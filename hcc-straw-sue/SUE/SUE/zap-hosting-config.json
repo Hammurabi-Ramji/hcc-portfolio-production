@@ -1,0 +1,85 @@
+{
+  "zapHosting": {
+    "vps": {
+      "name": "HCC API Server",
+      "location": "Ashburn, USA (East)",
+      "specs": {
+        "ram": "8 GB",
+        "cpu": "4 Cores",
+        "storage": "100 GB NVMe",
+        "bandwidth": "500 Mbit/s",
+        "os": "Ubuntu 22.04 LTS",
+        "ip": "5.249.163.79"
+      },
+      "purpose": "Primary HCC API server, database, and services"
+    },
+    "webspace": {
+      "name": "HCC Web Services",
+      "specs": {
+        "disk": "20 GB",
+        "emailAccounts": 100,
+        "mysqlDatabases": 100,
+        "ddosProtection": true
+      },
+      "purpose": "Email service, backup storage, static assets"
+    },
+    "architecture": {
+      "type": "VPS-Centric",
+      "description": "Primary services on VPS, supporting services on webspace",
+      "services": {
+        "onVps": ["HCC API Server (Node.js, port 8080)", "MySQL Database (port 3306)", "Redis Cache (port 6379)", "Nginx Web Server (ports 80/443)", "SUE Extension Files"],
+        "onWebspace": ["Email Accounts (SMTP/IMAP)", "Database Backups (20GB storage)", "Additional MySQL databases (if needed)"]
+      }
+    },
+    "deployment": {
+      "steps": [
+        {
+          "order": 1,
+          "action": "SSH into VPS",
+          "command": "ssh root@5.249.163.79"
+        },
+        {
+          "order": 2,
+          "action": "Run setup script",
+          "command": "bash -s < setup-zap-vps.sh"
+        },
+        {
+          "order": 3,
+          "action": "Deploy application",
+          "command": "./scripts/deploy-to-zap.sh"
+        },
+        {
+          "order": 4,
+          "action": "Configure SSL",
+          "command": "sudo certbot --nginx -d hcc.hammurabicoding.com"
+        },
+        {
+          "order": 5,
+          "action": "Test and monitor",
+          "command": "curl https://hcc.hammurabicoding.com/api/status"
+        }
+      ]
+    },
+    "security": {
+      "firewall": "UFW enabled (ports 22, 80, 443)",
+      "fail2ban": "Installed and enabled",
+      "ssl": "Let's Encrypt (auto-renew)",
+      "headers": "Security headers configured in Nginx"
+    },
+    "maintenance": {
+      "backup": {
+        "schedule": "Daily at 2 AM",
+        "command": "bash /var/www/sue/scripts/backup-database.sh",
+        "retention": "7 days"
+      },
+      "monitoring": {
+        "command": "bash /var/www/sue/scripts/maintenance.sh status",
+        "schedule": "Hourly"
+      },
+      "updates": {
+        "automatic": true,
+        "schedule": "Weekly"
+      }
+    }
+  }
+}

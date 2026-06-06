@@ -1,0 +1,93 @@
+# ──────────────────────────────────────────────────────────────
+# hcc-portfolio-production — root .gitignore
+# ──────────────────────────────────────────────────────────────
+
+# Dependencies (all sub-projects)
+**/node_modules/
+**/.pnpm-store/
+
+# Rust build artifacts
+**/target/
+**/.cargo/
+**/*.rlib
+**/*.rmeta
+**/*.rs.bk
+**/Cargo.lock
+
+# Build outputs
+**/dist/
+**/dist-browsers/
+**/build/
+**/pkg/
+**/release/
+**/installer/assets/
+
+# Secrets — never commit
+**/.env
+**/.env.local
+**/.env.production
+**/*.pem
+**/*.key
+**/*.b64
+**/vault_key.txt
+**/sue-extension-key.b64
+**/sue-extension-id.txt
+**/sue-extension.pem
+
+# Logs
+*.log
+**/logs/
+**/install_host.log
+debug.log
+
+# Large binaries
+*.zip
+*.crx
+*.xpi
+*.exe
+*.dll
+*.pak
+*.asar
+*.dat
+*.bin
+
+# PDFs (large, use links instead)
+*.pdf
+
+# Test outputs
+**/playwright-report/
+**/test-results/
+**/verify_output.txt
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Temp / scratch
+output/
+temp/
+tmp/
+**/*.tmp
+**/ramemory_search_results*.txt
+fashion_files.txt
+fashion_files_cmd.txt
+temp_list.txt
+audit_results.csv
+pasted_file_*.png
+pasted_file_*.jpg
+data/
+
+# Manus download artifacts
+https___*/
+
+# Python
+**/__pycache__/
+**/*.pyc
+
+# WASM intermediate
+**/*.wasm.gz

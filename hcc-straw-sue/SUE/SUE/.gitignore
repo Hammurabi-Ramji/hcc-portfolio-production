@@ -1,0 +1,104 @@
+# ──────────────────────────────────────────────────────────────
+# SUE — .gitignore
+# ──────────────────────────────────────────────────────────────
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Rust / Cargo artifacts
+**/target/
+.cargo/
+sue-view/pkg/
+**/*.rs.bk
+**/*.rlib
+**/*.rmeta
+Cargo.lock
+
+# Build artifacts
+dist/
+dist-browsers/
+build/
+*.pdb
+*.exe
+*.exe.backup
+*.ilk
+*.meta
+
+# Extension build output
+sue-view.wasm
+sue-view.js
+sue-runtime.wasm
+sue-runtime.js
+
+# WASM intermediate
+*.wasm.gz
+
+# Release packages
+release/
+installer/assets/
+*.zip
+*.crx
+*.xpi
+
+# Electron / Chatbox binary distribution (not source)
+Chatbox/
+
+# Previous version snapshots
+SUEv4.0/
+
+# Binary runtime files
+*.dll
+*.pak
+*.asar
+*.dat
+*.bin
+*.pyc
+__pycache__/
+
+# Secrets — NEVER commit these
+.env
+.env.local
+.env.production
+*.key
+*.pem
+*.b64
+vault_key.txt
+sue-extension-key.b64
+sue-extension-id.txt
+sue-extension.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+install_host.log
+
+# Test outputs
+playwright-report/
+test-results/
+verify_output.txt
+
+# Misc temp
+tmp/
+temp/
+*.tmp
+ramemory_search_results*.txt
+output/
+
+# Database (stored in extension, not git)
+hcc.db
+*.db
+

@@ -1,0 +1,41 @@
+CREATE TABLE `vendor_performance_history` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`vendor_id` int NOT NULL,
+	`event_type` enum('delivery','quality_inspection','price_change','issue') NOT NULL,
+	`event_date` timestamp NOT NULL,
+	`delivery_status` enum('on_time','late','early'),
+	`days_late` int,
+	`inspection_result` enum('pass','fail','conditional'),
+	`defects_found` int,
+	`price_change` decimal(10,2),
+	`price_change_percent` decimal(5,2),
+	`notes` text,
+	`created_at` timestamp NOT NULL DEFAULT (now()),
+	CONSTRAINT `vendor_performance_history_id` PRIMARY KEY(`id`)
+);
+--> statement-breakpoint
+CREATE TABLE `vendor_performance_metrics` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`vendor_id` int NOT NULL,
+	`metric_date` date NOT NULL,
+	`total_deliveries` int NOT NULL DEFAULT 0,
+	`on_time_deliveries` int NOT NULL DEFAULT 0,
+	`late_deliveries` int NOT NULL DEFAULT 0,
+	`average_delivery_days` decimal(5,2),
+	`delivery_score` decimal(5,2),
+	`total_inspections` int NOT NULL DEFAULT 0,
+	`passed_inspections` int NOT NULL DEFAULT 0,
+	`failed_inspections` int NOT NULL DEFAULT 0,
+	`defect_rate` decimal(5,2),
+	`quality_score` decimal(5,2),
+	`average_price` decimal(10,2),
+	`market_average_price` decimal(10,2),
+	`price_competitiveness` decimal(5,2),
+	`price_stability` decimal(5,2),
+	`pricing_score` decimal(5,2),
+	`overall_score` decimal(5,2),
+	`tier` enum('platinum','gold','silver','bronze','probation'),
+	`created_at` timestamp NOT NULL DEFAULT (now()),
+	`updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `vendor_performance_metrics_id` PRIMARY KEY(`id`)
+);

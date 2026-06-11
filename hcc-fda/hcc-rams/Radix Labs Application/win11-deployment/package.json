@@ -1,0 +1,54 @@
+{
+  "name": "radix-unified-erp",
+  "version": "1.0.0",
+  "description": "Radix Labs Unified ERP System - Complete pharmaceutical manufacturing platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "seed": "cd backend && npm run seed",
+    "migrate": "cd backend && npm run migrate",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "desktop",
+    "mobile"
+  ],
+  "keywords": [
+    "erp",
+    "pharmaceutical",
+    "manufacturing",
+    "regulatory",
+    "compliance",
+    "radix-labs"
+  ],
+  "author": "Radix Laboratories, Inc.",
+  "license": "Proprietary",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

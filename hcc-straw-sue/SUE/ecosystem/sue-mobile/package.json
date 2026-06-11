@@ -1,0 +1,51 @@
+{
+  "name": "sue-mobile",
+  "version": "5.0.0",
+  "description": "SUE Mobile App - React Native, iOS/Android",
+  "main": "index.js",
+  "scripts": {
+    "dev": "expo start",
+    "dev:ios": "expo start --ios",
+    "dev:android": "expo start --android",
+    "build:ios": "eas build --platform ios",
+    "build:android": "eas build --platform android",
+    "build": "eas build",
+    "submit:ios": "eas submit --platform ios",
+    "submit:android": "eas submit --platform android",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "expo": "^50.0.0",
+    "expo-router": "^3.4.0",
+    "expo-splash-screen": "^0.26.4",
+    "expo-status-bar": "^1.11.1",
+    "expo-camera": "^13.8.0",
+    "expo-notifications": "^0.27.3",
+    "expo-secure-store": "^12.8.0",
+    "react": "^18.2.0",
+    "react-native": "^0.73.2",
+    "zustand": "^4.4.1",
+    "@react-navigation/native": "^6.1.9",
+    "@react-navigation/bottom-tabs": "^6.5.11",
+    "axios": "^1.6.2",
+    "socket.io-client": "^4.7.2",
+    "react-native-gesture-handler": "^2.14.0",
+    "react-native-reanimated": "^3.6.0",
+    "react-native-screens": "^3.27.0",
+    "@react-native-async-storage/async-storage": "^1.21.0",
+    "react-native-paper": "^5.11.4",
+    "react-native-markdown-display": "^7.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/react": "^18.2.37",
+    "@types/react-native": "^0.73.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

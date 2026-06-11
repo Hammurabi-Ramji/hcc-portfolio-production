@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HCC — Offline</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #f3f4f6;
+      height: 100vh;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .offline-icon {
+      font-size: 48px;
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f3f4f6;
+    }
+
+    p {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ef4444;
+      animation: pulse 1.5s ease-in-out infinite;
+      margin-right: 6px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    .retry-btn {
+      padding: 10px 24px;
+      background: #4a9eed;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .retry-btn:hover { background: #3a8ecd; }
+
+    .features {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #16213e;
+      border: 1px solid #2d2d4a;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    .feature-item .check { color: #22c55e; font-size: 16px; }
+
+    footer {
+      position: absolute;
+      bottom: 16px;
+      font-size: 11px;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="offline-icon">⚡</div>
+
+  <h1>You are offline</h1>
+
+  <p>
+    <span class="status-dot"></span>
+    No internet connection detected.<br/>
+    Some features may be unavailable.
+  </p>
+
+  <!-- Available offline features -->
+  <div class="features">
+    <div class="feature-item">
+      <span class="check">✓</span>
+      <span>Notes — Read &amp; edit locally</span>
+    </div>
+    <div class="feature-item">
+      <span class="check">✓</span>
+      <span>Projects — View Kanban board</span>
+    </div>
+    <div class="feature-item">
+      <span class="check">✓</span>
+      <span>Settings — Change preferences</span>
+    </div>
+    <div class="feature-item" style="opacity:.45;">
+      <span style="color:#ef4444;font-size:16px;">✕</span>
+      <span>AI Chat — Requires connection</span>
+    </div>
+    <div class="feature-item" style="opacity:.45;">
+      <span style="color:#ef4444;font-size:16px;">✕</span>
+      <span>Cloud Sync — Requires connection</span>
+    </div>
+  </div>
+
+  <button class="retry-btn" onclick="checkConnection()">Try Again</button>
+
+  <footer>SUE v4.0.0 | Sovereign by Design</footer>
+
+  <!-- Offline handler script (external, CSP-compliant) -->
+  <script src="offline-handler.js"></script>
+</body>
+</html>
+

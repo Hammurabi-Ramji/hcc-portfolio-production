@@ -1,0 +1,25 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+
+exporters:
+  logging:
+    verbosity: detailed
+  signoz:
+    endpoint: "http://signoz-otel-collector:4317"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, signoz]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, signoz]

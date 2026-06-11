@@ -1,0 +1,6 @@
+{
+  "assets": [
+    "installer/assets/sue-host.exe",
+    "installer/assets/sue-api.exe"
+  ]
+}

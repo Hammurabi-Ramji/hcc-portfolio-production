@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "sue-view",
+    "sue-core",
+]
+
+[workspace.package]
+version = "5.0.0"
+edition = "2021"
+authors = ["R.K. Girdhari"]
+license = "MIT"
+
+[workspace.dependencies]
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = "0.3"
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+getrandom = { version = "0.2", features = ["js"] }
+leptos = "0.7"
+leptos_router = "0.7"
+serde = "1.0"
+serde_json = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1.0", features = ["time"] }
+

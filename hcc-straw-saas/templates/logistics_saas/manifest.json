@@ -1,0 +1,12 @@
+{
+  "template_id": "logistics_saas",
+  "industry": "Logistics",
+  "bundled_components": [
+    "dashboard_analytics",
+    "notification_system",
+    "api_layer_axum",
+    "database_sqlite",
+    "search_engine_local"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

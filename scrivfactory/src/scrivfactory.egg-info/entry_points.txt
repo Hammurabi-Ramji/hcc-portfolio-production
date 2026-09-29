@@ -1,0 +1,2 @@
+[console_scripts]
+scrivfactory = scrivfactory.cli.main:main

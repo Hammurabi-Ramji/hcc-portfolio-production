@@ -1,0 +1,2 @@
+Blocked request. This host ("5173-idt5gulevj7sj1dvruhmm-e3d32099.us2.manus.computer") is not allowed.
+To allow this host, add "5173-idt5gulevj7sj1dvruhmm-e3d32099.us2.manus.computer" to `server.allowedHosts` in vite.config.js.

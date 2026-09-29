@@ -1,0 +1,45 @@
+{
+  "name": "openclaw-hcc-integration",
+  "version": "1.0.0",
+  "description": "OpenClaw HCC Integration - Retail Packaged Software",
+  "main": "bin/openclaw.js",
+  "bin": {
+    "openclaw": "bin/openclaw.js"
+  },
+  "scripts": {
+    "start": "node bin/openclaw.js",
+    "test": "node test-all-integrations.js",
+    "build-win": "call build.bat",
+    "build-unix": "bash build.sh"
+  },
+  "keywords": [
+    "hcc",
+    "integration",
+    "fda",
+    "mantle",
+    "pharma",
+    "scraping",
+    "automation"
+  ],
+  "author": "Hammurabi Coding Company",
+  "license": "Proprietary",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "node-schedule": "^2.1.0",
+    "puppeteer": "^21.0.0",
+    "redis": "^4.6.0",
+    "winston": "^3.10.0",
+    "pg": "^8.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.0.0",
+    "pkg": "^5.8.1"
+  }
+}

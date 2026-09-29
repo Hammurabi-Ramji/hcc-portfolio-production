@@ -1,0 +1,28 @@
+template_name: "Blank Project"
+template_version: "1.0.0"
+author: "scrivfactory"
+description: "Minimal Scrivener project starter."
+
+scrivener_version: "3.1.1"
+project_settings:
+  default_font: "Calibri"
+  default_font_size: 11
+  paper_size: "Letter"
+
+metadata_fields: []
+collections: []
+binder_structure:
+  - id: "01"
+    title: "Draft"
+    type: "folder"
+    children:
+      - title: "Untitled Document"
+        type: "document"
+        content: |
+          {{project_name}}
+
+          Start writing here.
+
+document_templates: []
+variables: {}
+placeholders: {}

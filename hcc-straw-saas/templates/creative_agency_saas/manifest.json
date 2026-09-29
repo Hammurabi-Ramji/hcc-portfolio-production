@@ -1,0 +1,12 @@
+{
+  "template_id": "creative_agency_saas",
+  "industry": "Creative",
+  "bundled_components": [
+    "frontend_svelte",
+    "file_storage_local",
+    "billing_stripe",
+    "user_management",
+    "notification_system"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

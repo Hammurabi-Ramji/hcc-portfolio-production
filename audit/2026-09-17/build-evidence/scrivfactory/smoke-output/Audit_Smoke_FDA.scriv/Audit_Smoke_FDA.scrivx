@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Version="3.0" Build="15043.0" ScrivenerVersion="3.1.1" ProjectName="Audit_Smoke_FDA">
+  <ProjectSettings>
+    <DefaultFont>Calibri</DefaultFont>
+    <DefaultFontSize>11</DefaultFontSize>
+    <PaperSize>Letter</PaperSize>
+  </ProjectSettings>
+  <Binder>
+    <BinderItem UUID="DBE1505B-63DC-4DE3-88A3-7943BD31B40F" Type="DraftFolder">
+      <Title>Draft</Title>
+      <Children>
+        <BinderItem UUID="FF673693-CAD8-4D69-A9C5-9E4D7E8E9509" Type="Folder">
+          <Title>01 - Cover &amp; Executive Documents</Title>
+          <TemplateID>01</TemplateID>
+          <Children>
+            <BinderItem UUID="3F162866-6EE5-4FC4-837D-B51DBFAA169D" Type="Text">
+              <Title>Cover Page Template</Title>
+            </BinderItem>
+            <BinderItem UUID="997C643D-9858-4028-8784-1DF08C7EB577" Type="Text">
+              <Title>Table of Contents</Title>
+            </BinderItem>
+            <BinderItem UUID="F76C7647-6898-4B37-9B0F-758D42F75197" Type="Text">
+              <Title>Executive Compliance Statement</Title>
+            </BinderItem>
+            <BinderItem UUID="1E7E68D3-A3C0-43FC-8F52-8A854283712D" Type="Text">
+              <Title>FDA Inspection Protocol Overview</Title>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="E066E452-661A-45E4-BB90-750E9FCEE1F2" Type="Folder">
+          <Title>02 - Quality Management System</Title>
+          <TemplateID>02</TemplateID>
+          <Children>
+            <BinderItem UUID="E8A3F7A9-28FD-4337-AE3B-17B62F57945C" Type="Text">
+              <Title>Quality Manual Master</Title>
+            </BinderItem>
+            <BinderItem UUID="228E2F6F-A1E1-4910-9FC4-B4942047E244" Type="Folder">
+              <Title>Management Review Records</Title>
+              <Children>
+                <BinderItem UUID="8200DAD8-4616-4627-8947-916265AF99C7" Type="Text">
+                  <Title>Q1 Management Review</Title>
+                </BinderItem>
+                <BinderItem UUID="EBE7F46A-9596-4C30-9032-AC80F13CAF8E" Type="Text">
+                  <Title>Q2 Management Review</Title>
+                </BinderItem>
+                <BinderItem UUID="7B261F20-2399-42FB-8DD3-8620C87C1914" Type="Text">
+                  <Title>Q3 Management Review</Title>
+                </BinderItem>
+                <BinderItem UUID="512A1E50-CE69-4D3F-B438-8ACD5A4A26F1" Type="Text">
+                  <Title>Q4 Management Review</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="6C43963A-B0A7-483C-933D-2943CA5D7812" Type="Folder">
+              <Title>Internal Audit Reports</Title>
+              <Children>
+                <BinderItem UUID="98E3D0E8-F963-463C-8590-3063760D45A3" Type="Text">
+                  <Title>Audit Schedule Master</Title>
+                </BinderItem>
+                <BinderItem UUID="13901E55-1879-4672-A1D2-555174799C91" Type="Text">
+                  <Title>Internal Audit Template</Title>
+                </BinderItem>
+                <BinderItem UUID="45682750-1E0C-497F-AB00-280BD2CB3857" Type="Folder">
+                  <Title>Completed Audits</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="AB98E817-ABE3-4298-B05D-A4605D1282A5" Type="Folder">
+              <Title>CAPA Tracking</Title>
+              <Children>
+                <BinderItem UUID="1351B4B0-D840-4B0F-B5DC-DC65B2BA5E8F" Type="Text">
+                  <Title>CAPA Master Log</Title>
+                </BinderItem>
+                <BinderItem UUID="627D14CF-0216-4F2A-A23C-746B13168058" Type="Folder">
+                  <Title>Active CAPA Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="8D23ACBE-B853-47E3-94BA-C7634E0871FE" Type="Folder">
+          <Title>03 - GMP Compliance Documentation</Title>
+          <TemplateID>03</TemplateID>
+          <Children>
+            <BinderItem UUID="78B4B685-DC99-49F5-8C42-1404F1A2E07C" Type="Folder">
+              <Title>Standard Operating Procedures</Title>
+              <Children>
+                <BinderItem UUID="6CADFE3B-54E2-4002-A5E0-7BC025FAB8F1" Type="Text">
+                  <Title>SOP Index Master</Title>
+                </BinderItem>
+                <BinderItem UUID="9212D9E5-F4F3-49D5-87D5-7E6BB0F12723" Type="Folder">
+                  <Title>Manufacturing SOPs</Title>
+                </BinderItem>
+                <BinderItem UUID="AE1A7FDD-3042-44CC-8045-42FD3882A965" Type="Folder">
+                  <Title>Quality Control SOPs</Title>
+                </BinderItem>
+                <BinderItem UUID="8E813B36-D84E-4632-90C7-D2FA62AF1FE8" Type="Folder">
+                  <Title>Facilities SOPs</Title>
+                </BinderItem>
+                <BinderItem UUID="7C41FC9D-AE8E-43C9-9AAA-06FF8CDE91F5" Type="Folder">
+                  <Title>Administrative SOPs</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="F4570C50-849A-4EB1-9554-19CF737C9622" Type="Folder">
+              <Title>Batch Records</Title>
+              <Children>
+                <BinderItem UUID="A9E80606-9561-41E8-8DB8-C4549AD1E048" Type="Text">
+                  <Title>Master Batch Record Template</Title>
+                </BinderItem>
+                <BinderItem UUID="90139136-EEEA-4F84-B780-501B491E024A" Type="Folder">
+                  <Title>Executed Batch Records (Current Year)</Title>
+                </BinderItem>
+                <BinderItem UUID="39480E7A-03E9-44A7-8A4F-80AB716CD19C" Type="Folder">
+                  <Title>Historical Batch Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="BF61CF8E-1457-48E0-8DD2-E86742016EFB" Type="Folder">
+              <Title>Change Control</Title>
+              <Children>
+                <BinderItem UUID="9C9646D4-D60E-4FC8-9728-FE8D71316174" Type="Text">
+                  <Title>Change Control Log</Title>
+                </BinderItem>
+                <BinderItem UUID="2865D240-00E0-4C64-8363-D185A069F3ED" Type="Folder">
+                  <Title>Change Control Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="58E6F2A1-2623-4BD7-8B35-C3737CB74490" Type="Folder">
+          <Title>04 - Laboratory Controls</Title>
+          <TemplateID>04</TemplateID>
+          <Children>
+            <BinderItem UUID="1AE5EF00-2006-46EF-B509-5E49B245BFDE" Type="Folder">
+              <Title>Testing Procedures</Title>
+              <Children>
+                <BinderItem UUID="B40B40F5-7A9A-4E06-B884-539912BDD431" Type="Text">
+                  <Title>Method Validation Master List</Title>
+                </BinderItem>
+                <BinderItem UUID="179392FD-E0AD-4DC7-8DBB-E0BB106494C0" Type="Folder">
+                  <Title>Validated Methods</Title>
+                </BinderItem>
+                <BinderItem UUID="90C021DF-D10A-4116-AE28-570148F66AA9" Type="Folder">
+                  <Title>Method Verification Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="8501CEC1-F29D-4E90-A9ED-4F1218B5FE39" Type="Folder">
+              <Title>Equipment Records</Title>
+              <Children>
+                <BinderItem UUID="EB139906-0006-4717-B58F-1D276C2E125D" Type="Text">
+                  <Title>Equipment Inventory</Title>
+                </BinderItem>
+                <BinderItem UUID="E9506141-91C8-49B5-9B10-6BF630F8466A" Type="Folder">
+                  <Title>Calibration Records</Title>
+                </BinderItem>
+                <BinderItem UUID="92FAC145-CC0B-4008-8E89-49D88EA27E33" Type="Folder">
+                  <Title>Maintenance Logs</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="2D081FBD-5579-4C0E-8E8B-CE9B86ADF790" Type="Folder">
+              <Title>OOS Investigations</Title>
+              <Children>
+                <BinderItem UUID="2F47F398-31F1-47B4-BDBC-01A3E615B18B" Type="Text">
+                  <Title>OOS Investigation Template</Title>
+                </BinderItem>
+                <BinderItem UUID="A5849041-4B7B-4660-968F-94855830637D" Type="Folder">
+                  <Title>Completed OOS Reports</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="F89B8901-528A-4BF2-A0BE-9A3BC2FCDCD7" Type="Folder">
+          <Title>05 - Facilities &amp; Equipment</Title>
+          <TemplateID>05</TemplateID>
+          <Children>
+            <BinderItem UUID="0E3E67D9-CBEA-41AB-B09D-1FEC01D22C64" Type="Folder">
+              <Title>Qualification Documentation</Title>
+              <Children>
+                <BinderItem UUID="4221BD0E-E425-4D1E-9BAE-78E10F9EDD42" Type="Text">
+                  <Title>Equipment Qualification Master List</Title>
+                </BinderItem>
+                <BinderItem UUID="72B95391-5AAF-42D2-9855-2A41C5667A69" Type="Folder">
+                  <Title>Installation Qualifications (IQ)</Title>
+                </BinderItem>
+                <BinderItem UUID="F8BDEB63-8C83-4D90-AAAB-3C03C2FF8CFC" Type="Folder">
+                  <Title>Operational Qualifications (OQ)</Title>
+                </BinderItem>
+                <BinderItem UUID="1EE2BF92-B908-43A2-B048-DDFABD4DD323" Type="Folder">
+                  <Title>Performance Qualifications (PQ)</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="A988C1DB-0C3F-46F7-A82B-E6C0631C7C29" Type="Folder">
+              <Title>Calibration &amp; Maintenance</Title>
+              <Children>
+                <BinderItem UUID="D2540451-E45F-4B7C-A9F6-B25A82E0B6A4" Type="Text">
+                  <Title>Calibration Schedule</Title>
+                </BinderItem>
+                <BinderItem UUID="DB677715-9EB1-40AE-9DD1-3141AC1CDCA9" Type="Folder">
+                  <Title>Maintenance Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="06A86D13-27BD-4E50-93F0-8B5779E58E8A" Type="Folder">
+              <Title>Cleaning Validation</Title>
+              <Children>
+                <BinderItem UUID="DA4F3C83-547A-4F5B-82F1-48B0DB2917BB" Type="Text">
+                  <Title>Cleaning Validation Protocol Template</Title>
+                </BinderItem>
+                <BinderItem UUID="CA048745-9109-4AFA-B128-E67A315298BF" Type="Folder">
+                  <Title>Validation Reports</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="77FF6007-8925-48F7-877F-0791482EB1C8" Type="Folder">
+          <Title>06 - Materials Management</Title>
+          <TemplateID>06</TemplateID>
+          <Children>
+            <BinderItem UUID="AFD59C8A-B59F-4868-8F63-29EC21995DC2" Type="Folder">
+              <Title>Supplier Qualification</Title>
+              <Children>
+                <BinderItem UUID="B4D7DAE1-F9FB-481B-BF6E-EFECE852F1F5" Type="Text">
+                  <Title>Approved Supplier List</Title>
+                </BinderItem>
+                <BinderItem UUID="0B357C42-B1CA-426D-B56B-E91FF565EC67" Type="Folder">
+                  <Title>Supplier Audit Reports</Title>
+                </BinderItem>
+                <BinderItem UUID="9A43CBED-9B80-471C-A67A-E48A336BD69E" Type="Folder">
+                  <Title>Supplier Certifications</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="BD966D14-B977-4358-BDDA-4321DAD5C6DB" Type="Folder">
+              <Title>Incoming Materials</Title>
+              <Children>
+                <BinderItem UUID="9DBD74FA-3DB3-45E6-8D66-923A63BDD8FA" Type="Text">
+                  <Title>Raw Material Testing Log</Title>
+                </BinderItem>
+                <BinderItem UUID="393A4A82-D08E-41C4-A360-F2DFD6DFAF51" Type="Folder">
+                  <Title>Certificate of Analysis Library</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="FA532E1D-4141-45B5-8087-5F40E826E49A" Type="Folder">
+              <Title>Inventory Control</Title>
+              <Children>
+                <BinderItem UUID="D41AD47F-C1A8-40C0-8800-EF6F5D17FF7F" Type="Text">
+                  <Title>Inventory Management SOP</Title>
+                </BinderItem>
+                <BinderItem UUID="B8F41D28-E7A6-491E-9338-C1901D793CA2" Type="Folder">
+                  <Title>Storage Condition Logs</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="A8137F90-9324-4007-92FC-DA264149FBC8" Type="Folder">
+          <Title>07 - Production &amp; Process Controls</Title>
+          <TemplateID>07</TemplateID>
+          <Children>
+            <BinderItem UUID="72D30D1E-C8EF-4F87-9A7E-29829AA96E93" Type="Folder">
+              <Title>Master Production Records</Title>
+              <Children>
+                <BinderItem UUID="1E474575-819E-4E90-818C-7250DA4FF3AE" Type="Text">
+                  <Title>MPR Template</Title>
+                </BinderItem>
+                <BinderItem UUID="246E1DA8-9E9B-449F-8C97-D530935E19F1" Type="Folder">
+                  <Title>Approved MPRs</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="570CAEA4-26CF-4D0C-8621-88063D7ABC47" Type="Folder">
+              <Title>In-Process Controls</Title>
+              <Children>
+                <BinderItem UUID="48002140-01CF-41C0-A300-CC69851F67B4" Type="Text">
+                  <Title>In-Process Testing Schedule</Title>
+                </BinderItem>
+                <BinderItem UUID="59DE4838-1759-45EA-8085-33902768ECDD" Type="Folder">
+                  <Title>Control Charts</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="3E29CAA3-9475-442D-8831-A5D02DB09A6E" Type="Folder">
+              <Title>Deviation Management</Title>
+              <Children>
+                <BinderItem UUID="FDAAE362-CE3D-4C4A-B246-EA56681BA623" Type="Text">
+                  <Title>Deviation Log</Title>
+                </BinderItem>
+                <BinderItem UUID="07095D74-7B1D-4DFF-8D11-A777AD93195E" Type="Folder">
+                  <Title>Investigation Reports</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="ADE84EF3-A8FC-4A95-9A47-769288D8F297" Type="Folder">
+          <Title>08 - Packaging &amp; Labeling</Title>
+          <TemplateID>08</TemplateID>
+          <Children>
+            <BinderItem UUID="774F3051-43D2-412B-9EB7-F1D0D6F022BB" Type="Folder">
+              <Title>Label Controls</Title>
+              <Children>
+                <BinderItem UUID="9B1703CF-C8FE-437A-89DB-BE58FD4064F8" Type="Text">
+                  <Title>Label Approval Matrix</Title>
+                </BinderItem>
+                <BinderItem UUID="93F3EECE-422B-4ED1-BB7B-53EC109A70C5" Type="Folder">
+                  <Title>Approved Label Templates</Title>
+                </BinderItem>
+                <BinderItem UUID="C6B8C596-238F-4A9B-8CD9-95D11864FBA5" Type="Folder">
+                  <Title>Label Control Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="07DA5297-449B-4FFA-BC27-C41645FC1490" Type="Folder">
+              <Title>Packaging Line Clearance</Title>
+              <Children>
+                <BinderItem UUID="F6BA699C-C378-4F7E-91CB-BB04AC685355" Type="Text">
+                  <Title>Line Clearance Checklist Template</Title>
+                </BinderItem>
+                <BinderItem UUID="90D9C5E8-1297-4395-9F75-475C7FC0B35C" Type="Folder">
+                  <Title>Completed Clearances</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="4857D6DA-310F-4349-A7F0-14DA998EA013" Type="Folder">
+              <Title>Packaging Materials</Title>
+              <Children>
+                <BinderItem UUID="71ACCBD7-8308-4F02-B446-0CD6BED6DBD1" Type="Text">
+                  <Title>Packaging Material Specifications</Title>
+                </BinderItem>
+                <BinderItem UUID="7910B61E-33CA-497A-90DA-1C076F68B2E7" Type="Folder">
+                  <Title>Testing Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="0108592A-3175-4D2D-8A12-548BD7CB998A" Type="Folder">
+          <Title>09 - Complaints, Recalls &amp; CAPA</Title>
+          <TemplateID>09</TemplateID>
+          <Children>
+            <BinderItem UUID="66A8B550-DE2C-43C2-A351-E440A642C4AF" Type="Folder">
+              <Title>Complaint Handling</Title>
+              <Children>
+                <BinderItem UUID="1F2A963A-6EEA-4484-A36E-F1A62362B9E4" Type="Text">
+                  <Title>Complaint Handling SOP</Title>
+                </BinderItem>
+                <BinderItem UUID="C45CDCDE-5E61-4F39-8A84-7A14A7CFA67F" Type="Text">
+                  <Title>Complaint Log Master</Title>
+                </BinderItem>
+                <BinderItem UUID="33FFE135-B44C-45E3-BC0F-528852AB5524" Type="Folder">
+                  <Title>Individual Complaint Files</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="4B59577E-F1CD-4C1B-B1E6-AF1C483442C2" Type="Folder">
+              <Title>Recall Management</Title>
+              <Children>
+                <BinderItem UUID="A5844E50-130C-4A75-9509-A59DBB18B7C3" Type="Text">
+                  <Title>Recall Procedure</Title>
+                </BinderItem>
+                <BinderItem UUID="36F4BBF9-4E0A-4D23-A080-C81FB8C1899B" Type="Folder">
+                  <Title>Mock Recall Reports</Title>
+                </BinderItem>
+                <BinderItem UUID="C94202EC-62D2-461D-B9AA-673444ECBD12" Type="Folder">
+                  <Title>Recall Documentation</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="E41A48E4-B238-48D4-B832-8806BABD2E67" Type="Folder">
+              <Title>CAPA System</Title>
+              <Children>
+                <BinderItem UUID="A86BDF11-FE7E-45F3-B864-59CB3C79B82C" Type="Text">
+                  <Title>CAPA Procedure</Title>
+                </BinderItem>
+                <BinderItem UUID="BE46B324-C4ED-4BFB-AFC1-7202EC5E70CA" Type="Text">
+                  <Title>CAPA Effectiveness Review</Title>
+                </BinderItem>
+                <BinderItem UUID="9EAAC7A6-7C14-4D73-8333-774E3BC308C4" Type="Folder">
+                  <Title>CAPA Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="307607B5-C1FF-4EEA-BC46-3E1C4FCD0A72" Type="Folder">
+          <Title>10 - Training &amp; Personnel</Title>
+          <TemplateID>10</TemplateID>
+          <Children>
+            <BinderItem UUID="C3A7629C-5C98-43CE-9403-EFFDCE4E5E6B" Type="Folder">
+              <Title>Training Documentation</Title>
+              <Children>
+                <BinderItem UUID="C42D9238-0B59-4B71-8C03-A9A78B3B9AF5" Type="Text">
+                  <Title>Training Matrix Master</Title>
+                </BinderItem>
+                <BinderItem UUID="671D0256-EE8A-48A0-89F0-974327C5CB60" Type="Folder">
+                  <Title>Training SOPs</Title>
+                </BinderItem>
+                <BinderItem UUID="BDC13DB8-B5F3-4676-8DD9-6E062530B677" Type="Folder">
+                  <Title>Training Materials</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="394970EA-5867-47EC-AC54-90ADDD6D509B" Type="Folder">
+              <Title>Personnel Qualification</Title>
+              <Children>
+                <BinderItem UUID="5CC1C0F4-68E3-4B9A-A019-CEBE07634B9D" Type="Folder">
+                  <Title>Job Descriptions</Title>
+                </BinderItem>
+                <BinderItem UUID="1A11CA0F-14D5-4C7A-B544-D6AD27F2CB65" Type="Folder">
+                  <Title>Individual Training Records</Title>
+                </BinderItem>
+                <BinderItem UUID="239004C4-AECD-4834-8949-4C8BFAC26027" Type="Folder">
+                  <Title>Competency Assessments</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="2471E322-5B23-4AF2-BAAD-59D3E6D0BDBD" Type="Folder">
+              <Title>Training Effectiveness</Title>
+              <Children>
+                <BinderItem UUID="700A6B12-9DA5-43A3-BEC5-6BDCE27A458A" Type="Text">
+                  <Title>Training Effectiveness Evaluation</Title>
+                </BinderItem>
+                <BinderItem UUID="0B3BC85D-A5F5-4B85-8489-394CE3A0396F" Type="Folder">
+                  <Title>Assessment Records</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="665C5178-8843-4DA3-BD13-05F1248969A2" Type="Folder">
+          <Title>11 - FDA Inspection Management</Title>
+          <TemplateID>11</TemplateID>
+          <Children>
+            <BinderItem UUID="5CBCE77F-B882-4EDE-9E00-F53E12144BC8" Type="Folder">
+              <Title>Inspection Protocols</Title>
+              <Children>
+                <BinderItem UUID="4983D8C7-B784-439D-B8CC-E1F45231D8BC" Type="Text">
+                  <Title>Pre-Inspection Checklist</Title>
+                </BinderItem>
+                <BinderItem UUID="74241170-C237-44B4-87BC-C09A963DD8E0" Type="Text">
+                  <Title>During Inspection Checklist</Title>
+                </BinderItem>
+                <BinderItem UUID="F6F6AE77-27C0-4CE3-92B0-3F28566942A3" Type="Text">
+                  <Title>Post-Inspection Checklist</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="9EC778F1-263E-494C-ACBD-66E51B9ED690" Type="Folder">
+              <Title>Inspection Tools</Title>
+              <Children>
+                <BinderItem UUID="323A2B5B-F2BF-4DCE-8FBA-E0CAD9C1EA80" Type="Text">
+                  <Title>FDA Request Log Template</Title>
+                </BinderItem>
+                <BinderItem UUID="E924B9F3-2B62-418F-A553-B486032D23AE" Type="Text">
+                  <Title>Daily Debrief Form</Title>
+                </BinderItem>
+                <BinderItem UUID="720C69E8-08F1-4772-8AB7-2BC53A3928EA" Type="Text">
+                  <Title>Document Response Form</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+            <BinderItem UUID="FDF186A7-1DCB-4941-9DCE-8C2443AAAF2D" Type="Folder">
+              <Title>Inspection Records</Title>
+              <Children>
+                <BinderItem UUID="B3375B77-2B40-4764-B8E4-FFBF71F2BA59" Type="Folder">
+                  <Title>Current Inspection Files</Title>
+                </BinderItem>
+                <BinderItem UUID="1A0D0C62-30F6-42EC-9878-DB05FCEF10A5" Type="Folder">
+                  <Title>Historical Inspections</Title>
+                </BinderItem>
+              </Children>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="7C414552-80BB-4718-81BA-2A604AA88014" Type="Folder">
+          <Title>12 - Appendices &amp; References</Title>
+          <TemplateID>12</TemplateID>
+          <Children>
+            <BinderItem UUID="84057933-D769-490B-86DF-858A83A17A25" Type="Text">
+              <Title>CFR Reference Guide</Title>
+            </BinderItem>
+            <BinderItem UUID="E83CC6FE-8ECD-4889-9EAB-73B192686FB6" Type="Text">
+              <Title>Glossary of Terms</Title>
+            </BinderItem>
+            <BinderItem UUID="864BE74A-8063-4D02-B309-6D5EAE8BF65D" Type="Text">
+              <Title>Organizational Chart</Title>
+            </BinderItem>
+            <BinderItem UUID="1E1CC005-58F4-4418-9748-6F7E8A2F35A9" Type="Text">
+              <Title>Facility Layout Diagram</Title>
+            </BinderItem>
+            <BinderItem UUID="DD908843-3677-4EA6-B7D4-07625269DB64" Type="Folder">
+              <Title>Supporting Documentation</Title>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+      </Children>
+    </BinderItem>
+    <BinderItem UUID="1B354E41-5FA9-4091-BF44-25DE42B176F3" Type="ResearchFolder">
+      <Title>Research</Title>
+      <Children>
+        <BinderItem UUID="09A2033C-7F2E-4E3A-A7DC-50E52F3876E1" Type="Folder">
+          <Title>Document Templates</Title>
+          <Children>
+            <BinderItem UUID="48624440-E3AC-413A-8626-911191E3A815" Type="Template">
+              <Title>SOP Template</Title>
+            </BinderItem>
+            <BinderItem UUID="4F53E865-B565-4C4A-BB52-FEECECA1529D" Type="Template">
+              <Title>CAPA Form Template</Title>
+            </BinderItem>
+            <BinderItem UUID="E3C27437-B7AF-4B98-9722-9EDCF1769903" Type="Template">
+              <Title>Checklist Template</Title>
+            </BinderItem>
+          </Children>
+        </BinderItem>
+        <BinderItem UUID="B1E3A91A-D199-4C4C-8918-06A664FA2467" Type="Folder">
+          <Title>Reference Material</Title>
+        </BinderItem>
+      </Children>
+    </BinderItem>
+    <BinderItem UUID="66B17026-FE61-4561-AD43-CEEB985C2BC2" Type="TrashFolder">
+      <Title>Trash</Title>
+    </BinderItem>
+  </Binder>
+  <Collections>
+    <Collection Name="Action Items" Type="search">
+      <Criteria>text contains 'Action Item' OR 'TODO'</Criteria>
+    </Collection>
+    <Collection Name="Due This Week" Type="search">
+      <Criteria>Review_Date within 7 days</Criteria>
+    </Collection>
+    <Collection Name="FDA Critical Docs" Type="manual">
+      <Description>Key documents that inspectors request most often.</Description>
+    </Collection>
+    <Collection Name="Pending Approval" Type="search">
+      <Criteria>Approval_Status equals 'Under Review'</Criteria>
+    </Collection>
+  </Collections>
+  <CustomMetaDataSettings>
+    <MetaDataField Name="Document_Type" Type="text" Default="" />
+    <MetaDataField Name="Effective_Date" Type="date" Default="" />
+    <MetaDataField Name="Review_Date" Type="date" Default="" />
+    <MetaDataField Name="Document_Number" Type="text" Default="" />
+    <MetaDataField Name="Approval_Status" Type="list" Default="Draft">
+      <Options>
+        <Option>Draft</Option>
+        <Option>Under Review</Option>
+        <Option>Approved</Option>
+      </Options>
+    </MetaDataField>
+    <MetaDataField Name="Owner" Type="text" Default="" />
+  </CustomMetaDataSettings>
+  <DocumentTemplates>
+    <Template Name="SOP Template" UUID="48624440-E3AC-413A-8626-911191E3A815">
+      <Description>Standard Operating Procedure template</Description>
+    </Template>
+    <Template Name="CAPA Form Template" UUID="4F53E865-B565-4C4A-BB52-FEECECA1529D">
+      <Description>Corrective and Preventive Action form</Description>
+    </Template>
+    <Template Name="Checklist Template" UUID="E3C27437-B7AF-4B98-9722-9EDCF1769903">
+      <Description>Inspection readiness checklist</Description>
+    </Template>
+  </DocumentTemplates>
+</ScrivenerProject>

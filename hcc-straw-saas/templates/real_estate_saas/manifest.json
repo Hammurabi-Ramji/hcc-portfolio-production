@@ -1,0 +1,12 @@
+{
+  "template_id": "real_estate_saas",
+  "industry": "Real",
+  "bundled_components": [
+    "search_engine_local",
+    "file_storage_local",
+    "dashboard_analytics",
+    "notification_system",
+    "api_layer_axum"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

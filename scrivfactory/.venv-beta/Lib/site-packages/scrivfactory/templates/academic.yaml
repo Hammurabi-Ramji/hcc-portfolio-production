@@ -1,0 +1,84 @@
+template_name: "Academic Research"
+template_version: "1.0.0"
+author: "scrivfactory"
+description: "A thesis and dissertation oriented project skeleton."
+
+scrivener_version: "3.1.1"
+project_settings:
+  default_font: "Calibri"
+  default_font_size: 12
+  paper_size: "Letter"
+
+metadata_fields:
+  - name: "Section_Status"
+    type: "list"
+    options: ["Outline", "Draft", "Revised", "Approved"]
+    default: "Outline"
+
+collections:
+  - name: "Draft Sections"
+    type: "search"
+    criteria: "Section_Status equals 'Draft'"
+
+binder_structure:
+  - id: "01"
+    title: "Front Matter"
+    type: "folder"
+    children:
+      - title: "Abstract"
+        type: "document"
+      - title: "Acknowledgements"
+        type: "document"
+  - id: "02"
+    title: "Chapters"
+    type: "folder"
+    children:
+      - title: "Introduction"
+        type: "document"
+        template: "Chapter Template"
+      - title: "Literature Review"
+        type: "document"
+        template: "Chapter Template"
+      - title: "Methodology"
+        type: "document"
+        template: "Chapter Template"
+      - title: "Results"
+        type: "document"
+        template: "Chapter Template"
+      - title: "Discussion"
+        type: "document"
+        template: "Chapter Template"
+  - id: "03"
+    title: "References"
+    type: "folder"
+    children:
+      - title: "Bibliography"
+        type: "document"
+  - id: "04"
+    title: "Appendices"
+    type: "folder"
+    children:
+      - title: "Appendix A"
+        type: "document"
+
+document_templates:
+  - name: "Chapter Template"
+    description: "Academic chapter starter"
+    content: |
+      # [Chapter Title]
+
+      Research question:
+      [State the key question for this section]
+
+      Main argument:
+      [Summarize the core claim]
+
+      Evidence:
+      - [Source or dataset]
+      - [Source or dataset]
+
+      Notes:
+      [Working notes]
+
+variables: {}
+placeholders: {}

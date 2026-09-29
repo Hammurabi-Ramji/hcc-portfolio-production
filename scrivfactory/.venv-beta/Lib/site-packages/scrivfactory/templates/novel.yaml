@@ -1,0 +1,78 @@
+template_name: "Novel Manuscript"
+template_version: "1.0.0"
+author: "scrivfactory"
+description: "A fiction-writing starter with acts, scenes, and reference folders."
+
+scrivener_version: "3.1.1"
+project_settings:
+  default_font: "Calibri"
+  default_font_size: 12
+  paper_size: "Letter"
+
+metadata_fields:
+  - name: "POV"
+    type: "text"
+    default: ""
+  - name: "Status"
+    type: "list"
+    options: ["Draft", "Revised", "Final"]
+    default: "Draft"
+
+collections:
+  - name: "Scenes To Revise"
+    type: "search"
+    criteria: "Status equals 'Draft'"
+
+binder_structure:
+  - id: "01"
+    title: "Front Matter"
+    type: "folder"
+    children:
+      - title: "Title Page"
+        type: "document"
+        content: |
+          {{project_name}}
+
+          by [Author Name]
+  - id: "02"
+    title: "Act I"
+    type: "folder"
+    children:
+      - title: "Chapter 1"
+        type: "document"
+        template: "Scene Template"
+      - title: "Chapter 2"
+        type: "document"
+        template: "Scene Template"
+  - id: "03"
+    title: "Characters"
+    type: "folder"
+    children:
+      - title: "Character Notes"
+        type: "document"
+  - id: "04"
+    title: "Research"
+    type: "folder"
+    children:
+      - title: "Worldbuilding"
+        type: "document"
+
+document_templates:
+  - name: "Scene Template"
+    description: "Novel scene starter"
+    content: |
+      Scene Title: [Enter Scene Title]
+      POV: [Character Name]
+      Date: {{date}}
+
+      Goal:
+      [What does the character want?]
+
+      Conflict:
+      [What stands in the way?]
+
+      Outcome:
+      [How does the scene change the story?]
+
+variables: {}
+placeholders: {}

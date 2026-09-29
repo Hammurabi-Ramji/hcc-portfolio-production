@@ -1,0 +1,13 @@
+{
+  "template_id": "finance_saas",
+  "industry": "Finance",
+  "bundled_components": [
+    "auth_system",
+    "billing_stripe",
+    "dashboard_analytics",
+    "security_zero_trust",
+    "reporting_engine",
+    "database_sqlite"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

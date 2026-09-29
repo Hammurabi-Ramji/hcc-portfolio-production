@@ -1,0 +1,18 @@
+{
+  "pkg": {
+    "targets": ["win-x64"],
+    "output": "dist/openclaw.exe",
+    "scripts": ["bin/openclaw.js"],
+    "assets": [
+      "integrations/**/*",
+      "data/**/*",
+      "logs/**/*",
+      ".env",
+      "*.md",
+      "package.json"
+    ],
+    "compress": "Brotli",
+    "targets": ["win-x64", "macos-x64", "linux-x64"],
+    "outputPath": "dist"
+  }
+}

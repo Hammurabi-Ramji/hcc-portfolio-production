@@ -1,0 +1,87 @@
+template_name: "Project Management"
+template_version: "1.0.0"
+author: "scrivfactory"
+description: "A planning and delivery workspace for teams and solo operators."
+
+scrivener_version: "3.1.1"
+project_settings:
+  default_font: "Calibri"
+  default_font_size: 11
+  paper_size: "Letter"
+
+metadata_fields:
+  - name: "Task_Status"
+    type: "list"
+    options: ["Backlog", "In Progress", "Blocked", "Done"]
+    default: "Backlog"
+  - name: "Owner"
+    type: "text"
+    default: ""
+
+collections:
+  - name: "Blocked Tasks"
+    type: "search"
+    criteria: "Task_Status equals 'Blocked'"
+  - name: "In Progress"
+    type: "search"
+    criteria: "Task_Status equals 'In Progress'"
+
+binder_structure:
+  - id: "01"
+    title: "Vision"
+    type: "folder"
+    children:
+      - title: "Project Brief"
+        type: "document"
+      - title: "Success Metrics"
+        type: "document"
+  - id: "02"
+    title: "Planning"
+    type: "folder"
+    children:
+      - title: "Roadmap"
+        type: "document"
+      - title: "Risk Register"
+        type: "document"
+      - title: "Milestones"
+        type: "document"
+  - id: "03"
+    title: "Execution"
+    type: "folder"
+    children:
+      - title: "Sprint Notes"
+        type: "document"
+        template: "Meeting Notes"
+      - title: "Backlog"
+        type: "document"
+      - title: "Decisions"
+        type: "document"
+  - id: "04"
+    title: "Retrospective"
+    type: "folder"
+    children:
+      - title: "Wins"
+        type: "document"
+      - title: "Lessons Learned"
+        type: "document"
+
+document_templates:
+  - name: "Meeting Notes"
+    description: "Structured meeting note template"
+    content: |
+      Meeting: [Meeting Name]
+      Date: {{fulldate}}
+      Facilitator: [Name]
+
+      Agenda:
+      - [Item one]
+      - [Item two]
+
+      Notes:
+      [Discussion notes]
+
+      Action Items:
+      - Owner: [Name] | Due: [Date] | TODO
+
+variables: {}
+placeholders: {}

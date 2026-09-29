@@ -1,0 +1,513 @@
+template_name: "FDA Compliance Dossier"
+template_version: "1.0.0"
+author: "Compliance Team"
+description: "Complete FDA 21 CFR Part 211 compliance documentation structure."
+
+scrivener_version: "3.1.1"
+project_settings:
+  default_font: "Calibri"
+  default_font_size: 11
+  paper_size: "Letter"
+
+metadata_fields:
+  - name: "Document_Type"
+    type: "text"
+    default: ""
+  - name: "Effective_Date"
+    type: "date"
+    default: ""
+  - name: "Review_Date"
+    type: "date"
+    default: ""
+  - name: "Document_Number"
+    type: "text"
+    default: ""
+  - name: "Approval_Status"
+    type: "list"
+    options: ["Draft", "Under Review", "Approved"]
+    default: "Draft"
+  - name: "Owner"
+    type: "text"
+    default: ""
+
+collections:
+  - name: "Action Items"
+    type: "search"
+    criteria: "text contains 'Action Item' OR 'TODO'"
+  - name: "Due This Week"
+    type: "search"
+    criteria: "Review_Date within 7 days"
+  - name: "FDA Critical Docs"
+    type: "manual"
+    description: "Key documents that inspectors request most often."
+  - name: "Pending Approval"
+    type: "search"
+    criteria: "Approval_Status equals 'Under Review'"
+
+binder_structure:
+  - id: "01"
+    title: "01 - Cover & Executive Documents"
+    type: "folder"
+    children:
+      - title: "Cover Page Template"
+        type: "document"
+        content: |
+          {{company_name}}
+          FDA Compliance Dossier
+          Facility: {{facility_id}}
+          Prepared for: {{compliance_officer}}
+          Date: {{fulldate}}
+      - title: "Table of Contents"
+        type: "document"
+        content: |
+          TABLE OF CONTENTS
+
+          [Auto-generated during compile]
+      - title: "Executive Compliance Statement"
+        type: "document"
+        content: |
+          EXECUTIVE COMPLIANCE STATEMENT
+
+          This dossier contains the current inspection-ready document set for {{company_name}}.
+      - title: "FDA Inspection Protocol Overview"
+        type: "document"
+        content: |
+          FDA INSPECTION PROTOCOL OVERVIEW
+
+          Action Item: Review the inspection response team roster before each audit window.
+
+  - id: "02"
+    title: "02 - Quality Management System"
+    type: "folder"
+    children:
+      - title: "Quality Manual Master"
+        type: "document"
+        template: "SOP Template"
+      - title: "Management Review Records"
+        type: "folder"
+        children:
+          - title: "Q1 Management Review"
+            type: "document"
+          - title: "Q2 Management Review"
+            type: "document"
+          - title: "Q3 Management Review"
+            type: "document"
+          - title: "Q4 Management Review"
+            type: "document"
+      - title: "Internal Audit Reports"
+        type: "folder"
+        children:
+          - title: "Audit Schedule Master"
+            type: "document"
+          - title: "Internal Audit Template"
+            type: "document"
+            template: "Checklist Template"
+          - title: "Completed Audits"
+            type: "folder"
+      - title: "CAPA Tracking"
+        type: "folder"
+        children:
+          - title: "CAPA Master Log"
+            type: "document"
+          - title: "Active CAPA Records"
+            type: "folder"
+
+  - id: "03"
+    title: "03 - GMP Compliance Documentation"
+    type: "folder"
+    children:
+      - title: "Standard Operating Procedures"
+        type: "folder"
+        children:
+          - title: "SOP Index Master"
+            type: "document"
+          - title: "Manufacturing SOPs"
+            type: "folder"
+          - title: "Quality Control SOPs"
+            type: "folder"
+          - title: "Facilities SOPs"
+            type: "folder"
+          - title: "Administrative SOPs"
+            type: "folder"
+      - title: "Batch Records"
+        type: "folder"
+        children:
+          - title: "Master Batch Record Template"
+            type: "document"
+            template: "Checklist Template"
+          - title: "Executed Batch Records (Current Year)"
+            type: "folder"
+          - title: "Historical Batch Records"
+            type: "folder"
+      - title: "Change Control"
+        type: "folder"
+        children:
+          - title: "Change Control Log"
+            type: "document"
+          - title: "Change Control Records"
+            type: "folder"
+
+  - id: "04"
+    title: "04 - Laboratory Controls"
+    type: "folder"
+    children:
+      - title: "Testing Procedures"
+        type: "folder"
+        children:
+          - title: "Method Validation Master List"
+            type: "document"
+          - title: "Validated Methods"
+            type: "folder"
+          - title: "Method Verification Records"
+            type: "folder"
+      - title: "Equipment Records"
+        type: "folder"
+        children:
+          - title: "Equipment Inventory"
+            type: "document"
+          - title: "Calibration Records"
+            type: "folder"
+          - title: "Maintenance Logs"
+            type: "folder"
+      - title: "OOS Investigations"
+        type: "folder"
+        children:
+          - title: "OOS Investigation Template"
+            type: "document"
+            template: "CAPA Form Template"
+          - title: "Completed OOS Reports"
+            type: "folder"
+
+  - id: "05"
+    title: "05 - Facilities & Equipment"
+    type: "folder"
+    children:
+      - title: "Qualification Documentation"
+        type: "folder"
+        children:
+          - title: "Equipment Qualification Master List"
+            type: "document"
+          - title: "Installation Qualifications (IQ)"
+            type: "folder"
+          - title: "Operational Qualifications (OQ)"
+            type: "folder"
+          - title: "Performance Qualifications (PQ)"
+            type: "folder"
+      - title: "Calibration & Maintenance"
+        type: "folder"
+        children:
+          - title: "Calibration Schedule"
+            type: "document"
+          - title: "Maintenance Records"
+            type: "folder"
+      - title: "Cleaning Validation"
+        type: "folder"
+        children:
+          - title: "Cleaning Validation Protocol Template"
+            type: "document"
+            template: "Checklist Template"
+          - title: "Validation Reports"
+            type: "folder"
+
+  - id: "06"
+    title: "06 - Materials Management"
+    type: "folder"
+    children:
+      - title: "Supplier Qualification"
+        type: "folder"
+        children:
+          - title: "Approved Supplier List"
+            type: "document"
+          - title: "Supplier Audit Reports"
+            type: "folder"
+          - title: "Supplier Certifications"
+            type: "folder"
+      - title: "Incoming Materials"
+        type: "folder"
+        children:
+          - title: "Raw Material Testing Log"
+            type: "document"
+          - title: "Certificate of Analysis Library"
+            type: "folder"
+      - title: "Inventory Control"
+        type: "folder"
+        children:
+          - title: "Inventory Management SOP"
+            type: "document"
+            template: "SOP Template"
+          - title: "Storage Condition Logs"
+            type: "folder"
+
+  - id: "07"
+    title: "07 - Production & Process Controls"
+    type: "folder"
+    children:
+      - title: "Master Production Records"
+        type: "folder"
+        children:
+          - title: "MPR Template"
+            type: "document"
+            template: "Checklist Template"
+          - title: "Approved MPRs"
+            type: "folder"
+      - title: "In-Process Controls"
+        type: "folder"
+        children:
+          - title: "In-Process Testing Schedule"
+            type: "document"
+          - title: "Control Charts"
+            type: "folder"
+      - title: "Deviation Management"
+        type: "folder"
+        children:
+          - title: "Deviation Log"
+            type: "document"
+          - title: "Investigation Reports"
+            type: "folder"
+
+  - id: "08"
+    title: "08 - Packaging & Labeling"
+    type: "folder"
+    children:
+      - title: "Label Controls"
+        type: "folder"
+        children:
+          - title: "Label Approval Matrix"
+            type: "document"
+          - title: "Approved Label Templates"
+            type: "folder"
+          - title: "Label Control Records"
+            type: "folder"
+      - title: "Packaging Line Clearance"
+        type: "folder"
+        children:
+          - title: "Line Clearance Checklist Template"
+            type: "document"
+            template: "Checklist Template"
+          - title: "Completed Clearances"
+            type: "folder"
+      - title: "Packaging Materials"
+        type: "folder"
+        children:
+          - title: "Packaging Material Specifications"
+            type: "document"
+          - title: "Testing Records"
+            type: "folder"
+
+  - id: "09"
+    title: "09 - Complaints, Recalls & CAPA"
+    type: "folder"
+    children:
+      - title: "Complaint Handling"
+        type: "folder"
+        children:
+          - title: "Complaint Handling SOP"
+            type: "document"
+            template: "SOP Template"
+          - title: "Complaint Log Master"
+            type: "document"
+          - title: "Individual Complaint Files"
+            type: "folder"
+      - title: "Recall Management"
+        type: "folder"
+        children:
+          - title: "Recall Procedure"
+            type: "document"
+            template: "SOP Template"
+          - title: "Mock Recall Reports"
+            type: "folder"
+          - title: "Recall Documentation"
+            type: "folder"
+      - title: "CAPA System"
+        type: "folder"
+        children:
+          - title: "CAPA Procedure"
+            type: "document"
+            template: "CAPA Form Template"
+          - title: "CAPA Effectiveness Review"
+            type: "document"
+          - title: "CAPA Records"
+            type: "folder"
+
+  - id: "10"
+    title: "10 - Training & Personnel"
+    type: "folder"
+    children:
+      - title: "Training Documentation"
+        type: "folder"
+        children:
+          - title: "Training Matrix Master"
+            type: "document"
+          - title: "Training SOPs"
+            type: "folder"
+          - title: "Training Materials"
+            type: "folder"
+      - title: "Personnel Qualification"
+        type: "folder"
+        children:
+          - title: "Job Descriptions"
+            type: "folder"
+          - title: "Individual Training Records"
+            type: "folder"
+          - title: "Competency Assessments"
+            type: "folder"
+      - title: "Training Effectiveness"
+        type: "folder"
+        children:
+          - title: "Training Effectiveness Evaluation"
+            type: "document"
+          - title: "Assessment Records"
+            type: "folder"
+
+  - id: "11"
+    title: "11 - FDA Inspection Management"
+    type: "folder"
+    children:
+      - title: "Inspection Protocols"
+        type: "folder"
+        children:
+          - title: "Pre-Inspection Checklist"
+            type: "document"
+            template: "Checklist Template"
+          - title: "During Inspection Checklist"
+            type: "document"
+            template: "Checklist Template"
+          - title: "Post-Inspection Checklist"
+            type: "document"
+            template: "Checklist Template"
+      - title: "Inspection Tools"
+        type: "folder"
+        children:
+          - title: "FDA Request Log Template"
+            type: "document"
+          - title: "Daily Debrief Form"
+            type: "document"
+          - title: "Document Response Form"
+            type: "document"
+      - title: "Inspection Records"
+        type: "folder"
+        children:
+          - title: "Current Inspection Files"
+            type: "folder"
+          - title: "Historical Inspections"
+            type: "folder"
+
+  - id: "12"
+    title: "12 - Appendices & References"
+    type: "folder"
+    children:
+      - title: "CFR Reference Guide"
+        type: "document"
+      - title: "Glossary of Terms"
+        type: "document"
+      - title: "Organizational Chart"
+        type: "document"
+      - title: "Facility Layout Diagram"
+        type: "document"
+      - title: "Supporting Documentation"
+        type: "folder"
+
+document_templates:
+  - name: "SOP Template"
+    description: "Standard Operating Procedure template"
+    content: |
+      STANDARD OPERATING PROCEDURE
+
+      Company: {{company_name}}
+      Document Number: SOP-[DOCNUM]
+      Title: [Enter SOP Title]
+      Effective Date: {{date}}
+      Revision: 1.0
+
+      PURPOSE:
+      [Describe why this SOP exists]
+
+      SCOPE:
+      [Define what this SOP covers]
+
+      RESPONSIBILITIES:
+      Quality Manager: [Define responsibility]
+      Production Manager: [Define responsibility]
+      Operators: [Define responsibility]
+
+      PROCEDURE:
+      1. [Step one]
+      2. [Step two]
+      3. [Continue numbering]
+
+      REFERENCES:
+      21 CFR Part 211
+      [Internal procedures referenced]
+
+      APPROVALS:
+      Prepared: _________________ Date: _______
+      Reviewed: _________________ Date: _______
+      Approved: _________________ Date: _______
+
+  - name: "CAPA Form Template"
+    description: "Corrective and Preventive Action form"
+    content: |
+      CORRECTIVE AND PREVENTIVE ACTION (CAPA)
+
+      CAPA #: CAPA-{{year}}-[DOCNUM:0001]
+      Date Opened: {{fulldate}}
+      Opened By: {{compliance_officer}}
+
+      PROBLEM IDENTIFICATION:
+      Source: Audit / Complaint / Inspection / Other
+      Description:
+      [Detailed problem description]
+
+      ROOT CAUSE ANALYSIS:
+      Method: 5-Why / Fishbone / Other
+      Root Cause:
+      [Root cause identified]
+
+      CORRECTIVE ACTION:
+      Immediate Action:
+      [What was done immediately]
+
+      Long-term Correction:
+      Action | Owner | Due Date | Status
+      [Action items]
+
+      VERIFICATION:
+      Method: [How effectiveness will be verified]
+      Results: [Results of verification]
+      Effective: Yes / No
+
+  - name: "Checklist Template"
+    description: "Inspection readiness checklist"
+    content: |
+      INSPECTION READINESS CHECKLIST
+
+      Date: {{fulldate}}
+      Facility: {{facility_id}}
+      Owner: {{compliance_officer}}
+
+      PREPARATION:
+      - [ ] Review current SOP index
+      - [ ] Confirm CAPA log is current
+      - [ ] Confirm training records are complete
+      - [ ] Verify calibration status for critical equipment
+
+      DURING INSPECTION:
+      - [ ] Log each request immediately
+      - [ ] Provide controlled copies only
+      - [ ] Document follow-up questions
+
+      POST-INSPECTION:
+      - [ ] Record observations
+      - [ ] Assign Action Item owners
+      - [ ] Update Pending Approval documents
+
+variables:
+  company_name: "Your Company Name"
+  facility_id: "FAC-001"
+  compliance_officer: "[Name]"
+
+placeholders:
+  DOCNUM: "auto_increment:0001"
+  DATE: "{{date}}"
+  YEAR: "{{year}}"
+  PAGENUM: "1"

@@ -1,0 +1,12 @@
+{
+  "template_id": "legal_saas",
+  "industry": "Legal",
+  "bundled_components": [
+    "security_zero_trust",
+    "reporting_engine",
+    "file_storage_local",
+    "auth_system",
+    "database_sqlite"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

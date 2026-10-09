@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>STRAW Desk</title>
+  <link data-trunk rel="copy-dir" href="public">
+  <script type="importmap">
+  {"imports": {
+    "svelte": "/public/ui/vendor/svelte/index-client.js",
+    "svelte/internal/client": "/public/ui/vendor/svelte/internal/client/index.js",
+    "svelte/internal/flags/legacy": "/public/ui/vendor/svelte/internal/flags/legacy.js",
+    "svelte/attachments": "/public/ui/vendor/svelte/attachments/index.js",
+    "svelte/store": "/public/ui/vendor/svelte/store/index-client.js",
+    "#client/constants": "/public/ui/vendor/svelte/internal/client/constants.js",
+    "esm-env": "/public/ui/vendor/env.js",
+    "clsx": "/public/ui/vendor/clsx.mjs",
+    "wasm-frontend": "/wasm-frontend.js"
+  }}
+  </script>
+  <link data-trunk rel="rust" href="crates/wasm-frontend/Cargo.toml" data-wasm-opt="0">
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/public/ui/main.js"></script>
+</body>
+</html>
+

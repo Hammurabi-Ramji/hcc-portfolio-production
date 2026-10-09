@@ -1,0 +1,283 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: northstar-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - northstar-network
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+  api-gateway:
+    build:
+      context: ./backend/api-gateway
+      dockerfile: Dockerfile
+    container_name: northstar-api-gateway
+    environment:
+      PORT: 8080
+      NODE_ENV: development
+      LOG_LEVEL: info
+      CUSTOMER_SERVICE_URL: http://customer-service:8084
+      CRM_SERVICE_URL: http://crm-service:8090
+      ESTIMATION_SERVICE_URL: http://estimation-service:8086
+      FIELD_OPERATIONS_SERVICE_URL: http://field-operations-service:8087
+      FINANCIAL_SERVICE_URL: http://financial-service:8088
+      INVENTORY_SERVICE_URL: http://inventory-service:8089
+      DOCUMENT_SERVICE_URL: http://document-service:8085
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      REDIS_URL: redis://redis:6379
+    ports:
+      - "8080:8080"
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./backend/api-gateway/src:/app/src
+      - ./backend/api-gateway/package.json:/app/package.json
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  customer-service:
+    build:
+      context: ./backend/customer-service
+      dockerfile: Dockerfile
+    container_name: northstar-customer-service
+    environment:
+      PORT: 8084
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/customer.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+    ports:
+      - "8084:8084"
+    volumes:
+      - ./backend/customer-service/src:/app/src
+      - ./backend/customer-service/package.json:/app/package.json
+      - northstar_data:/data
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8084/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  estimation-service:
+    build:
+      context: ./backend/estimation-service
+      dockerfile: Dockerfile
+    container_name: northstar-estimation-service
+    environment:
+      PORT: 8086
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/estimation.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./backend/estimation-service/src:/app/src
+      - ./backend/estimation-service/package.json:/app/package.json
+      - northstar_data:/data
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  field-operations-service:
+    build:
+      context: ./backend/field-operations-service
+      dockerfile: Dockerfile
+    container_name: northstar-field-operations-service
+    environment:
+      PORT: 8087
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/field_operations.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+    ports:
+      - "8087:8087"
+    volumes:
+      - ./backend/field-operations-service/src:/app/src
+      - ./backend/field-operations-service/package.json:/app/package.json
+      - northstar_data:/data
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8087/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  crm-service:
+    build:
+      context: ./backend/crm-service
+      dockerfile: Dockerfile
+    container_name: northstar-crm-service
+    environment:
+      PORT: 8090
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/crm.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./backend/crm-service/src:/app/src
+      - ./backend/crm-service/package.json:/app/package.json
+      - northstar_data:/data
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8090/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  financial-service:
+    build:
+      context: ./backend/financial-service
+      dockerfile: Dockerfile
+    container_name: northstar-financial-service
+    environment:
+      PORT: 8088
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/financial.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./backend/financial-service/src:/app/src
+      - ./backend/financial-service/package.json:/app/package.json
+      - northstar_data:/data
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  inventory-service:
+    build:
+      context: ./backend/inventory-service
+      dockerfile: Dockerfile
+    container_name: northstar-inventory-service
+    environment:
+      PORT: 8089
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/inventory.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+    ports:
+      - "8089:8089"
+    volumes:
+      - ./backend/inventory-service/src:/app/src
+      - ./backend/inventory-service/package.json:/app/package.json
+      - northstar_data:/data
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8089/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  document-service:
+    build:
+      context: ./backend/document-service
+      dockerfile: Dockerfile
+    container_name: northstar-document-service
+    environment:
+      PORT: 8085
+      NODE_ENV: development
+      LOG_LEVEL: info
+      DB_TYPE: sqlite3
+      DB_PATH: /data/document.db
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      STORAGE_PATH: /storage
+    ports:
+      - "8085:8085"
+    volumes:
+      - ./backend/document-service/src:/app/src
+      - ./backend/document-service/package.json:/app/package.json
+      - northstar_data:/data
+      - northstar_storage:/storage
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8085/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: northstar-frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:8080/api
+      REACT_APP_WS_URL: ws://localhost:8080
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
+    depends_on:
+      api-gateway:
+        condition: service_healthy
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/package.json:/app/package.json
+    networks:
+      - northstar-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  redis_data:
+    driver: local
+  northstar_data:
+    driver: local
+  northstar_storage:
+    driver: local
+
+networks:
+  northstar-network:
+    driver: bridge

@@ -1,0 +1,42 @@
+.team-availability-calendar { padding: 24px; margin-bottom: 32px; }
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+.calendar-header h2 { font-size: 20px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px 0; }
+.calendar-header p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+.calendar-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.view-toggle { display: flex; background-color: var(--bg-secondary); border-radius: 6px; padding: 2px; }
+.view-btn { padding: 6px 12px; background: none; border: none; color: var(--text-secondary); cursor: pointer; border-radius: 4px; font-size: 13px; font-weight: 500; transition: all 0.2s ease; }
+.view-btn:hover { color: var(--text-primary); }
+.view-btn.active { background-color: var(--accent-primary); color: white; }
+.week-navigation { display: flex; align-items: center; gap: 8px; }
+.nav-btn { background: none; border: 1px solid var(--border-color); color: var(--text-primary); cursor: pointer; padding: 6px; border-radius: 4px; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; }
+.nav-btn:hover { background-color: var(--bg-tertiary); border-color: var(--accent-primary); }
+.current-week { font-size: 14px; font-weight: 600; color: var(--text-primary); min-width: 180px; text-align: center; }
+.calendar-grid { display: grid; grid-template-columns: 280px 1fr; gap: 20px; }
+.team-sidebar { background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; }
+.team-sidebar h3 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0 0 16px 0; }
+.team-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.team-member-card { display: flex; align-items: center; gap: 12px; padding: 12px; background-color: var(--bg-secondary); border-radius: 6px; }
+.member-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), #00bcf2); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; }
+.member-info { flex: 1; }
+.member-name { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+.member-role { font-size: 12px; color: var(--text-tertiary); }
+.availability-indicator { width: 12px; height: 12px; border-radius: 50%; }
+.availability-legend { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 1px solid var(--border-color); }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-secondary); }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+.calendar-content { background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
+.week-days-header { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px; background-color: var(--border-color); border-bottom: 1px solid var(--border-color); }
+.day-header { padding: 12px 8px; background-color: var(--bg-secondary); text-align: center; cursor: pointer; transition: all 0.2s ease; border: none; }
+.day-header:hover { background-color: var(--bg-tertiary); }
+.day-header.selected { background-color: var(--accent-primary); color: white; }
+.day-name { font-size: 12px; font-weight: 600; margin-bottom: 4px; text-transform: uppercase; }
+.day-label { font-size: 18px; font-weight: 700; }
+.schedule-grid { display: flex; flex-direction: column; }
+.member-schedule-row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px; background-color: var(--border-color); border-bottom: 1px solid var(--border-color); }
+.schedule-cell { background-color: var(--bg-primary); min-height: 80px; padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+.schedule-block { padding: 6px; background-color: rgba(0, 120, 212, 0.1); border-left: 3px solid var(--accent-primary); border-radius: 4px; }
+.schedule-time { font-size: 11px; font-weight: 600; color: var(--accent-primary); margin-bottom: 2px; }
+.schedule-project { font-size: 11px; color: var(--text-primary); }
+.available-slot { display: flex; align-items: center; justify-content: center; height: 100%; font-size: 11px; color: var(--success); font-weight: 500; font-style: italic; opacity: 0.6; }
+@media (max-width: 1200px) { .calendar-grid { grid-template-columns: 1fr; } .team-sidebar { display: none; } }
+@media (max-width: 768px) { .week-days-header { grid-template-columns: repeat(3, 1fr); } .member-schedule-row { grid-template-columns: repeat(3, 1fr); } .calendar-controls { flex-direction: column; align-items: stretch; } }

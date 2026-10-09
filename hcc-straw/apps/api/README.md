@@ -1,0 +1,17 @@
+# Local STRAW web API
+
+This independent Rust workspace owns the legacy web application's local authentication and SQLite persistence. Start from this folder with `cargo run --offline --locked`. It binds only literal `127.0.0.1`, default port 3001. It does not serve the desktop application.
+
+Set the same `STRAW_API_PORT` and `STRAW_WEB_ORIGIN` for this process and Next. Defaults are 3001 and `http://localhost:3000`. The origin must be one exact local HTTP(S) origin; all unsafe requests require that Origin header. `STRAW_API_DATABASE` selects the SQLite path (default `straw-web.sqlite3` relative to the process working directory). Preserve that file across restarts; protect its filesystem access as it contains password hashes and account data. The Next route handlers use the server-only fixed-loopback proxy. Browser credentials travel solely in the `straw_session` HttpOnly, SameSite=Strict, Path=/ cookie. HTTPS origins add Secure; explicit local HTTP development is supported.
+
+Public registration always creates a user with `emailVerified:false` and `isActive:true`. Passwords use salted Argon2id. Ordinary cookies have no Max-Age and a server expiry of 8 hours; rememberMe login issues a persistent cookie with bounded 30-day expiry. Refresh revokes the previous credential atomically and issues a new random credential. Logout revokes and clears the cookie. Credentials are stored only as SHA-256 hashes of random 256-bit values. Every authenticated request checks persisted expiry, revocation and active account state.
+
+To create an administrator, stop normal operation if necessary and run `cargo run --offline --locked -- bootstrap-admin operator@example.test`, providing the password through standard input followed by EOF. Use a local secret-input mechanism; do not put the password in shell arguments/history. This creates a new administrator and refuses an existing email rather than promoting accounts. There is no public administrator registration field or bootstrap HTTP route. This does not mark an email as verified.
+
+Supported contracts: POST `/api/auth/register`, `/login`, `/logout`, `/refresh-token`; GET `/api/auth/me`. GET `/verify-email` (POST also accepted), POST `/forgot-password`, `/reset-password` return HTTP 501 `UNSUPPORTED` because no email transport is configured. They do not claim delivery, create tokens, or disclose recovery secrets.
+
+All JSON results use the canonical ApiResponse envelope, with `{user}` inside login/register/refresh data and a singular UserDto for me and `data:null` for logout. IDs and timestamps are strings; flags reflect persisted state. Bodies are limited to 16 KiB; malformed or unknown auth fields return 400. Origins are enforced independently at Next and Rust. No CORS grant or arbitrary outbound destination exists.
+
+Run `cargo test --offline --locked` for isolated real-loopback HTTP, persistence, session, Origin, envelope, role/bootstrap and input regressions. Tests bind ephemeral ports and stop their servers. Full Next/browser integration is owned by downstream integration agents.
+
+Extension interfaces: `AppState`, `Store::with_conn`, `store::load_user`, `UserDto`, `ProfileDto`, `auth::authenticate`, and `ValidSession` role/ownership predicates. Serialized users then projects module owners add routers before global fallbacks/layers in `lib.rs`; table and DTO fields are in `store.rs`. Protected mutations must keep authorization and record writes within their transaction where needed. Do not expose password_hash or session token_hash in public responses.

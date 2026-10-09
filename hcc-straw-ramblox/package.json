@@ -1,0 +1,49 @@
+{
+  "name": "ramblox",
+  "version": "2.0.0",
+  "description": "Roblox game development platform with SQLite backend",
+  "type": "module",
+  "scripts": {
+    "dev": "cd client && next dev",
+    "build": "cd client && next build",
+    "start": "cd client && next start",
+    "lint": "cd client && next lint",
+    "type-check": "cd client && tsc --noEmit",
+    "setup-db": "node scripts/setup-database.mjs",
+    "db:migrate": "node scripts/setup-database.mjs",
+    "test:manual": "node scripts/manual-test.cjs",
+    "test:e2e": "node scripts/e2e-tests.mjs",
+    "test:e2e:full": "node scripts/run-full-e2e.mjs",
+    "test:e2e:ci": "node scripts/run-full-e2e.mjs",
+    "deploy:staging": "vercel --prod"
+  },
+  "dependencies": {
+    "next": "15.1.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@react-three/fiber": "^8.17.14",
+    "@react-three/drei": "^9.121.5",
+    "three": "^0.174.0",
+    "tailwind-merge": "^2.6.0",
+    "bcrypt": "^5.1.1",
+    "better-sqlite3": "^11.6.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/node": "^20.14.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.174.0",
+    "typescript": "^5.8.2",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.5.3",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

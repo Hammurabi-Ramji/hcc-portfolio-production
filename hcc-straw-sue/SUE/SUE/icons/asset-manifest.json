@@ -1,0 +1,40 @@
+{
+  "name": "SUE",
+  "tagline": "SOTA AI Sidebar UI Extension",
+  "colors": {
+    "midnight": "#050816",
+    "panel": "#0f172a",
+    "blue": "#2563eb",
+    "violet": "#8b5cf6",
+    "cyan": "#22d3ee",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "danger": "#f43f5e",
+    "text": "#f8fafc",
+    "muted": "#94a3b8"
+  },
+  "assets": [
+    "button-automation.svg",
+    "button-primary-send.svg",
+    "button-secondary-analyze.svg",
+    "button-settings.svg",
+    "button-vision.svg",
+    "icon128.png",
+    "icon128.svg",
+    "icon16.png",
+    "icon16.svg",
+    "icon256.png",
+    "icon256.svg",
+    "icon32.png",
+    "icon32.svg",
+    "icon48.png",
+    "icon48.svg",
+    "icon512.png",
+    "icon512.svg",
+    "icon64.png",
+    "icon64.svg",
+    "icon96.png",
+    "icon96.svg",
+    "sue-logo-banner.png"
+  ]
+}

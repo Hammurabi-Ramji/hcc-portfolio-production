@@ -1,0 +1,187 @@
+You want the full inventory. Every asset required to take SUE from "the developer just pushed the release binary" to "customers are paying and referring." I'll structure this by pipeline phase with counts, delivery formats, and dependencies.
+
+---
+
+# SUE PRODUCT LAUNCH — COMPLETE MARKETING MATERIALS MANIFEST
+
+## Phase 0: Brand Foundation (Build once, use everywhere)
+
+These are the atomic assets every downstream piece depends on. Do not skip any.
+
+| # | Asset | Format | Dependency |
+|---|---|---|---|
+| 1.1 | Logo — full color (horizontal + stacked + icon-only) | SVG + PNG (3 variants) | None |
+| 1.2 | Logo — reversed (for dark backgrounds) | SVG + PNG | 1.1 |
+| 1.3 | Logo — monochrome (for print/favicon) | SVG + PNG | 1.1 |
+| 1.4 | Color palette document (hex/rgb/cmyk values, gradient stops) | PDF + Figma | None |
+| 1.5 | Typography spec (headline, body, mono font families + sizes) | PDF | None |
+| 1.6 | Brand guidelines v1 (1-page usage rules) | PDF | 1.1–1.5 |
+| 1.7 | Voice & tone guide (3-page doc covering messaging principles, sovereignty positioning, "we don't" statements) | PDF | None |
+| 1.8 | Tagline variants (primary + 3 alternates stress-tested against audience) | Text document | 1.7 |
+| 1.9 | Approved screenshots library (clean UI states, no mock data, 3 viewport sizes) | PNG @2x, 10–15 files | Working product |
+
+---
+
+## Phase 1: Website & Landing Suite
+
+Every page must exist in at least the native-leptos build. No JS, verified by Gate 7.
+
+| # | Page/Asset | Key Elements | Priority |
+|---|---|---|---|
+| 2.1 | **Homepage / Hero page** | Hero headline + subhead, 3-benefit grid, product screenshot hero, social proof bar (logos or user count), CTA, footer with sovereignty badge | P0 |
+| 2.2 | **Features page** | Feature-by-feature walkthrough with screenshots per section, search/filter, comparison to incumbents | P0 |
+| 2.3 | **Pricing page** | Three tiers (Free, Pro $499 lifetime, Enterprise custom), feature comparison matrix, "what you actually get" table, FAQ to preempt objections | P0 |
+| 2.4 | **Documentation / Quickstart** | Getting started guide, self-host install instructions (single binary + systemd unit), API reference, export schema docs | P0 |
+| 2.5 | **Security & Sovereignty page** | Encryption architecture diagram, data flow map, third-party dependency list, hosted vs self-hosted comparison | P1 |
+| 2.6 | **Changelog / Roadmap** | Public changelog (markdown from git tags), public roadmap board (no login required) | P1 |
+| 2.7 | **Blog** | Minimum 4 launch-week posts (see Phase 4) | P0 |
+| 2.8 | **About page** | Founder story, methodology (BSM-C summary in plain language), company ethos | P2 |
+| 2.9 | **Contact / Support page** | Email contact form, knowledge base link, SLA commitment text | P1 |
+| 2.10 | **Affiliate / Referral page** | Program terms (30% lifetime revenue share on referred licenses), signup form, tracking dashboard for affiliates | P2 |
+| 2.11 | **Status page** | Uptime monitor (self-hosted health endpoint), incident history feed | P2 |
+| 2.12 | **Comparison landing pages (×3)** | SUE vs Asana, SUE vs Monday, SUE vs Linear — separate pages for SEO capture | P1 |
+| 2.13 | **Export schema page** | Downloadable JSON schema of full data model, migration tool (import from CSV/Jira/Asana/Monday) | P0 |
+| 2.14 | **Cookie-less analytics opt-in banner** | Short, plain-language, no third-party trackers on the site by default | P1 |
+
+---
+
+## Phase 2: Visual & Brand Advertising Assets
+
+These go on social, the website, ad platforms, and launch distribution channels.
+
+| # | Asset | Format | Quantity | Uses |
+|---|---|---|---|---|
+| 3.1 | Hero poster (core value prop) | PNG 1080×1920, 1200×630, 1920×1080 | 3 sizes | Website hero, social cover, ad |
+| 3.2 | Feature comparison poster (vs incumbents) | PNG 1200×800, 1080×1080 | 2 sizes | Social carousel, blog embed, print |
+| 3.3 | Testimonial quote card (Marcus V.) | PNG 1200×630, 1080×1080 | 2 sizes | Social proof post, landing page |
+| 3.4 | Testimonial quote card (variants, blank template) | PNG template PSD | 1 template | Ongoing user story posts |
+| 3.5 | 3-product-card series (individual features) | PNG 1080×1080, 3-card set | 3 files | Social carousel, ad sequence |
+| 3.6 | Sovereignty explainer graphic (infographic) | PNG 2400×1800 | 1 file | Blog, downloadable PDF |
+| 3.7 | Pricing breakdown graphic | PNG 1200×800 | 1 file | Pricing page, social |
+| 3.8 | "What you actually get" table card | PNG 1080×1080 | 1 file | Social shareable |
+| 3.9 | Product screenshots (clean, staged) | PNG @2x, 10–15 files | 15 | Every page, social, ads |
+| 3.10 | Product GIF/WEBP demos (loopable, 15s max) | WEBP / GIF, 3–5 files | 5 | Landing page, tweets |
+| 3.11 | Short explainer video (60–90s) | MP4 1920×1080, vertical cut | 2 versions | YouTube, TikTok, Instagram |
+| 3.12 | Founder introduction video (90s) | MP4 1920×1080 | 1 | About page, launch day |
+| 3.13 | B-roll footage / screen recordings for editing | MP4 source, 10–15 clips | 15 | Video editing, ads |
+| 3.14 | Avatar / headshot (founder) | PNG 800×1000, professional | 1 | About page, media kit |
+
+---
+
+## Phase 3: Written Copy & Content Marketing
+
+| # | Asset | Word Count | Target Audience | Distribution |
+|---|---|---|---|---|
+| 4.1 | **Launch blog post #1:** "Why we built a PM tool you can walk away from" | 1500–2000 | Indie devs, technical founders | Website blog, Hacker News, LinkedIn |
+| 4.2 | **Launch blog post #2:** "SUE vs Asana: What the pricing page doesn't tell you" | 2000–2500 | SMB owners burned by SaaS pricing | Website blog, Medium, Reddit |
+| 4.3 | **Launch blog post #3:** "Self-hosting project management without the ops nightmare" | 1500–2000 | Engineering leads at 5–30 person teams | Dev.to, Hacker News, LinkedIn |
+| 4.4 | **Launch blog post #4:** "The Sovereignty Pitch: Why your next tool should be your last" | 2000–2500 | Decision-makers evaluating tools | Website blog, Medium, email |
+| 4.5 | **Email sequence — Pre-launch (3 emails (3)** | 200–400 each | Waitlist subscribers | Mail list |
+| 4.6 | **Email sequence — Launch day email (1)** | 400–600 | Waitlist + newsletter | Mail list |
+| 4.7 | **Email sequence — Post-launch follow-ups (3)** | 200–400 each | Trial users, converters | Mail list |
+| 4.8 | **Landing page copy for all 14 pages (Phase 1)** | Variable | Per page purpose | Website |
+| 4.9 | **Product Hunt launch copy** | Headline + 10-line description + 2 intro comments | PH community | Product Hunt |
+| 4.10 | **Hacker News Show HN post** | Title + 200-word first comment | HN community | Hacker News |
+| 4.11 | **Reddit posts (×3 subreddits)** | 300–500 word self-posts + comments | r/SaaS, r/selfhosted, r/projectmanagement | Reddit |
+| 4.12 | **Twitter/X thread (10–12 tweets)** | 280 characters each + media | Tech Twitter | Twitter/X |
+| 4.13 | **LinkedIn long-form post (founder voice)** | 1000–1500 words | LinkedIn network | LinkedIn |
+| 4.14 | **Comparison PDF download** | 4-page PDF (Pricing comparison, feature checklist, migration guide, FAQ) | 2000 words total | Enterprise leads | Download on website |
+| 4.15 | **Case study template** | Template with fillable sections for future user stories | Marketing operations | Ongoing |
+| 4.16 | **ROI calculator (interactive)** | Embedded calculator + downloadable spreadsheet | Enterprise buyers | Pricing page + download |
+| 4.17 | **FAQ document (30+ questions)** | Covers pricing, self-hosting, migration, security, licensing | Support + sales | Support page, email drips |
+
+---
+
+## Phase 4: Social Media & Community Assets
+
+| # | Asset | Platform | Quantity Pre-built | Schedule |
+|---|---|---|---|---|
+| 5.1 | Teaser posts (countdown / cryptic) | Twitter/X, LinkedIn | 3 posts | T-7 days before launch |
+| 5.2 | Feature highlight series (feature per day) | Twitter/X, LinkedIn | 5 posts | T-5 to T-1 |
+| 5.3 | Launch announcement post (hero poster) | Twitter/X, LinkedIn | 1 post | Launch day 9:00 AM ET |
+| 5.4 | Testimonial share (quote card) | Twitter/X, LinkedIn | 1 post | Launch day + 1 |
+| 5.5 | Pricing comparison share (comparison poster) | Twitter/X, LinkedIn, Reddit | 1 post | Launch day + 2 |
+| 5.6 | "How it works" thread with GIFs | Twitter/X | 1 thread (8–12 tweets) | Launch day + 3 |
+| 5.7 | User onboarding tutorial thread | Twitter/X, LinkedIn | 1 thread | Launch day + 5 |
+| 5.8 | Content repurposing schedule (each blog post → 3–5 tweets + 1 LinkedIn post) | Twitter/X, LinkedIn | 4 × 4 = 16 posts | Every 2 days post-launch |
+| 5.9 ...| 5.9 | Launch week live AMA session (text-based, founder answers questions in real-time) | Twitter/X Spaces + Discord | 1 session, 1 hr | Launch day, 3:00 PM ET |
+
+| 5.10 | Discord community — seeded conversations (5 topics, 3 questions each) | Discord | 15 starter posts | Launch day + ongoing |
+| 5.11 | Reddit comment stubs (pre-written responses for likely objections) | Reddit | 8–10 responses | Ready for launch day monitoring |
+| 5.12 | LinkedIn engagement loop (tag 3–5 relevant creators, seed comment on their posts) | LinkedIn | 5 outreach messages day of | Launch day + 3 |
+| 5.13 | YouTube community post (short text + link) | YouTube | 1 post | Launch day |
+| 5.14 | Newsletter cross-promotion swap (reach out to 5 PM-adjacent newsletters) | Email | 5 outreach templates | T-14 days |
+
+---
+
+**Phase 5: Distribution & Launch Execution Assets**
+
+These are the operational assets that don't get seen by customers but make the launch run.
+
+| # | Asset | Format | Purpose |
+|---|---|---|---|
+| 6.1 | Launch timeline Gantt (T-30 to T+30, hour-by-hour for launch day) | PDF / Notion | Executive coordination |
+| 6.2 | Launch day runbook (checklist every hour from 6 AM to 10 PM ET) | Markdown checklist | Prevent missed steps |
+| 6.3 | Crisis communication plan (server down, bug found day-of, negative viral post) | 3-page PDF | Executive decision-making |
+| 6.4 | Customer support script (launch week canned responses — 20 variants) | Markdown | Support team (you) |
+| 6.5 | Press kit (logo pack, founder headshot, product screenshots, boilerplate, 3 key quotes) | ZIP folder | Media outreach |
+| 6.6 | Media list (20 journalists, 10 newsletters, 5 podcast hosts covering SaaS/self-hosted/dev tools) | Spreadsheet | Outreach pipeline |
+| 6.7 | Product Hunt launch checklist (all fields, images, makers, first 10 comments pre-written) | Markdown + screenshots | PH launch |
+| 6.8 | Affiliate / referral launch email to 10 initial partners | Email template | Partnership activation |
+| 6.9 | User onboarding email drip (5 emails, days 1–14 after signup) | Email sequence text | Conversion funnel |
+| 6.10 | Re-engagement email (day 7 no-login trigger) | Email template | Abandonment recovery |
+| 6.11 | Social listening dashboard preset (keywords to monitor: SUE, sovereign PM, self-hosted project management, etc.) | Spreadsheet + search links | Real-time monitoring |
+| 6.12 | Competitor response matrix (if Asana/Monday/Linear announce changes in reaction) | Decision tree | Executive positioning |
+
+---
+
+**Phase 6: Measurement & Analytics Foundation**
+
+Build these before the launch button is pressed.
+
+| # | Asset | Format | Metric Tracked |
+|---|---|---|---|
+| 7.1 | Dashboard — Website analytics (self-hosted, cookie-less) | Plausible or Umami instance | Visits, page views, bounce rate, CTA clicks |
+| 7.2 | Dashboard — Conversion funnel (visit → signup → install → create project → day 7 active) | SQLite) | SQL query + chart | Funnel drop-off rates |
+| 7.3 | Dashboard — Revenue (lifetime licenses sold, MRR from Pro tiers, refund rate) | SQL + chart | Revenue metrics |
+| 7.4 | Dashboard — Support (ticket volume, first-reply time, resolution rate) | Basic tracker | Support health |
+| 7.5 | Dashboard — Social (mentions, sentiment, engagement rate per platform-by-platform) | Spreadsheet updated weekly | Brand health |
+| 7.6 | A/B test framework for pricing page (2 variants: lifetime-only vs monthly+annual) | Split test config | Conversion optimization |
+| 7.7 | User feedback pipeline (NPS survey trigger at day 14 + free-text) | Email + SQLite | Product improvement loop |
+
+---
+
+**Phase 7: Post-Launch Sustaining Materials (Weeks 2–12)**
+
+These keep momentum after launch week noise fades.
+
+| # | Asset | Week | Format |
+|---|---|---|---|
+| 8.1 | User story #1 — interview a beta user, write 1500-word case study | W+2 | Blog post + social share graphic |
+| 8.2 | User story #2 — repeat with different use case (consultant vs dev team vs solo founder) | W+4 | Blog post + PDF download |
+| 8.3 | Feature release announcement template (reusable for every ship) | W+2 onward | Blog + social + email + Discord |
+| 8.4 | "State of SUE" monthly update post (stats, users, revenue, roadmap progress) | W+4, repeat monthly | Blog + email |
+| 8.5 | Integration spotlight series (how SUE works with X tool — Zapier, GitHub, Notion export) | W+3, then biweekly | Blog + social carousel |
+| 8.6 | Sovereignty thought leadership series (3 posts: "Why your data isn't yours," "The real cost of free tiers," "What happens when your PM tool gets acquired") | W+2, W+6, W+10 | Blog + LinkedIn + Medium |
+| 8.7 | Video walkthrough series (5 short tutorials: creating a project, setting up automations, self-host install, import from Asana, export your data) | W+2 through W+6 | YouTube + embedded on site |
+| 8.8 | Community Q&A digest (monthly roundup of top Discord/Reddit questions answered) | W+4, repeat monthly | Blog + Discord archive |
+| 8.9 | Referral program launch post + assets | W+3 | Blog + email + social |
+| 8.10 | Changelog release (every 2 weeks — commit log + user-facing summary) | W+2, repeating | Blog + email |
+
+---
+
+**Total Asset Count:**
+
+Phase 0: 9 assets
+Phase 1: 14 pages
+Phase 2: 15 visual assets (plus 15 screenshot files)
+Phase 3: 17 written assets
+Phase 4: 14 social/community assets
+Phase 5: 12 operational/execution assets
+Phase 6: 7 analytics/monitoring assets
+Phase 7: 10 post-launch sustaining assets
+Phase 8 (your Phase 0 brand): already counted
+
+**Grand total: ~98 deliverables** — every one within a single-developer capacity if you sequence them correctly and don't try to parallelize everything. The launch day runbook is more important than the 15th social graphic.
+
+If you want me to drill deeper into any single phase — write out the full email sequence copy, draft the blog posts, or spec the exact layer structure for the hero poster generation — say the word.

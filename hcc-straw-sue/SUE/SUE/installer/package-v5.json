@@ -1,0 +1,71 @@
+{
+  "name": "SUE-Setup",
+  "version": "5.0.0",
+  "productName": "SUE v5.0.0 — Sovereign AI Sidebar",
+  "description": "Enterprise Windows installer for SUE v5.0.0 (complete ecosystem)",
+  "author": "Hammurabi Coding Company",
+  "license": "MIT",
+  "main": "installer-v5.js",
+  "bin": {
+    "sue-setup": "installer-v5.js"
+  },
+  "scripts": {
+    "build": "pkg --target node18-win-x64 --output SUE-Setup.exe --compress Brotli installer-v5.js",
+    "verify": "node installer-v5.js --verify",
+    "test": "node test-installer.js"
+  },
+  "pkg": {
+    "assets": [
+      "assets/sue-host.exe",
+      "assets/sue-api.exe",
+      "extension/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "../release",
+    "scripts": [
+      "installer-v5.js"
+    ],
+    "compress": "Brotli"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "pkg": "^5.13.1"
+  },
+  "keywords": [
+    "sue",
+    "ai",
+    "sidebar",
+    "chrome",
+    "extension",
+    "installer",
+    "windows"
+  ],
+  "metadata": {
+    "version": "5.0.0",
+    "releaseDate": "2026-05-24",
+    "platform": "Windows x64",
+    "compression": "Brotli",
+    "bundledFiles": {
+      "extension": "dist/",
+      "hostBinary": "assets/sue-host.exe",
+      "apiBinary": "assets/sue-api.exe"
+    },
+    "systemRequirements": {
+      "windows": "10 21H2 or 11",
+      "ram": "2GB",
+      "disk": "500MB",
+      "browsers": ["Chrome 110+", "Edge 110+"]
+    },
+    "features": [
+      "One-click installation",
+      "Automatic API server launch",
+      "Native messaging host registration",
+      "Windows startup integration",
+      "Interactive setup guide",
+      "Installation manifest logging",
+      "Rollback capability"
+    ]
+  }
+}

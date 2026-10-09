@@ -1,0 +1,104 @@
+version: '3.8'
+
+services:
+  # Database
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: sue
+      POSTGRES_PASSWORD: sue_password
+      POSTGRES_DB: sue_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sue"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  api:
+    build:
+      context: ./sue-cloud-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://sue:sue_password@postgres:5432/sue_db
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: dev_secret_key_change_in_production
+      FRONTEND_URL: http://localhost:3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./sue-cloud-backend/src:/app/src
+    command: npm run dev
+
+  # Dashboard Web
+  dashboard:
+    build:
+      context: ./sue-dashboard-web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - api
+    volumes:
+      - ./sue-dashboard-web/src:/app/src
+
+  # Admin Portal
+  admin:
+    build:
+      context: ./sue-admin-portal
+      dockerfile: Dockerfile
+    ports:
+      - "3001:5173"
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on:
+      - api
+    volumes:
+      - ./sue-admin-portal/src:/app/src
+
+  # AI Chat
+  chat:
+    build:
+      context: ./sue-ai-chat
+      dockerfile: Dockerfile
+    ports:
+      - "3002:5173"
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on:
+      - api
+    volumes:
+      - ./sue-ai-chat/src:/app/src
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  default:
+    name: sue-network

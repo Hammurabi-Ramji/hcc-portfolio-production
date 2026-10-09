@@ -1,18 +1,27 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, untrack } from 'svelte';
   import NodeConfigPanel from './NodeConfigPanel.svelte';
-  let { record, persisted, invoke, notify, onsaved } = $props();
-  let name = $state(record.name);
-  let graph = $state(JSON.parse(JSON.stringify(record.definition)));
+  let { record, persisted, invoke, notify, onsaved, ondraft } = $props();
+  function openedFlow(source, alreadyPersisted) {
+    return {
+      name: source.name,
+      definition: JSON.parse(JSON.stringify(source.definition)),
+      dirty: !alreadyPersisted
+    };
+  }
+  const opened = untrack(() => openedFlow(record, persisted));
+  let name = $state(opened.name);
+  let graph = $state(opened.definition);
   let schemas = $state([]);
   let selected = $state(null);
-  let dirty = $state(!persisted);
+  let dirty = $state(opened.dirty);
   let busy = $state(false);
   let history = $state([]);
   let result = $state(null);
   let source = $state(''); let sourcePort = $state('');
   let target = $state(''); let targetPort = $state('');
   let dragging = $state(null);
+  let editRevision = 0;
   const selectedNode = $derived(graph.nodes.find(n => n.id === selected));
   const selectedSchema = $derived(schemas.find(s => s.kind === selectedNode?.kind));
   const sourceSchema = $derived(schemas.find(s => s.kind === graph.nodes.find(n => n.id === source)?.kind));
@@ -20,35 +29,62 @@
   onMount(() => {
     let live = true;
     Promise.all([invoke('node_schemas'), invoke('execution_list', { id:record.id })]).then(([s,h]) => { if (live) { schemas=s; history=h; } }).catch(e => notify(String(e),true));
-    return () => { live=false; };
+    return () => { live=false; publishDraft(); };
   });
+  function publishDraft() {
+    ondraft({ id: record.id, name, definition: JSON.parse(JSON.stringify(graph)), dirty, createdAt: record.createdAt, updatedAt: record.updatedAt });
+  }
+  function markEdited() {
+    editRevision += 1;
+    dirty = true;
+    publishDraft();
+  }
   function addNode(schema) {
     const config = Object.fromEntries(schema.configFields.map(f => [f.name,f.default ?? '']));
     const id = crypto.randomUUID();
     graph.nodes = [...graph.nodes,{id,kind:schema.kind,config,x:45+(graph.nodes.length%3)*240,y:45+Math.floor(graph.nodes.length/3)*150}];
-    selected=id; dirty=true;
+    selected=id; markEdited();
   }
   function configUpdate(field,value) {
-    graph.nodes = graph.nodes.map(n => n.id === selected ? {...n,config:{...n.config,[field]:value}} : n); dirty=true;
+    graph.nodes = graph.nodes.map(n => n.id === selected ? {...n,config:{...n.config,[field]:value}} : n); markEdited();
   }
   function deleteNode() {
     graph.nodes=graph.nodes.filter(n => n.id !== selected);
     graph.edges=graph.edges.filter(e => e.source !== selected && e.target !== selected);
-    selected=null; dirty=true;
+    selected=null; markEdited();
   }
   function connect() {
     if (!source || !target || !sourcePort || !targetPort) return notify('Choose both nodes and ports.',true);
-    graph.edges=[...graph.edges,{source,sourceHandle:sourcePort,target,targetHandle:targetPort}]; dirty=true;
+    graph.edges=[...graph.edges,{source,sourceHandle:sourcePort,target,targetHandle:targetPort}]; markEdited();
   }
   async function save() {
-    const row = await invoke('flow_save',{flow:{...record,name,definition:JSON.parse(JSON.stringify(graph))}});
-    onsaved(row); dirty=false; return row;
+    const revision = editRevision;
+    const definition = JSON.parse(JSON.stringify(graph));
+    const savedName = name;
+    const row = await invoke('flow_save',{flow:{...record,name:savedName,definition}});
+    onsaved(row);
+    if (editRevision === revision) dirty = false;
+    publishDraft();
+    return row;
   }
-  async function saveClicked() { busy=true; try { await save(); notify('Flow saved.'); } catch(e) {notify(String(e),true);} finally {busy=false;} }
+  async function saveClicked() {
+    busy=true;
+    const revision = editRevision;
+    try {
+      await save();
+      if (editRevision === revision) notify('Flow saved.');
+      else notify('Saved the previous version. Newer edits are still unsaved.', true);
+    } catch(e) {notify(String(e),true);} finally {busy=false;}
+  }
   async function run() {
     busy=true;
     try {
+      const revision = editRevision;
       const row=await save();
+      if (editRevision !== revision) {
+        notify('Edits changed during save. Save again before running.', true);
+        return;
+      }
       result=await invoke('execute_workflow',{id:row.id,graph:row.definition});
       history=await invoke('execution_list',{id:row.id});
       if (result.status.kind === 'failed') notify(result.status.error,true);
@@ -58,25 +94,25 @@
   function dragStart(event,id) { dragging=id; selected=id; event.currentTarget.setPointerCapture(event.pointerId); }
   function drag(event) {
     if (!dragging) return;
-    graph.nodes=graph.nodes.map(n => n.id === dragging ? {...n,x:Math.max(0,n.x+event.movementX),y:Math.max(0,n.y+event.movementY)} : n); dirty=true;
+    graph.nodes=graph.nodes.map(n => n.id === dragging ? {...n,x:Math.max(0,n.x+event.movementX),y:Math.max(0,n.y+event.movementY)} : n); markEdited();
   }
   function nodeFor(id) { return graph.nodes.find(n => n.id === id); }
 </script>
 
 <div class="editor">
   <header class="row spread">
-    <label>Flow name <input bind:value={name} oninput={() => dirty=true}></label>
+    <label>Flow name <input value={name} oninput={(event) => { name = event.currentTarget.value; markEdited(); }}></label>
     <span class="muted">{dirty ? 'Unsaved changes' : 'Saved'} · {record.id}</span>
     <div class="row"><button disabled={busy} onclick={saveClicked}>Save</button><button disabled={busy} onclick={run}>{busy?'Working…':'Run flow'}</button></div>
   </header>
   <section class="palette" aria-label="Node palette">
-    {#each schemas as schema (schema.kind)}<button disabled={busy} onclick={() => addNode(schema)}>{schema.label}</button>{/each}
+    {#each schemas as schema (schema.kind)}<button onclick={() => addNode(schema)}>{schema.label}</button>{/each}
   </section>
   <div class="workspace">
     <div class="canvas-scroll">
       <div class="canvas" aria-label="Workflow canvas">
         <svg width="1400" height="1000" aria-label="Connections">
-          {#each graph.edges as edge}
+          {#each graph.edges as edge, index (`${edge.source}-${edge.target}-${index}`)}
             {@const a=nodeFor(edge.source)}{@const b=nodeFor(edge.target)}
             {#if a && b}<line x1={a.x+190} y1={a.y+45} x2={b.x} y2={b.y+45} stroke="currentColor" stroke-width="2" />{/if}
           {/each}
@@ -95,13 +131,13 @@
   <section class="connections">
     <h3>Connect nodes</h3>
     <div class="row">
-      <label>From<select bind:value={source} onchange={() => sourcePort=''}><option value="">Choose node</option>{#each graph.nodes as n}<option value={n.id}>{n.kind} · {n.id.slice(0,6)}</option>{/each}</select></label>
-      <label>Output<select bind:value={sourcePort}><option value="">Choose port</option>{#each sourceSchema?.outputs ?? [] as p}<option>{p}</option>{/each}</select></label>
-      <label>To<select bind:value={target} onchange={() => targetPort=''}><option value="">Choose node</option>{#each graph.nodes as n}<option value={n.id}>{n.kind} · {n.id.slice(0,6)}</option>{/each}</select></label>
-      <label>Input<select bind:value={targetPort}><option value="">Choose port</option>{#each targetSchema?.inputs ?? [] as p}<option>{p}</option>{/each}</select></label>
+      <label>From<select bind:value={source} onchange={() => sourcePort=''}><option value="">Choose node</option>{#each graph.nodes as n (n.id)}<option value={n.id}>{n.kind} · {n.id.slice(0,6)}</option>{/each}</select></label>
+      <label>Output<select bind:value={sourcePort}><option value="">Choose port</option>{#each sourceSchema?.outputs ?? [] as p (p)}<option>{p}</option>{/each}</select></label>
+      <label>To<select bind:value={target} onchange={() => targetPort=''}><option value="">Choose node</option>{#each graph.nodes as n (n.id)}<option value={n.id}>{n.kind} · {n.id.slice(0,6)}</option>{/each}</select></label>
+      <label>Input<select bind:value={targetPort}><option value="">Choose port</option>{#each targetSchema?.inputs ?? [] as p (p)}<option>{p}</option>{/each}</select></label>
       <button onclick={connect}>Connect</button>
     </div>
-    {#each graph.edges as e,i}<div class="row muted"><span>{e.sourceHandle} → {e.targetHandle}</span><button aria-label="Remove connection" onclick={() => {graph.edges=graph.edges.filter((_,index) => index !== i);dirty=true;}}>Remove</button></div>{/each}
+    {#each graph.edges as e,i (`${e.source}-${e.target}-${i}`)}<div class="row muted"><span>{e.sourceHandle} → {e.targetHandle}</span><button aria-label="Remove connection" onclick={() => {graph.edges=graph.edges.filter((_,index) => index !== i);markEdited();}}>Remove</button></div>{/each}
   </section>
   {#if result}<section class="results"><h3>Execution · {result.status.kind}</h3><pre>{JSON.stringify(result.results,null,2)}</pre></section>{/if}
   {#if history.length}<section class="results"><h3>Execution history</h3>{#each history as h (h.id)}<p class="muted">{h.status.kind} · {h.startedAt} → {h.finishedAt ?? 'running'}{h.status.error ? ` · ${h.status.error}` : ''}</p>{/each}</section>{/if}

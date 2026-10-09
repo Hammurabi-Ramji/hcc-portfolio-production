@@ -503,9 +503,9 @@ Implementation settlement: **DONE** · [Current agent report](review/agent-outpu
 
 Reviewed by `/root/review_147`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--ui.md).
 
-- [ ] Delay `flow_save`; attempt every editor mutation; ensure persisted data and dirty indicator agree.
-- [ ] Switch away from a dirty/new flow and resolve a prior save; verify draft retention and stable selection.
-- [ ] Defer `File.arrayBuffer()`, press Send, then resolve reading/model response; ensure the selected document is transmitted once and remains visible until captured.
+- [x] Delay `flow_save`; attempt every editor mutation; ensure persisted data and dirty indicator agree.
+- [x] Switch away from a dirty/new flow and resolve a prior save; verify draft retention and stable selection.
+- [x] Defer `File.arrayBuffer()`, press Send, then resolve reading/model response; ensure the selected document is transmitted once and remains visible until captured.
 - [ ] Smoke-test compiled UI in WebView2: startup, all schema editors, save/reopen/run/history, chat failure/retry, generation/edit/refine/save, and WASM bounds.
 
 ### STACK-F052 · `tests`

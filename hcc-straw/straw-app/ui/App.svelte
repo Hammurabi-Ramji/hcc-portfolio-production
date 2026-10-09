@@ -13,6 +13,9 @@
   const siteSurface = document.documentElement.dataset.surface === 'site';
   let mode = $state(readRoute());
   let flows = $state([]);
+  let drafts = $state({});
+  let removed = $state({});
+  let draftTable = {};
   let active = $state(null);
   let ready = $state(false);
   let startupError = $state('');
@@ -42,18 +45,54 @@
     })();
     return () => { live = false; stopRouting(); clearTimeout(timer); };
   });
+  const sidebarFlows = $derived.by(() => {
+    const persisted = new Set(flows.map((flow) => flow.id));
+    const unsaved = Object.values(drafts).filter((draft) => draft && !persisted.has(draft.id) && !removed[draft.id]);
+    return [...unsaved, ...flows.filter((flow) => !removed[flow.id])];
+  });
+  function flowLabel(flow) {
+    return drafts[flow.id]?.name || flow.name;
+  }
+  function editorRecord(flow) {
+    const draft = drafts[flow.id];
+    return draft ? { ...flow, name: draft.name, definition: draft.definition } : flow;
+  }
+  function rememberDraft(draft) {
+    if (!draft?.id || removed[draft.id]) return;
+    draftTable[draft.id] = {
+      id: draft.id,
+      name: draft.name,
+      definition: draft.definition,
+      dirty: draft.dirty,
+      createdAt: draft.createdAt,
+      updatedAt: draft.updatedAt
+    };
+    drafts = { ...draftTable };
+  }
+  function openFlow(flow) {
+    active = editorRecord(flow);
+    navigate('flows');
+  }
   async function newFlow() {
-    try { active = await invoke('flow_new'); navigate('flows'); notify('New flow identity minted.'); }
-    catch (e) { notify(String(e), true); }
+    try {
+      const minted = await invoke('flow_new');
+      rememberDraft({ id: minted.id, name: minted.name, definition: minted.definition, dirty: true, createdAt: minted.createdAt, updatedAt: minted.updatedAt });
+      active = minted;
+      navigate('flows');
+      notify('New flow identity minted.');
+    } catch (e) { notify(String(e), true); }
   }
   function saved(row) {
-    flows = [row, ...flows.filter(f => f.id !== row.id)];
-    active = row;
+    if (!row?.id || removed[row.id]) return;
+    flows = [row, ...flows.filter((flow) => flow.id !== row.id)];
   }
   async function removeFlow(id) {
     try {
       await invoke('flow_delete', { id });
-      flows = flows.filter(f => f.id !== id);
+      removed = { ...removed, [id]: true };
+      flows = flows.filter((flow) => flow.id !== id);
+      delete draftTable[id];
+      drafts = { ...draftTable };
       if (active?.id === id) active = null;
       notify('Flow deleted.');
     } catch (e) { notify(String(e), true); }
@@ -71,15 +110,15 @@
     <h1>STRAW Desk</h1>
     <p class="muted">Local automation workspace</p>
     <nav aria-label="Workspace">
-      {#each (desktop ? [['modules','Modules'],['flows','Flows'],['chat','AI chat'],['code','Code generation']] : [['modules','Modules'],['flows','Desktop flows']]) as [value,label]}
+      {#each (desktop ? [['modules','Modules'],['flows','Flows'],['chat','AI chat'],['code','Code generation']] : [['modules','Modules'],['flows','Desktop flows']]) as [value,label] (value)}
         <button class:active={mode === value} onclick={() => navigate(value)}>{label}</button>
       {/each}
     </nav>
     {#if desktop}
     <div class="row spread"><h2>Saved flows</h2><button disabled={!ready} onclick={newFlow}>New</button></div>
     <ul class="flow-list">
-      {#each flows as flow (flow.id)}
-        <li><button class:active={active?.id === flow.id} onclick={() => { active = flow; navigate('flows'); }}>{flow.name}</button><button aria-label={`Delete ${flow.name}`} onclick={() => removeFlow(flow.id)}>×</button></li>
+      {#each sidebarFlows as flow (flow.id)}
+        <li><button class:active={active?.id === flow.id} onclick={() => openFlow(flow)}>{flowLabel(flow)}</button><button aria-label={`Delete ${flowLabel(flow)}`} onclick={() => removeFlow(flow.id)}>×</button></li>
       {/each}
     </ul>
     <p class="muted">{ready ? 'Local engine ready' : startupError || 'Opening local engine…'}</p>
@@ -105,7 +144,7 @@
     {#if desktop}
     <div class="view" hidden={mode !== 'flows'}>
       {#if active}
-        {#key active.id}<FlowCanvas record={active} persisted={flows.some(f => f.id === active.id)} {invoke} {notify} onsaved={saved} />{/key}
+        {#key active.id}<FlowCanvas record={editorRecord(active)} persisted={flows.some((flow) => flow.id === active.id) && !drafts[active.id]?.dirty} {invoke} {notify} onsaved={saved} ondraft={rememberDraft} />{/key}
       {:else}
         <section class="welcome"><h2>Build a local workflow</h2><p>Connect file, text, logic, and local model nodes. Save and run against the desktop engine.</p><button disabled={!ready} onclick={newFlow}>Create a flow</button></section>
       {/if}

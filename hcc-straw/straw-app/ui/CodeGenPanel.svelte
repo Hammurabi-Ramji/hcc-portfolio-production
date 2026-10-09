@@ -19,6 +19,16 @@
     } catch(e) {notify(String(e),true);} finally {busy=false;}
   }
   function edit(content) {files=files.map(f => f.id === selectedId ? {...f,content,isDirty:true} : f);}
+  function newProject() {
+    if (files.some((file) => file.isDirty)) {
+      notify('Save file edits before starting a new project.', true);
+      return;
+    }
+    files = [];
+    selectedId = null;
+    prompt = '';
+    outputDir = '';
+  }
   async function save() {
     busy=true;
     try {
@@ -41,7 +51,7 @@
   <div class="row"><label>Local model<input bind:value={model} disabled={busy}></label><label>Endpoint<input class="endpoint" bind:value={apiUrl} disabled={busy}></label></div>
   <label>Output directory<input placeholder="Choose an absolute local project directory" bind:value={outputDir} disabled={busy || files.length > 0}></label>
   <label>Describe the project<textarea rows="4" bind:value={prompt} disabled={busy}></textarea></label>
-  <div class="row"><button disabled={busy || !prompt.trim() || !outputDir.trim()} onclick={generate}>{busy?'Working…':'Generate and save'}</button><button disabled={busy} onclick={() => {files=[];selectedId=null;prompt='';outputDir='';}}>New project</button></div>
+  <div class="row"><button disabled={busy || !prompt.trim() || !outputDir.trim()} onclick={generate}>{busy?'Working…':'Generate and save'}</button><button disabled={busy} onclick={newProject}>New project</button></div>
   {#if files.length}
     <div class="file-editor">
       <nav aria-label="Generated files">{#each files as file (file.id)}<button class:active={selectedId === file.id} onclick={() => selectedId=file.id}>{file.path}{file.isDirty?' *':''}</button>{/each}</nav>

@@ -1,0 +1,9 @@
+{
+  "name": "com.hammurabi.sue.nativehost",
+  "description": "SUE Native Host",
+  "path": "C:\\SUE\\SUE\\native-host\\sue-host.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://hlfmlaemeoaaeoccpdlhembcljiojcom/"
+  ]
+}

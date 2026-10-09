@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preload WASM module so fetch starts before sidebar-init.js executes -->
+  <link rel="modulepreload" href="sue-runtime.js" />
+  <script src="offline-handler.js"></script>
+  <script type="module" src="sidebar-init.js"></script>
+</head>
+<body>
+  <!--
+    Leptos mounts directly to <body> via mount_to_body(App).
+    The sidebar dimensions are set by the browser extension framework.
+  -->
+</body>
+</html>
+

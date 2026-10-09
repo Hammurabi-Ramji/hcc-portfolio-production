@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "sue": {
+      "command": "wasm-pack",
+      "args": ["serve", "--target", "web"],
+      "env": {
+        "HCC_API_URL": "http://localhost:8080",
+        "OLLAMA_URL": "http://localhost:11434",
+        "RUST_LOG": "info"
+      }
+    }
+  }
+}
+

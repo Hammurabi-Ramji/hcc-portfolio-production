@@ -1,0 +1,15 @@
+{
+  "name": "SUE-Setup",
+  "version": "1.0.0",
+  "description": "SUE one-click Windows installer",
+  "main": "installer.js",
+  "bin": "installer.js",
+  "pkg": {
+    "assets": [
+      "assets/sue-host.exe",
+      "assets/sue-api.exe"
+    ],
+    "targets": ["node18-win-x64"],
+    "outputPath": "../release"
+  }
+}

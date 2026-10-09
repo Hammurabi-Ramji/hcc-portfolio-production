@@ -1,0 +1,21 @@
+[build]
+target = "index.html"
+dist = "dist"
+offline = true
+filehash = false
+inject_scripts = false
+
+[serve]
+addresses = ["127.0.0.1"]
+port = 8080
+open = false
+
+[watch]
+watch = ["ui", "index.html", "crates/wasm-frontend", "tools/frontend-build"]
+ignore = ["target", "dist", "site-dist", "public"]
+
+[[hooks]]
+stage = "pre_build"
+command = "cargo"
+command_arguments = ["run", "--offline", "--package", "frontend-build"]
+

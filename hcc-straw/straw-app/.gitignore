@@ -1,0 +1,11 @@
+/target/
+/dist/
+/site-dist/
+/public/ui/
+/public/compute/
+/src-tauri/target/
+/src-tauri/gen/
+*.db
+*.db-shm
+*.db-wal
+.env

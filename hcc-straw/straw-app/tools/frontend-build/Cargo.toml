@@ -1,0 +1,17 @@
+[package]
+name = "frontend-build"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rsvelte_core = { git = "https://github.com/baseballyama/rsvelte", rev = "5ed8ea3a3401b9fbbe780d3b18d6f90073291d6b", default-features = false }
+oxc_allocator = "=0.149.0"
+oxc_parser = "=0.149.0"
+oxc_span = "=0.149.0"
+serde_json.workspace = true
+sha2 = "0.10"
+base64 = "0.22"
+
+[dev-dependencies]
+tempfile = "3"
+

@@ -152,10 +152,10 @@ Reviewed by `/root/review_091`. [Evidence, expected behavior and patch details](
 
 Reviewed by `/root/review_092`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--docs.md).
 
-- [ ] Correct stack/layout/deployment claims and specify `cd apps/web` before commands.
-- [ ] Identify authentication capabilities as contracts or verified implementations.
-- [ ] Ensure every visible fragment link resolves and provide the same TOC on mobile.
-- [ ] From a clean checkout, follow revised instructions; confirm all advertised prerequisites exist and all cards navigate to real content.
+- [x] Correct stack/layout/deployment claims and specify `cd apps/web` before commands.
+- [x] Identify authentication capabilities as contracts or verified implementations.
+- [x] Ensure every visible fragment link resolves and provide the same TOC on mobile.
+- [x] From a clean checkout, follow revised instructions; confirm all advertised prerequisites exist and all cards navigate to real content.
 
 ### STACK-F012 · `apps/web/app/features`
 

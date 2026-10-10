@@ -1,0 +1,397 @@
+I can see the SUE interface clearly — that dark navy sidebar with the purple-cyan gradient accents, the "Browse Smarter, Together" positioning, and the six core action buttons (Summarize, Extract, Navigate, Screenshot, Click, Story). The navigation shows Home, AI, Work, Notes, Tabs, Cloud as the primary waypoints.
+
+Here's the **complete component architecture** for SUE as a SOTA AI Browser Sidebar Extension, broken down by system, tab, and atomic component:
+
+---
+
+# SUE COMPONENT ARCHITECTURE
+## AI-Native Browser Sidebar Extension
+
+---
+
+## I. GLOBAL SHELL COMPONENTS
+
+### 1.1 Sidebar Container
+```
+├─ ResizablePanel (min: 320px, max: 600px, default: 400px)
+│  ├─ CollapseToggle (chevron, hotkey: Cmd/Ctrl + Shift + S)
+│  ├─ DragHandle (resize affordance)
+│  └─ ContentViewport (scrollable region)
+└─ FloatingTrigger (when collapsed: orb indicator with pulse state)
+```
+
+### 1.2 Navigation Rail (Top Level)
+```
+├─ TabBar (horizontal, icon + label)
+│  ├─ HomeTab (house icon, default landing)
+│  ├─ AIChatTab (sparkle icon, conversation interface)
+│  ├─ WorkTab (briefcase icon, task management)
+│  ├─ NotesTab (document icon, knowledge capture)
+│  ├─ TabsTab (grid icon, browser session management)
+│  └─ CloudTab (cloud icon, sync & integrations)
+└─ ContextSwitcher (workspace/profile dropdown)
+```
+
+### 1.3 System Status Bar
+```
+├─ ConnectionIndicator (WebSocket state: connected/syncing/offline)
+├─ ModelStatus (current LLM: GPT-4/Claude/Llama, with toggle)
+└─ QuickActions (screenshot, voice input, settings)
+```
+
+---
+
+## II. TAB-BY-TAB COMPONENT BREAKDOWN
+
+---
+
+### TAB 1: HOME (Command Center)
+
+**Purpose:** Context-aware dashboard showing current page intelligence + quick actions
+
+```
+HomeDashboard
+├─ PageContextHeader
+│  ├─ Favicon (current site)
+│  ├─ PageTitle (truncated, with edit capability)
+│  └─ DomainBadge (security status, tracker count)
+├─ AIInsightCard (auto-generated page summary)
+│  ├─ SummaryText (2-3 sentences)
+│  ├─ KeyEntities (extracted names, dates, topics)
+│  └─ SuggestedActions (contextual quick-prompts)
+├─ ActionDock (the 6 core actions from your UI)
+│  ├─ SummarizeButton (page → tl;dr)
+│  ├─ ExtractButton (data → structured)
+│  ├─ NavigateButton (AI-guided browsing)
+│  ├─ ScreenshotButton (capture + annotate)
+│  ├─ ClickButton (element automation)
+│  └─ StoryButton (narrative generation)
+├─ RecentActivityFeed
+│  ├─ ActivityItem (action, timestamp, result preview)
+│  └─ ClearHistoryButton
+└─ QuickAccessGrid
+   ├─ SavedPrompts (user favorites)
+   ├─ RecentNotes (last 3)
+   └─ ActiveTasks (from Work tab)
+```
+
+---
+
+### TAB 2: AI (Conversation Interface)
+
+**Purpose:** Natural language interaction with browser context awareness
+
+```
+AIChatInterface
+├─ ChatHeader
+│  ├─ ModelSelector (GPT-4, Claude-3, Llama-3, Local)
+│  ├─ ContextWindowIndicator (tokens used/remaining)
+│  └─ ClearConversationButton
+├─ MessageStream (reverse chronological)
+│  ├─ UserMessageBubble (right-aligned, markdown support)
+│  ├─ AIMessageBubble (left-aligned, with reasoning steps)
+│  │  ├─ ThoughtProcess (collapsible: "Thinking...")
+│  │  ├─ ResponseContent (formatted text, code blocks)
+│  │  ├─ ActionPreview (if automation suggested: "I can click the Submit button")
+│  │  └─ CitationLinks (sources from current page)
+│  └─ SystemMessage (notifications, errors)
+├─ ContextPanel (collapsible)
+│  ├─ CurrentPageContext (DOM snapshot summary)
+│  ├─ PreviousPages (session history)
+│  └─ UploadedFiles (images, PDFs for analysis)
+├─ InputComposer
+│  ├─ TextInput (auto-resizing textarea)
+│  ├─ VoiceInputButton (speech-to-text)
+│  ├─ AttachmentButton (image upload, file drop)
+│  ├─ ActionConfirmation (when AI proposes browser action)
+│  └─ SendButton (paper airplane, gradient)
+└─ PromptLibraryDrawer
+   ├─ Categories (Research, Shopping, Development, Writing)
+   └─ CustomPrompts (user-defined)
+```
+
+---
+
+### TAB 3: WORK (Task & Project Management)
+
+**Purpose:** Project management without leaving the browser
+
+```
+WorkDashboard
+├─ ProjectSelector
+│  ├─ ProjectList (dropdown with color coding)
+│  ├─ NewProjectButton
+│  └─ QuickSwitch (Cmd/Ctrl + P)
+├─ ViewSwitcher
+│  ├─ ListView (tasks as rows)
+│  ├─ BoardView (Kanban: Backlog | In Progress | Review | Done)
+│  ├─ TimelineView (Gantt-style)
+│  └─ CalendarView (monthly/weekly)
+├─ TaskList
+│  └─ TaskCard
+│     ├─ Checkbox (completion toggle)
+│     ├─ Title (editable inline)
+│     ├─ MetadataRow
+│     │  ├─ DueDate (with overdue highlighting)
+│     │  ├─ PriorityBadge (P0-P3, color-coded)
+│     │  ├─ TagCloud (context labels)
+│     │  └─ AssigneeAvatar (if shared)
+│     └─ LinkedPage (favicon of related URL)
+├─ QuickAddBar
+│  ├─ InputField ("Add task...")
+│  ├─ ExtractFromPageButton (AI parses current page for tasks)
+│  └─ VoiceAddButton
+├─ FilterBar
+│  ├─ SearchInput
+│  ├─ FilterChips (Due Today, High Priority, Linked to Page)
+│  └─ SortDropdown
+└─ AIAssistantPanel
+   ├─ Suggestion: "I noticed 3 deadlines mentioned on this page. Add to tasks?"
+   └─ GenerateReportButton (weekly summary)
+```
+
+---
+
+### TAB 4: NOTES (Knowledge Capture)
+
+**Purpose:** Contextual note-taking with automatic linking
+
+```
+NotesDashboard
+├─ NotebookNavigator
+│  ├─ NotebookList (sidebar tree)
+│  │  ├─ DailyNotes (auto-created)
+│  │  ├─ ProjectNotes (linked to Work projects)
+│  │  ├─ WebClippings (auto-saved by domain)
+│  │  └─ CustomNotebooks (user-created)
+│  └─ NewNotebookButton
+├─ NoteEditor
+│  ├─ EditorToolbar
+│  │  ├─ FormattingTools (bold, italic, headings, lists)
+│  │  ├─ InsertTools (image, link, code block, table)
+│  │  ├─ AITools (summarize, expand, rewrite)
+│  │  └─ ShareButton
+│  ├─ BlockBasedEditor (Notion-like)
+│  │  ├─ ParagraphBlock
+│  │  ├─ HeadingBlock
+│  │  ├─ TodoBlock (syncs with Work tab)
+│  │  ├─ CodeBlock (with syntax highlighting)
+│  │  ├─ ImageBlock (screenshots, uploads)
+│  │  ├─ EmbedBlock (iframe, video)
+│  │  ├─ AIBlock (generated content, marked with sparkle)
+│  │  └─ DividerBlock
+│  └─ LinkedReferencesPanel
+│     ├─ Backlinks (other notes linking here)
+│     ├─ PageContext (current website when note was created)
+│     └─ RelatedNotes (AI-suggested)
+├─ QuickCaptureBar (always visible)
+│  ├─ ScreenshotToNoteButton
+│  ├─ SelectionToQuoteButton
+│  └─ PageToClipButton
+└─ SearchPanel
+   ├─ FullTextSearch (across all notes)
+   ├─ SemanticSearch (AI-powered meaning search)
+   └─ FilterByDate/Tag/Domain
+```
+
+---
+
+### TAB 5: TABS (Browser Session Management)
+
+**Purpose:** Advanced tab management with AI organization
+
+```
+TabsDashboard
+├─ SessionHeader
+│  ├─ SessionName (editable, default: "Session [Date]")
+│  ├─ TabCounter (active/total)
+│  ├─ SaveSessionButton (to Cloud)
+│  └─ RestoreSessionButton (from history)
+├─ ViewOptions
+│  ├─ GridView (thumbnails)
+│  ├─ ListView (compact)
+│  └─ TreeView (grouped by domain/window)
+├─ TabGrid
+│  └─ TabCard
+│     ├─ Thumbnail (live or cached)
+│     ├─ Favicon
+│     ├─ Title (truncated)
+│     ├─ Domain
+│     ├─ CloseButton
+│     └─ PinToggle
+├─ AIOrganizationPanel
+│  ├─ SuggestedGroups ("Research Papers", "Shopping", "Documentation")
+│  ├─ AutoGroupButton (AI clusters by content similarity)
+│  ├─ DuplicateDetector ("3 tabs with similar content")
+│  └─ SuspendedTabsSection (memory management)
+├─ TabSearch
+│  ├─ TextSearch (title/URL)
+│  └─ ContentSearch ("find tab with recipe for pasta")
+├─ SessionHistory
+│  ├─ PreviousSessions (collapsed by default)
+│  └─ RestorePoint (auto-saved every 30 min)
+└─ QuickActions
+   ├─ CloseAllButPinned
+   ├─ MergeWindows
+   ├─ SuspendInactive (>1 hour)
+   └─ ExportSession (JSON, shareable)
+```
+
+---
+
+### TAB 6: CLOUD (Sync & Integrations)
+
+**Purpose:** Data sovereignty management + external connections
+
+```
+CloudDashboard
+├─ SyncStatusPanel
+│  ├─ ConnectionStatus (green/orange/red)
+│  ├─ LastSyncTimestamp
+│  ├─ SyncProgressBar (if active)
+│  ├─ DataUsageMeter (storage quota)
+│  └─ ForceSyncButton
+├─ DataSovereigntyPanel
+│  ├─ LocalStorageIndicator (SQLite size, location)
+│  ├─ ExportAllButton (JSON, Markdown, HTML)
+│  ├─ EncryptionStatus (E2E encryption badge)
+│  ├─ SelfHostOption (Docker instructions)
+│  └─ DeleteCloudDataButton
+├─ IntegrationsGrid
+│  ├─ IntegrationCard (per service)
+│  │  ├─ ServiceIcon (Notion, GitHub, Linear, Slack, etc.)
+│  │  ├─ ConnectionStatus
+│  │  ├─ SyncSettings (frequency, direction)
+│  │  ├─ LastActivity
+│  │  └─ DisconnectButton
+│  └─ AddIntegrationButton (marketplace)
+├─ APISection (for developers)
+│  ├─ APIKeyDisplay (masked)
+│  ├─ RegenerateKeyButton
+│  ├─ DocumentationLink
+│  └─ UsageStats (requests this month)
+├─ BackupSchedule
+│  ├─ AutoBackupToggle
+│  ├─ FrequencySelector (daily/weekly)
+│  ├─ RetentionPolicy (keep last N backups)
+│  └─ ManualBackupNowButton
+└─ Team/SharingPanel (if collaborative features)
+   ├─ SharedWorkspacesList
+   ├─ InviteMemberButton
+   └─ PermissionsManager
+```
+
+---
+
+## III. ATOMIC COMPONENT LIBRARY
+
+### 3.1 Input Components
+```
+├─ SmartTextArea (auto-resize, markdown preview, @mentions)
+├─ CommandPalette (Cmd/Ctrl + K, fuzzy search, actions)
+├─ URLInput (with favicon fetch, validation)
+├─ TagInput (comma-separated, autocomplete)
+└─ DateTimePicker (natural language: "tomorrow 3pm")
+```
+
+### 3.2 Display Components
+```
+├─ SmartLink (preview on hover, favicon, title fetch)
+├─ CodeBlock (syntax highlight, copy button, run button)
+├─ DiffViewer (before/after, for AI edits)
+├─ ConfidenceBadge (AI certainty indicator: 87% match)
+├─ Timeline (vertical, scrollable, event nodes)
+└─ Heatmap (activity visualization)
+```
+
+### 3.3 AI-Specific Components
+```
+├─ StreamingText (token-by-token reveal)
+├─ ReasoningChain (collapsible thought process)
+├─ ActionPreview (DOM element highlight + proposed action)
+├─ ComparisonView (side-by-side AI suggestions)
+├─ ContextChip (what the AI knows: "Current page", "Previous 3 messages")
+└─ ModelBadge (with capability icons: vision, tools, fast)
+```
+
+### 3.4 Browser Integration Components
+```
+├─ ElementHighlighter (overlay on webpage, for Click/Extract)
+├─ SelectionPopover (appears on text selection: "Ask SUE about this")
+├─ ScreenshotCropper (region selection, annotation tools)
+├─ FormDetector (recognizes forms, offers autofill)
+└─ NavigationTrail (breadcrumb of AI-guided browsing)
+```
+
+---
+
+## IV. STATE MANAGEMENT ARCHITECTURE
+
+```
+GlobalStore (Zustand/Redux)
+├─ UIState
+│  ├─ sidebarOpen: boolean
+│  ├─ activeTab: string
+│  ├─ panelSizes: { sidebar: number, chat: number }
+│  └─ theme: 'dark' | 'light' | 'system'
+├─ SessionState
+│  ├─ currentUrl: string
+│  ├─ pageContent: ParsedDOM
+│  ├─ activeTabIds: string[]
+│  └─ browserWindows: Window[]
+├─ AIState
+│  ├─ conversationHistory: Message[]
+│  ├─ currentModel: string
+│  ├─ streamingResponse: string | null
+│  └─ pendingActions: Action[]
+├─ WorkState
+│  ├─ projects: Project[]
+│  ├─ activeProject: string | null
+│  └─ tasks: Task[]
+├─ NotesState
+│  ├─ notebooks: Notebook[]
+│  ├─ activeNote: Note | null
+│  └─ editorContent: Block[]
+└─ CloudState
+   ├─ syncStatus: 'idle' | 'syncing' | 'error'
+   ├─ lastSync: Date
+   ├─ integrations: Integration[]
+   └─ settings: CloudSettings
+```
+
+---
+
+## V. TECH STACK SPECIFICATION
+
+```
+Frontend: React 18 + TypeScript + Tailwind CSS
+State: Zustand (lightweight) or Redux Toolkit (complex)
+UI Components: Radix UI (headless) + custom styling
+Animation: Framer Motion (smooth, physics-based)
+Editor: BlockNote (Notion-like) or TipTap (ProseMirror)
+AI Streaming: Vercel AI SDK or custom EventSource
+Storage: 
+  - Local: IndexedDB (Dexie.js) or SQLite (via sql.js)
+  - Sync: Supabase or self-hosted Postgres
+Browser API: Chrome Extension Manifest V3
+  - content_scripts (page interaction)
+  - background (service worker)
+  - side_panel (the sidebar itself)
+Build: Vite (fast HMR, optimized bundles)
+```
+
+---
+
+## VI. KEY INTERACTION PATTERNS
+
+1. **Contextual Awareness:** Every tab knows what page you're on and adapts
+2. **Progressive Disclosure:** Complex features hidden behind "Advanced" toggles
+3. **Keyboard First:** Every action has a hotkey, shown in tooltips
+4. **AI as Co-pilot:** Not replacement but augmentation (human always in control)
+5. **Data Sovereignty:** Local-first, sync optional, export always available
+
+---
+
+**Total Components Designed:** 87 atomic + 6 tab dashboards + 1 global shell
+
+**Next step:** Shall I wireframe the component hierarchy for any specific tab, or generate the TypeScript interfaces for the state management?

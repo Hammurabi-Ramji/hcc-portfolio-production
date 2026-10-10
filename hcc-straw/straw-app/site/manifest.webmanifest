@@ -1,0 +1,12 @@
+{
+  "id": "/",
+  "name": "STRAW Desk",
+  "short_name": "STRAW",
+  "description": "Local workflow tools and offline WebAssembly compute.",
+  "start_url": "/#/modules",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#151a20",
+  "theme_color": "#151a20",
+  "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}

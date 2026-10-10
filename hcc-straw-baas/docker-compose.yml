@@ -1,0 +1,126 @@
+# OPTIONAL: Docker Compose for Distributed Setup
+# Use this ONLY if you need multi-region or separate service containers
+# Default: Use SQLite + local file storage (see README.md)
+
+version: '3.8'
+
+services:
+  # Services can be containerized while still using SQLite
+  auth-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: auth
+    environment:
+      PORT: 3001
+      NODE_ENV: production
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production}
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./data:/app/.data
+    networks:
+      - holo9
+
+  data-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: data
+    environment:
+      PORT: 3002
+      NODE_ENV: production
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./data:/app/.data
+    networks:
+      - holo9
+
+  billing-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: billing
+    environment:
+      PORT: 3003
+      NODE_ENV: production
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./data:/app/.data
+    networks:
+      - holo9
+
+  storage-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: storage
+    environment:
+      PORT: 3004
+      NODE_ENV: production
+    ports:
+      - "3004:3004"
+    volumes:
+      - ./data:/app/.data
+      - ./storage:/app/.storage
+    networks:
+      - holo9
+
+  analytics-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: analytics
+    environment:
+      PORT: 3005
+      NODE_ENV: production
+    ports:
+      - "3005:3005"
+    volumes:
+      - ./data:/app/.data
+    networks:
+      - holo9
+
+  # Optional: API Gateway (Caddy)
+  gateway:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - holo9
+    depends_on:
+      - auth-service
+      - data-service
+      - billing-service
+      - storage-service
+      - analytics-service
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  holo9:
+    driver: bridge
+
+# TO USE:
+# docker-compose up -d
+#
+# NOTES:
+# - All services share .data volume (SQLite databases)
+# - Each service runs in its own container
+# - Services communicate via Docker network
+# - Still no PostgreSQL, Redis, Meilisearch, or MinIO required
+# - File storage stays in .storage directory

@@ -1,0 +1,17 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.ts",
+    "build": "echo 'TS service'",
+    "start": "node index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.0.0",
+    "better-sqlite3": "^9.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}

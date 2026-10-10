@@ -1,0 +1,25 @@
+{
+	"name": "hcc-straw-baas",
+	"version": "0.1.0",
+	"private": true,
+	"packageManager": "pnpm@9.0.0",
+	"workspaces": ["packages/*", "industry-modules/*"],
+	"scripts": {
+		"dev": "turbo dev",
+		"build": "turbo build",
+		"lint": "turbo lint",
+		"test": "turbo test",
+		"type-check": "turbo type-check",
+		"docker:up": "docker compose up -d",
+		"docker:down": "docker compose down",
+		"generate:sdk": "turbo generate-sdk",
+		"deploy:staging": "turbo deploy --filter=./packages/*",
+		"deploy:prod": "turbo deploy-prod --filter=./packages/*"
+	},
+	"devDependencies": {
+		"turbo": "^1.10.0",
+		"typescript": "^5.5.0",
+		"@types/node": "^20.0.0",
+		"@biomejs/biome": "^1.6.0"
+	}
+}

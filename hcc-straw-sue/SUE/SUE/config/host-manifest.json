@@ -1,0 +1,7 @@
+{
+  "name": "com.hammurabi.sue.nativehost",
+  "description": "SUE Native Host",
+  "path": "REPLACE_WITH_ABSOLUTE_PATH_TO_NATIVE_HOST_HOST_BAT",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://YOUR_EXTENSION_ID/"]
+}

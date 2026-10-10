@@ -1,0 +1,22 @@
+[package]
+name = "straw-stack"
+version = "0.1.0"
+description = "STRAW sovereign desktop"
+authors = ["Hammurabi Coding Company"]
+edition = "2021"
+
+[lib]
+name = "straw_stack_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde.workspace = true
+serde_json.workspace = true
+straw-engine = { path = "../crates/engine" }
+axum-loop = { path = "../crates/axum-loop" }
+wasm-frontend = { path = "../crates/wasm-frontend" }
+tokio.workspace = true

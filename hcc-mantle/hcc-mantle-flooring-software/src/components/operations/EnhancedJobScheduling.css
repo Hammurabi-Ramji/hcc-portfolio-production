@@ -1,0 +1,44 @@
+.enhanced-job-scheduling { padding: 24px; margin-bottom: 32px; }
+.schedule-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+.schedule-header h2 { font-size: 20px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px 0; }
+.schedule-header p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+.schedule-actions { display: flex; gap: 12px; }
+.week-navigation { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding: 16px; background-color: var(--bg-secondary); border-radius: 8px; }
+.nav-btn { background: none; border: 1px solid var(--border-color); color: var(--text-primary); cursor: pointer; padding: 8px; border-radius: 6px; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; }
+.nav-btn:hover { background-color: var(--bg-tertiary); border-color: var(--accent-primary); }
+.week-days { display: flex; gap: 8px; flex: 1; justify-content: center; }
+.day-card { display: flex; flex-direction: column; align-items: center; padding: 12px 16px; background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; transition: all 0.2s ease; min-width: 80px; }
+.day-card:hover { border-color: var(--accent-primary); transform: translateY(-2px); }
+.day-card.selected { background-color: var(--accent-primary); color: white; border-color: var(--accent-primary); }
+.day-name { font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 4px; }
+.day-label { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.day-jobs { font-size: 11px; color: var(--text-tertiary); }
+.day-card.selected .day-jobs { color: rgba(255, 255, 255, 0.8); }
+.schedule-content { padding: 20px; background-color: var(--bg-secondary); border-radius: 8px; }
+.day-title { font-size: 18px; font-weight: 600; color: var(--text-primary); margin: 0 0 20px 0; }
+.jobs-timeline { display: flex; flex-direction: column; gap: 16px; }
+.timeline-job { display: flex; gap: 16px; }
+.job-time { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 8px; background-color: var(--bg-primary); border-radius: 8px; min-width: 80px; font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.job-time svg { font-size: 16px; color: var(--accent-primary); }
+.job-card { flex: 1; padding: 16px; background-color: var(--bg-primary); border-radius: 8px; border: 1px solid var(--border-color); }
+.job-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.job-header h4 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0; }
+.job-duration { padding: 4px 8px; background-color: var(--bg-tertiary); border-radius: 12px; font-size: 11px; font-weight: 600; color: var(--text-secondary); }
+.job-info { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.info-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); }
+.info-item svg { font-size: 14px; color: var(--text-tertiary); }
+.job-actions { display: flex; gap: 8px; }
+.action-btn { flex: 1; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; border: none; }
+.action-btn.primary { background-color: var(--accent-primary); color: white; }
+.action-btn.primary:hover { background-color: var(--accent-secondary); }
+.action-btn.secondary { background-color: transparent; color: var(--text-secondary); border: 1px solid var(--border-color); }
+.action-btn.secondary:hover { background-color: var(--bg-tertiary); }
+.no-day-selected { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; color: var(--text-tertiary); }
+.no-day-selected svg { font-size: 48px; margin-bottom: 16px; opacity: 0.5; }
+.no-day-selected p { font-size: 14px; }
+@media (max-width: 768px) {
+  .week-days { flex-wrap: wrap; }
+  .day-card { min-width: 60px; padding: 8px 12px; }
+  .schedule-actions { width: 100%; justify-content: stretch; }
+  .schedule-actions button { flex: 1; }
+}

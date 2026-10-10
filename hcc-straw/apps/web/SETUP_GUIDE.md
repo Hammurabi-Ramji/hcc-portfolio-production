@@ -1,8 +1,10 @@
 # AUTARCH Web Platform - Complete Setup Guide
 
+This guide describes the quarantined legacy Next.js tree in `apps/web`. It is outside the sovereign STRAW/Eduba path and is not the STRAW or Eduba build. Eduba (`straw-app/crates/eduba-ledger`, `straw-app/crates/eduba-server`) is the append-only SQLite archival ledger via sqlx, not a school. The sovereign desktop is Trunk, Tauri 2, and pure Rust, with Axum on `127.0.0.1`. From `straw-app/`, use `trunk build`, `cargo tauri build`, and `cargo test --workspace --offline --locked`. Node and npm steps below run only this legacy tree.
+
 ## 🎉 What You Have Now
 
-You have the local Next.js application and the loopback Rust API. Pages exist in source. Session pages, live login, and a production deployment are not certified by this guide.
+You have the legacy Next.js application and the loopback Rust API it calls. Pages exist in source. Session pages, live login, and a production deployment are not certified by this guide. This tree does not build the desktop or Eduba.
 
 ### ✅ **6 Main Pages**
 - Home / Landing page
@@ -345,17 +347,17 @@ npm run lint       # Run ESLint
 npm run type-check # TypeScript check
 ```
 
-These commands run in `apps/web`. `npm run format` is not a script in this package.
+These commands run in `apps/web` for the legacy tree only. They do not build Eduba or the desktop. `npm run format` is not a script in this package.
 
 ---
 
 ## 🎉 Next Steps
 
-1. Start `apps/api`, then `npm run dev` in `apps/web`.
+1. Start the legacy API from `apps/api` with `cargo run --offline --locked` on `127.0.0.1:3001`, then `npm run dev` in `apps/web`. That pair is not `trunk build` or `cargo tauri build`.
 2. Exercise login only after the session pages and API routes are wired. Email recovery stays HTTP 501.
-3. The database is the API's local SQLite file. PostgreSQL and Redis are not the chosen deployment.
+3. The legacy API database is its local SQLite file. That file is not the Eduba ledger. PostgreSQL and Redis are not part of this tree.
 4. Production hosting is not configured in this tree.
 
 ---
 
-This guide describes the local Next.js app and the loopback Rust API. It is not a production-deployment certificate.
+This guide describes the quarantined legacy Next.js app and the loopback Rust API on `127.0.0.1:3001` with the `straw_session` cookie. It is not a production-deployment certificate and it is not the STRAW or Eduba build.

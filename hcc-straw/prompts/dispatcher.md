@@ -55,11 +55,8 @@ Known contested files:
 - src-tauri rebuild artifacts  → F041 primary; F043/F044 read-only until settled
 
 ## TOOLCHAIN DISCIPLINE
-- STRAW tree (straw-app/**): cargo, trunk, tauri CLI ONLY. No npm/vite/node.
-- apps/web/**: existing npm scripts permitted for VERIFICATION of the legacy
-  Next.js surface (npm run type-check, npm run lint, npm run build) exactly as
-  documented in the folder reports. No new Node tooling may be introduced into
-  straw-app/**. Mixed-tree violations are hard failures.
+- Sovereign STRAW tree (`straw-app/**`, including `eduba-ledger` and `eduba-server`): `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree` only. Svelte 5 runes compile by Trunk to WASM. Tauri 2, pure Rust, Axum on `127.0.0.1`, SQLite via sqlx `query!` macros for Eduba. Eduba is the append-only archival ledger, not a school, LMS, or curriculum product. No Node.js, npm, pnpm, yarn, Python, pip, Playwright, Vite, or Webpack. No `package.json` lockstep.
+- `apps/web/**` is the quarantined legacy Next.js tree, outside the sovereign STRAW/Eduba path. Existing npm scripts are permitted only for VERIFICATION of that legacy surface (npm run type-check, npm run lint, npm run build) exactly as documented in the folder reports. No Node tooling may be introduced into `straw-app/**`. Mixed-tree violations are hard failures.
 - Zero telemetry: no agent fetches, CDNs, or outbound network except loopback
   servers the tasks themselves start for verification.
 - Every Rust change: typestate where a state exists; invalid states
@@ -87,7 +84,7 @@ G4 Typestate — Rust state machines compile invalid states out
 G5 Primitives — no speculative abstraction; patch only what the report lists
 G6 8px Grid — spacing/margins in web+UI patches snap to 8px multiples
 G7 Deterministic — same input tree + seed ⇒ same generated output
-G8 Eduba — every claim carries an evidence path; no unverifiable assertions
+G8 Eduba — every claim carries an evidence path; no unverifiable assertions. The product Eduba is the append-only SQLite archival ledger (`eduba-ledger`, `eduba-server`), not a school, LMS, or curriculum product.
 G9 Bookkeeping — settlement-ledger.jsonl appended, registry updated
 
 G3 SOURCE-SCAN FAILURE (documented in F029/F049): the G3 literal source scan

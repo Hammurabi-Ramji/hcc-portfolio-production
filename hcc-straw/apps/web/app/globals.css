@@ -3,14 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-rgb: 255 255 255;
+  --foreground-rgb: 23 23 23;
+  --primary-rgb: 67 56 202;
+  --secondary-rgb: 244 244 245;
+  --muted-rgb: 244 244 245;
+  --muted-foreground-rgb: 63 63 70;
+  --card-rgb: 255 255 255;
+  --border-rgb: 212 212 216;
+  --background: rgb(var(--background-rgb));
+  --foreground: rgb(var(--foreground-rgb));
+  --primary: rgb(var(--primary-rgb));
+  --secondary: rgb(var(--secondary-rgb));
+  --muted: rgb(var(--muted-rgb));
+  --muted-foreground: rgb(var(--muted-foreground-rgb));
+  --card: rgb(var(--card-rgb));
+  --border: rgb(var(--border-rgb));
+}
+
+/* An explicit .light class wins over the operating-system preference. */
+.dark {
+  --background-rgb: 10 10 10;
+  --foreground-rgb: 237 237 237;
+  --primary-rgb: 79 70 229;
+  --secondary-rgb: 39 39 42;
+  --muted-rgb: 39 39 42;
+  --muted-foreground-rgb: 212 212 216;
+  --card-rgb: 23 23 23;
+  --border-rgb: 63 63 70;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light) {
+    --background-rgb: 10 10 10;
+    --foreground-rgb: 237 237 237;
+    --primary-rgb: 79 70 229;
+    --secondary-rgb: 39 39 42;
+    --muted-rgb: 39 39 42;
+    --muted-foreground-rgb: 212 212 216;
+    --card-rgb: 23 23 23;
+    --border-rgb: 63 63 70;
   }
 }
 

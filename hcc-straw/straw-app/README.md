@@ -1,6 +1,12 @@
 # STRAW Desk
 
-A local application with a Tauri desktop surface and a static browser/PWA surface, sharing Svelte 5 runes components and Rust WebAssembly compute. SQLite is the desktop database. Engine networking accepts only literal IPv4 loopback endpoints.
+Sovereign desktop: Svelte 5 runes compiled by Trunk to WASM, Tauri 2, pure Rust, and Axum bound only to literal IPv4 loopback. A Tauri surface and a static browser/PWA surface share those compiled components and Rust WebAssembly compute. SQLite is local. This is not a Node.js or Vite application. The `.svelte` sources are not a Node app.
+
+Eduba (`crates/eduba-ledger`, `crates/eduba-server`) is the archival ledger: an append-only SQLite record house using sqlx `query!` macros. It is not a school, LMS, curriculum, or student product.
+
+There is no Node.js, npm, pnpm, yarn, Python, pip, Playwright, Vite, or Webpack step. No `package.json` lockstep, `node_modules`, or `vite.config.js`. Supported commands are `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree`.
+
+This folder is the desktop. `apps/web` is the quarantined legacy Next.js tree and is not built from here. The SaaS generator is a separate tree; it does not build this desktop or Eduba.
 
 ## Prerequisites
 
@@ -11,24 +17,25 @@ A local application with a Tauri desktop surface and a static browser/PWA surfac
 - wasm-bindgen CLI **0.2.121**, matching the pinned compute crate (`cargo install wasm-bindgen-cli --version 0.2.121 --locked`).
 - Local Ollama with a downloaded model for chat and code generation; model name defaults to `llama3.2` and is editable.
 
-Run all commands from this folder. Cargo's manifest establishes a workspace boundary independent of ancestor workspaces. Tools must be available on PATH.
+Run all commands from this folder. Cargo's manifest establishes a workspace boundary independent of ancestor workspaces. When `cargo` is not already on PATH, add `%USERPROFILE%\.cargo\bin`. Trunk 0.21.14 accepts `NO_COLOR=true` or `NO_COLOR=false`, not the numeric string `1`.
 
 ## Build and run
 
 ```powershell
 cargo fetch --locked
-cargo build --workspace --offline
-cargo test --workspace --offline
+cargo build --workspace --offline --locked
+cargo test --workspace --offline --locked
+cargo tree --offline
 trunk build
 trunk build --config Trunk.site.toml
-cargo run --offline -p frontend-build -- verify-site
+cargo run --offline --locked -p frontend-build -- verify-site
 cargo tauri dev
 cargo tauri build
 ```
 
 Dependency provisioning is separate from application networking. After provisioning, the build hook operates offline. The test framework is `cargo test`. Tests exercise contract serialization, actual SQLite persistence, graph failure propagation, path validation, named-file parsing, and an actual Axum server.
 
-Trunk does not have a built-in Svelte asset type. Its pre-build hook runs `tools/frontend-build`, which calls the native `rsvelte_core` Rust compiler pinned to revision `5ed8ea3a3401b9fbbe780d3b18d6f90073291d6b` (0.12.6). Components compile in Svelte 5 runes mode to browser modules with injected CSS. Trunk builds the compute crate through its Rust asset pipeline and wasm-bindgen. No JavaScript compiler or scripting runtime runs during the build. The browser still executes Svelte's local JavaScript DOM runtime, pinned to the compiler's Svelte 5.57.1 target. Import maps resolve modules without a bundler. See `third-party/NOTICE.md` for provenance and licenses. The compiler is an independent pre-1.0 implementation; a successful build is not a claim of complete upstream compatibility or supply-chain certification.
+Trunk does not have a built-in Svelte asset type. Its pre-build hook runs `tools/frontend-build`, which calls the native `rsvelte_core` Rust compiler pinned to revision `5ed8ea3a3401b9fbbe780d3b18d6f90073291d6b` (0.12.6). Svelte 5 runes compile through that Rust hook. Trunk builds the compute crate to WASM with wasm-bindgen. There is no Node, npm, Vite, or Python build step. Import maps resolve modules without a bundler. See `third-party/NOTICE.md` for provenance and licenses. The compiler is an independent pre-1.0 implementation; a successful build is not a claim of complete upstream compatibility or supply-chain certification.
 
 `trunk serve` binds **127.0.0.1:8080** for desktop development. Desktop assets go to `dist/`. `trunk serve --config Trunk.site.toml` binds **127.0.0.1:8081** for the PWA and writes `site-dist/`. Build the two entries sequentially because they share generated component assets. Serve the PWA output at an origin's root, rather than a subdirectory; opening its HTML as a local file does not support installation.
 
@@ -46,12 +53,27 @@ To check offline behavior manually: serve the PWA, open `http://127.0.0.1:8081/#
 
 - `crates/engine`: typed identities, contracts, validation/execution, persistence, node implementations, local model calls, generation/refinement, and file guards. It has no desktop-shell dependency.
 - `crates/axum-loop`: read-only `/health` and `/flows` routes, **127.0.0.1:8741** only.
+- `crates/eduba-ledger`: archival ledger. Append-only SQLite through sqlx `query!` macros. Not a school or curriculum product.
+- `crates/eduba-server`: Axum for that ledger, **127.0.0.1** only (default port 8080).
 - `crates/wasm-frontend`: bounded Fibonacci compute and greeting exports, built for both browser WASM and the optional native command.
 - `src-tauri`: managed database and flow registry, command handlers, and API service lifecycle.
 - `ui`: standalone Svelte 5 runes components. The compute action directly imports and executes the WASM export.
 - `site`: PWA entry, install manifest, icon, and service worker. The same compiled UI serves both surfaces.
 - `tools/frontend-build`: local compiler/build hook.
 - `crates/straw-ledger`: dependency-free, in-memory outcome hash chain with a sealed/verified lifecycle. Persistence integration is deferred; see `STRAW-002-VERIFICATION.md`.
+
+## Eduba
+
+`eduba-ledger` inserts archival rows through sqlx `query!` macros. `eduba-server` listens on `127.0.0.1` only. The default address is `127.0.0.1:8080` (`AUTARCH_BE_ADDR`). The database URL defaults to `sqlite://eduba.db?mode=rwc` (`ACCORDION_DB_PATH`). Schema table names already in code are `learner`, `course`, `lesson`, `enrollment`, and `submission`. Those are stored record types.
+
+```powershell
+cargo test --offline --locked -p eduba-ledger
+cargo test --offline --locked -p eduba-server
+cargo run --offline --locked -p eduba-server
+cargo tree -p eduba-ledger
+```
+
+The desk flow database in `crates/engine` is separate. It is not the Eduba record house.
 
 ## Persistence and commands
 
@@ -75,7 +97,17 @@ The preserved Read File and Write File nodes operate on explicit operator-config
 
 ## Verification status
 
-See `STRAW-001-VERIFICATION.md` for actual results, deviations, and pending work. Installer generation alone does not prove successful installation or live model inference. The next slice remains gated on completion of the verification contract.
+Current setup and release evidence is [`STRAW-001-VERIFICATION.md`](STRAW-001-VERIFICATION.md). Historical output guides that still mention the removed npm package are labeled archived under `output/historical/`; they are not current entry instructions. This README and that verification file are the current entry.
+
+The G3 literal source scan failed and remains a release hold. The scan matches upstream Svelte sources that are vendored for the browser runtime. Replacing the JavaScript compiler does not clear that literal result, and this document does not grant a release exception.
+
+G6 browser WASM was first seen on 2026-10-09 at `http://127.0.0.1:8094/#/modules` (`fibonacci(10) = 55 · WebAssembly`). On 2026-10-10 S15 also observed an **installed** WebView2 window (`STRAW Desk`, `tauri.localhost`): WASM compute, IPC save/run/history, attachment send into a loopback capture fixture, and a live Ollama reply. Evidence: `../review/agent-output/A-S15/`. S15 is complete for those observations; G3 remains a release hold.
+
+Upstream provenance for the vendored Svelte runtime and clsx is `third-party/NOTICE.md`, with the local license texts copied into generated `public/ui/vendor/licenses/` and Trunk `dist/public/ui/vendor/licenses/`. A successful build is not a claim of complete upstream compatibility.
+
+The current engine does not load the previous UI's graph format. `output/historical/demo-nlp-to-code-flow.json` is an archived incompatible example. `output/current-text-transform-graph.json` is a current graph.
+
+Installer generation alone is not enough; S15 re-ran the NSIS setup into an isolated destination, opened the installed window, and recorded IPC/model/attachment evidence under `../review/agent-output/A-S15/`. The Trunk distribution's license paths are `dist/public/ui/vendor/licenses/svelte-LICENSE.md`, `clsx-LICENSE`, and `NOTICE.md`.
 
 WebView2 is a prerequisite. The Windows installer skips downloading it. In terminals that set NO_COLOR to the numeric string 1, set it to true before invoking Trunk 0.21.14.
 

@@ -1,7 +1,9 @@
 AUTARCH Web Platform - Complete File Structure
 ==============================================
 
-C:\hcc-straw\hcc-straw\apps\web\
+This map is the quarantined legacy Next.js tree in `apps/web`. It is outside the sovereign STRAW/Eduba path and is not the STRAW or Eduba build. Eduba (`straw-app/crates/eduba-ledger`, `straw-app/crates/eduba-server`) is the append-only SQLite archival ledger via sqlx, not a school. The sovereign desktop is Trunk, Tauri 2, and pure Rust, with Axum on `127.0.0.1`. From `straw-app/`, use `trunk build`, `cargo tauri build`, and `cargo test --workspace --offline --locked`. npm commands in this file apply only to this legacy tree.
+
+apps/web/
 │
 ├── 📁 app/                          # Next.js App Router Pages
 │   ├── layout.tsx                  # Root layout with metadata
@@ -170,8 +172,10 @@ C:\hcc-straw\hcc-straw\apps\web\
 
 ## 🚀 Quick Commands
 
+These npm commands run the legacy tree after `cd apps/web`. They do not build Eduba or the desktop.
+
 ```bash
-# Install all dependencies
+# Install all dependencies for this legacy tree
 npm install
 
 # Run development server
@@ -214,4 +218,4 @@ npm run format
 
 ---
 
-*AUTARCH Web Platform - Ready for Production!*
+*Legacy Next.js tree in apps/web. Not the sovereign STRAW or Eduba build.*

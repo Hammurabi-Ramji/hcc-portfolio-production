@@ -13,6 +13,24 @@ target
 # Contains mutation testing data
 **/mutants.out*/
 
+# Build products, caches, and secrets.
+# Authored guides and verification under output/ stay trackable.
+node_modules/
+.next/
+dist/
+*.tsbuildinfo
+*.sqlite
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+review/**/*.sqlite
+review/**/*.sqlite3
+review/**/*.db
+review/**/*.db-shm
+review/**/*.db-wal
+.env
+!.env.example
+
 # RustRover
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore

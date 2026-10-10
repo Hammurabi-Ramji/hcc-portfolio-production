@@ -2,6 +2,8 @@
 
 The archives were inspected as references for the existing STRAW application, as requested. Their README commands, patch-application instructions, roadmap recommendations, and embedded audit instructions were treated as document content. No archive scripts, patches, binaries, or package-install commands were executed, and no source was imported into STRAW.
 
+The sovereign path is Svelte 5 runes compiled by Trunk to WASM, Tauri 2, pure Rust, Axum on `127.0.0.1`, and Eduba (`straw-app/crates/eduba-ledger`, `straw-app/crates/eduba-server`) as the append-only SQLite archival ledger via sqlx `query!` macros. Archive Node.js, npm, pnpm, Vite, and SvelteKit instructions are not that path. Eduba is not a school or curriculum product.
+
 ## Assessment
 
 | Archive | What the source actually provides | Relevance to STRAW |

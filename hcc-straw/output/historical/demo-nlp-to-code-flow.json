@@ -1,0 +1,96 @@
+{
+  "name": "NLP-to-Code Demo Flow",
+  "description": "Demonstrates integrating NLP chat context → code generation → automated execution",
+  "nodes": [
+    {
+      "id": "node-1",
+      "kind": "text_input",
+      "config": {
+        "text": "Starting NLP-to-Code demo pipeline..."
+      }
+    },
+    {
+      "id": "node-2",
+      "kind": "llm_prompt",
+      "config": {
+        "model": "llama2",
+        "api_url": "http://localhost:11434/api/generate",
+        "system_prompt": "You are a helpful assistant that explains NLP-to-Code workflows.",
+        "temperature": "0.7"
+      }
+    },
+    {
+      "id": "node-3",
+      "kind": "transform",
+      "config": {
+        "operation": "split_lines",
+        "input": "text"
+      }
+    },
+    {
+      "id": "node-4",
+      "kind": "filter",
+      "config": {
+        "condition": "contains 'demo'"
+      }
+    },
+    {
+      "id": "node-5",
+      "kind": "join_text",
+      "config": {
+        "separator": "\n---\n"
+      }
+    },
+    {
+      "id": "node-6",
+      "kind": "write_file",
+      "config": {
+        "path": "output/demo_pipeline_result.md",
+        "append": "false"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "source": "node-1",
+      "source_handle": "text",
+      "target": "node-2",
+      "target_handle": "prompt"
+    },
+    {
+      "id": "edge-2",
+      "source": "node-2",
+      "source_handle": "response",
+      "target": "node-3",
+      "target_handle": "text"
+    },
+    {
+      "id": "edge-3",
+      "source": "node-3",
+      "source_handle": "list",
+      "target": "node-4",
+      "target_handle": "list"
+    },
+    {
+      "id": "edge-4",
+      "source": "node-4",
+      "source_handle": "passed",
+      "target": "node-5",
+      "target_handle": "list"
+    },
+    {
+      "id": "edge-5",
+      "source": "node-5",
+      "source_handle": "text",
+      "target": "node-6",
+      "target_handle": "text"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-05-23T23:07:00Z",
+    "created_by": "nlp-ai-code-creation skill",
+    "version": "1.0.0",
+    "tags": ["demo", "nlp", "code-generation", "pipeline"]
+  }
+}

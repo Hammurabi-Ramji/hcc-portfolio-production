@@ -10,9 +10,9 @@ use std::sync::Arc;
 
 pub mod auth;
 pub mod config;
+pub mod projects;
 pub mod store;
 pub mod users;
-// Serialized owner F008 may add the projects module and merge its router here.
 
 pub use config::Config;
 pub use store::{ProfileDto, Store, UserDto};
@@ -131,6 +131,7 @@ async fn method_not_allowed() -> ApiError {
 pub fn router(state: AppState) -> Router {
     auth::router()
         .merge(users::router())
+        .merge(projects::router())
         .fallback(missing)
         .method_not_allowed_fallback(method_not_allowed)
         .layer(DefaultBodyLimit::max(16 * 1024))

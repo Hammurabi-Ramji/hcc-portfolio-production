@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
+function applyTheme(next: 'light' | 'dark') {
+  document.documentElement.classList.toggle('dark', next === 'dark');
+  document.documentElement.classList.toggle('light', next === 'light');
+}
+
 export function useTheme() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
@@ -15,14 +20,14 @@ export function useTheme() {
     const initialTheme = storedTheme || systemTheme;
     
     setTheme(initialTheme);
-    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+    applyTheme(initialTheme);
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    applyTheme(newTheme);
   };
 
   return { theme, toggleTheme };

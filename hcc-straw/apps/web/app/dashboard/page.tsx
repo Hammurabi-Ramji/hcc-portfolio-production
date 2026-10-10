@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { 
@@ -20,13 +20,15 @@ import Navbar from '@/components/Navbar';
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { user, logout, isAuthenticated } = useAuth();
+  const { user, logout, isAuthenticated, isLoading } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Redirect if not authenticated
-  if (!isAuthenticated) {
-    router.push('/login');
-    return null;
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) router.push('/login');
+  }, [isAuthenticated, isLoading, router]);
+
+  if (isLoading || !isAuthenticated) {
+    return <div className="min-h-screen bg-background" />;
   }
 
   const handleLogout = async () => {

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO submission (id, lesson_id, learner_id, content, submitted_at) VALUES (?1, ?2, ?3, ?4, ?5)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "f9e87e5212e1c29e649dcdcf8a259cbadb7065a4a7f296282ad2a95dc119cb4c"
+}

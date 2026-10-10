@@ -1,5 +1,7 @@
 # Quick Start Guide - AUTARCH Web Platform
 
+This guide runs the quarantined legacy Next.js tree in `apps/web`. It is outside the sovereign STRAW/Eduba path and is not the STRAW or Eduba build. Eduba (`straw-app/crates/eduba-ledger`, `straw-app/crates/eduba-server`) is the append-only SQLite archival ledger via sqlx, not a school. The sovereign desktop is Trunk, Tauri 2, and pure Rust, with Axum on `127.0.0.1`. From `straw-app/`, use `trunk build`, `cargo tauri build`, and `cargo test --workspace --offline --locked`. The `npm` commands below apply only after `cd apps/web`.
+
 ## 🚀 Getting Started in 5 Minutes
 
 ### Step 1: Navigate to the Project
@@ -100,17 +102,9 @@ npm run type-check   # Run TypeScript compiler
 
 ---
 
-## 🐳 Docker Support (Optional)
+## Docker
 
-If you want to use Docker:
-
-```bash
-# From root directory
-cd C:\hcc-straw\hcc-straw
-npm run docker:up    # Start all containers
-npm run docker:down  # Stop containers
-npm run docker:logs  # View logs
-```
+Docker Compose is not part of this legacy tree. There is no `npm run docker:up` script here, and Docker is not how to build or run Eduba or the desktop. Start this tree with `cd apps/web` and `npm run dev`. Start the legacy API from `apps/api` with `cargo run --offline --locked` on `127.0.0.1:3001`.
 
 ---
 
@@ -143,8 +137,8 @@ theme: {
 
 ### Port 3000 Already in Use
 ```bash
-# Change port in package.json scripts
-"dev": "next dev -p 3001"
+# Change the Next port in package.json scripts. Leave 3001 for the legacy API.
+"dev": "next dev -p 3002"
 ```
 
 ### Dependencies Installation Fails
@@ -183,4 +177,4 @@ npm run lint
 
 ---
 
-**Ready to build amazing apps!** 🚀
+These steps run the legacy Next.js tree from `apps/web`. They do not build Eduba or the desktop.

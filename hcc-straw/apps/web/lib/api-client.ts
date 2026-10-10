@@ -30,6 +30,7 @@ export class ApiClient {
       baseURL: '/api',
       headers: { 'Content-Type': 'application/json' },
       timeout: 30000,
+      withCredentials: true,
     })
     this.client.interceptors.response.use(
       response => response,

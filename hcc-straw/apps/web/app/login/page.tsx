@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Eye, EyeOff, Mail, Lock, AlertCircle } from 'lucide-react';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { zodFormResolver } from '@/lib/zod-form-resolver';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/context/AuthContext';
 
@@ -18,29 +18,45 @@ const loginSchema = z.object({
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
+function safeCallback(value: string | null): string {
+  if (!value || !value.startsWith('/') || value.startsWith('//') || value.includes('\\') || value.includes('://')) {
+    return '/dashboard';
+  }
+  return value;
+}
+
 export default function LoginPage() {
   const router = useRouter();
-  const { login, isLoading } = useAuth();
+  const { login, isLoading, isAuthenticated } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [callbackUrl, setCallbackUrl] = useState('/dashboard');
+
+  useEffect(() => {
+    const raw = new URLSearchParams(window.location.search).get('callbackUrl');
+    setCallbackUrl(safeCallback(raw));
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) router.push(callbackUrl);
+  }, [callbackUrl, isAuthenticated, isLoading, router]);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<LoginFormData>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodFormResolver(loginSchema),
   });
 
   const onSubmit = async (data: LoginFormData) => {
     setError(null);
     
     try {
-      const result = await login(data.email, data.password);
-      
+      const result = await login(data.email, data.password, data.rememberMe);
+
       if (result.success && result.data) {
-        // Redirect to dashboard or previous page
-        router.push('/dashboard');
+        router.push(callbackUrl);
       } else {
         setError(result.error?.message || 'Login failed');
       }

@@ -1,21 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { projectApi, CreateProject } from '@/services/project.service';
+import { projectApi, type CreateProject } from '@/services/project.service';
 import { useToast } from '@/hooks/useToast';
-
-interface Project {
-  id: string;
-  name: string;
-  description?: string;
-  status: 'active' | 'completed' | 'archived' | 'draft';
-  createdAt: Date;
-  updatedAt: Date;
-}
+import type { Project } from '@/types';
 
 export default function ProjectsPage() {
   const { user } = useAuth();
@@ -43,7 +35,7 @@ export default function ProjectsPage() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
     try {

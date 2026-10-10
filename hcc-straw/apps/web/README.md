@@ -1,11 +1,13 @@
 # AUTARCH Web Platform
 
-Next.js 15 application in `apps/web`, paired with the local Rust/Axum service in `apps/api`. The browser uses same-origin `/api`. Next proxies to `127.0.0.1` on port 3001. SQLite is the API database. Express, PostgreSQL, Redis, and Docker are not part of this tree.
+This folder is the quarantined legacy Next.js tree. It is outside the sovereign STRAW/Eduba path and is not the STRAW or Eduba build. Eduba (`straw-app/crates/eduba-ledger`, `straw-app/crates/eduba-server`) is the append-only SQLite archival ledger via sqlx, not a school. The sovereign desktop is Trunk, Tauri 2, and pure Rust, with Axum on `127.0.0.1`. From `straw-app/`, use `trunk build`, `cargo tauri build`, and `cargo test --workspace --offline --locked`. Node and npm steps below run only this legacy tree.
+
+Next.js 15 in `apps/web` is paired with the local Rust/Axum service in `apps/api`. The browser uses same-origin `/api`. Next proxies to `127.0.0.1` on port 3001. SQLite is that legacy API's database, not the Eduba ledger. Express, PostgreSQL, Redis, and Docker are not part of this tree.
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Node.js 18+
+### Prerequisites for this legacy tree
+- Node.js 18+ for this Next.js tree only
 - Rust with the workspace's offline Cargo cache, for `apps/api`
 
 ### Installation
@@ -92,7 +94,7 @@ npm run lint          # ESLint
 npm run type-check    # TypeScript check
 ```
 
-The API is not an npm script. Run it from `apps/api` with `cargo run --offline --locked`.
+The API is not an npm script. Run it from `apps/api` with `cargo run --offline --locked`. That process is the legacy API on `127.0.0.1:3001`. It is not `trunk build` or `cargo tauri build`.
 
 ## 🔧 Configuration
 
@@ -151,4 +153,4 @@ Built with ❤️ by Hammurabi Coding Company
 
 ---
 
-**Ready to build?** Get started with the [Quick Start Guide](/docs#quick-start) or explore the [Documentation](/docs).
+These pages describe the legacy Next.js tree. Build the desktop and Eduba from `straw-app/`.

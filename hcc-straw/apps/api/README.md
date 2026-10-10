@@ -1,5 +1,7 @@
 # Local STRAW web API
 
+This service belongs to the quarantined legacy `apps/web` tree. It is outside the sovereign STRAW/Eduba path. Eduba is the append-only SQLite archival ledger in `straw-app/crates/eduba-ledger` and `straw-app/crates/eduba-server`. Do not build or run Eduba or the desktop from this folder. Sovereign commands are in `straw-app/README.md`: `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree`.
+
 This independent Rust workspace owns the legacy web application's local authentication and SQLite persistence. Start from this folder with `cargo run --offline --locked`. It binds only literal `127.0.0.1`, default port 3001. It does not serve the desktop application.
 
 Set the same `STRAW_API_PORT` and `STRAW_WEB_ORIGIN` for this process and Next. Defaults are 3001 and `http://localhost:3000`. The origin must be one exact local HTTP(S) origin; all unsafe requests require that Origin header. `STRAW_API_DATABASE` selects the SQLite path (default `straw-web.sqlite3` relative to the process working directory). Preserve that file across restarts; protect its filesystem access as it contains password hashes and account data. The Next route handlers use the server-only fixed-loopback proxy. Browser credentials travel solely in the `straw_session` HttpOnly, SameSite=Strict, Path=/ cookie. HTTPS origins add Secure; explicit local HTTP development is supported.

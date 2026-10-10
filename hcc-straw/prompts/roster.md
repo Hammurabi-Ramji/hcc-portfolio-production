@@ -4,6 +4,8 @@
 markdown
 # AGENT ROSTER — Waves, Owners, Verification
 
+Sovereign STRAW and Eduba (`straw-app/`, including `eduba-ledger` and `eduba-server`) verify with `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree`. Eduba is the append-only SQLite archival ledger, not a school or curriculum product. npm commands below apply only to the quarantined legacy `apps/web` tree, which is outside that path.
+
 ## WAVE 0 — Foundations (no deps)
 | Agent    | Scope                                | Cross-task | Verify |
 |----------|--------------------------------------|------------|--------|

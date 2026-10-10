@@ -1,0 +1,19 @@
+diff --git a/docs/g3-scan-scope.proposed.md b/docs/g3-scan-scope.proposed.md
+new file mode 100644
+--- /dev/null
++++ b/docs/g3-scan-scope.proposed.md
+@@ -0,0 +1,14 @@
++# G3 literal source scan - PROPOSED two-tier scope (NOT APPROVED, NOT ACTIVE)
++
++Status: proposal only. review/arbitration.md records that no vendor exception
++was approved. Applying this requires an explicit owner/S16 ruling.
++
++Tier A (release-blocking, unchanged strictness): scan all first-party sources
++  under the whole tree, excluding only generated outputs and straw-app/third-party/.
++Tier B (provenance, still enforced): straw-app/third-party/ is NOT skipped silently.
++  It must (1) contain NOTICE.md, (2) have svelte/LICENSE.md and clsx/LICENSE,
++  (3) match the pinned versions in NOTICE.md, (4) have its matches enumerated
++  in the evidence log (count and file list), never hidden or renamed.
++Upstream identifiers stay byte-for-byte; nothing is disguised to pass.
++Current observed result (STRAW-001-VERIFICATION.md): 95 upstream matches,
++  0 first-party matches. G3 remains FAIL until a ruling is recorded.

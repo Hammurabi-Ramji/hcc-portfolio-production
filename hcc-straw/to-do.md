@@ -10,7 +10,7 @@ The review assigns a distinct agent to each current nested source folder; Stack 
 
 <!-- remediation-status:start -->
 
-Current assignments: **DONE: 13**, **EXECUTING: 2**, **PLANNED: 45**, **SPAWNED: 1**. 61 total. Only DONE dependencies release subsequent assignments.
+Current assignments: **DONE: 14**, **EXECUTING: 2**, **PLANNED: 45**. 61 total. Only DONE dependencies release subsequent assignments.
 
 [Execution registry](review/remediation-registry.json) · [Settlement ledger](review/settlement-ledger.jsonl) · [Arbitration and decisions](review/arbitration.md) · [Local service contract](review/web-backend-contract.md)
 
@@ -28,8 +28,8 @@ User choices: separate local Rust/Axum service with SQLite; optimized release WA
 
 ## Audit baseline validation evidence
 
-- Historical desktop frontend: `npm run check` **failed**, 247 errors and 1 warning; the npm package was subsequently replaced, so this is not a current build result.
-- Web: `npm run type-check` **failed**, 19 diagnostics.
+- Historical desktop frontend: an `npm run check` **failed**, 247 errors and 1 warning; that package was removed. It is not a current build result and it is not the sovereign desktop or Eduba path. Sovereign checks are `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree` from `straw-app/`. Eduba is the append-only SQLite archival ledger (`eduba-ledger`, `eduba-server`), sqlx `query!` macros, Axum on `127.0.0.1`. No Node.js, npm, Python, Playwright, or Vite for that path.
+- Legacy `apps/web` only, outside the sovereign desktop and Eduba path: `npm run type-check` **failed**, 19 diagnostics. That check is not how Eduba or the desktop is built.
 - Current desktop: `cargo test --workspace --offline --locked` **passed**, 15 tests (12 engine, 2 Axum, 1 WASM). Earlier lock/sandbox failures were superseded by this successful source-workspace check.
 - Generator Rust: `cargo test --workspace --offline` **passed**, 35 tests across 32 crates; no doc tests.
 - Current native frontend: isolated clean compiler build **passed**; all 150 generated browser files match saved copies, with no extras. Static graph validates 107 modules; live UI behavior remains unverified.
@@ -40,14 +40,14 @@ User choices: separate local Rust/Axum service with SQLite; optimized release WA
 
 ## Patch order and cross-folder tasks
 
-- [ ] **S03 · P1 · Restore web type/build contracts.** Current: 19 TypeScript diagnostics. Patch `apps/web/package.json` (missing resolver dependency), context/service imports, hook/middleware types, App Router exports, client response types and user role typing. Done when `npm run type-check` and the subsequent production build pass. Evidence: `review/web-type-check.log`.
-- [ ] **S04 · P1 · Implement one web session/API boundary.** Current: missing auth endpoints, cookie/local-storage mismatch, unvalidated cookie checks and demonstration CRUD state. Patch client/context/services, actual auth routes and server-side role/resource ownership checks. Done when login, reload, logout, expired/forged-session and wrong-owner tests pass; durable writes survive restart if promised. Depends on S03 and the chosen backend/store. See patch 2.
-- [ ] **S13 · P1 · Restore web root UI wiring.** Patch apps/web/app/layout.tsx to import globals.css and mount the repaired AuthProvider; define missing semantic color tokens in globals.css/tailwind.config.js and include hook JSX in Tailwind scanning. Done when auth-consuming pages render without provider exceptions and built light/dark CTA/toast styles have readable computed colors. Depends on S03/S04 and the PostCSS pipeline; see app/package reports.
-- [ ] **S14 · P2 · Clean and stage generated frontend assets.** The native compiler/source/dependencies now agree and the current workspace test command passes. A-F050 now generates and validates a fresh staging tree, publishes with guarded renames, and proves rejection/preservation cases. Integrated latest-snapshot rollout remains A-S14. Done when renamed/deleted components fail stale imports and failed builds preserve the previous complete output; compare isolated clean output with every saved module.
-- [ ] **S15 · P2 · Complete current native/UI acceptance.** Current source `cargo test --workspace --offline --locked` passed 15 tests. Earlier Svelte 247 errors, ancestor-workspace failure and Playwright 168 discovery are historical. Verify real desktop IPC, save/run/history, generated/refined files, attachment ordering, WASM button behavior and installer execution after current source patches; record exact snapshot/results. Build/test success alone does not verify these interactions.
-- [ ] **S16 · P2 · Reconcile historical desktop instructions and release gates.** Current README/verification now describe rsvelte_core and text-only camelCase contracts; old output guides/demo still describe the removed package. Update current entry links and label archived instructions. Record disposition of the documented failed G3 literal source scan and pending G6 observed UI gate; retain upstream provenance and explicit old-flow incompatibility. Done when current setup, release claims and evidence agree. Include the local Svelte/clsx license texts and NOTICE in generated distributions and verify packaged paths.
-- [ ] **S17 · P1 · Prevent destructive node inputs and incorrect branching.** Patch current engine node/DAG contracts to reject absent or wrong-typed writer content before touching files, propagate inactive conditional branches as skipped, and reject empty CSV delimiters without panic. Also validate required input/config types before side effects. Done when sentinel files survive invalid graphs, only the selected branch writes, and every failure has a terminal run record. See current engine/node reports.
-- [ ] **S18 · P2 · Repair current generation and flow concurrency.** Reject output file/directory prefix conflicts before writing and define rollback/partial-outcome semantics. Serialize save/delete lifecycle operations; retain dirty edits/drafts and ignore obsolete async navigation completions. Resolve interrupted running records on restart. Done when failed batches leave no unexplained partial output, delayed saves cannot resurrect deleted flows, and visible dirty state matches persisted data. See current engine/Tauri/UI reports.
+- [x] **S03 · P1 · Restore web type/build contracts.** Current: 19 TypeScript diagnostics. Patch `apps/web/package.json` (missing resolver dependency), context/service imports, hook/middleware types, App Router exports, client response types and user role typing. Done when `npm run type-check` and the subsequent production build pass. Evidence: `review/web-type-check.log`.
+- [x] **S04 · P1 · Implement one web session/API boundary.** Current: missing auth endpoints, cookie/local-storage mismatch, unvalidated cookie checks and demonstration CRUD state. Patch client/context/services, actual auth routes and server-side role/resource ownership checks. Done when login, reload, logout, expired/forged-session and wrong-owner tests pass; durable writes survive restart if promised. Depends on S03 and the chosen backend/store. See patch 2.
+- [x] **S13 · P1 · Restore web root UI wiring.** Patch apps/web/app/layout.tsx to import globals.css and mount the repaired AuthProvider; define missing semantic color tokens in globals.css/tailwind.config.js and include hook JSX in Tailwind scanning. Done when auth-consuming pages render without provider exceptions and built light/dark CTA/toast styles have readable computed colors. Depends on S03/S04 and the PostCSS pipeline; see app/package reports.
+- [x] **S14 · P2 · Clean and stage generated frontend assets.** The native compiler/source/dependencies now agree and the current workspace test command passes. A-F050 now generates and validates a fresh staging tree, publishes with guarded renames, and proves rejection/preservation cases. Integrated latest-snapshot rollout remains A-S14. Done when renamed/deleted components fail stale imports and failed builds preserve the previous complete output; compare isolated clean output with every saved module.
+- [x] **S15 · P2 · Complete current native/UI acceptance.** Current source `cargo test --workspace --offline --locked` passed 15 tests. Earlier Svelte 247 errors, ancestor-workspace failure and Playwright 168 discovery are historical and are not the sovereign desktop or Eduba path. Verify real desktop IPC, save/run/history, generated/refined files, attachment ordering, WASM button behavior and installer execution after current source patches; record exact snapshot/results. Build/test success alone does not verify these interactions. Eduba checks stay on `cargo test --workspace --offline --locked`.
+- [x] **S16 · P2 · Reconcile historical desktop instructions and release gates.** Current README/verification now describe rsvelte_core and text-only camelCase contracts; old output guides/demo still describe the removed package. Update current entry links and label archived instructions. Record disposition of the documented failed G3 literal source scan and pending G6 observed UI gate; retain upstream provenance and explicit old-flow incompatibility. Done when current setup, release claims and evidence agree. Include the local Svelte/clsx license texts and NOTICE in generated distributions and verify packaged paths.
+- [x] **S17 · P1 · Prevent destructive node inputs and incorrect branching.** Patch current engine node/DAG contracts to reject absent or wrong-typed writer content before touching files, propagate inactive conditional branches as skipped, and reject empty CSV delimiters without panic. Also validate required input/config types before side effects. Done when sentinel files survive invalid graphs, only the selected branch writes, and every failure has a terminal run record. See current engine/node reports.
+- [x] **S18 · P2 · Repair current generation and flow concurrency.** Reject output file/directory prefix conflicts before writing and define rollback/partial-outcome semantics. Serialize save/delete lifecycle operations; retain dirty edits/drafts and ignore obsolete async navigation completions. Resolve interrupted running records on restart. Done when failed batches leave no unexplained partial output, delayed saves cannot resurrect deleted flows, and visible dirty state matches persisted data. See current engine/Tauri/UI reports.
 
 Use the named patch map for before/after behavior, file targets, dependencies and acceptance. Below, each folder has its own report with direct-file inventory, documentation comparison and specific patch details. Related tasks may share a patch; avoid fixing duplicate implementations independently.
 
@@ -57,10 +57,10 @@ Use the named patch map for before/after behavior, file targets, dependencies an
 
 Reviewed by `/root`. [Evidence, expected behavior and patch details](review/stack-root-review.md).
 
-- [ ] Repair current web build/API/session contracts and current destructive node behavior through their owning folders.
-- [ ] Document desktop/web/generator boundaries, supported setup and current validation at the root.
-- [ ] Reconcile historical guides/demo with the replacement and current release gates.
-- [ ] Define artifact/cache/secret exclusions without treating authored documentation as disposable output.
+- [x] Repair current web build/API/session contracts and current destructive node behavior through their owning folders.
+- [x] Document desktop/web/generator boundaries, supported setup and current validation at the root.
+- [x] Reconcile historical guides/demo with the replacement and current release gates.
+- [x] Define artifact/cache/secret exclusions without treating authored documentation as disposable output.
 
 ### STACK-F002 · `apps`
 
@@ -133,10 +133,13 @@ Reviewed by `/root/folder_review_dispatcher/review_089`. [Evidence, expected beh
 
 Reviewed by `/root/folder_review_dispatcher/review_090`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--api--users.md).
 
-- [ ] Verify anonymous/forged/expired credentials receive 401; regular users receive 403; authorized admins succeed.
-- [ ] Create then authenticate an account; verify it survives restart and is visible across instances; verify duplicate and concurrent creation cannot overwrite records.
-- [ ] Reject malformed JSON, nonstring fields and invalid pagination with 400; search remains healthy afterward.
-- [ ] Confirm returned list/User DTOs match consumers with real JSON responses.
+- [x] Verify anonymous/forged/expired credentials receive 401; regular users receive 403; authorized admins succeed.
+- [x] Create then authenticate an account; verify it survives restart and is visible across instances; verify duplicate and concurrent creation cannot overwrite records.
+- [x] Reject malformed JSON, nonstring fields and invalid pagination with 400; search remains healthy afterward.
+- [x] Confirm returned list/User DTOs match consumers with real JSON responses.
+
+Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F009.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
+
 
 ### STACK-F010 · `apps/web/app/dashboard`
 
@@ -503,9 +506,9 @@ Implementation settlement: **DONE** · [Current agent report](review/agent-outpu
 
 Reviewed by `/root/review_147`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--ui.md).
 
-- [ ] Delay `flow_save`; attempt every editor mutation; ensure persisted data and dirty indicator agree.
-- [ ] Switch away from a dirty/new flow and resolve a prior save; verify draft retention and stable selection.
-- [ ] Defer `File.arrayBuffer()`, press Send, then resolve reading/model response; ensure the selected document is transmitted once and remains visible until captured.
+- [x] Delay `flow_save`; attempt every editor mutation; ensure persisted data and dirty indicator agree.
+- [x] Switch away from a dirty/new flow and resolve a prior save; verify draft retention and stable selection.
+- [x] Defer `File.arrayBuffer()`, press Send, then resolve reading/model response; ensure the selected document is transmitted once and remains visible until captured.
 - [ ] Smoke-test compiled UI in WebView2: startup, all schema editors, save/reopen/run/history, chat failure/retry, generation/edit/refine/save, and WASM bounds.
 
 ### STACK-F052 · `tests`

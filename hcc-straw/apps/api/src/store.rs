@@ -98,6 +98,13 @@ impl Store {
                 revoked INTEGER NOT NULL DEFAULT 0 CHECK(revoked IN (0,1)), created_at TEXT NOT NULL
             );
             CREATE INDEX IF NOT EXISTS sessions_user ON sessions(user_id);
+            CREATE TABLE IF NOT EXISTS projects (
+                id TEXT PRIMARY KEY, name TEXT NOT NULL, description TEXT,
+                status TEXT NOT NULL CHECK(status IN ('active','completed','archived','draft')),
+                created_by TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                created_at TEXT NOT NULL, updated_at TEXT NOT NULL
+            );
+            CREATE INDEX IF NOT EXISTS projects_owner ON projects(created_by, created_at);
         ").map_err(db_error)?;
         Ok(Self {
             connection: Arc::new(Mutex::new(conn)),

@@ -1,4 +1,30 @@
 # STRAW-stack
-Svelte + Tauri + Rust + Axum + WASM Desktop Application Stack
 
-The desktop application lives in `straw-app/`. The separate Next.js application and its local Rust API live in `apps/`. See [apps/README.md](apps/README.md) for that boundary. Desktop setup and verification are in [straw-app/README.md](straw-app/README.md).
+Sovereign baseline: Svelte 5 runes compiled by Trunk to WASM, Tauri 2, pure Rust, and Axum bound only to `127.0.0.1`. Persistence on this path is SQLite through sqlx. Eduba is the archival ledger, an append-only SQLite record house in `straw-app/crates/eduba-ledger` and `straw-app/crates/eduba-server`, using sqlx `query!` macros. It is not a school, LMS, curriculum, or student product.
+
+There is no Node.js, npm, pnpm, yarn, Python, pip, Playwright, Vite, or Webpack toolchain on the sovereign path. No `package.json` lockstep, `node_modules`, or `vite.config.js`. From `straw-app/`, the supported commands are `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree`. When `cargo` is not already on PATH, add `%USERPROFILE%\.cargo\bin`. Trunk accepts `NO_COLOR` as `true` or `false`, not `1`.
+
+## Boundaries
+
+- **Desktop:** `straw-app/`. Trunk, Tauri 2, Rust, Axum on `127.0.0.1`, and SQLite/sqlx. This is the sovereign product.
+- **Legacy web:** `apps/web` is the quarantined Next.js tree. `apps/api` is the separate local Rust/Axum service that tree calls. Neither builds the desktop or Eduba. See [apps/README.md](apps/README.md).
+- **Generator:** the SaaS generator is a separate tree. It assembles template bundles. It is not this desktop, not Eduba, and not `apps/web`. Its checks are not release evidence for this stack.
+
+## Setup and current entry
+
+Supported setup and commands are [straw-app/README.md](straw-app/README.md). The current entry is that file together with [straw-app/STRAW-001-VERIFICATION.md](straw-app/STRAW-001-VERIFICATION.md) and [straw-app/STRAW-002-VERIFICATION.md](straw-app/STRAW-002-VERIFICATION.md).
+
+May 2026 guides under `output/` are historical. Each is labeled at the top and is not a setup instruction. The current engine does not import the previous UI's graph format. `output/historical/demo-nlp-to-code-flow.json` is an archived demo the engine rejects. `output/current-text-transform-graph.json` is a current graph fixture.
+
+Upstream provenance for the vendored Svelte runtime and clsx is [straw-app/third-party/NOTICE.md](straw-app/third-party/NOTICE.md).
+
+## Current validation
+
+Dated build evidence begins in the 2026-10-09 record in `straw-app/STRAW-001-VERIFICATION.md`. S15 desktop observation evidence is dated 2026-10-10 under `review/agent-output/A-S15/`.
+
+- That verification file records workspace tests, cargo check, formatting, a standalone Trunk build, and desktop package generation for its snapshot. Eduba and the in-memory ledger core have separate notes in `STRAW-002-VERIFICATION.md`.
+- **G3 literal source scan failed** and remains a release hold. The scan matches vendored upstream Svelte sources. Replacing the JavaScript compiler does not clear that result. This document does not grant a release exception.
+- **G6 desktop observation is recorded for S15.** On 2026-10-10 an isolated NSIS install launched a WebView2 window titled `STRAW Desk` (`Edg/154.0.4258.62`, `http://tauri.localhost/#/modules`). In that window: WASM `fibonacci(10) = 55`, IPC save/run/history completed, chat attachment bytes reached a loopback capture fixture, and a live Ollama model answered. Evidence: `review/agent-output/A-S15/`.
+- **S15 is complete** for those stated observations. Broader folder smoke rows (full editor matrix, packaging checklist) remain separately tracked where still unchecked.
+
+This stack is not released while G3 remains a failed hold.

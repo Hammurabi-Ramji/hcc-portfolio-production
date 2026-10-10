@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT id, learner_id, course_id, enrolled_at FROM enrollment ORDER BY enrolled_at DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "enrollment",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "learner_id",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "enrollment",
+            "name": "learner_id"
+          }
+        }
+      },
+      {
+        "name": "course_id",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "enrollment",
+            "name": "course_id"
+          }
+        }
+      },
+      {
+        "name": "enrolled_at",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "enrollment",
+            "name": "enrolled_at"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "002b487eb9a130446f69eaf4085a8652c47415091a4849ff78cc443b19522e2b"
+}

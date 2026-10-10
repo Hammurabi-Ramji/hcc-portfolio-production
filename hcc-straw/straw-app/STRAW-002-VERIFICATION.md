@@ -1,6 +1,8 @@
 # STRAW-002 — standalone run-ledger core
 
-Delivered scope: `crates/straw-ledger`, registered in the Cargo workspace, with zero normal, build, or development dependencies. The supplied seed's syntax error was removed. This is an in-memory core; existing SQLite workflow runs are not yet protected by this ledger.
+Sovereign archival ledger: Eduba (`crates/eduba-ledger`, `crates/eduba-server`) is the append-only SQLite record house. It uses sqlx `query!` macros and Axum bound only to `127.0.0.1`. It is not a school, LMS, or curriculum product. Supported checks are `cargo test --workspace --offline --locked` and `cargo tree`. No Node.js, npm, Python, Playwright, or Vite.
+
+Delivered scope of this file: `crates/straw-ledger`, registered in the Cargo workspace, with zero normal, build, or development dependencies. The supplied seed's syntax error was removed. This is an in-memory core; existing SQLite workflow runs are not yet protected by this ledger. Eduba is a separate crate pair and is not this in-memory chain.
 
 ## Lifecycle and import boundary
 
@@ -29,6 +31,6 @@ A self-consistent chain is not an authenticated receipt. An attacker able to rew
 
 Typestate enforces the API lifecycle; it does not prove human approval or enforce seal-before-release across an application that has not yet integrated it. No broad security certification or panic-free allocation claim is made for the supplied hashing implementation.
 
-Persistence and startup verification remain deferred. The actual app uses `rusqlite`, rather than the attachment's stated `sqlx`. A future adapter needs transactional append/checkpoint handling, a trusted-head policy, corruption diagnostics without deleting evidence, and startup verification before workflow execution. No database schema or startup hook was changed in this delivery.
+Persistence and startup verification for this in-memory core remain deferred. Eduba is the sqlx archival ledger (`query!` macros, loopback Axum). The desk flow store in `crates/engine` still uses `rusqlite`; that store is not the Eduba record house. A future adapter from this in-memory chain needs transactional append/checkpoint handling, a trusted-head policy, corruption diagnostics without deleting evidence, and startup verification before workflow execution. No database schema or startup hook for `straw-ledger` was changed in this delivery.
 
 STRAW-001's literal source gate and observed browser acceptance remain outstanding and are not resolved by this core crate.

@@ -1,0 +1,182 @@
+[
+  {
+    "path": "apps/web/app/api/auth/register/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\register\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "ee1d50db755a16f5b7adc5d74f52b8076cf1dbe4c5e9a7d88e29add2d26888fe",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--register--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/login/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\login\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "0426cfd0d9b5284a66353d76290a2f07483a2474aef010af0d1497800132a042",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--login--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/logout/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\logout\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "b859df399316c7edfd74a7745b414ab329595b0cb9090e5c395290a3f15fbbe7",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--logout--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/me/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\me\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "37bed5184f1d3c98e6847cd164884085e974fe4a9e3ff4fd712a8d89f1b66c69",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--me--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/refresh-token/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\refresh-token\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "4803e1a61a814257488a590f5033732d02670dd30fc7a2ab4cb55e5f57aa7bb3",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--refresh-token--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/verify-email/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\verify-email\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "9bde41abd5fd171c212f75b6b2c7dd32555722f8d31cf00ee92fe7e050a4390c",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--verify-email--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/forgot-password/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\forgot-password\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "1a468f1ec126c30d36a1c800727a34849ec94f8b4c52fd4fb3298001b30f661f",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--forgot-password--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/web/app/api/auth/reset-password/route.ts",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\web\\app\\api\\auth\\reset-password\\route.ts",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "483c52ec03fad539fa0d11889ee1aaf8d6536ba66ceb7036697bacb5cf926eee",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--web--app--api--auth--reset-password--route.ts.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/Cargo.toml",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\Cargo.toml",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "3b8663c8255768046610995c2d14cd12c262cbe7e4ac35a912eadbfce501dc47",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--Cargo.toml.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/src/lib.rs",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\src\\lib.rs",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "bb678b6af5b4deddcbc220268c516c6ff34c3541571b33333ea2980d282fdd6e",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--src--lib.rs.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/src/config.rs",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\src\\config.rs",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "a59aff976561591cc65bf839cf09bb6b45b8008412e3056531489a5b789b5e00",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--src--config.rs.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/src/store.rs",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\src\\store.rs",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "74396ad60e80cae59b3c453d0092093e7fb80dd2c4ddcad04465b0d416268bbb",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--src--store.rs.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/src/auth.rs",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\src\\auth.rs",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "81417a19d7cedeea850082d80fd05aaa50891399629a0fa5e302872d0178733c",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--src--auth.rs.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/src/main.rs",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\src\\main.rs",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "a47ddd73039c28e0fdaf751c67425ab83af3d2dbc6f8beba7efe1866ea6f8a68",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--src--main.rs.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/.gitignore",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\.gitignore",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "42b4c70775881bdf1e28602bb1130d3e5b8d63076259a6588a1b42cde8502536",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--.gitignore.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/README.md",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\README.md",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "40be7544db038c78ea432a55bbaac0498997898b39689f887515104d47f7bdc5",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--README.md.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/Cargo.lock",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\Cargo.lock",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "6960dd49de386bdeb372516056096c4524af7e1b086799e3f905e14410e1df61",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--Cargo.lock.patch",
+    "patch_reconstruction": "passed"
+  },
+  {
+    "path": "apps/api/tests/auth_http.rs",
+    "new_file": true,
+    "after_snapshot": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\after\\apps\\api\\tests\\auth_http.rs",
+    "before": null,
+    "before_sha256": null,
+    "after_sha256": "2ae78ecbe4d159e99305bbb7ffa05f54a079f24c18d2aa9790c49da928788f6d",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\patches\\apps--api--tests--auth_http.rs.patch",
+    "patch_reconstruction": "passed"
+  }
+]

@@ -17,6 +17,9 @@ target
 # Authored guides and verification under output/ stay trackable.
 node_modules/
 .next/
+.next-*/
+__pycache__/
+*.pyc
 dist/
 *.tsbuildinfo
 *.sqlite

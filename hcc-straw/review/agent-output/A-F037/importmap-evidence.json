@@ -1,0 +1,13 @@
+﻿{
+    "source_import_map_wasm_frontend":  "/wasm-frontend.js",
+    "dist_import_map_wasm_frontend":  "/wasm-frontend.js",
+    "urls_match":  true,
+    "expected_module_url":  "/wasm-frontend.js",
+    "dist_js_exists":  true,
+    "dist_wasm_exists":  true,
+    "dist_js_bytes":  7103,
+    "dist_wasm_bytes":  23169,
+    "js_exports_default_init":  true,
+    "js_exports_fibonacci":  true,
+    "pass":  true
+}

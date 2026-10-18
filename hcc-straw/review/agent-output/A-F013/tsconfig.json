@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../../..",
+    "paths": {
+      "@/*": ["apps/web/*"]
+    },
+    "typeRoots": ["../../../apps/web/node_modules/@types"]
+  },
+  "include": [
+    "../../../apps/web/app/login/**/*.ts",
+    "../../../apps/web/app/login/**/*.tsx",
+    "../../../apps/web/lib/zod-form-resolver.ts",
+    "../../../apps/web/lib/utils.ts",
+    "../../../apps/web/context/AuthContext.tsx",
+    "../../../apps/web/types/index.ts",
+    "../../../apps/web/services/auth.service.ts",
+    "../../../apps/web/services/service-utils.ts",
+    "../../../apps/web/lib/api-client.ts"
+  ]
+}

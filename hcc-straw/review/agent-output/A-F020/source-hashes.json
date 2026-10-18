@@ -1,0 +1,58 @@
+[
+  {
+    "file": "apps/web/hooks/useBrowserStorage.ts",
+    "existed_before": false,
+    "before_sha256": null,
+    "after_sha256": "057a016d8c25e6ce2e01e2815f8daa36cfc09c70352152140c6b27940520a72b",
+    "before_bytes": 0,
+    "after_bytes": 2531
+  },
+  {
+    "file": "apps/web/hooks/useDebounce.ts",
+    "existed_before": true,
+    "before_sha256": "070b2eb2d130df188261e5a3581a6aebb682d51623d6f3b312ce9873d467f9c9",
+    "after_sha256": "af6af54895232175e4b92a8c6c06711485eaeb58c3b03616d95b58d3c016b97c",
+    "before_bytes": 1051,
+    "after_bytes": 1178
+  },
+  {
+    "file": "apps/web/hooks/useLocalStorage.ts",
+    "existed_before": true,
+    "before_sha256": "2d0a3a67aa57afd0bc84bbfec212dc0e2cec357cda2a0b42795983ec9cceaa79",
+    "after_sha256": "57f2056dc1488fa744a489d30017739f30a057ebb244f190b8b4663508c3fd25",
+    "before_bytes": 1692,
+    "after_bytes": 329
+  },
+  {
+    "file": "apps/web/hooks/useSessionStorage.ts",
+    "existed_before": true,
+    "before_sha256": "f830301c02d5ed24612f80a3910c365ec675bb5eb1c7e8a13190f27277b81192",
+    "after_sha256": "145cdacc8edcd626e3ee7a260eea760da4e09799d32e305f3fd65976ca220976",
+    "before_bytes": 1183,
+    "after_bytes": 272
+  },
+  {
+    "file": "apps/web/hooks/useProtectedRoute.ts",
+    "existed_before": true,
+    "before_sha256": "62e3029c7b6e6ff968cf9bf70bd2da3ddb6980bc6447dd2b5e136ae1dc3e5e50",
+    "after_sha256": "43f0fdb3474d325d135587f0f2c6e8e87098802c6c0c80c2eea1eab9b6f2024f",
+    "before_bytes": 705,
+    "after_bytes": 601
+  },
+  {
+    "file": "apps/web/hooks/useTheme.ts",
+    "existed_before": true,
+    "before_sha256": "48e687b72a3fe1b81fde9f818d25fa63b0d9e7378fdd485060da70a97107c511",
+    "after_sha256": "b900c25755cdb40cb40856e7d4023bf91ea644fe84b460d1541ceb297d1b9353",
+    "before_bytes": 931,
+    "after_bytes": 864
+  },
+  {
+    "file": "apps/web/hooks/useToast.tsx",
+    "existed_before": true,
+    "before_sha256": "91761655ba29e2fa64ed9547bb705bfd215cbe2d10ad75375f03f8309c376a26",
+    "after_sha256": "2384da97e7f7cd2ea7a39d59e407e7fd5d2e23d1d229fb854204439db5b80d12",
+    "before_bytes": 2723,
+    "after_bytes": 4094
+  }
+]

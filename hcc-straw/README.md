@@ -1,6 +1,6 @@
 # STRAW-stack
 
-Sovereign baseline: Svelte 5 runes compiled by Trunk to WASM, Tauri 2, pure Rust, and Axum bound only to `127.0.0.1`. Persistence on this path is SQLite through sqlx. Eduba is the archival ledger, an append-only SQLite record house in `straw-app/crates/eduba-ledger` and `straw-app/crates/eduba-server`, using sqlx `query!` macros. It is not a school, LMS, curriculum, or student product.
+Approved STRAW hybrid: Svelte 5 runes compiled to browser JavaScript by the native Rust compiler, Tauri 2, Rust/WASM compute, SQLx SQLite WAL storage, Tower/Tokio, Specta contracts, and optional loopback Axum. A supervised Candle sidecar bundles the verified Qwen3-based `rockypod/svelte-coder-4b` GGUF. The native vault, signed single-use grants and checkpointed ledger govern protected operations. See [the hybrid implementation record](straw-app/HYBRID-MERGE.md).
 
 There is no Node.js, npm, pnpm, yarn, Python, pip, Playwright, Vite, or Webpack toolchain on the sovereign path. No `package.json` lockstep, `node_modules`, or `vite.config.js`. From `straw-app/`, the supported commands are `trunk build`, `cargo tauri build`, `cargo test --workspace --offline --locked`, and `cargo tree`. When `cargo` is not already on PATH, add `%USERPROFILE%\.cargo\bin`. Trunk accepts `NO_COLOR` as `true` or `false`, not `1`.
 
@@ -8,7 +8,7 @@ There is no Node.js, npm, pnpm, yarn, Python, pip, Playwright, Vite, or Webpack 
 
 - **Desktop:** `straw-app/`. Trunk, Tauri 2, Rust, Axum on `127.0.0.1`, and SQLite/sqlx. This is the sovereign product.
 - **Legacy web:** `apps/web` is the quarantined Next.js tree. `apps/api` is the separate local Rust/Axum service that tree calls. Neither builds the desktop or Eduba. See [apps/README.md](apps/README.md).
-- **Generator:** the SaaS generator is a separate tree. It assembles template bundles. It is not this desktop, not Eduba, and not `apps/web`. Its checks are not release evidence for this stack.
+- **Generator:** the original SaaS generator remains available in its own tree. The native `straw-fabricator` in this workspace preserves its nine template names and emits the reviewed shared core. Domain integrations are separate modules; legacy cloud clients are not imported into the runtime.
 
 ## Setup and current entry
 
@@ -19,6 +19,8 @@ May 2026 guides under `output/` are historical. Each is labeled at the top and i
 Upstream provenance for the vendored Svelte runtime and clsx is [straw-app/third-party/NOTICE.md](straw-app/third-party/NOTICE.md).
 
 ## Current validation
+
+Latest source closeout: [2026-10-18 checks and remaining gates](review/closeout-2026-10-18/README.md). Desktop workspace tests, legacy web checks/build, local API tests, and generator unit tests passed. This checkpoint retains the release hold below.
 
 Dated build evidence begins in the 2026-10-09 record in `straw-app/STRAW-001-VERIFICATION.md`. S15 desktop observation evidence is dated 2026-10-10 under `review/agent-output/A-S15/`.
 

@@ -1,0 +1,43 @@
+[
+  {
+    "command": "static-route-nav contract checks over apps/web/app/features/*.tsx + Navbar mobile/desktop user branches",
+    "cwd": "C:\\IEDB\\STRAW Stack",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\static-route-nav.log",
+    "acceptance": true,
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "npm_config_offline": "true"
+    }
+  },
+  {
+    "command": "npm run type-check",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\type-check.log",
+    "acceptance": true,
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "npm_config_offline": "true"
+    }
+  },
+  {
+    "command": "npm run build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build.log",
+    "acceptance": false,
+    "deferred_to": "A-F003",
+    "diagnostic": "Compile and type lint completed; Collecting page data failed with ENOENT pages-manifest.json under junction target C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\.next. Outside A-F012 folder ownership.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build-realpath.log"
+  },
+  {
+    "command": "npm run build",
+    "cwd": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build-realpath.log",
+    "acceptance": false,
+    "deferred_to": "A-F003",
+    "diagnostic": "Compiled successfully then failed Collecting page data with PageNotFoundError Cannot find module for page: /_document. Pre-existing Next standalone/junction issue; features route compiled. Full web build remains A-F003."
+  }
+]

@@ -1,0 +1,17 @@
+[package]
+name = "straw-stele"
+version = "0.2.0"
+edition = "2021"
+description = "The Stele: a typestate over the vault ledger. Precedents join the one signed chain."
+
+[dependencies]
+straw-security = { path = "../security" }
+uuid.workspace = true
+chrono.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+straw-storage = { path = "../storage" }
+sqlx.workspace = true
+tempfile = "=3.27.0"
+zeroize = "=1.9.1"

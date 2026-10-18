@@ -1,0 +1,74 @@
+[
+  {
+    "path": "apps/api/src/users.rs",
+    "new": true,
+    "before_sha256": null,
+    "after_sha256": "4505fecd33050497baec478079542002290554342315c6a46b1da700ba83ff59",
+    "before": null,
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\api\\src\\users.rs",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__api__src__users.rs.diff"
+  },
+  {
+    "path": "apps/api/src/lib.rs",
+    "new": false,
+    "before_sha256": "bb678b6af5b4deddcbc220268c516c6ff34c3541571b33333ea2980d282fdd6e",
+    "after_sha256": "8c6412276401ecf55a3a76a417e93bd2aba885df9ff8665eb631c962a9b96b06",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\before\\apps\\api\\src\\lib.rs",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\api\\src\\lib.rs",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__api__src__lib.rs.diff"
+  },
+  {
+    "path": "apps/api/src/auth.rs",
+    "new": false,
+    "before_sha256": "81417a19d7cedeea850082d80fd05aaa50891399629a0fa5e302872d0178733c",
+    "after_sha256": "f3397eb29d5e11615cafba536a0d79f8edb6c7f9dd9db7478e4d7e8589b5ab0c",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\before\\apps\\api\\src\\auth.rs",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\api\\src\\auth.rs",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__api__src__auth.rs.diff"
+  },
+  {
+    "path": "apps/api/tests/users_http.rs",
+    "new": true,
+    "before_sha256": null,
+    "after_sha256": "add9c39b589c36e5a1fd5399502bc8f6ecab46cc26207cdc154243e2d5cb1a41",
+    "before": null,
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\api\\tests\\users_http.rs",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__api__tests__users_http.rs.diff"
+  },
+  {
+    "path": "apps/web/app/api/users/route.ts",
+    "new": false,
+    "before_sha256": "3563d2699212e69085f37e796d7cafaaedcb2152c5d0ad103dbb5951f69fecfe",
+    "after_sha256": "fbac953999990c5c28545464d584a969e934beb6a2d0c927628ba659d4bca4ac",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\before\\apps\\web\\app\\api\\users\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\web\\app\\api\\users\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__web__app__api__users__route.ts.diff"
+  },
+  {
+    "path": "apps/web/app/api/users/profile/route.ts",
+    "new": true,
+    "before_sha256": null,
+    "after_sha256": "0c4c0e6ad8d0aa7be66c5353e87e3dc6a1f65dcd75b33703cf6cfdbdb0fd765e",
+    "before": null,
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\web\\app\\api\\users\\profile\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__web__app__api__users__profile__route.ts.diff"
+  },
+  {
+    "path": "apps/web/app/api/users/avatar/route.ts",
+    "new": true,
+    "before_sha256": null,
+    "after_sha256": "7d822d4eb6e6eaec024277d31e92f304c5c1a06b9056fb5718bf180195f86cdd",
+    "before": null,
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\web\\app\\api\\users\\avatar\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__web__app__api__users__avatar__route.ts.diff"
+  },
+  {
+    "path": "apps/web/app/api/users/[id]/route.ts",
+    "new": true,
+    "before_sha256": null,
+    "after_sha256": "8ba07f642e46ec7d07c75e2c3972acc2518a7dd5353f77d2978daf6ef0c546e2",
+    "before": null,
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\after\\apps\\web\\app\\api\\users\\[id]\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\patches\\apps__web__app__api__users__id__route.ts.diff"
+  }
+]

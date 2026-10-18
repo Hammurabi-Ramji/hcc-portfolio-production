@@ -1,0 +1,18 @@
+{
+  "straw-app/tools/frontend-build/src/main.rs": "a72c2c59ccca753ae0fcb0ab5edf9bd9a3cc4c59aa765de05721389fe335266b",
+  "straw-app/tools/frontend-build/src/site_cache.rs": "fa88da4278b156b48a7e46ecc32f35ab5445c5ec84213f3041111def731873f4",
+  "straw-app/index.html": "c582b58740bb41567405bf2fb9071858af770e7667e14a4a2cfbd60a7c22f398",
+  "straw-app/site/index-site.html": "33fb98bd3ab3df4a32bf9af9163e3451e077b58033bc9c4b03e17dd43ef6253c",
+  "ui": {
+    "App.svelte": "7c5483575e918a63b4376342178f9c0d793976b58059fa52d5c10d2f3b9928c6",
+    "BrowserFlows.svelte": "e7555bb5ed6eb056e4b3b7ba10fc31b134c145f09f273cefa30a75d5d5395c14",
+    "CodeGenPanel.svelte": "9573b9d6c88527dce478ce9bced91e6244532e8d6f0584ddea418cfd34bb5640",
+    "FlowCanvas.svelte": "35a1f170e65a17d343dcfd86e85dd2139c5c4b0e698f2c1d046c4e33ec19febe",
+    "main.js": "c7423216aeba8a6b36adbaffbc6502a89886354063949f9bf456b01932549e7f",
+    "NlpChatPanel.svelte": "fd59e57f6fce94e788099b3588a3de999e8f9a1f1d27de7ad5df5843e6d54162",
+    "NodeConfigPanel.svelte": "51ab5789128830ffa5b6e48f03cee481b70668ea45ab9c81d0dc37c0edad2e2c",
+    "PwaStatus.svelte": "2f56ee2b897002c5654b7119febcb2632f41088d5008dd4d301e3cc372d2485f",
+    "routes.js": "93189f26ccaaf850f86c572dc242898e0cc129eacaaf1e4eac5f28b8c6346c05",
+    "Toast.svelte": "88467d34b36306aa64453b156be30c70f2b4acd98be671ffdda8a316ca02c878"
+  }
+}

@@ -7,11 +7,20 @@
   import Toast from './Toast.svelte';
   import PwaStatus from './PwaStatus.svelte';
   import BrowserFlows from './BrowserFlows.svelte';
+  import ModelPanel from './ModelPanel.svelte';
+  import DocumentPanel from './DocumentPanel.svelte';
+  import FabricatorPanel from './FabricatorPanel.svelte';
+  import VaultPanel from './VaultPanel.svelte';
+  import PrecedentPanel from './PrecedentPanel.svelte';
+  import RecordsPanel from './RecordsPanel.svelte';
+  import ValidationPanel from './ValidationPanel.svelte';
+  import { invokeCommand } from './commands.js';
   import { readRoute, navigate, watchRoute } from './routes.js';
 
   const desktop = Boolean(window.__TAURI__?.core?.invoke);
   const siteSurface = document.documentElement.dataset.surface === 'site';
   let mode = $state(readRoute());
+  let modelSettings = $state({model:'rockypod/svelte-coder-4b',apiUrl:'candle://bundled',temperature:0.2});
   let flows = $state([]);
   let drafts = $state({});
   let removed = $state({});
@@ -30,7 +39,7 @@
   }
   async function invoke(command, args = {}) {
     if (!window.__TAURI__?.core?.invoke) throw new Error('Open STRAW Desk to use the local engine.');
-    return window.__TAURI__.core.invoke(command, args);
+    return invokeCommand(command, args);
   }
   onMount(() => {
     let live = true;
@@ -99,8 +108,10 @@
   }
   function compute() {
     try {
-      if (!Number.isInteger(computeInput) || computeInput < 0 || computeInput > 46) throw new Error('Choose an integer from 0 to 46.');
-      computeResult = `fibonacci(${computeInput}) = ${fibonacci(computeInput)} · WebAssembly`;
+      const n = typeof computeInput === 'number' ? computeInput : Number(computeInput);
+      if (!Number.isInteger(n) || n < 0 || n > 46) throw new Error('Choose an integer from 0 to 46.');
+      computeInput = n;
+      computeResult = `fibonacci(${n}) = ${fibonacci(n)} · WebAssembly`;
     } catch (e) { notify(String(e), true); }
   }
 </script>
@@ -110,7 +121,7 @@
     <h1>STRAW Desk</h1>
     <p class="muted">Local automation workspace</p>
     <nav aria-label="Workspace">
-      {#each (desktop ? [['modules','Modules'],['flows','Flows'],['chat','AI chat'],['code','Code generation']] : [['modules','Modules'],['flows','Desktop flows']]) as [value,label] (value)}
+      {#each (desktop ? [['modules','Modules'],['records','Records'],['validate','Validate project'],['vault','Vault and grants'],['ledger','Ledger'],['flows','Flows'],['documents','Documents'],['models','Local models'],['fabricator','Fabricator'],['chat','AI chat'],['code','Code generation']] : [['modules','Modules'],['flows','Desktop flows']]) as [value,label] (value)}
         <button class:active={mode === value} onclick={() => navigate(value)}>{label}</button>
       {/each}
     </nav>
@@ -144,17 +155,24 @@
     {#if desktop}
     <div class="view" hidden={mode !== 'flows'}>
       {#if active}
-        {#key active.id}<FlowCanvas record={editorRecord(active)} persisted={flows.some((flow) => flow.id === active.id) && !drafts[active.id]?.dirty} {invoke} {notify} onsaved={saved} ondraft={rememberDraft} />{/key}
+        {#key active.id}<FlowCanvas record={editorRecord(active)} persisted={flows.some((flow) => flow.id === active.id) && !drafts[active.id]?.dirty} {invoke} {notify} {modelSettings} onsaved={saved} ondraft={rememberDraft} />{/key}
       {:else}
         <section class="welcome"><h2>Build a local workflow</h2><p>Connect file, text, logic, and local model nodes. Save and run against the desktop engine.</p><button disabled={!ready} onclick={newFlow}>Create a flow</button></section>
       {/if}
     </div>
     <div class="view" hidden={mode !== 'chat'}>
-      <NlpChatPanel {invoke} {notify} />
+      <NlpChatPanel {invoke} {notify} {modelSettings} />
     </div>
     <div class="view" hidden={mode !== 'code'}>
-      <CodeGenPanel {invoke} {notify} />
+      <CodeGenPanel {invoke} {notify} {modelSettings} />
     </div>
+    <div class="view" hidden={mode !== 'models'}><ModelPanel {invoke} {notify} onselect={settings => modelSettings = settings} /></div>
+    <div class="view" hidden={mode !== 'documents'}><DocumentPanel {invoke} {notify} /></div>
+    <div class="view" hidden={mode !== 'fabricator'}><FabricatorPanel {invoke} {notify} /></div>
+    <div class="view" hidden={mode !== 'vault'}><VaultPanel {invoke} {notify} /></div>
+    <div class="view" hidden={mode !== 'ledger'}><PrecedentPanel {invoke} {notify} active={mode === 'ledger'} /></div>
+    {#if mode === 'records'}<RecordsPanel {invoke} />{/if}
+    <div class="view" hidden={mode !== 'validate'}><ValidationPanel {invoke} {notify} /></div>
     {:else}
       <div class="view" hidden={mode !== 'flows'}><BrowserFlows {notify} /></div>
       {#if mode === 'chat' || mode === 'code'}<section class="panel"><h2>Desktop feature</h2><p>Open STRAW Desk to use the local model and write files.</p><div><button onclick={() => navigate('modules')}>Back to modules</button></div></section>{/if}

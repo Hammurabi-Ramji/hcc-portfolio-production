@@ -1,0 +1,757 @@
+{
+  "exit_code": 0,
+  "scope": "Isolated compiler/UI/vendor copy; no saved production browser modules regenerated",
+  "files": [
+    {
+      "relative": "App.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "CodeGenPanel.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "FlowCanvas.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "main.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "NlpChatPanel.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "NodeConfigPanel.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "Toast.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/clsx.mjs",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/env.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/animate/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/attachments/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/constants.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/easing/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/escaping.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/events/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/html-tree-validation.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/index-client.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/index-server.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/constants.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/context.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/assign.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/console-log.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/css.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/debug.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/elements.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/equality.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/hmr.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/inspect.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/legacy.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/ownership.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/tracing.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dev/validation.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/async.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/await.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/boundary.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/branches.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/css-props.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/each.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/html.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/if.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/key.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/slot.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/snippet.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/svelte-component.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/svelte-element.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/blocks/svelte-head.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/css.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/actions.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/attachments.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/attributes.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/document.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/input.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/media.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/navigator.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/props.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/select.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/shared.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/size.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/this.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/universal.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/bindings/window.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/class.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/custom-element.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/customizable-select.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/events.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/misc.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/style.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/elements/transitions.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/hydration.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/legacy/event-modifiers.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/legacy/lifecycle.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/legacy/misc.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/operations.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/reconciler.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/task.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/dom/template.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/error-handling.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/errors.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/hydratable.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/legacy.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/loop.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/proxy.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/async.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/batch.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/deriveds.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/effects.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/equality.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/props.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/sources.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/status.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/store.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/reactivity/utils.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/render.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/runtime.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/timing.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/validate.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/client/warnings.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/disclose-version.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/flags/async.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/flags/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/flags/legacy.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/flags/tracing.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/abort-signal.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/blocks/html.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/blocks/snippet.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/context.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/crypto.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/dev.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/errors.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/hydratable.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/hydration.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/render-context.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/renderer.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/server/warnings.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/attributes.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/clone.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/context.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/dev.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/errors.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/utils.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/validate.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/internal/shared/warnings.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/legacy/legacy-client.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/legacy/legacy-server.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/motion/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/motion/spring.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/motion/tweened.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/motion/utils.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/create-subscriber.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/date.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/index-client.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/index-server.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/map.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/media-query.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/reactive-value.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/set.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/url-search-params.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/url.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/reactivity/window/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/server/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/store/index-client.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/store/index-server.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/store/shared/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/store/utils.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/transition/index.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/utils.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    },
+    {
+      "relative": "vendor/svelte/version.js",
+      "production_exists": true,
+      "matches_clean_build": true
+    }
+  ],
+  "extra_production_files": []
+}

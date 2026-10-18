@@ -1,0 +1,20 @@
+[
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F024/tsconfig.json",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\01.log",
+    "acceptance": true
+  },
+  {
+    "command": "node --test review/agent-output/A-F024/regression.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\02.log",
+    "acceptance": true
+  },
+  {
+    "command": "python review/agent-output/A-F024/save-evidence.py",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\03.log",
+    "acceptance": true
+  }
+]

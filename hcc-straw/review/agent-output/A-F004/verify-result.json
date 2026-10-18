@@ -1,0 +1,67 @@
+{
+  "pass": true,
+  "providerExceptionSafe": true,
+  "checks": {
+    "layoutImportsCss": true,
+    "layoutMountsAuthProvider": true,
+    "authProviderExports": true,
+    "authProviderThrowsWithoutMount": true,
+    "pageUsesAuth": true,
+    "tokenMapped": true,
+    "lightTokensPresent": true,
+    "darkTokensPresent": true,
+    "darkMediaPresent": true,
+    "lightCta": 7.9,
+    "darkCta": 6.29,
+    "lightBody": 17.93,
+    "darkBody": 16.91,
+    "lightMuted": 10.44,
+    "darkMuted": 13.4,
+    "lightCtaReadable": true,
+    "darkCtaReadable": true,
+    "lightBodyReadable": true,
+    "darkBodyReadable": true,
+    "lightMutedReadable": true,
+    "darkMutedReadable": true,
+    "twScansApp": true,
+    "twScansHooks": true,
+    "twScansComponents": true
+  },
+  "routes": [
+    {
+      "route": "/",
+      "usesUseAuth": true,
+      "coveredByRootAuthProvider": true
+    },
+    {
+      "route": "/login",
+      "usesUseAuth": true,
+      "coveredByRootAuthProvider": true
+    },
+    {
+      "route": "/signup",
+      "usesUseAuth": true,
+      "coveredByRootAuthProvider": true
+    },
+    {
+      "route": "/dashboard",
+      "usesUseAuth": true,
+      "coveredByRootAuthProvider": true
+    },
+    {
+      "route": "/settings",
+      "usesUseAuth": true,
+      "coveredByRootAuthProvider": true
+    }
+  ],
+  "navbarVariants": {
+    "anonymous": {
+      "user": null,
+      "expected": "Login + Sign Up controls"
+    },
+    "authenticated": {
+      "mapping": "user ? { name: username||email||'User', avatar: profile?.avatarUrl } : null",
+      "expected": "Dashboard + avatar/name controls"
+    }
+  }
+}

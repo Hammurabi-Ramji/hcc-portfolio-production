@@ -6,7 +6,7 @@ pub fn schema() -> NodeSchema {
         kind: "template".into(),
         label: "Text Template".into(),
         description:
-            "Fill {{variable}} placeholders from vars: JSON text mapping names to strings.".into(),
+            "Fill {{variable}} substitutions from vars: JSON text mapping names to strings.".into(),
         category: "Text".into(),
         inputs: vec!["vars".into()],
         outputs: vec!["output".into()],
@@ -41,20 +41,20 @@ pub fn execute(config: &HashMap<String, String>, inputs: NodeInputs) -> NodeResu
     let mut remaining = template;
     while let Some(start) = remaining.find("{{") {
         result.push_str(&remaining[..start]);
-        let placeholder = &remaining[start..];
-        let Some(end) = placeholder[2..].find("}}") else {
-            result.push_str(placeholder);
+        let substitution = &remaining[start..];
+        let Some(end) = substitution[2..].find("}}") else {
+            result.push_str(substitution);
             remaining = "";
             break;
         };
         let end = end + 2;
-        let key = &placeholder[2..end];
+        let key = &substitution[2..end];
         result.push_str(
             vars.get(key)
                 .map(String::as_str)
-                .unwrap_or(&placeholder[..end + 2]),
+                .unwrap_or(&substitution[..end + 2]),
         );
-        remaining = &placeholder[end + 2..];
+        remaining = &substitution[end + 2..];
     }
     result.push_str(remaining);
 

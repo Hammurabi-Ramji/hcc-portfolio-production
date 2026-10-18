@@ -1,0 +1,125 @@
+﻿{
+    "timestamp":  "2026-10-18T10:56:05.0131827Z",
+    "sourceIcoEntries":  [
+                             {
+                                 "index":  0,
+                                 "width":  16,
+                                 "height":  16,
+                                 "bytes":  1128,
+                                 "offset":  70
+                             },
+                             {
+                                 "index":  1,
+                                 "width":  32,
+                                 "height":  32,
+                                 "bytes":  4264,
+                                 "offset":  1198
+                             },
+                             {
+                                 "index":  2,
+                                 "width":  128,
+                                 "height":  128,
+                                 "bytes":  67624,
+                                 "offset":  5462
+                             },
+                             {
+                                 "index":  3,
+                                 "width":  256,
+                                 "height":  256,
+                                 "bytes":  13556,
+                                 "offset":  73086
+                             }
+                         ],
+    "compare_source32_vs_installed":  {
+                                          "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\source-32x32.png",
+                                          "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\installed-exe-associated.png",
+                                          "aw":  32,
+                                          "ah":  32,
+                                          "bw":  32,
+                                          "bh":  32,
+                                          "sameDims":  true,
+                                          "pixelsChecked":  1024,
+                                          "pixelsDiffer":  482,
+                                          "identical":  false
+                                      },
+    "compare_source32_vs_release":  {
+                                        "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\source-32x32.png",
+                                        "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\release-exe-associated.png",
+                                        "aw":  32,
+                                        "ah":  32,
+                                        "bw":  32,
+                                        "bh":  32,
+                                        "sameDims":  true,
+                                        "pixelsChecked":  1024,
+                                        "pixelsDiffer":  482,
+                                        "identical":  false
+                                    },
+    "compare_installed_vs_release":  {
+                                         "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\installed-exe-associated.png",
+                                         "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\release-exe-associated.png",
+                                         "aw":  32,
+                                         "ah":  32,
+                                         "bw":  32,
+                                         "bh":  32,
+                                         "sameDims":  true,
+                                         "pixelsChecked":  1024,
+                                         "pixelsDiffer":  0,
+                                         "identical":  true
+                                     },
+    "compare_source32_vs_nsis":  {
+                                     "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\source-32x32.png",
+                                     "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\nsis-setup-associated.png",
+                                     "aw":  32,
+                                     "ah":  32,
+                                     "bw":  32,
+                                     "bh":  32,
+                                     "sameDims":  true,
+                                     "pixelsChecked":  1024,
+                                     "pixelsDiffer":  860,
+                                     "identical":  false
+                                 },
+    "multiSizeFromInstalled":  [
+                                   {
+                                       "size":  16,
+                                       "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIconsW\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                       "ok":  false
+                                   },
+                                   {
+                                       "size":  32,
+                                       "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIconsW\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                       "ok":  false
+                                   },
+                                   {
+                                       "size":  48,
+                                       "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIconsW\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                       "ok":  false
+                                   },
+                                   {
+                                       "size":  64,
+                                       "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIconsW\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                       "ok":  false
+                                   },
+                                   {
+                                       "size":  128,
+                                       "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIconsW\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                       "ok":  false
+                                   },
+                                   {
+                                       "size":  256,
+                                       "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIconsW\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                       "ok":  false
+                                   }
+                               ],
+    "shortcutMeta":  {
+                         "path":  "C:\\Users\\hammu\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\STRAW Desk.lnk",
+                         "name":  "STRAW Desk",
+                         "type":  "Shortcut",
+                         "exists":  true
+                     },
+    "hashes":  {
+                   "releaseAssoc":  "2D0A1409C21D170FA102E6F33CF49BB0D9886099DF6067FEB45B2C36C722CAE8",
+                   "source32":  "1C6782DC65C8111C12CBC1882A0FEA5E71AB8E51B18DA2CE9580F5C88860ED02",
+                   "installedAssoc":  "2D0A1409C21D170FA102E6F33CF49BB0D9886099DF6067FEB45B2C36C722CAE8",
+                   "nsisAssoc":  "E8C1EE55F2F15384E636BAF410B27287A1F96F85B0C871DCEBB8FF3AF877E08A"
+               }
+}

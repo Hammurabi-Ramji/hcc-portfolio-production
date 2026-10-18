@@ -1,0 +1,87 @@
+{
+  "runtime": {
+    "react": "19.3.0",
+    "typescript": "5.9.3",
+    "browser": "156.0.8078.36"
+  },
+  "ok": true,
+  "passed": 7,
+  "failed": 0,
+  "groups": [
+    {
+      "name": "mount-without-provider-error",
+      "ok": true,
+      "detail": {
+        "text": "Create an accountStart building with AUTARCH todayUsernameEmail addressPasswordM"
+      }
+    },
+    {
+      "name": "client-validation-blocks-request",
+      "ok": true,
+      "detail": {
+        "registerCalls": 0,
+        "emailError": "Invalid email address",
+        "termsError": "You must accept the terms and conditions"
+      }
+    },
+    {
+      "name": "pending-single-submit-and-retry",
+      "ok": true,
+      "detail": {
+        "registerCalls": 2,
+        "alert": "The local API request could not be completed."
+      }
+    },
+    {
+      "name": "success-reaches-dashboard",
+      "ok": true,
+      "detail": {
+        "redirects": [
+          "/dashboard"
+        ],
+        "calls": 1
+      }
+    },
+    {
+      "name": "a11y-controls-and-policy-links",
+      "ok": true,
+      "detail": {
+        "termsHref": "/signup/terms",
+        "privacyHref": "/signup/privacy",
+        "passwordPressed": "true"
+      }
+    },
+    {
+      "name": "authenticated-redirect",
+      "ok": true,
+      "detail": {
+        "redirects": [
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard"
+        ]
+      }
+    },
+    {
+      "name": "session-survives-reload",
+      "ok": true,
+      "detail": {
+        "redirects": [
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard",
+          "/dashboard"
+        ],
+        "user": "reload@example.com",
+        "mechanism": "HttpOnly straw_session via AuthContext refresh"
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "runtime": {
+    "react": "19.3.0",
+    "typescript": "5.9.3",
+    "browser": "156.0.8078.36"
+  },
+  "passes": [
+    "cookie-only reload hydration survives denied browser storage",
+    "login/register use real services and explicit singular user envelope; rememberMe forwarded",
+    "invalid/expired and malformed/inactive responses never preserve an authenticated user",
+    "refresh transport failure and logout revocation failure are truthful; confirmed logout clears state",
+    "logout distinguishes confirmed invalid session (401) from Origin denial (403)",
+    "hydration/refresh completions cannot overwrite a newer session",
+    "overlapping login operations serialize Set-Cookie order and suppress obsolete success",
+    "failed queued login and stale profile edits cannot desynchronize identity/authorization",
+    "queued login/logout failures reconcile the last confirmed server session",
+    "unmount and StrictMode replay discard stale completions without state leaks"
+  ],
+  "count": 10,
+  "transport": "actual AuthService and Axios interceptor/adapter; no HTTP or backend/browser integration claim",
+  "requests": [
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/register",
+      "baseURL": "/api"
+    },
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/logout",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/logout",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/logout",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/logout",
+      "baseURL": "/api"
+    },
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/logout",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/logout",
+      "baseURL": "/api"
+    },
+    {
+      "method": "post",
+      "url": "/auth/login",
+      "baseURL": "/api"
+    },
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    },
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    },
+    {
+      "method": "get",
+      "url": "/auth/me",
+      "baseURL": "/api"
+    }
+  ]
+}

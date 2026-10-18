@@ -1,0 +1,598 @@
+cargo 1.98.1 (797e8a9bc 2026-08-05)
+rustc 1.98.1 (48a229cea 2026-09-01)
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.45
+   Compiling unicode-ident v1.0.24
+   Compiling serde_core v1.0.228
+   Compiling cfg-if v1.0.4
+   Compiling windows-link v0.2.1
+   Compiling serde v1.0.228
+   Compiling itoa v1.0.18
+   Compiling smallvec v1.15.1
+   Compiling once_cell v1.21.4
+   Compiling pin-project-lite v0.2.17
+   Compiling bytes v1.11.1
+   Compiling futures-core v0.3.32
+   Compiling parking_lot_core v0.9.12
+   Compiling scopeguard v1.2.0
+   Compiling zmij v1.0.21
+   Compiling windows-sys v0.61.2
+   Compiling stable_deref_trait v1.2.1
+   Compiling slab v0.4.12
+   Compiling autocfg v1.5.1
+   Compiling lock_api v0.4.14
+   Compiling tracing-core v0.1.36
+   Compiling log v0.4.29
+   Compiling serde_json v1.0.150
+   Compiling memchr v2.8.0
+   Compiling find-msvc-tools v0.1.9
+   Compiling futures-task v0.3.32
+   Compiling shlex v1.3.0
+   Compiling base64 v0.22.1
+   Compiling num-traits v0.2.19
+   Compiling tracing v0.1.44
+   Compiling http v1.4.0
+   Compiling futures-util v0.3.32
+   Compiling cc v1.2.62
+   Compiling percent-encoding v2.3.2
+   Compiling tower-service v0.3.3
+   Compiling hashbrown v0.17.1
+   Compiling equivalent v1.0.2
+   Compiling httparse v1.10.1
+   Compiling futures-sink v0.3.32
+   Compiling tower-layer v0.3.3
+   Compiling try-lock v0.2.5
+   Compiling atomic-waker v1.1.2
+   Compiling libc v0.2.186
+   Compiling fnv v1.0.7
+   Compiling litemap v0.8.2
+   Compiling indexmap v2.14.0
+   Compiling writeable v0.6.3
+   Compiling want v0.3.1
+   Compiling form_urlencoded v1.2.2
+   Compiling http-body v1.0.1
+   Compiling parking_lot v0.12.5
+   Compiling sync_wrapper v1.0.2
+   Compiling futures-channel v0.3.32
+   Compiling windows-strings v0.5.1
+   Compiling windows-result v0.4.1
+   Compiling httpdate v1.0.3
+   Compiling icu_properties_data v2.2.0
+   Compiling icu_normalizer_data v2.2.0
+   Compiling utf8_iter v1.0.4
+   Compiling syn v2.0.117
+   Compiling http-body-util v0.1.3
+   Compiling ipnet v2.12.0
+   Compiling getrandom v0.4.2
+   Compiling windows-registry v0.6.1
+   Compiling mime v0.3.17
+   Compiling version_check v0.9.5
+   Compiling bitflags v2.11.1
+   Compiling zerocopy v0.8.48
+   Compiling ryu v1.0.23
+   Compiling native-tls v0.2.18
+   Compiling thiserror v2.0.18
+   Compiling num-conv v0.2.2
+   Compiling vcpkg v0.2.15
+   Compiling ahash v0.8.12
+   Compiling pkg-config v0.3.33
+   Compiling rustversion v1.0.22
+   Compiling time-core v0.1.8
+   Compiling powerfmt v0.2.0
+   Compiling ring v0.17.14
+   Compiling num-integer v0.1.46
+   Compiling time-macros v0.2.27
+   Compiling deranged v0.5.8
+   Compiling uuid v1.23.1
+   Compiling getrandom v0.2.17
+   Compiling libsqlite3-sys v0.28.0
+   Compiling zeroize v1.8.2
+   Compiling num-bigint v0.4.6
+   Compiling untrusted v0.9.0
+   Compiling rustls-pki-types v1.14.1
+   Compiling serde_path_to_error v0.1.20
+   Compiling pem v3.0.6
+   Compiling encoding_rs v0.8.35
+   Compiling fallible-iterator v0.3.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling matchit v0.7.3
+   Compiling user_analytics_posthog v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\user_analytics_posthog)
+   Compiling time v0.3.47
+   Compiling notification_system v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\notification_system)
+   Compiling error_tracking_sentry v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\error_tracking_sentry)
+   Compiling monitoring_prometheus v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\monitoring_prometheus)
+   Compiling log_aggregation_loki v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\log_aggregation_loki)
+   Compiling uptime_monitor v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\uptime_monitor)
+   Compiling object_storage_s3 v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\object_storage_s3)
+   Compiling secrets_management_vault v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\secrets_management_vault)
+   Compiling crm_integration_hub v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\crm_integration_hub)
+   Compiling file_storage_local v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\file_storage_local)
+   Compiling timeseries_db_influx v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\timeseries_db_influx)
+   Compiling tax_calculation_service v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\tax_calculation_service)
+   Compiling search_engine_local v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\search_engine_local)
+   Compiling api_gateway_proxy v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\api_gateway_proxy)
+   Compiling data_warehouse_connector v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\data_warehouse_connector)
+   Compiling caching_layer_redis v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\caching_layer_redis)
+   Compiling email_template_system v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\email_template_system)
+   Compiling data_pipeline_etl v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\data_pipeline_etl)
+   Compiling microservices_orchestrator v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\microservices_orchestrator)
+   Compiling read_replicas_manager v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\read_replicas_manager)
+   Compiling waf_security_layer v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\waf_security_layer)
+   Compiling synstructure v0.13.2
+   Compiling serde_derive v1.0.228
+   Compiling zerofrom-derive v0.1.7
+   Compiling yoke-derive v0.8.2
+   Compiling tokio-macros v2.7.0
+   Compiling zerovec-derive v0.11.3
+   Compiling displaydoc v0.2.5
+   Compiling thiserror-impl v2.0.18
+   Compiling pin-project-internal v1.1.13
+   Compiling async-trait v0.1.89
+   Compiling axum-core v0.4.5
+   Compiling pin-project v1.1.13
+   Compiling zerofrom v0.1.8
+   Compiling tower v0.4.13
+   Compiling simple_asn1 v0.6.4
+   Compiling yoke v0.8.2
+   Compiling zerovec v0.11.6
+   Compiling zerotrie v0.2.4
+   Compiling chrono v0.4.44
+   Compiling serde_urlencoded v0.7.1
+   Compiling jsonwebtoken v9.3.1
+   Compiling security_zero_trust v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\security_zero_trust)
+   Compiling background_job_processor v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\background_job_processor)
+   Compiling user_management v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\user_management)
+   Compiling reporting_engine v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\reporting_engine)
+   Compiling billing_stripe v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\billing_stripe)
+   Compiling mio v1.2.0
+   Compiling socket2 v0.6.3
+   Compiling tinystr v0.8.3
+   Compiling potential_utf v0.1.5
+   Compiling schannel v0.1.29
+   Compiling icu_collections v2.2.0
+   Compiling icu_locale_core v2.2.0
+   Compiling webhook_system v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\webhook_system)
+   Compiling dashboard_analytics v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\dashboard_analytics)
+   Compiling auth_system v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\auth_system)
+   Compiling tokio v1.52.3
+   Compiling icu_provider v2.2.0
+   Compiling icu_properties v2.2.0
+   Compiling icu_normalizer v2.2.0
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling hashbrown v0.14.5
+   Compiling hashlink v0.9.1
+   Compiling rusqlite v0.31.0
+   Compiling database_sqlite v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\database_sqlite)
+   Compiling tokio-util v0.7.18
+   Compiling tower v0.5.3
+   Compiling tokio-native-tls v0.3.1
+   Compiling tower-http v0.6.11
+   Compiling h2 v0.4.14
+   Compiling hyper v1.9.0
+   Compiling hyper-util v0.1.20
+   Compiling hyper-tls v0.6.0
+   Compiling axum v0.7.9
+   Compiling reqwest v0.12.28
+   Compiling ai_engine_ollama v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\ai_engine_ollama)
+   Compiling api_layer_axum v0.1.0 (C:\IEDB\STRAW SaaS Generator\components\api_layer_axum)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 04s
+     Running unittests src\lib.rs (target\debug\deps\ai_engine_ollama-58de83f76720e19c.exe)
+
+running 1 test
+test tests::test_ai_engine_init ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\api_gateway_proxy-3947085ef4b0eec5.exe)
+
+running 1 test
+test tests::test_gateway_routing ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\api_layer_axum-8825f9bd044bd1fb.exe)
+
+running 1 test
+test tests::test_health_check ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\auth_system-c6f4343f7324999a.exe)
+
+running 2 tests
+test tests::test_invalid_token ... ok
+test tests::test_token_generation_and_validation ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\background_job_processor-c28b5f1bb85aaebe.exe)
+
+running 1 test
+test tests::test_job_processing ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\billing_stripe-54d6ce418c318ca1.exe)
+
+running 2 tests
+test tests::test_create_checkout_session ... ok
+test tests::test_get_plans ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\caching_layer_redis-b030adc02f1b3465.exe)
+
+running 1 test
+test tests::test_cache_operations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\crm_integration_hub-e8846359f27a12c1.exe)
+
+running 1 test
+test tests::test_crm_sync ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\dashboard_analytics-a72aed3f5b605f70.exe)
+
+running 1 test
+test tests::test_analytics_tracking ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\data_pipeline_etl-1122fff85df74a1c.exe)
+
+running 1 test
+test tests::test_etl_flow ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\data_warehouse_connector-e9d6f319634db379.exe)
+
+running 1 test
+test tests::test_warehouse_query ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\database_sqlite-a942b20920edd834.exe)
+
+running 1 test
+test tests::test_db_operations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\email_template_system-60e26f6f0c5c19b4.exe)
+
+running 1 test
+test tests::test_welcome_template ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\error_tracking_sentry-e5e2c4bc1d466c46.exe)
+
+running 1 test
+test tests::test_error_tracking ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\file_storage_local-5263fc914e18e333.exe)
+
+running 1 test
+test tests::test_file_operations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src\lib.rs (target\debug\deps\log_aggregation_loki-0334277d97b28e51.exe)
+
+running 1 test
+test tests::test_logging ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\microservices_orchestrator-2cef2e02c3783640.exe)
+
+running 1 test
+test tests::test_service_registration ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\monitoring_prometheus-985b625b858bb6f0.exe)
+
+running 1 test
+test tests::test_metrics_collection ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\notification_system-ad05f7dcb23ffd0d.exe)
+
+running 1 test
+test tests::test_notification_send ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\object_storage_s3-2f98b654e0ebb3a4.exe)
+
+running 1 test
+test tests::test_s3_upload ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\read_replicas_manager-e51dd000f95412fc.exe)
+
+running 1 test
+test tests::test_load_balancing ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\reporting_engine-d2eb0b5194716903.exe)
+
+running 1 test
+test tests::test_report_generation ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\search_engine_local-4a75392be4d083d5.exe)
+
+running 1 test
+test tests::test_search_operations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\secrets_management_vault-0464a48452a4b3e5.exe)
+
+running 1 test
+test tests::test_vault_operations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\security_zero_trust-813dea91192528d5.exe)
+
+running 1 test
+test tests::test_zero_trust_verification ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\tax_calculation_service-48aa23be55e9e8ca.exe)
+
+running 1 test
+test tests::test_tax_calculations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\timeseries_db_influx-2682671bbf992220.exe)
+
+running 1 test
+test tests::test_influx_write ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\uptime_monitor-ad333219b9cbda1f.exe)
+
+running 1 test
+test tests::test_uptime_check ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\user_analytics_posthog-2358d45df71b6874.exe)
+
+running 1 test
+test tests::test_analytics_tracking ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\user_management-fd3f57e67a579828.exe)
+
+running 2 tests
+test tests::test_user_profile ... ok
+test tests::test_status_update ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\waf_security_layer-3a1f12871a5c2c2a.exe)
+
+running 1 test
+test tests::test_waf_blocking ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\lib.rs (target\debug\deps\webhook_system-dc84af343e3c1a35.exe)
+
+running 1 test
+test tests::test_webhook_trigger ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests ai_engine_ollama
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests api_gateway_proxy
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests api_layer_axum
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests auth_system
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests background_job_processor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests billing_stripe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests caching_layer_redis
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests crm_integration_hub
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests dashboard_analytics
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests data_pipeline_etl
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests data_warehouse_connector
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests database_sqlite
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests email_template_system
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests error_tracking_sentry
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests file_storage_local
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests log_aggregation_loki
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests microservices_orchestrator
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests monitoring_prometheus
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests notification_system
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests object_storage_s3
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests read_replicas_manager
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests reporting_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests search_engine_local
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests secrets_management_vault
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests security_zero_trust
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests tax_calculation_service
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests timeseries_db_influx
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests uptime_monitor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests user_analytics_posthog
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests user_management
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests waf_security_layer
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests webhook_system
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

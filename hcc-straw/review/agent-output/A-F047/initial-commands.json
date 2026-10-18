@@ -1,0 +1,14 @@
+[
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated\\straw-app",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\compiler-clean-build.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated\\straw-app",
+    "exit_code": 2,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\trunk-clean-build.log"
+  }
+]

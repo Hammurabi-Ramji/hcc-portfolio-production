@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "identifier": "r.k.girdhari.strawflow",
   "build": {
-    "beforeDevCommand": "trunk serve",
+    "beforeDevCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev-desktop.ps1",
     "devUrl": "http://127.0.0.1:8080",
-    "beforeBuildCommand": "trunk build",
-    "frontendDist": "../dist"
+    "beforeBuildCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-desktop.ps1",
+    "frontendDist": "../desktop-dist"
   },
   "app": {
     "windows": [
@@ -21,7 +21,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:8741 http://127.0.0.1:8080 ws://127.0.0.1:8080; img-src 'self' data:; object-src 'none'; base-uri 'self'"
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:8741 http://127.0.0.1:8080 ws://127.0.0.1:8080; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-src 'none'; form-action 'none'"
     },
     "withGlobalTauri": true
   },
@@ -39,6 +39,12 @@
       "webviewInstallMode": {
         "type": "skip"
       }
+    },
+    "externalBin": [
+      "binaries/straw-infer"
+    ],
+    "resources": {
+      "resources/models/svelte-coder/": "models/svelte-coder/"
     }
   }
 }

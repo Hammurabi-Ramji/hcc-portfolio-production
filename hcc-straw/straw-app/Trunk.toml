@@ -11,8 +11,8 @@ port = 8080
 open = false
 
 [watch]
-watch = ["ui", "index.html", "crates/wasm-frontend", "tools/frontend-build"]
-ignore = ["target", "dist", "site-dist", "public"]
+watch = ["ui", "packages/origami-fe", "index.html", "crates/wasm-frontend", "tools/frontend-build"]
+ignore = ["target", "dist", "desktop-dist", "site-dist", "public"]
 
 [[hooks]]
 stage = "pre_build"

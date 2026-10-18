@@ -144,20 +144,20 @@ pub fn safe_join(output_dir: &Path, rel: &str) -> Result<PathBuf, PathError> {
     Ok(candidate)
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct CreationRequest {
     pub prompt: String,
     pub output_dir: String,
     pub settings: ModelSettings,
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub struct CreationResult {
     pub files: Vec<CodeFile>,
     pub output_dir: String,
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RefinementRequest {
     pub file: CodeFile,
@@ -462,7 +462,13 @@ pub(crate) fn save_files_with_changed_prior(
 }
 
 pub fn generate(request: CreationRequest) -> Result<CreationResult, String> {
-    let response = crate::network::generate(&request.settings, &request.prompt,
+    generate_with(request, crate::network::generate)
+}
+pub fn generate_with(
+    request: CreationRequest,
+    generate: impl FnOnce(&ModelSettings, &str, &str) -> Result<String, String>,
+) -> Result<CreationResult, String> {
+    let response = generate(&request.settings, &request.prompt,
         "Return complete named files in fenced blocks. The first line INSIDE every block must be path: relative/file.ext. Close every block. Never repeat paths.")?;
     let blocks = parse_code_blocks(&response).map_err(|e| e.to_string())?;
     let files: Vec<_> = blocks
@@ -482,6 +488,12 @@ pub fn generate(request: CreationRequest) -> Result<CreationResult, String> {
 }
 
 pub fn refine(request: RefinementRequest) -> Result<CodeFile, String> {
+    refine_with(request, crate::network::generate)
+}
+pub fn refine_with(
+    request: RefinementRequest,
+    generate: impl FnOnce(&ModelSettings, &str, &str) -> Result<String, String>,
+) -> Result<CodeFile, String> {
     validate_relative(&request.file.path).map_err(|e| e.to_string())?;
     if request.file.id.is_empty() {
         return Err("missing file identity".into());
@@ -490,7 +502,7 @@ pub fn refine(request: RefinementRequest) -> Result<CodeFile, String> {
         "File: {}\nCurrent content:\n{}\nInstruction:\n{}",
         request.file.path, request.file.content, request.instruction
     );
-    let content = crate::network::generate(
+    let content = generate(
         &request.settings,
         &prompt,
         "Return only the full refined file content, without fences or commentary.",

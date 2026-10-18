@@ -1,0 +1,53 @@
+Warning: truncated output (original token count: 7107)
+Total output lines: 170
+
+Listing tests:
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:8:3 › API - Auth Service (Port 3001) › POST /register - Register new user
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:24:3 › API - Auth Service (Port 3001) › POST /login - Authenticate user
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:52:3 › API - Auth Service (Port 3001) › GET /me - Get current user
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:82:3 › API - Auth Service (Port 3001) › Error handling - Missing fields
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:96:3 › API - Data Service (Port 3002) › POST /collections - Create collection
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:111:3 › API - Data Service (Port 3002) › POST /records - Insert record
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:138:3 › API - Data Service (Port 3002) › GET /records - Query records
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:175:3 › API - Billing Service (Port 3003) › POST /subscriptions - Create subscription
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:187:3 › API - Billing Service (Port 3003) › POST /usage/record - Record usage
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:201:3 › API - Billing Service (Port 3003) › GET /usage/:tenantId - Get usage
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:223:3 › API - Storage Service (Port 3004) › POST /upload - Upload file
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:240:3 › API - Storage Service (Port 3004) › GET /files - List files
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:251:3 › API - Storage Service (Port 3004) › GET /quota - Get storage quota
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:268:3 › API - Analytics Service (Port 3005) › POST /events - Track event
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:283:3 › API - Analytics Service (Port 3005) › GET /events - Query events
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:306:3 › API - Analytics Service (Port 3005) › GET /health - Service health
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\api.spec.ts:319:3 › Full Integration - End-to-End Flow › Complete workflow: Register → Create Data → Track Event → Generate Invoice
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.test.ts:10:3 › App Shell › renders welcome screen on first load
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.test.ts:19:3 › App Shell › sidebar contains logo and all three mode buttons
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.test.ts:26:3 › App Shell › Flows mode is active by default
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.test.ts:31:3 › App Shell › switching to AI Chat mode shows NLP panel
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.test.ts:37:3 › App Shell › switching to Create mode shows Code Gen panel
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.test.ts:43:3 › App Shell › switching back to Flows mode shows flow list
+  [chromium] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\01-app-shell.tes…5107 tokens truncated…w\straw-app\tests\e2e\06-toast.test.ts:7:3 › Toast Notifications › toast appears after creating a new flow
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\06-toast.test.ts:15:3 › Toast Notifications › toast appears after sending NLP message
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\e2e\06-toast.test.ts:24:3 › Toast Notifications › toast appears after generating code
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:8:3 › Multi-Tenant Isolation › Users from different tenants should not see each other data
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:36:3 › Multi-Tenant Isolation › Analytics should track events per tenant
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:73:3 › Error Handling › Missing required fields should return 400
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:81:3 › Error Handling › Invalid authentication should return 401
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:89:3 › Error Handling › Non-existent resource should return 404
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:103:3 › Performance › Bulk insert should complete in reasonable time
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\integration.spec.ts:132:3 › Performance › Query with limit should be fast
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:9:3 › Desktop App - Dashboard › should render dashboard with workflows
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:14:3 › Desktop App - Dashboard › should display workflow list
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:19:3 › Desktop App - Dashboard › should create new workflow
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:24:3 › Desktop App - Dashboard › should open workflow template
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:30:3 › Desktop App - Dashboard › should display database statistics
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:43:3 › Desktop App - Workflow Editor › should render workflow canvas
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:48:3 › Desktop App - Workflow Editor › should add node to canvas
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:59:3 › Desktop App - Workflow Editor › should connect nodes with edges
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:77:3 › Desktop App - Workflow Editor › should save workflow
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:84:3 › Desktop App - Workflow Editor › should execute workflow
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:91:3 › Desktop App - Workflow Editor › should delete workflow
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:105:3 › Desktop App - Settings › should render settings page
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:109:3 › Desktop App - Settings › should update settings
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:118:3 › Desktop App - Error Handling › should show error boundary on crash
+  [firefox] › ..\..\..\external\BSM-C\hcc-straw\hcc-straw\straw-app\tests\ui.spec.ts:123:3 › Desktop App - Error Handling › should display validation errors
+Total: 168 tests in 9 files

@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet, VecDeque};
 use uuid::Uuid;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize, specta::Type)]
 #[serde(transparent)]
 pub struct NodeId(Uuid);
 impl NodeId {
@@ -17,7 +17,7 @@ impl std::fmt::Display for NodeId {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct FlowNode {
     pub id: NodeId,
@@ -28,7 +28,7 @@ pub struct FlowNode {
     #[serde(default)]
     pub y: f64,
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct FlowEdge {
     pub source: NodeId,
@@ -36,7 +36,7 @@ pub struct FlowEdge {
     pub target: NodeId,
     pub target_handle: String,
 }
-#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct Graph {
     pub nodes: Vec<FlowNode>,
@@ -171,7 +171,7 @@ impl Graph {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, specta::Type)]
 #[serde(
     tag = "kind",
     rename_all = "camelCase",
@@ -185,13 +185,13 @@ pub enum RunStatus {
         error: String,
     },
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub struct NodeResult {
     pub node_id: NodeId,
     pub outputs: HashMap<String, NodeValue>,
 }
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub struct ExecutionResult {
     pub id: String,
@@ -207,7 +207,10 @@ impl AcyclicGraph {
     pub fn topological(&self) -> Vec<NodeId> {
         self.order.clone()
     }
-    pub(crate) fn execute(&self) -> (RunStatus, Vec<NodeResult>) {
+    pub(crate) fn execute_with(
+        &self,
+        generate: &dyn Fn(&crate::contract::ModelSettings, &str, &str) -> Result<String, String>,
+    ) -> (RunStatus, Vec<NodeResult>) {
         let mut store: HashMap<NodeId, HashMap<String, NodeValue>> = HashMap::new();
         let mut results = Vec::new();
         for id in &self.order {
@@ -287,7 +290,12 @@ impl AcyclicGraph {
                     }
                 }
             }
-            match execute_node(&node.kind, &node.config, NodeInputs(inputs)) {
+            let output = if node.kind == "llm_prompt" {
+                crate::nodes::llm_prompt::execute_with(&node.config, NodeInputs(inputs), generate)
+            } else {
+                execute_node(&node.kind, &node.config, NodeInputs(inputs))
+            };
+            match output {
                 Ok(output) => {
                     store.insert(*id, output.0.clone());
                     results.push(NodeResult {
@@ -307,5 +315,115 @@ impl AcyclicGraph {
             }
         }
         (RunStatus::Completed, results)
+    }
+}
+
+#[cfg(test)]
+mod graph_contract_tests {
+    use super::*;
+    fn node(kind: &str) -> FlowNode {
+        FlowNode {
+            id: NodeId::mint(),
+            kind: kind.into(),
+            config: HashMap::new(),
+            x: 0.,
+            y: 0.,
+        }
+    }
+    fn edge(source: &FlowNode, output: &str, target: &FlowNode, input: &str) -> FlowEdge {
+        FlowEdge {
+            source: source.id,
+            source_handle: output.into(),
+            target: target.id,
+            target_handle: input.into(),
+        }
+    }
+    fn fails(graph: Graph, expected: &str) {
+        assert!(graph.validate().unwrap_err().to_string().contains(expected));
+    }
+
+    #[test]
+    fn graph_identity_ports_and_ownership_are_checked_before_execution() {
+        let source = node("text_input");
+        let target = node("transform");
+        fails(Graph::default(), "empty graph");
+        fails(
+            Graph {
+                nodes: vec![source.clone(), source.clone()],
+                edges: vec![],
+            },
+            "duplicate node ID",
+        );
+        fails(
+            Graph {
+                nodes: vec![node("unknown")],
+                edges: vec![],
+            },
+            "unknown node kind",
+        );
+        fails(
+            Graph {
+                nodes: vec![source.clone()],
+                edges: vec![edge(&node("text_input"), "text", &source, "text")],
+            },
+            "unknown source",
+        );
+        fails(
+            Graph {
+                nodes: vec![source.clone()],
+                edges: vec![edge(&source, "text", &node("transform"), "text")],
+            },
+            "unknown target",
+        );
+        fails(
+            Graph {
+                nodes: vec![source.clone(), target.clone()],
+                edges: vec![edge(&source, "unknown", &target, "text")],
+            },
+            "unknown port",
+        );
+        let connection = edge(&source, "text", &target, "text");
+        fails(
+            Graph {
+                nodes: vec![source.clone(), target.clone()],
+                edges: vec![connection.clone(), connection],
+            },
+            "more than once",
+        );
+        fails(
+            Graph {
+                nodes: vec![target.clone()],
+                edges: vec![],
+            },
+            "requires connected input",
+        );
+        fails(
+            Graph {
+                nodes: vec![target.clone()],
+                edges: vec![edge(&target, "result", &target, "text")],
+            },
+            "cycle detected",
+        );
+        let join = node("join_text");
+        fails(
+            Graph {
+                nodes: vec![source.clone(), join.clone()],
+                edges: vec![edge(&source, "text", &join, "list")],
+            },
+            "incompatible port types",
+        );
+        let valid = Graph {
+            nodes: vec![target.clone(), source.clone()],
+            edges: vec![edge(&source, "text", &target, "text")],
+        }
+        .validate()
+        .unwrap();
+        assert_eq!(valid.topological(), vec![source.id, target.id]);
+        assert!(matches!(
+            valid
+                .execute_with(&|_, _, _| Err("must not infer".into()))
+                .0,
+            RunStatus::Completed
+        ));
     }
 }

@@ -5,7 +5,7 @@ pub fn schema() -> NodeSchema {
     NodeSchema {
         kind: "llm_prompt".into(),
         label: "LLM Prompt".into(),
-        description: "Send a prompt to a local LLM (Ollama) through IPv4 loopback.".into(),
+        description: "Send a prompt to the bundled model or a local loopback LLM.".into(),
         category: "AI".into(),
         inputs: vec!["prompt".into()],
         outputs: vec!["response".into()],
@@ -47,6 +47,13 @@ pub fn schema() -> NodeSchema {
 }
 
 pub fn execute(config: &HashMap<String, String>, inputs: NodeInputs) -> NodeResult {
+    execute_with(config, inputs, &crate::network::generate)
+}
+pub fn execute_with(
+    config: &HashMap<String, String>,
+    inputs: NodeInputs,
+    generate: &dyn Fn(&crate::contract::ModelSettings, &str, &str) -> Result<String, String>,
+) -> NodeResult {
     let config = schema()
         .validated_config(config)
         .map_err(NodeError::Execution)?;
@@ -72,6 +79,6 @@ pub fn execute(config: &HashMap<String, String>, inputs: NodeInputs) -> NodeResu
         .get("system_prompt")
         .map(String::as_str)
         .unwrap_or("You are a helpful assistant.");
-    let text = crate::network::generate(&settings, prompt, system).map_err(NodeError::Execution)?;
+    let text = generate(&settings, prompt, system).map_err(NodeError::Execution)?;
     Ok(NodeOutputs::single("response", NodeValue::Text(text)))
 }

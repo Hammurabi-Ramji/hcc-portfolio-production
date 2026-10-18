@@ -1,0 +1,9 @@
+[package]
+name = "sovereign-app"
+version = "0.1.0"
+edition = "2021"
+[dependencies]
+straw-engine = { path = "../crates/engine" }
+straw-security = { path = "../crates/security" }
+axum-loop = { path = "../crates/axum-loop" }
+tokio.workspace = true

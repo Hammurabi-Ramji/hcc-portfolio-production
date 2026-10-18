@@ -1,0 +1,81 @@
+[
+  {
+    "probe": "CLI <no args>",
+    "returncode": 0,
+    "live_output_unchanged": true,
+    "stdout": "usage: controller.py [-h] [--config CONFIG] [--template TEMPLATE]\n                     [--components COMPONENTS [COMPONENTS ...]] [--all]\n                     [--list-templates] [--list-components]\n\nGenerate SaaS starter bundles from the HCC STRAW SaaS generator.\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG       Path to the generator config file. (default: None)\n  --template TEMPLATE   Generate a single named template. (default: None)\n  --components COMPONENTS [COMPONENTS ...]\n                        Override the component list for --template with a\n                        space-separated set of component names. (default:\n                        None)\n  --all                 Generate every configured template. (default: False)\n  --list-templates      Print the available template names and exit. (default:\n                        False)\n  --list-components     Print the available component names and exit.\n                        (default: False)\n",
+    "stderr": ""
+  },
+  {
+    "probe": "CLI --help",
+    "returncode": 0,
+    "live_output_unchanged": true,
+    "stdout": "usage: controller.py [-h] [--config CONFIG] [--template TEMPLATE]\n                     [--components COMPONENTS [COMPONENTS ...]] [--all]\n                     [--list-templates] [--list-components]\n\nGenerate SaaS starter bundles from the HCC STRAW SaaS generator.\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG       Path to the generator config file. (default: None)\n  --template TEMPLATE   Generate a single named template. (default: None)\n  --components COMPONENTS [COMPONENTS ...]\n                        Override the component list for --template with a\n                        space-separated set of component names. (default:\n                        None)\n  --all                 Generate every configured template. (default: False)\n  --list-templates      Print the available template names and exit. (default:\n                        False)\n  --list-components     Print the available component names and exit.\n                        (default: False)\n",
+    "stderr": ""
+  },
+  {
+    "probe": "CLI --list-templates",
+    "returncode": 0,
+    "live_output_unchanged": true,
+    "stdout": "Available templates:\n  - healthcare_saas\n  - finance_saas\n  - ecommerce_saas\n  - marketing_saas\n  - education_saas\n  - real_estate_saas\n  - legal_saas\n  - logistics_saas\n  - creative_agency_saas\n",
+    "stderr": ""
+  },
+  {
+    "probe": "CLI --list-components",
+    "returncode": 0,
+    "live_output_unchanged": true,
+    "stdout": "Available components:\n  - auth_system\n  - billing_stripe\n  - dashboard_analytics\n  - ai_engine_ollama\n  - database_sqlite\n  - api_layer_axum\n  - frontend_svelte\n  - desktop_shell_tauri\n  - notification_system\n  - user_management\n  - file_storage_local\n  - reporting_engine\n  - search_engine_local\n  - security_zero_trust\n  - mobile_app_shell\n  - admin_dashboard_ui\n  - landing_page_marketing\n  - component_library_ui\n  - email_template_system\n  - api_gateway_proxy\n  - microservices_orchestrator\n  - background_job_processor\n  - read_replicas_manager\n  - data_warehouse_connector\n  - caching_layer_redis\n  - object_storage_s3\n  - timeseries_db_influx\n  - iac_terraform_scripts\n  - cicd_github_actions\n  - secrets_management_vault\n  - waf_security_layer\n  - monitoring_prometheus\n  - log_aggregation_loki\n  - user_analytics_posthog\n  - error_tracking_sentry\n  - uptime_monitor\n  - tax_calculation_service\n  - crm_integration_hub\n  - webhook_system\n  - support_portal_internal\n  - data_pipeline_etl\n  - no_code_workflow_builder\n  - zap_hosting_management\n",
+    "stderr": ""
+  },
+  {
+    "probe": "CLI --all --template healthcare_saas",
+    "returncode": 2,
+    "live_output_unchanged": true,
+    "stdout": "",
+    "stderr": "usage: controller.py [-h] [--config CONFIG] [--template TEMPLATE]\n                     [--components COMPONENTS [COMPONENTS ...]] [--all]\n                     [--list-templates] [--list-components]\ncontroller.py: error: Choose either --template or --all, not both.\n"
+  },
+  {
+    "probe": "CLI --components auth_system",
+    "returncode": 2,
+    "live_output_unchanged": true,
+    "stdout": "",
+    "stderr": "usage: controller.py [-h] [--config CONFIG] [--template TEMPLATE]\n                     [--components COMPONENTS [COMPONENTS ...]] [--all]\n                     [--list-templates] [--list-components]\ncontroller.py: error: --components can only be used together with --template.\n"
+  },
+  {
+    "probe": "missing implementation and unknown component reporting",
+    "manifest": {
+      "saas_name": "Healthcare Saas",
+      "active_components": [
+        "auth_system",
+        "frontend_svelte"
+      ],
+      "missing_components": [
+        "unknown_component"
+      ],
+      "status": "ready_to_build",
+      "features_requested": 3,
+      "features_included": 2
+    },
+    "placeholder_created": true,
+    "placeholder_reported_missing": false,
+    "build_manifest_present": false,
+    "deduplicated": true
+  },
+  {
+    "probe": "unknown template rejection",
+    "rejected": true,
+    "message": "Template unknown_template not found. Available templates: healthcare_saas, finance_saas, ecommerce_saas, marketing_saas, education_saas, real_estate_saas, legal_saas, logistics_saas, creative_agency_saas"
+  },
+  {
+    "probe": "default template mapping",
+    "configured_templates": 9,
+    "configured_components": 43,
+    "not_in_any_default": [
+      "data_warehouse_connector",
+      "iac_terraform_scripts",
+      "no_code_workflow_builder",
+      "zap_hosting_management"
+    ],
+    "unknown_defaults": []
+  }
+]

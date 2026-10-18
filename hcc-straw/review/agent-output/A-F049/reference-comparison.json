@@ -1,0 +1,16 @@
+{
+  "independent_clean_reference": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui",
+  "reference_matches_all_153": true,
+  "saved_output": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui",
+  "saved_output_count": 150,
+  "common_output_count": 150,
+  "common_output_differences": [],
+  "new_current_outputs": [
+    "vendor/licenses/NOTICE.md",
+    "vendor/licenses/clsx-LICENSE",
+    "vendor/licenses/svelte-LICENSE.md"
+  ],
+  "extra_saved_outputs": [],
+  "saved_output_acceptance": false,
+  "saved_output_diagnostic": "Saved generated artifacts may await A-F039 refresh after A-F050. This is not browser acceptance."
+}

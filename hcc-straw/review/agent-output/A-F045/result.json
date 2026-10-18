@@ -1,0 +1,44 @@
+{
+  "agent": "A-F045",
+  "folder": "straw-app/src-tauri/icons",
+  "status": "PARTIAL",
+  "wave": 2,
+  "g3": "TRACK-ONLY; release hold remains with A-F029; F045 does not clear G3.",
+  "source_edits": [],
+  "checkbox": {
+    "text": "At release validation, build the intended desktop bundles and inspect installed launcher/taskbar imagery.",
+    "checked": false,
+    "inspection_pass": true,
+    "fresh_bundle_build_pass": false
+  },
+  "verified": {
+    "icon_ico_32_matches_installed_exe_associated": true,
+    "installed_matches_release_exe_associated": true,
+    "live_window_title": "STRAW Desk",
+    "taskbar_screenshot_captured": true,
+    "tauri_icon_refs_present": true,
+    "icons_unchanged_since_retained_bundles": true
+  },
+  "blockers": [
+    "A-F041 packaging unsettled; no agent-output; installer checklist open",
+    "Fresh cargo/tauri desktop bundle rebuild not performed this session (F041 ownership)",
+    "G3 release hold tracked only; not cleared"
+  ],
+  "evidence": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\icons-inventory.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\icon-extraction-report.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\icon-compare-report.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\live-icon-inspection.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\bundle-coordination.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\shortcut-resolution.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\screenshots\\desktop-with-app.png",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\screenshots\\taskbar-strip.png",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\"
+  ],
+  "triple_ripple": {
+    "primary": "Confirm desktop launcher/taskbar imagery comes from committed icons/assets.",
+    "secondary": "A-F041 must produce current offline locked bundles before F045 checkbox close.",
+    "tertiary": "G3 hold and W4 release certification remain outside F045."
+  }
+}

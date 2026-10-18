@@ -1,0 +1,35 @@
+[
+  {
+    "command": "set NEXT_TELEMETRY_DISABLED=1&& set npm_config_offline=true&& node .\\node_modules\\tailwindcss\\lib\\cli.js -i .\\app\\globals.css -o C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\generated\\tailwind.out.css --minify",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\logs\\01-tailwind-generate.log",
+    "acceptance": true
+  },
+  {
+    "command": "python C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\assert_css.py",
+    "exit_code": 9009,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\logs\\02-css-assert.stdout.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\logs\\02-css-assert.log",
+    "diagnostic": "python launcher missing on PATH; replaced by node assert_css.cjs"
+  },
+  {
+    "command": "node C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\assert_css.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\logs\\02-css-assert.log",
+    "acceptance": true
+  },
+  {
+    "command": "node C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\visual\\serve.cjs ; browser visual + CDP on http://127.0.0.1:18025/visual/fixture.html",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\logs\\03-visual.log",
+    "acceptance": true
+  },
+  {
+    "command": "Stop-Process OwningProcess listening on 127.0.0.1:18025; confirm port closed",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F025\\logs\\04-server-stop.log",
+    "acceptance": true
+  }
+]

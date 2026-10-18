@@ -1,0 +1,21 @@
+{
+  "agent": "A-F014",
+  "files": {
+    "apps/web/app/profile/page.tsx": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "ce78cc0f394162475e2c91c93d3febe962997324d6381b69c96822c69b435b55",
+      "before_bytes": 0,
+      "after_bytes": 292,
+      "patch": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F014\\patches\\page--tsx.patch",
+      "new_file": true
+    },
+    "apps/web/app/profile/README.md": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "b636936fdaf5638d3f7fd7f6909757a8c99713d12c2e07ff7f98e5f43e5898bd",
+      "before_bytes": 0,
+      "after_bytes": 876,
+      "patch": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F014\\patches\\README--md.patch",
+      "new_file": true
+    }
+  }
+}

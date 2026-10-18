@@ -14,7 +14,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use thiserror::Error;
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, specta::Type)]
 #[serde(tag = "type", content = "value")]
 pub enum NodeValue {
     Text(String),
@@ -23,7 +23,7 @@ pub enum NodeValue {
     List(Vec<NodeValue>),
     Table(Vec<HashMap<String, String>>),
     Null,
-    /// Inactive branch: propagate without executing downstream nodes.
+    // Inactive branch: propagate without executing downstream nodes.
     Skipped,
 }
 
@@ -37,10 +37,10 @@ impl NodeValue {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 pub struct NodeInputs(pub HashMap<String, NodeValue>);
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 pub struct NodeOutputs(pub HashMap<String, NodeValue>);
 
 impl NodeOutputs {
@@ -51,7 +51,7 @@ impl NodeOutputs {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub struct SchemaField {
     pub name: String,
@@ -62,7 +62,7 @@ pub struct SchemaField {
     pub required: bool,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub struct NodeSchema {
     pub kind: String,
@@ -75,7 +75,7 @@ pub struct NodeSchema {
 }
 
 /// Central port contract; string port lists stay wire-compatible with the editor.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub enum ValueType {
     Text,
@@ -85,7 +85,7 @@ pub enum ValueType {
     Table,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, specta::Type)]
 #[serde(rename_all = "camelCase")]
 pub struct InputSpec {
     pub name: String,
@@ -185,9 +185,9 @@ impl NodeSchema {
                 }
             }
             "llm_prompt" => {
-                crate::network::LoopbackEndpoint::parse(
-                    config.get("api_url").map(String::as_str).unwrap_or(""),
-                )?;
+                let endpoint=config.get("api_url").map(String::as_str).unwrap_or("");
+                if endpoint=="candle://bundled" {if config.get("model").map(String::as_str)!=Some("rockypod/svelte-coder-4b"){return Err("bundled model identity mismatch".into());}}
+                else {crate::network::LoopbackEndpoint::parse(endpoint)?;}
                 let temperature = config
                     .get("temperature")
                     .and_then(|n| n.parse::<f64>().ok())

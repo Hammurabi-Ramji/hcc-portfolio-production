@@ -19,6 +19,11 @@ pub fn router(db: DbState) -> Router {
     Router::new()
         .route("/health", get(|| async { "ok" }))
         .route("/flows", get(engine_flows_list))
+        .layer(tower_http::limit::RequestBodyLimitLayer::new(64 * 1024))
+        .layer(tower_http::timeout::TimeoutLayer::with_status_code(
+            StatusCode::REQUEST_TIMEOUT,
+            std::time::Duration::from_secs(10),
+        ))
         .layer(middleware::from_fn(local_browser_origin))
         .with_state(db)
 }
@@ -194,6 +199,7 @@ mod tests {
         let db = DbState::open(dir.path().join("reject.db")).unwrap();
         let (_stop, signal) = tokio::sync::oneshot::channel();
         let error = serve(wildcard, db, signal).await.unwrap_err();
+        assert_eq!(error.kind(), io::ErrorKind::Other);
         assert!(error.to_string().contains("127.0.0.1"));
         tokio::net::TcpListener::bind((Ipv4Addr::UNSPECIFIED, wildcard_port))
             .await
@@ -205,7 +211,47 @@ mod tests {
             let db = DbState::open(dir.path().join("ipv6.db")).unwrap();
             let (_stop, signal) = tokio::sync::oneshot::channel();
             let error = serve(ipv6, db, signal).await.unwrap_err();
+            assert_eq!(error.kind(), io::ErrorKind::Other);
             assert!(error.to_string().contains("127.0.0.1"));
         }
+    }
+
+    /// Focused shutdown/rebind: oneshot send and sender-drop both release the port.
+    /// Desktop Exit join/timeout remains STACK-F046 / A-F046 (Tauri owner).
+    #[tokio::test]
+    async fn graceful_shutdown_releases_listener_for_rebind() {
+        let _production_port = tokio::net::TcpListener::bind(BIND_ADDRESS).await.ok();
+        let dir = tempfile::tempdir().unwrap();
+        let db = DbState::open(dir.path().join("shutdown.db")).unwrap();
+        let listener = tokio::net::TcpListener::bind((Ipv4Addr::LOCALHOST, 0))
+            .await
+            .unwrap();
+        let address = listener.local_addr().unwrap();
+        let (stop, signal) = tokio::sync::oneshot::channel();
+        let task = tokio::spawn(serve(listener, db, signal));
+        let health_url = format!("http://{address}/health");
+        let health = tokio::task::spawn_blocking(move || {
+            straw_engine::network::request("GET", &health_url, &Default::default(), "").unwrap()
+        })
+        .await
+        .unwrap();
+        assert_eq!(health, (200, "ok".into()));
+        assert!(tokio::net::TcpListener::bind(address).await.is_err());
+        stop.send(()).unwrap();
+        task.await.unwrap().unwrap();
+        let rebound = tokio::net::TcpListener::bind(address).await.unwrap();
+        drop(rebound);
+
+        let dir = tempfile::tempdir().unwrap();
+        let db = DbState::open(dir.path().join("drop-shutdown.db")).unwrap();
+        let listener = tokio::net::TcpListener::bind((Ipv4Addr::LOCALHOST, 0))
+            .await
+            .unwrap();
+        let address = listener.local_addr().unwrap();
+        let (stop, signal) = tokio::sync::oneshot::channel();
+        let task = tokio::spawn(serve(listener, db, signal));
+        drop(stop);
+        task.await.unwrap().unwrap();
+        tokio::net::TcpListener::bind(address).await.unwrap();
     }
 }

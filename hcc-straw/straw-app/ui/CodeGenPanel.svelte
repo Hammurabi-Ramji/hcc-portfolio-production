@@ -1,15 +1,13 @@
 <script>
-  let { invoke, notify } = $props();
+  let { invoke, notify, modelSettings } = $props();
   let prompt = $state('');
   let outputDir = $state('');
-  let model = $state('llama3.2');
-  let apiUrl = $state('http://127.0.0.1:11434/api/generate');
   let files = $state([]);
   let selectedId = $state(null);
   let busy = $state(false);
   let instruction = $state('');
   const selected = $derived(files.find(f => f.id === selectedId));
-  function settings() {return {model,apiUrl,temperature:0.7};}
+  function settings() {return JSON.parse(JSON.stringify(modelSettings));}
   async function generate() {
     busy=true;
     try {
@@ -48,7 +46,7 @@
 </script>
 <section class="panel">
   <h2>Code generation</h2><p class="muted">Named files are checked before saving. Generation refuses to overwrite existing files.</p>
-  <div class="row"><label>Local model<input bind:value={model} disabled={busy}></label><label>Endpoint<input class="endpoint" bind:value={apiUrl} disabled={busy}></label></div>
+  <p class="muted">Selected model: {modelSettings.model}. Load and warm the bundled model in Local models before generating.</p>
   <label>Output directory<input placeholder="Choose an absolute local project directory" bind:value={outputDir} disabled={busy || files.length > 0}></label>
   <label>Describe the project<textarea rows="4" bind:value={prompt} disabled={busy}></textarea></label>
   <div class="row"><button disabled={busy || !prompt.trim() || !outputDir.trim()} onclick={generate}>{busy?'Working…':'Generate and save'}</button><button disabled={busy} onclick={newProject}>New project</button></div>

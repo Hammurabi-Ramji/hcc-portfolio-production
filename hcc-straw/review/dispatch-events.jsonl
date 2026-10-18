@@ -1,0 +1,80 @@
+{"agent": "A-F026", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:11:57.957867+00:00"}
+{"agent": "A-F027", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:11:58.060623+00:00"}
+{"agent": "A-F047", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:11:58.169640+00:00"}
+{"agent": "A-F027", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:12:38.809671+00:00"}
+{"agent": "A-F027", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:12:38.809671+00:00"}
+{"agent": "A-F027", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:12:38.809671+00:00"}
+{"agent": "A-F020", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:12:38.927992+00:00"}
+{"agent": "A-F020", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:13:15.808183+00:00"}
+{"agent": "A-F026", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:14:55.494587+00:00"}
+{"agent": "A-F026", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:14:55.498971+00:00"}
+{"agent": "A-F026", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:14:55.498971+00:00"}
+{"agent": "A-F047", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:14:55.617217+00:00"}
+{"agent": "A-F047", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:14:55.621625+00:00"}
+{"agent": "A-F047", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:14:55.621625+00:00"}
+{"agent": "A-F034", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:15:11.754772+00:00"}
+{"agent": "A-F034", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:15:31.609210+00:00"}
+{"agent": "A-F026", "from": "SETTLED", "to": "REPORTED", "note": "Corrected evidence metadata returned; previous settlement retained", "timestamp_utc": "2026-10-09T08:15:43.962055+00:00"}
+{"agent": "A-F026", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:15:43.962055+00:00"}
+{"agent": "A-F026", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:15:43.962055+00:00"}
+{"agent": "A-F021", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:15:44.066541+00:00"}
+{"agent": "A-F021", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:16:02.213157+00:00"}
+{"agent": "A-F034", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:18:56.012770+00:00"}
+{"agent": "A-F034", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:18:56.012770+00:00"}
+{"agent": "A-F034", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:18:56.012770+00:00"}
+{"agent": "A-F035", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:18:56.128855+00:00"}
+{"agent": "A-F035", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:19:26.160126+00:00"}
+{"agent": "A-F020", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:22:50.649352+00:00"}
+{"agent": "A-F020", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:22:50.657351+00:00"}
+{"agent": "A-F020", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:22:50.657883+00:00"}
+{"agent": "A-F049", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:22:50.754409+00:00"}
+{"agent": "A-F049", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:23:59.214764+00:00"}
+{"agent": "A-F020", "from": "SETTLED", "to": "REPORTED", "note": "Corrected evidence metadata returned; previous settlement retained", "timestamp_utc": "2026-10-09T08:23:59.330977+00:00"}
+{"agent": "A-F020", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:23:59.330977+00:00"}
+{"agent": "A-F020", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:23:59.330977+00:00"}
+{"agent": "A-F020", "from": "SETTLED", "to": "REPORTED", "note": "Corrected evidence metadata returned; previous settlement retained", "timestamp_utc": "2026-10-09T08:24:10.197766+00:00"}
+{"agent": "A-F020", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:24:10.214543+00:00"}
+{"agent": "A-F020", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:24:10.214543+00:00"}
+{"agent": "A-F021", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:24:10.314886+00:00"}
+{"agent": "A-F021", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:24:10.314886+00:00"}
+{"agent": "A-F021", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:24:10.314886+00:00"}
+{"agent": "A-F007", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:24:10.430265+00:00"}
+{"agent": "A-F007", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:24:43.839830+00:00"}
+{"agent": "A-F049", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:29:24.334316+00:00"}
+{"agent": "A-F049", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:29:24.334316+00:00"}
+{"agent": "A-F049", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:29:24.349978+00:00"}
+{"agent": "A-F024", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:29:24.445746+00:00"}
+{"agent": "A-F024", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:29:52.273554+00:00"}
+{"agent": "A-F024", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:36:42.579654+00:00"}
+{"agent": "A-F024", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:36:42.614110+00:00"}
+{"agent": "A-F024", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:36:42.614110+00:00"}
+{"agent": "A-F050", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:36:42.714244+00:00"}
+{"agent": "A-F050", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:37:02.806483+00:00"}
+{"agent": "A-F007", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:41:12.362576+00:00"}
+{"agent": "A-F007", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:41:12.857442+00:00"}
+{"agent": "A-F007", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:41:12.857442+00:00"}
+{"agent": "A-F035", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:41:13.025617+00:00"}
+{"agent": "A-F035", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:41:13.089473+00:00"}
+{"agent": "A-F035", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:41:13.089473+00:00"}
+{"agent": "A-F036", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:41:13.535820+00:00"}
+{"agent": "A-F006", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:41:13.668254+00:00"}
+{"agent": "A-F036", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:42:08.257276+00:00"}
+{"agent": "A-F006", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:42:08.378677+00:00"}
+{"agent": "A-F006", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:55:05.888302+00:00"}
+{"agent": "A-F006", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:55:06.011672+00:00"}
+{"agent": "A-F006", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:55:06.011672+00:00"}
+{"agent": "A-F019", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:55:06.164307+00:00"}
+{"agent": "A-F009", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T08:55:06.305145+00:00"}
+{"agent": "A-F019", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:55:40.610306+00:00"}
+{"agent": "A-F009", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T08:55:40.976679+00:00"}
+{"agent": "A-F036", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T08:57:12.146893+00:00"}
+{"agent": "A-F036", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T08:57:12.271922+00:00"}
+{"agent": "A-F036", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T08:57:12.271922+00:00"}
+{"agent": "A-F050", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-09T09:00:54.535163+00:00"}
+{"agent": "A-F050", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-09T09:00:54.705743+00:00"}
+{"agent": "A-F050", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-09T09:00:54.709579+00:00"}
+{"agent": "A-F046", "from": "PLANNED", "to": "SPAWNED", "note": "Dependencies checked; dispatch reserved", "timestamp_utc": "2026-10-09T09:00:54.914300+00:00"}
+{"agent": "A-F046", "from": "SPAWNED", "to": "EXECUTING", "note": "Agent execution confirmed by dispatcher", "timestamp_utc": "2026-10-09T09:01:15.663517+00:00"}
+{"agent": "A-F009", "from": "EXECUTING", "to": "REPORTED", "note": "Result and report returned", "timestamp_utc": "2026-10-10T09:11:27.872629+00:00"}
+{"agent": "A-F009", "from": "REPORTED", "to": "ARBITRATED", "note": "Dispatcher reviewed scope, evidence and acceptance", "timestamp_utc": "2026-10-10T09:11:27.880787+00:00"}
+{"agent": "A-F009", "from": "ARBITRATED", "to": "SETTLED", "note": "Evidence status recorded", "timestamp_utc": "2026-10-10T09:11:27.880787+00:00"}

@@ -1,0 +1,35 @@
+{
+  "agent": "A-F014",
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "npm_config_offline": "true"
+  },
+  "commands": [
+    {
+      "command": "node review/agent-output/A-F014/verify.cjs",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F014\\logs\\verify-attempt1.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F014\\logs\\verify.log",
+      "note": "Compiled middleware could not resolve next/server from output dir; harness rewritten to absolute require."
+    },
+    {
+      "command": "node review/agent-output/A-F014/verify.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F014\\logs\\verify.log",
+      "acceptance": true
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --noEmit --pretty false --project review/agent-output/A-F014/tsconfig.page.json",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F014\\logs\\tsc-page.log",
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F014/save-evidence.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F014\\logs\\evidence.log",
+      "acceptance": true
+    }
+  ]
+}

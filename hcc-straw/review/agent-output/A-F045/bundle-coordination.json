@@ -1,0 +1,30 @@
+﻿{
+    "timestamp":  "2026-10-18T11:01:53.8141028Z",
+    "bundlesPresent":  {
+                           "nsis":  {
+                                        "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\target\\release\\bundle\\nsis\\STRAW Desk_0.1.0_x64-setup.exe",
+                                        "sha256":  "CE0943022B7FE86AE4BA887779E9ACA735F53545410B2F5BEACCF05930B31438",
+                                        "mtime":  "2026-10-09T17:55:03.3577391Z",
+                                        "bytes":  3472439
+                                    },
+                           "msi":  {
+                                       "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\target\\release\\bundle\\msi\\STRAW Desk_0.1.0_x64_en-US.msi",
+                                       "sha256":  "67772B8C95357730A1AB3635D072190AA3FAFE2603E7DDB316727065DFE43521",
+                                       "mtime":  "2026-10-09T08:53:40.8570000Z",
+                                       "bytes":  4997120
+                                   }
+                       },
+    "iconsNewestMtime":  "2026-10-09T15:17:43.2427132Z",
+    "iconsUnchangedSinceBundle":  true,
+    "tauriIconRefsAllPresent":  true,
+    "missingRefs":  [
+
+                    ],
+    "f041":  {
+                 "toDoUnchecked":  true,
+                 "note":  "F041 packaging checklist still open; fresh cargo tauri build deferred to packaging owner",
+                 "agentOutputExists":  false
+             },
+    "freshBuildAttemptedThisSession":  false,
+    "reasonNoFreshBuild":  "Dep F045-after-F041; A-F041 unsettled; exclusive scope is icons only; existing 2026-10-09 NSIS/MSI + A-S15 install used for imagery validation"
+}

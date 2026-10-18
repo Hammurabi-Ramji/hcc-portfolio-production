@@ -1,0 +1,66 @@
+{
+  "agent": "A-F016",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\settings",
+  "wave": 2,
+  "files_touched": [
+    "apps/web/app/settings/page.tsx"
+  ],
+  "gates_passed": [
+    "Scoped settings TypeScript",
+    "5 offline React/Chrome settings regressions",
+    "Full apps/web type-check",
+    "Full apps/web production build (/settings emitted)",
+    "Validated unified patch from HEAD before snapshot"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\result.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\source-hashes.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\browser-results.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\patches\\page.tsx.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\before\\apps\\web\\app\\settings\\page.tsx",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\01-scoped-tsc.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\02-regression.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\03-web-type-check.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\04-web-build.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\05-evidence.log"
+  ],
+  "commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F016/tsconfig.json",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\01-scoped-tsc.log",
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F016/run-regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\02-regression.log",
+      "acceptance": true
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --noEmit --incremental false",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\03-web-type-check.log",
+      "acceptance": true
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\04-web-build.log",
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F016/save-evidence.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\05-evidence.log",
+      "acceptance": true
+    }
+  ],
+  "blocker": null,
+  "primary": "Settings route gates on auth, hydrates five profile fields once per identity, blocks blank premature submit, updates shared user state on save, shows toast feedback, and renders signed-in Navbar.",
+  "secondary": "Consumes F019 AuthContext/updateUser and F024 userApi GET/PUT /users/profile; ToastProvider from F020/S13; profile proxy from F009.",
+  "tertiary": "Dashboard still links /dashboard/settings (A-F010). Live backend persistence across process restart remains W4/S04 integration."
+}

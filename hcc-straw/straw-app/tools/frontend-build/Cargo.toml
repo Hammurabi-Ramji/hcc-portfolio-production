@@ -9,9 +9,9 @@ oxc_allocator = "=0.149.0"
 oxc_parser = "=0.149.0"
 oxc_span = "=0.149.0"
 serde_json.workspace = true
-sha2 = "0.10"
-base64 = "0.22"
+sha2 = "=0.10.9"
+base64 = "=0.22.1"
 
 [dev-dependencies]
-tempfile = "3"
+tempfile = "=3.27.0"
 

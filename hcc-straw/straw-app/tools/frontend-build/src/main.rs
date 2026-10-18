@@ -194,6 +194,56 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .map_err(|_| "component compiler thread failed")?
         .map_err(Into::into)
 }
+fn compile_component(path: &Path) -> Result<String, Box<dyn std::error::Error>> {
+    let source = fs::read_to_string(path)?;
+    let result = compile(
+        &source,
+        CompileOptions {
+            filename: Some(path.file_name().unwrap().to_string_lossy().into_owned()),
+            generate: GenerateMode::Client,
+            runes: Some(true),
+            css: CssMode::Injected,
+            dev: false,
+            disclose_version: false,
+            enable_sourcemap: false,
+            ..Default::default()
+        },
+    )
+    .map_err(|e| format!("{}: {e:?}", path.display()))?;
+    if !result.metadata.runes {
+        return Err(format!(
+            "{}: component was not compiled in runes mode",
+            path.display()
+        )
+        .into());
+    }
+    Ok(result
+        .js
+        .code
+        .replace(".svelte'", ".js'")
+        .replace(".svelte\"", ".js\""))
+}
+// Flat package directory: .svelte files are compiled, .js files copied verbatim.
+fn compile_package(source: &Path, output: &Path) -> Result<usize, Box<dyn std::error::Error>> {
+    fs::create_dir_all(output)?;
+    let mut count = 0;
+    for entry in sorted_entries(source)? {
+        let path = entry.path();
+        let name = path.file_stem().unwrap();
+        match path.extension().and_then(|e| e.to_str()) {
+            Some("svelte") => fs::write(
+                output.join(name).with_extension("js"),
+                compile_component(&path)?,
+            )?,
+            Some("js") => {
+                fs::copy(&path, output.join(path.file_name().unwrap()))?;
+            }
+            _ => continue,
+        }
+        count += 1;
+    }
+    Ok(count)
+}
 fn build() -> Result<(), Box<dyn std::error::Error>> {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"))
         .join("../..")
@@ -205,34 +255,17 @@ fn build() -> Result<(), Box<dyn std::error::Error>> {
         if path.extension().is_none_or(|e| e != "svelte") {
             continue;
         }
-        let source = fs::read_to_string(&path)?;
-        let result = compile(
-            &source,
-            CompileOptions {
-                filename: Some(path.file_name().unwrap().to_string_lossy().into_owned()),
-                generate: GenerateMode::Client,
-                runes: Some(true),
-                css: CssMode::Injected,
-                dev: false,
-                disclose_version: false,
-                enable_sourcemap: false,
-                ..Default::default()
-            },
-        )
-        .map_err(|e| format!("{}: {e:?}", path.display()))?;
-        if !result.metadata.runes {
-            return Err("component was not compiled in runes mode".into());
-        }
-        let code = result
-            .js
-            .code
-            .replace(".svelte'", ".js'")
-            .replace(".svelte\"", ".js\"");
+        let code = compile_component(&path)?;
         fs::write(
             output.join(path.file_stem().unwrap()).with_extension("js"),
             code,
         )?;
     }
+    // Shared fleet components (no package manager): served at /public/ui/origami-fe/.
+    compile_package(
+        &root.join("packages/origami-fe/src"),
+        &output.join("origami-fe"),
+    )?;
     copy_tree(
         &root.join("third-party/svelte/src"),
         &output.join("vendor/svelte"),
@@ -339,6 +372,107 @@ fn validate_modules(html: &Path, output: &Path) -> Result<(), Box<dyn std::error
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn browser_graph_checks_cycles_bare_imports_compute_mapping_and_escape_attempts() {
+        let fixture = Fixture::new();
+        let out = fixture.0.join("fresh");
+        fs::create_dir(&out).unwrap();
+        fs::write(out.join("a.js"), "import './b.js'; export const a=1;").unwrap();
+        fs::write(out.join("b.js"), "import './a.js'; export const b=2;").unwrap();
+        let html = fixture.0.join("graph.html");
+        fs::write(&html,r#"<script type="importmap">{"imports":{"a":"/public/ui/a.js","wasm-frontend":"/wasm-frontend.js"}}</script>"#).unwrap();
+        fs::write(out.join("main.js"), "import 'a'; import 'wasm-frontend';").unwrap();
+        validate_modules(&html, &out).unwrap();
+        for (code, mapping, expected) in [
+            ("import 'unmapped';", r#"{"imports":{}}"#, "unmapped import"),
+            (
+                "import 'a';",
+                r#"{"imports":{"a":"https://remote.example/a.js"}}"#,
+                "within /public/ui/",
+            ),
+            (
+                "import 'wasm-frontend';",
+                r#"{"imports":{"wasm-frontend":"/wrong.js"}}"#,
+                "compute import",
+            ),
+            (
+                "import '../outside.js';",
+                r#"{"imports":{}}"#,
+                "escapes fresh frontend output",
+            ),
+            ("export const =;", r#"{"imports":{}}"#, "main.js"),
+        ] {
+            fs::write(fixture.0.join("outside.js"), "export const safe=1;").unwrap();
+            fs::write(out.join("main.js"), code).unwrap();
+            fs::write(
+                &html,
+                format!("<script type=\"importmap\">{mapping}</script>"),
+            )
+            .unwrap();
+            assert!(validate_modules(&html, &out)
+                .unwrap_err()
+                .to_string()
+                .contains(expected));
+        }
+        for html_text in [
+            "missing import map",
+            r#"<script type="importmap">invalid JSON</script>"#,
+        ] {
+            fs::write(&html, html_text).unwrap();
+            assert!(validate_modules(&html, &out).is_err());
+        }
+    }
+
+    #[test]
+    fn compiling_packages_and_copying_runtime_files_respects_file_types() {
+        let fixture = Fixture::new();
+        let source = fixture.0.join("source");
+        let out = fixture.0.join("compiled");
+        fs::create_dir(&source).unwrap();
+        fs::write(
+            source.join("Card.svelte"),
+            "<script>let title=$state('Local');</script><p>{title}</p>",
+        )
+        .unwrap();
+        fs::write(source.join("helper.js"), "export const local=1;").unwrap();
+        fs::write(source.join("ignored.txt"), "not a module").unwrap();
+        assert_eq!(compile_package(&source, &out).unwrap(), 2);
+        assert!(out.join("Card.js").is_file());
+        assert_eq!(
+            fs::read_to_string(out.join("helper.js")).unwrap(),
+            "export const local=1;"
+        );
+        assert!(!out.join("ignored.txt").exists());
+        fs::create_dir(source.join("nested")).unwrap();
+        fs::write(source.join("nested/module.js"), "export const nested=2;").unwrap();
+        let copied = fixture.0.join("copied");
+        copy_tree(&source, &copied).unwrap();
+        assert!(copied.join("nested/module.js").is_file());
+        assert!(!copied.join("Card.svelte").exists());
+        fs::write(source.join("Invalid.svelte"), "<script>let =;</script>").unwrap();
+        assert!(compile_component(&source.join("Invalid.svelte")).is_err());
+    }
+
+    #[test]
+    fn fresh_output_publishes_once_and_refuses_non_directory_destinations() {
+        let fixture = Fixture::new();
+        fs::remove_dir_all(fixture.0.join("public/ui")).unwrap();
+        fixture.validated().publish().unwrap();
+        assert!(fixture.0.join("public/ui/main.js").exists());
+        fs::remove_dir_all(fixture.0.join("public/ui")).unwrap();
+        fs::write(fixture.0.join("public/ui"), "must preserve this file").unwrap();
+        assert!(fixture
+            .validated()
+            .publish()
+            .unwrap_err()
+            .to_string()
+            .contains("real workspace directory"));
+        assert_eq!(
+            fs::read_to_string(fixture.0.join("public/ui")).unwrap(),
+            "must preserve this file"
+        );
+    }
 
     struct Fixture(PathBuf, PathBuf);
     impl Fixture {
@@ -467,5 +601,81 @@ mod tests {
                 .count(),
             1
         );
+    }
+}
+
+#[cfg(test)]
+mod origami_package_tests {
+    use super::*;
+
+    fn package_root() -> PathBuf {
+        Path::new(env!("CARGO_MANIFEST_DIR")).join("../../packages/origami-fe/src")
+    }
+
+    #[test]
+    fn origami_package_compiles_with_a_closed_import_graph() {
+        let out = std::env::temp_dir().join(format!("origami-fe-test-{}", std::process::id()));
+        let _ = fs::remove_dir_all(&out);
+        let count = compile_package(&package_root(), &out).expect("package compiles");
+        assert!(count >= 10, "expected the full component set, got {count}");
+
+        let html =
+            fs::read_to_string(Path::new(env!("CARGO_MANIFEST_DIR")).join("../../index.html"))
+                .expect("index.html");
+        let map = html
+            .split("<script type=\"importmap\">")
+            .nth(1)
+            .and_then(|s| s.split("</script>").next())
+            .expect("import map");
+        let map: serde_json::Value = serde_json::from_str(map).expect("import map json");
+
+        for entry in sorted_entries(&out).expect("output") {
+            let path = entry.path();
+            let code = fs::read_to_string(&path).expect("module");
+            let arena = Allocator::default();
+            let parsed = Parser::new(&arena, &code, SourceType::mjs()).parse();
+            assert!(
+                parsed.diagnostics.is_empty(),
+                "{}: {:?}",
+                path.display(),
+                parsed.diagnostics
+            );
+            for request in parsed.module_record.requested_modules.keys() {
+                let request = request.as_str();
+                if request.starts_with('.') {
+                    assert!(
+                        out.join(request).is_file(),
+                        "{} imports missing {request}",
+                        path.display()
+                    );
+                } else {
+                    assert!(
+                        map["imports"][request].is_string(),
+                        "{} imports unmapped {request}",
+                        path.display()
+                    );
+                }
+            }
+        }
+        let _ = fs::remove_dir_all(&out);
+    }
+
+    // BSM-CODE: origami.trace.zero(): the package may not touch browser persistence.
+    #[test]
+    fn origami_package_has_no_browser_persistence() {
+        let banned = [
+            "localStorage",
+            "sessionStorage",
+            "indexedDB",
+            "document.cookie",
+            "caches.",
+        ];
+        for entry in sorted_entries(&package_root()).expect("package") {
+            let path = entry.path();
+            let text = fs::read_to_string(&path).expect("source");
+            for word in banned {
+                assert!(!text.contains(word), "{} uses {word}", path.display());
+            }
+        }
     }
 }

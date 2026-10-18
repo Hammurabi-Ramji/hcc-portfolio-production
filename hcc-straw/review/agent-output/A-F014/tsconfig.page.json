@@ -1,0 +1,5 @@
+{
+  "extends": "../../../apps/web/tsconfig.json",
+  "include": ["../../../apps/web/app/profile/page.tsx"],
+  "exclude": []
+}

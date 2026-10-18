@@ -1,0 +1,10 @@
+[
+  {
+    "file": "apps/web/context/AuthContext.tsx",
+    "before_sha256": "4be80c29693f5abb68c74f3fce3d148863f446568d91624e280d2394ca39bc15",
+    "after_sha256": "39702ec24e1183dee0403822c299bb6019fc73141af7e54c0c7a0e59c6f2a403",
+    "before_bytes": 4661,
+    "after_bytes": 7002,
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\diffs\\apps--web--context--AuthContext.tsx.diff"
+  }
+]

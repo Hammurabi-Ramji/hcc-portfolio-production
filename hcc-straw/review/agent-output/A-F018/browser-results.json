@@ -1,0 +1,19 @@
+{
+  "runtime": {
+    "react": "19.3.0",
+    "typescript": "5.9.3",
+    "browser": "156.0.8078.36"
+  },
+  "passes": [
+    "loading spinner; children unmounted",
+    "anonymous denied; callbackUrl replace; no localStorage",
+    "empty-role allowlist mounts children",
+    "allowed role mounts children",
+    "denied role; children never mounted; dashboard replace",
+    "provider-backed guard emits login callbackUrl for return navigation",
+    "navbar toggle names, expanded/controls, keyboard focus/activation",
+    "footer destinations reconciled to existing routes",
+    "feature claims distinguish scaffolding from configured infrastructure"
+  ],
+  "encodedSample": "/dashboard"
+}

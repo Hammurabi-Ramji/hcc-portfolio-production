@@ -1,0 +1,121 @@
+--- a/templates/logistics_saas/api_layer_axum/src/lib.rs
++++ b/templates/logistics_saas/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/templates/marketing_saas/api_layer_axum/src/lib.rs
++++ b/templates/marketing_saas/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/templates/real_estate_saas/api_layer_axum/src/lib.rs
++++ b/templates/real_estate_saas/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/creative_agency_saas/src/api_layer_axum/src/lib.rs
++++ b/output/creative_agency_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/ecommerce_saas/src/api_layer_axum/src/lib.rs
++++ b/output/ecommerce_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/education_saas/src/api_layer_axum/src/lib.rs
++++ b/output/education_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/finance_saas/src/api_layer_axum/src/lib.rs
++++ b/output/finance_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/legal_saas/src/api_layer_axum/src/lib.rs
++++ b/output/legal_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/logistics_saas/src/api_layer_axum/src/lib.rs
++++ b/output/logistics_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/marketing_saas/src/api_layer_axum/src/lib.rs
++++ b/output/marketing_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }
+--- a/output/real_estate_saas/src/api_layer_axum/src/lib.rs
++++ b/output/real_estate_saas/src/api_layer_axum/src/lib.rs
+@@ -11,7 +11,7 @@
+     }
+ 
+     pub async fn start(port: u16) {
+-        let app = Self::create_router();
++        let _app = Self::create_router();
+         let addr = SocketAddr::from(([127, 0, 0, 1], port));
+         println!("API Server listening on {}", addr);
+     }

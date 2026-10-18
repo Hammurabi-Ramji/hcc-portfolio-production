@@ -1,0 +1,102 @@
+﻿{
+    "captured_at":  "2026-10-18T05:36:29.0246895-05:00",
+    "agent":  "A-F029",
+    "compiler_pin":  "rsvelte_core 0.12.6 @ 5ed8ea3a3401b9fbbe780d3b18d6f90073291d6b",
+    "import_map_requires":  [
+                                "#client/constants",
+                                "wasm-frontend",
+                                "svelte"
+                            ],
+    "assets":  [
+                   {
+                       "path":  "dist\\index.html",
+                       "sha256":  "a22698031d21119b3fc8658fad66f5bedb66a5700c0190cce62e3433d97274fd",
+                       "bytes":  1115
+                   },
+                   {
+                       "path":  "dist\\wasm-frontend.js",
+                       "sha256":  "c35f16e3bb6dd298aba056a240d4d0a0f9a09adb4057c6e8ae49840a60867595",
+                       "bytes":  7247
+                   },
+                   {
+                       "path":  "dist\\wasm-frontend_bg.wasm",
+                       "sha256":  "7f5432ad0f840dd05d6dd2cdb2fe7688ecbc3e9fd3c3269156a7e2aa9082349f",
+                       "bytes":  72541
+                   },
+                   {
+                       "path":  "dist\\public\\ui\\main.js",
+                       "sha256":  "ac10a86845282e09b2813f41d60a975a3b9a47c8d9d917eeb60d0a155e0740f9",
+                       "bytes":  121
+                   },
+                   {
+                       "path":  "dist\\public\\ui\\vendor\\svelte\\internal\\client\\constants.js",
+                       "sha256":  "b75579aa413df436361a2dc6085bb9a5edb9330f99a3c120a61a86ad210e0913",
+                       "bytes":  3825
+                   },
+                   {
+                       "path":  "dist\\public\\ui\\vendor\\licenses\\svelte-LICENSE.md",
+                       "sha256":  "e4b4279a504e52a8b67f8b7ed9447044ec7ddb16a12205d5e3335f49fddbebe8",
+                       "bytes":  1133
+                   },
+                   {
+                       "path":  "dist\\public\\ui\\vendor\\licenses\\clsx-LICENSE",
+                       "sha256":  "bd3d45c67c661b5a4caca3187d6d09722a5065869a6896c26ed50e06f0f0b3c3",
+                       "bytes":  1113
+                   },
+                   {
+                       "path":  "dist\\public\\ui\\vendor\\licenses\\NOTICE.md",
+                       "sha256":  "5a8fc002a40e16212c5c4870d528fef26bfe07b2de82819c2c846501d6c088e7",
+                       "bytes":  1402
+                   },
+                   {
+                       "path":  "desktop-dist\\index.html",
+                       "sha256":  "a22698031d21119b3fc8658fad66f5bedb66a5700c0190cce62e3433d97274fd",
+                       "bytes":  1115
+                   },
+                   {
+                       "path":  "desktop-dist\\wasm-frontend.js",
+                       "sha256":  "c35f16e3bb6dd298aba056a240d4d0a0f9a09adb4057c6e8ae49840a60867595",
+                       "bytes":  7247
+                   },
+                   {
+                       "path":  "desktop-dist\\wasm-frontend_bg.wasm",
+                       "sha256":  "7f5432ad0f840dd05d6dd2cdb2fe7688ecbc3e9fd3c3269156a7e2aa9082349f",
+                       "bytes":  72541
+                   },
+                   {
+                       "path":  "site-dist\\index.html",
+                       "sha256":  "4dbdb264627278265a3331c2d25d7bd5852056107e875bfe7e30dba319d22714",
+                       "bytes":  1874
+                   },
+                   {
+                       "path":  "site-dist\\wasm-frontend_bg.wasm",
+                       "sha256":  "7f5432ad0f840dd05d6dd2cdb2fe7688ecbc3e9fd3c3269156a7e2aa9082349f",
+                       "bytes":  72541
+                   },
+                   {
+                       "path":  "index.html",
+                       "sha256":  "763259d80edff8cf18f4d2905e4601526037b7d55e89e89600c7904676ce1965",
+                       "bytes":  1143
+                   },
+                   {
+                       "path":  "Trunk.toml",
+                       "sha256":  "fca6ccd9786b1af7dcbad46b8a2830a059e2520611d2911d207354e343370960",
+                       "bytes":  478
+                   },
+                   {
+                       "path":  "Cargo.lock",
+                       "sha256":  "79379e6f69f30f67262c9ef7bbf51d1ae489089a9d55493d68fbd4184ace2755",
+                       "bytes":  178877
+                   },
+                   {
+                       "path":  "third-party\\NOTICE.md",
+                       "sha256":  "5a8fc002a40e16212c5c4870d528fef26bfe07b2de82819c2c846501d6c088e7",
+                       "bytes":  1402
+                   }
+               ],
+    "retained_clean_build_logs":  [
+                                      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\trunk-clean-release.log",
+                                      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-clean.log",
+                                      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\trunk-clean-release.log"
+                                  ]
+}

@@ -1,5 +1,7 @@
 # STRAW Stack — to-do
 
+Latest checkpoint: [2026-10-18 closeout](review/closeout-2026-10-18/README.md). Current desktop workspace tests passed (276 including doctests); legacy web type-check/lint/build and 10 local API integration tests passed. The historical evidence below retains its original snapshot date. Unchecked acceptance tasks and the G3 release hold remain open.
+
 Reviewed: 2026-10-09. **Audit baseline complete.** 52/52 assigned Stack folder reports and136/136 across both roots were saved for the captured audit tree. Current remediation/concurrent additions require the separate evidence listed below.
 
 The review assigns a distinct agent to each current nested source folder; Stack root is reviewed by the main agent. Generated/copied folders are compared to source rather than assigned duplicate agents, as requested. The review excludes dependencies, Git internals and caches. The desktop was replaced during the audit; the user selected the current replacement tree. Original evidence is retained separately and removed folders are excluded from active tasks. Remediation is now running under the supplied 61-assignment dispatcher. Checkboxes change only when current implementation evidence satisfies the stated task; an audit alone does not satisfy them.
@@ -84,10 +86,10 @@ Reviewed by `/root/review_085`. [Evidence, expected behavior and patch details](
 
 Reviewed by `/root/review_086`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app.md).
 
-- [ ] Load CSS and mount the repaired provider in the root layout.
-- [ ] Define/map semantic tokens; check computed CTA background and readable foreground in light/dark modes.
-- [ ] Render home, login, signup, dashboard and settings without provider exceptions; confirm responsive spacing, gradient, and navigation.
-- [ ] Connect homepage Navbar to hydrated user state and check anonymous/authenticated variants.
+- [x] Load CSS and mount the repaired provider in the root layout.
+- [x] Define/map semantic tokens; check computed CTA background and readable foreground in light/dark modes.
+- [x] Render home, login, signup, dashboard and settings without provider exceptions; confirm responsive spacing, gradient, and navigation.
+- [x] Connect homepage Navbar to hydrated user state and check anonymous/authenticated variants.
 
 ### STACK-F005 · `apps/web/app/about`
 
@@ -104,9 +106,9 @@ Reviewed by `/root/review_088`. [Evidence, expected behavior and patch details](
 - [x] Decide/document bare `/api` behavior and allowed-origin/credentials policy.
 - [x] Replace the unsupported interface; verify intended methods and unsupported-method behavior over HTTP.
 - [x] Verify allowed-origin OPTIONS and actual responses include consistent headers; disallowed origins receive no allow-origin authorization.
-- [ ] Verify credentialed cross-origin calls to child endpoints in a real browser (HTTP handler matrix passed in A-F006).
+- [x] Verify credentialed cross-origin calls to child endpoints in a real browser (HTTP handler matrix passed in A-F006). Evidence: `browser-cors-verify.cjs` **13/13 PASS**, exit **0** (`review/agent-output/A-F006/browser-cors-results.json`).
 
-Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F006.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
+Implementation settlement: **DONE** · [A-F006](review/agent-output/A-F006.md) · browser CORS exit 0. Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
 
 ### STACK-F007 · `apps/web/app/api/auth`
@@ -115,19 +117,21 @@ Reviewed by `/root/review_126`. [Evidence, expected behavior and patch details](
 
 - [x] Implement eight endpoint contracts with validation and appropriate statuses; recovery/email contracts return explicit501 because no local transport is implemented.
 - [x] Verify Rust HTTP register/login → me → refresh → logout, SQLite restart/revocation persistence and expired/forged-session rejection; recovery endpoints truthfully501.
-- [ ] Observe the same lifecycle through Next/browser reload after provider/middleware integration; reset/verification features remain unsupported until separately implemented.
+- [x] Observe the same lifecycle through Next/browser reload after provider/middleware integration; reset/verification features remain unsupported until separately implemented. Evidence: `review/agent-output/A-F007-browser.md` + Edge harness exit 0 (`count=9`).
 
-Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F007.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
+Implementation settlement: **DONE** · [A-F007](review/agent-output/A-F007.md) · [A-F007-browser](review/agent-output/A-F007-browser.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
 
 ### STACK-F008 · `apps/web/app/api/projects`
 
 Reviewed by `/root/folder_review_dispatcher/review_089`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--api--projects.md).
 
-- [ ] Reject anonymous, forged and expired sessions; verify two users cannot list each other's projects.
-- [ ] Create concurrently, restart and exercise two workers; all committed projects remain distinct and readable.
-- [ ] Reject malformed bodies/types/statuses and invalid pagination with 400; verify valid search and finite metadata.
-- [ ] Verify actual HTTP list/create responses through the repaired service/page; exercise detail/update/delete ownership checks.
+- [x] Reject anonymous, forged and expired sessions; verify two users cannot list each other's projects.
+- [x] Create concurrently, restart and exercise two workers; all committed projects remain distinct and readable.
+- [x] Reject malformed bodies/types/statuses and invalid pagination with 400; verify valid search and finite metadata.
+- [x] Verify actual HTTP list/create responses through the repaired service/page; exercise detail/update/delete ownership checks.
+
+Rust service verified by `apps/api/tests/projects_http.rs`. Next proxy HTTP regression settled in `review/agent-output/A-F008-integration.md` (152 assertions). Full browser/page remains F015; remaining service-effect checks remain F024.
 
 ### STACK-F009 · `apps/web/app/api/users`
 
@@ -145,11 +149,11 @@ Implementation settlement: **DONE** · [Current agent report](review/agent-outpu
 
 Reviewed by `/root/review_091`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--dashboard.md).
 
-- [ ] Repair shared provider/client/session dependencies, then apply loading-aware effect guard.
-- [ ] Correct reachable sidebar destinations and wire supported quick actions.
-- [ ] Replace or disclose sample metrics/activity; verify loading, failure, empty and real-data states.
-- [ ] Verify named mobile controls, keyboard close and focus restoration.
-- [ ] Check authenticated direct load/reload, unauthenticated redirect, logout, every exposed link/action and mobile layout.
+- [x] Repair shared provider/client/session dependencies, then apply loading-aware effect guard.
+- [x] Correct reachable sidebar destinations and wire supported quick actions.
+- [x] Replace or disclose sample metrics/activity; verify loading, failure, empty and real-data states.
+- [x] Verify named mobile controls, keyboard close and focus restoration.
+- [x] Check authenticated direct load/reload, unauthenticated redirect, logout, every exposed link/action and mobile layout.
 
 ### STACK-F011 · `apps/web/app/docs`
 
@@ -164,81 +168,85 @@ Reviewed by `/root/review_092`. [Evidence, expected behavior and patch details](
 
 Reviewed by `/root/review_093`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--features.md).
 
-- [ ] Correct shared capability copy and document planned integrations.
-- [ ] Wire session-aware Navbar after provider/session repairs.
-- [ ] Verify route rendering, mobile navigation, and build/type checks.
+- [x] Correct shared capability copy and document planned integrations.
+- [x] Wire session-aware Navbar after provider/session repairs.
+- [x] Verify route rendering, mobile navigation, and build/type checks.
 
 ### STACK-F013 · `apps/web/app/login`
 
 Reviewed by `/root/review_094`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--login.md).
 
-- [ ] Restore resolver dependency; rerun web type-check/build after coordinated shared fixes.
-- [ ] With delayed success/failure, verify one request per submission, visible pending state, error recovery, and no premature redirect.
-- [ ] Verify protected-route callback return, safe fallback for external callbacks, and explicit remember-me semantics.
-- [ ] Exercise each retained social/recovery/signup action; keyboard/screen-reader checks cover toggle and errors.
+- [x] Restore resolver dependency; rerun web type-check/build after coordinated shared fixes.
+- [x] With delayed success/failure, verify one request per submission, visible pending state, error recovery, and no premature redirect.
+- [x] Verify protected-route callback return, safe fallback for external callbacks, and explicit remember-me semantics.
+- [x] Exercise each retained social/recovery/signup action; keyboard/screen-reader checks cover toggle and errors.
 
 ### STACK-F014 · `apps/web/app/profile`
 
 Reviewed by `/root/review_127`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--profile.md).
 
-- [ ] Add the profile redirect and align documentation.
-- [ ] Verify authenticated `/profile` reaches settings; anonymous `/profile` redirects to login with callback preserved.
+- [x] Add the profile redirect and align documentation.
+- [x] Verify authenticated `/profile` reaches settings; anonymous `/profile` redirects to login with callback preserved.
 
 ### STACK-F015 · `apps/web/app/projects`
 
 Reviewed by `/root/review_095`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--projects.md).
 
-- [ ] Repair provider, service import, auth persistence and one typed response contract.
-- [ ] Verify initial authenticated visit renders seeded cards; empty and failed requests produce distinct states with retry and visible notification.
-- [ ] Verify create adds exactly one project, refreshes cards, and reports validation/network failures visibly.
-- [ ] Resolve View/dashboard links and authenticated Navbar display; add pending-submit protection.
+- [x] Repair provider, service import, auth persistence and one typed response contract.
+- [x] Verify initial authenticated visit renders seeded cards; empty and failed requests produce distinct states with retry and visible notification.
+- [x] Verify create adds exactly one project, refreshes cards, and reports validation/network failures visibly.
+- [x] Resolve View/dashboard links and authenticated Navbar display; add pending-submit protection.
 
 ### STACK-F016 · `apps/web/app/settings`
 
 Reviewed by `/root/review_096`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--settings.md).
 
-- [ ] Repair provider/client/profile-endpoint dependencies; pass web type-check/build.
-- [ ] Direct authenticated visit hydrates all five fields; delayed auth cannot submit blanks; anonymous visit redirects after loading.
-- [ ] Edited values persist across reload and update context; user switches do not leak prior form data.
-- [ ] Successful/failed save shows visible feedback; saving state clears; navigation displays the signed-in user and reaches `/settings`.
+- [x] Repair provider/client/profile-endpoint dependencies; pass web type-check/build.
+- [x] Direct authenticated visit hydrates all five fields; delayed auth cannot submit blanks; anonymous visit redirects after loading.
+- [x] Edited values persist across reload and update context; user switches do not leak prior form data.
+- [x] Successful/failed save shows visible feedback; saving state clears; navigation displays the signed-in user and reaches `/settings`.
+
+Implementation settlement: **DONE** · [A-F016](review/agent-output/A-F016.md) (browser 5/5; build/tsc exit 0; patch reproduces after).
 
 ### STACK-F017 · `apps/web/app/signup`
 
 Reviewed by `/root/review_097`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--app--signup.md).
 
-- [ ] Restore resolver/client/provider dependencies; type-check and load `/signup` without import or provider errors.
-- [ ] Reject invalid email, weak/mismatched passwords, and unchecked terms without sending requests.
-- [ ] Hold a registration response pending; verify one submit request, pending text, and disabled submit; verify retry after rejection.
-- [ ] Verify successful registration reaches dashboard and survives reload using the agreed session mechanism.
-- [ ] Verify duplicate-account/network errors remain visible and keyboard/screen-reader controls and policy links work.
+- [x] Restore resolver/client/provider dependencies; type-check and load `/signup` without import or provider errors.
+- [x] Reject invalid email, weak/mismatched passwords, and unchecked terms without sending requests.
+- [x] Hold a registration response pending; verify one submit request, pending text, and disabled submit; verify retry after rejection.
+- [x] Verify successful registration reaches dashboard and survives reload using the agreed session mechanism.
+- [x] Verify duplicate-account/network errors remain visible and keyboard/screen-reader controls and policy links work.
+
+Implementation settlement: **DONE** · [A-F017](review/agent-output/A-F017.md) (`run-all.cmd` TSC=0 BR=0 LIVE=0).
 
 ### STACK-F018 · `apps/web/components`
 
 Reviewed by `/root/review_098`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--components.md).
 
-- [ ] Correct and adopt the typed role predicate; verify loading, anonymous, allowed, denied, and empty-role cases, with denied children never mounted.
-- [ ] Reconcile footer destinations and feature claims with route/deployment owners.
-- [ ] Verify mobile toggle/social link names and expanded state using keyboard and accessibility tree.
-- [ ] Verify provider-backed guard redirects and successful return navigation with the auth owners.
+- [x] Correct and adopt the typed role predicate; verify loading, anonymous, allowed, denied, and empty-role cases, with denied children never mounted.
+- [x] Reconcile footer destinations and feature claims with route/deployment owners.
+- [x] Verify mobile toggle/social link names and expanded state using keyboard and accessibility tree.
+- [x] Verify provider-backed guard redirects and successful return navigation with the auth owners.
 
 ### STACK-F019 · `apps/web/context`
 
 Reviewed by `/root/folder_review_dispatcher/review_099`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--context.md).
 
-- [ ] Fix import and shared client envelope contract; TypeScript check passes without auth casts masking errors.
-- [ ] Mount provider; render each auth consumer without the missing-provider exception.
-- [ ] Test login/register, protected navigation, reload restoration, invalid token, storage failure, refresh and logout against implemented backend endpoints.
-- [ ] Assert middleware and client agree on session transport; logout invalidates the server session and refresh cannot retain an invalid user.
+- [x] Fix import and shared client envelope contract; TypeScript check passes without auth casts masking errors.
+- [x] Mount provider; render each auth consumer without the missing-provider exception.
+- [x] Test login/register, protected navigation, reload restoration, invalid token, storage failure, refresh and logout against implemented backend endpoints.
+- [x] Assert middleware and client agree on session transport; logout invalidates the server session and refresh cannot retain an invalid user.
 
 ### STACK-F020 · `apps/web/hooks`
 
 Reviewed by `/root/review_100`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--hooks.md).
 
-- [ ] Fix theme import; controller reruns web type-check after coordinated repairs.
+- [x] Fix theme import; controller reruns web type-check after coordinated repairs.
 - [x] Verify loading/authenticated/logged-out transitions never authorize early.
 - [x] Fake-timer check: rapid callback calls execute once with latest arguments; unmount cancels.
 - [x] Verify batched storage increments, key switching, absent/corrupt values, removal, and hydration.
-- [ ] Verify project/settings success/error messages appear, stack, dismiss accessibly, and expire.
+- [x] Verify project/settings success/error messages appear, stack, dismiss accessibly, and expire.
 
 Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F020.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
@@ -251,7 +259,7 @@ Reviewed by `/root/folder_review_dispatcher/review_101`. [Evidence, expected beh
 - [x] Verify login, empty response, pagination metadata, structured HTTP error, and network error retain the chosen contract.
 - [x] Verify legacy token helpers preserve raw values and handle SSR/storage failures; supported cookie client never reads or sends stored credentials (approved architecture).
 - [x] Verify upload preserves caller headers; test explicit date components and invalid utility inputs.
-- [ ] Document API origin and supply implemented endpoints before claiming web authentication works.
+- [x] Document API origin and supply implemented endpoints before claiming web authentication works.
 
 Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F021.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
@@ -260,7 +268,7 @@ Implementation settlement: **DONE** · [Current agent report](review/agent-outpu
 
 Reviewed by `/root/review_128`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--middleware.md).
 
-- [ ] Complete root middleware acceptance checks; retain or remove this unused directory as housekeeping.
+- [x] Complete root middleware acceptance checks; retain or remove this unused directory as housekeeping.
 
 ### STACK-F023 · `apps/web/public`
 
@@ -285,17 +293,17 @@ Implementation settlement: **DONE** · [Current agent report](review/agent-outpu
 
 Reviewed by `/root/review_130`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--styles.md).
 
-- [ ] Resolve the app report’s stylesheet wiring and verify generated Tailwind CSS visually.
-- [ ] Retain this documented optional container unless styles are actually added.
+- [x] Resolve the app report’s stylesheet wiring and verify generated Tailwind CSS visually.
+- [x] Retain this documented optional container unless styles are actually added.
 
 ### STACK-F026 · `apps/web/types`
 
 Reviewed by `/root/review_103`. [Evidence, expected behavior and patch details](review/folders/stack--apps--web--types.md).
 
-- [ ] Fix client imports and establish one shared response/pagination contract.
-- [ ] Separate wire DTOs from Date domain types; reconcile required User flags with server output.
-- [ ] Run web type-check/build through the root reviewer after integration repairs.
-- [ ] Assert serialized user/project list responses match shared DTOs and reach service consumers with one envelope; verify timestamp representation explicitly.
+- [x] Fix client imports and establish one shared response/pagination contract.
+- [x] Separate wire DTOs from Date domain types; reconcile required User flags with server output.
+- [x] Run web type-check/build through the root reviewer after integration repairs.
+- [x] Assert serialized user/project list responses match shared DTOs and reach service consumers with one envelope; verify timestamp representation explicitly.
 
 Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F026.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
@@ -323,11 +331,11 @@ Reviewed by `/root/review_132`. [Evidence, expected behavior and patch details](
 
 Reviewed by `/root/review_105`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app.md).
 
-- [ ] Fix and regression-check stale generated component/vendor output through the compiler child owner.
-- [ ] Align legacy output run instructions with the current package.
-- [ ] Retain final-snapshot clean Trunk/native packaging evidence, including import-map assets and compiler/runtime alignment.
+- [x] Fix and regression-check stale generated component/vendor output through the compiler child owner.
+- [x] Align legacy output run instructions with the current package.
+- [x] Retain final-snapshot clean Trunk/native packaging evidence, including import-map assets and compiler/runtime alignment.
 - [ ] Observe browser/Tauri UI, WASM button, IPC/persistence, and local model inference; execute and verify installers with documented prerequisites.
-- [ ] Resolve or explicitly track the documented G3 source-scan failure before advancing its gated slice.
+- [x] Resolve or explicitly track the documented G3 source-scan failure before advancing its gated slice.
 
 ### STACK-F030 · `straw-app/.vscode`
 
@@ -339,33 +347,33 @@ Reviewed by `/root/review_106`. [Evidence, expected behavior and patch details](
 
 Reviewed by `/root/review_134`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--crates.md).
 
-- [ ] Preserve workspace membership and shell dependency paths when relocating children.
-- [ ] Reconcile child review findings before accepting desktop integration.
+- [x] Preserve workspace membership and shell dependency paths when relocating children.
+- [x] Reconcile child review findings before accepting desktop integration.
 
 ### STACK-F032 · `straw-app/crates/axum-loop`
 
 Reviewed by `/root/review_135`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--crates--axum-loop.md).
 
 - [x] Preserve workspace membership, sibling engine dependency, and test-only tempfile when changing the API crate.
-- [ ] Coordinate the child source's ephemeral-port test patch and Tauri exit verification with their owners.
+- [x] Coordinate the child source's ephemeral-port test patch and Tauri exit verification with their owners.
 
 ### STACK-F033 · `straw-app/crates/axum-loop/src`
 
 Reviewed by `/root/review_136`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--crates--axum-loop--src.md).
 
 - [x] Isolate the HTTP integration test on an ephemeral loopback port; pass beside an app occupying 8741 and in concurrent test processes.
-- [ ] Add focused listener-rejection and shutdown/rebind checks; have the Tauri owner verify desktop exit completion.
-- [ ] Root reruns current offline checks after resolving lockfile state.
+- [x] Add focused listener-rejection and shutdown/rebind checks; have the Tauri owner verify desktop exit completion.
+- [x] Root reruns current offline checks after resolving lockfile state.
 
 ### STACK-F034 · `straw-app/crates/engine`
 
 Reviewed by `/root/review_137`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--crates--engine.md).
 
-- [ ] Preserve engine independence from Tauri when fixing child-module findings.
-- [ ] After those fixes, rerun focused engine tests and root workspace checks.
-- [ ] Complete observed desktop command/model acceptance and clarify historical documentation ownership.
+- [x] Preserve engine independence from Tauri when fixing child-module findings. Evidence: `review/agent-output/A-F034-remaining.md` (0 Tauri tree matches; README boundary; Cargo.toml unchanged).
+- [ ] After those fixes, rerun focused engine tests and root workspace checks. Engine package **44/44 exit 0**; workspace still **exit 101** on out-of-scope `crucible` `security_env_handling` — see A-F034-remaining.
+- [ ] Complete observed desktop command/model acceptance and clarify historical documentation ownership. Doc ownership clarified in crate README; live UI/IPC still A-S15 / A-F051 (GGUF + ollama present).
 
-Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F034.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
+Implementation settlement: **PARTIAL** · [A-F034](review/agent-output/A-F034.md) · [A-F034-remaining](review/agent-output/A-F034-remaining.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
 
 ### STACK-F035 · `straw-app/crates/engine/src`
@@ -375,10 +383,10 @@ Reviewed by `/root/review_138`. [Evidence, expected behavior and patch details](
 - [x] Reject both prefix-collision orderings before any write; verify safe rollback/cleanup. If a competing writer changes an installed file, preserve it and retain/report recovery backups and exact paths.
 - [x] Reject disconnected mandatory inputs/config choices before any file/network side effect; retain optional inputs and valid DAG ordering/failure persistence.
 - [x] Recover abandoned owned runs after actual process termination to terminal interrupted status with no replay; preserve live owners.
-- [ ] Apply the documented shutdown-only migration for ownerless legacy Running rows only during a separately controlled upgrade; no user database was migrated by this audit.
+- [x] Apply the documented shutdown-only migration for ownerless legacy Running rows only during a separately controlled upgrade; no user database was migrated by this audit. Evidence: `review/agent-output/A-F035-migration.md` (`migrate_ownerless_legacy_running` opt-in; ordinary open unchanged; engine tests 44/44 exit 0).
 - [x] Add local fixture coverage for model response/status/body limits, redirects/proxy disabling, successful chat, generation and refinement.
 
-Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F035.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
+Implementation settlement: **DONE** · [A-F035](review/agent-output/A-F035.md) · [A-F035-migration](review/agent-output/A-F035-migration.md). Checked tasks require their stated acceptance; downstream integration remains unchecked until verified.
 
 
 ### STACK-F036 · `straw-app/crates/engine/src/nodes`
@@ -404,9 +412,10 @@ Reviewed by `/root/review_140`. [Evidence, expected behavior and patch details](
 ### STACK-F038 · `straw-app/crates/wasm-frontend/src`
 
 Reviewed by `/root/review_141`. [Evidence, expected behavior and patch details](review/folders/stack--straw-app--crates--wasm-frontend--src.md).
+Implementation settlement: **DONE** · [Current agent report](review/agent-output/A-F038.md).
 
-- [ ] In the provisioned build environment, run the existing crate test and verify browser results at 0, 1, 10 and 46 plus invalid input rejection and module initialization failure handling.
-- [ ] Verify native `wasm_fibonacci` agrees with the browser result and rejects 47.
+- [x] In the provisioned build environment, run the existing crate test and verify browser results at 0, 1, 10 and 46 plus invalid input rejection and module initialization failure handling.
+- [x] Verify native `wasm_fibonacci` agrees with the browser result and rejects 47.
 
 ### STACK-F039 · `straw-app/public`
 
@@ -435,7 +444,7 @@ Reviewed by `/root/review_109`. [Evidence, expected behavior and patch details](
 
 - [x] Correct the historical testing-guide capability explanation.
 - [x] Consider an explicit main-window label.
-- [ ] Complete live desktop command/ACL acceptance checks after the concurrent rewrite settles.
+- [ ] Complete live desktop command/ACL acceptance checks after the concurrent rewrite settles. Static ACL source↔`gen/schemas`↔`label=main` exit **0**; live IPC blocked on A-F046 (registry still EXECUTING, no `result.json`). Evidence: [A-F042](review/agent-output/A-F042.md).
 
 ### STACK-F043 · `straw-app/src-tauri/gen`
 

@@ -1,0 +1,51 @@
+{
+  "agent": "A-F015",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\projects",
+  "wave": 2,
+  "files_touched": [
+    "apps/web/app/projects/page.tsx",
+    "apps/web/app/projects/[id]/page.tsx"
+  ],
+  "gates_passed": [
+    "scoped TypeScript compile of projects pages + dependency types/services/context/toast/navbar",
+    "static acceptance: AuthProvider/ToastProvider/service api-client present; page consumes PaginatedResponse.data",
+    "static acceptance: empty vs error+retry; create refresh; pending-submit; Navbar user adaptation; View→detail",
+    "offline contract: seeded two-card envelope, distinct empty/error, create-exactly-one, pending guard"
+  ],
+  "gates_deferred": [
+    "live authenticated browser visit against running Next+Rust API (ports closed)",
+    "dashboard /dashboard/projects href owned by A-F010 (out of projects folder)"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\static-acceptance.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\contract-acceptance.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\tsconfig.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\logs\\01-tsc.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\logs\\02-static.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\logs\\03-contract.log"
+  ],
+  "commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F015/tsconfig.json",
+      "exit_code": 0,
+      "acceptance": true
+    },
+    {
+      "command": "node --test review/agent-output/A-F015/static-acceptance.cjs",
+      "exit_code": 0,
+      "acceptance": true
+    },
+    {
+      "command": "node --test review/agent-output/A-F015/contract-acceptance.cjs",
+      "exit_code": 0,
+      "acceptance": true
+    }
+  ],
+  "blocker": "Live browser list/create/navigation not observed (127.0.0.1:3000/3001 down). Dashboard sidebar /dashboard/projects remains A-F010.",
+  "primary": "Projects list/detail pages consume F024 PaginatedResponse, auth-ready fetch, distinct empty/error+retry+toast, create with pending-submit, authenticated Navbar, View→/projects/[id].",
+  "secondary": "Provider/service/auth persistence repaired by F019/F024/layout owners and verified present; page no longer owns those edits.",
+  "tertiary": "Offline seeded-envelope and create-exactly-one contract proofs; live HTTP/browser retained for W4/S04."
+}

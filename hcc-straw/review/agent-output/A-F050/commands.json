@@ -1,0 +1,175 @@
+[
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe test --offline --locked --package frontend-build -- --nocapture",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\staging-unit-tests.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-clean.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-removes-stale-extras.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-incremental-native.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-incremental-trunk.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-clean-native.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-clean-trunk.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-recovery.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-incremental-native.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-incremental-trunk.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-clean-native.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-clean-trunk.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-recovery.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\component-compile-failure.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\license-copy-failure.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\unmapped-import.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\missing-vendor-module.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\site-map-unmapped-import.log",
+    "acceptance": true,
+    "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-clean-repeat.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\trunk-clean-release.log",
+    "acceptance": true
+  }
+]

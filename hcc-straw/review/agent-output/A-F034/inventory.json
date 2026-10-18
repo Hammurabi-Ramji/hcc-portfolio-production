@@ -1,0 +1,13 @@
+{
+  "captured_utc": "2026-10-09T08:17:22.7294265Z",
+  "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine",
+  "direct_files": [
+    {
+      "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\Cargo.toml",
+      "bytes": 358,
+      "sha256": "1E900054B2D49148EC8A4C1682726C36941DD7B6693F0AE8428C5DA1A099F91C"
+    }
+  ],
+  "source_files_touched": [],
+  "manifest_content": "[package]\nname = \"straw-engine\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[dependencies]\nserde.workspace = true\nserde_json.workspace = true\nuuid.workspace = true\nrusqlite.workspace = true\nthiserror.workspace = true\nchrono.workspace = true\ncsv = \"1.3\"\nureq = { version = \"2.12.1\", default-features = false, features = [\"json\"] }\n\n[dev-dependencies]\ntempfile = \"3\"\n\n"
+}

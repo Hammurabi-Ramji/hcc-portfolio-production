@@ -1,5 +1,7 @@
 # STRAW SaaS Generator — to-do
 
+Latest checkpoint: 2026-10-18. `cargo test --workspace --offline --locked` passed all 35 unit tests across 32 crates. Source/templates and the lockfile are versioned; G01/G02/G03/G12 and the other unchecked acceptance tasks remain open. See the shared [closeout record](<C:/IEDB/STRAW Stack/review/closeout-2026-10-18/README.md>); the older evidence below retains its original snapshot date.
+
 Reviewed: 2026-10-09. **Folder review complete.** 84/84 assigned folder reports saved here; 136/136 across both roots.
 
 The review assigns a distinct agent to each current nested source folder; Stack root is reviewed by the main agent. Generated/copied folders are compared to source rather than assigned duplicate agents, as requested. The review excludes dependencies, Git internals and caches. The desktop was replaced during the audit; the user selected the current replacement tree. Original evidence is retained separately and removed folders are excluded from active tasks. Implementation tasks remain unchecked; completing an audit does not mean its proposed patches are implemented.

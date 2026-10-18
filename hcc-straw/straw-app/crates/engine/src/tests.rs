@@ -30,6 +30,53 @@ fn identities_cannot_be_empty_or_nil_and_are_distinct() {
 }
 
 #[test]
+fn bundled_model_workflow_uses_injected_worker_and_persists_terminal_result() {
+    let directory = tempfile::tempdir().unwrap();
+    let db = DbState::open(directory.path().join("desk.db")).unwrap();
+    let input = node("text_input", &[("text", "Build a Svelte 5 button")]);
+    let llm = node(
+        "llm_prompt",
+        &[
+            ("model", "rockypod/svelte-coder-4b"),
+            ("api_url", "candle://bundled"),
+            ("temperature", "0.2"),
+            ("system_prompt", "Use runes"),
+        ],
+    );
+    let graph = Graph {
+        edges: vec![edge(&input, "text", &llm, "prompt")],
+        nodes: vec![input, llm.clone()],
+    };
+    let mut flow = FlowRecord::new("bundled coder".into());
+    flow.definition = graph.clone();
+    let flow = db.save(flow).unwrap();
+    let run = db
+        .execute_workflow_with(flow.id, graph, &|settings, prompt, system| {
+            assert_eq!(settings.api_url, "candle://bundled");
+            assert_eq!(settings.model, "rockypod/svelte-coder-4b");
+            assert_eq!(prompt, "Build a Svelte 5 button");
+            assert_eq!(system, "Use runes");
+            Ok("<button>Local</button>".into())
+        })
+        .unwrap();
+    assert_eq!(run.status, RunStatus::Completed);
+    assert_eq!(
+        run.results
+            .iter()
+            .find(|row| row.node_id == llm.id)
+            .unwrap()
+            .outputs["response"]
+            .as_text(),
+        Some("<button>Local</button>")
+    );
+    drop(db);
+    let reopened = DbState::open(directory.path().join("desk.db")).unwrap();
+    let saved = reopened.executions(flow.id).unwrap();
+    assert_eq!(saved.len(), 1);
+    assert_eq!(saved[0].status, RunStatus::Completed);
+}
+
+#[test]
 fn actual_wire_contract_roundtrips_camel_case() {
     let attachment: Attachment = serde_json::from_value(
         serde_json::json!({"name":"notes.txt","mimeType":"text/plain","sizeBytes":3,"data":"abc"}),
@@ -228,9 +275,9 @@ fn generation_batch_validation_happens_before_writes() {
     };
     assert!(save_files(dir.path(), &[a.clone(), b], false).is_err());
     assert!(!dir.path().join("src/a.rs").exists());
-    let saved = save_files(dir.path(), &[a.clone()], false).unwrap();
+    let saved = save_files(dir.path(), std::slice::from_ref(&a), false).unwrap();
     assert!(!saved[0].is_dirty);
-    assert!(save_files(dir.path(), &[a.clone()], false).is_err());
+    assert!(save_files(dir.path(), std::slice::from_ref(&a), false).is_err());
     let updated = CodeFile {
         content: "refined current content".into(),
         ..a
@@ -251,7 +298,7 @@ fn local_client_rejects_every_nonliteral_endpoint_before_connect() {
         "https://example.com",
         "http://example.com",
         "http://localhost:11434",
-        "http://127.0.0.2",
+        "http://127.0.0.2", // crucible:allow(security) intentional rejection fixture
         "http://127.0.0.1.evil.test",
         "http://127.0.0.1@evil.test",
         "http://127.0.0.1:0",
@@ -509,15 +556,103 @@ fn ownerless_legacy_running_is_not_falsely_recovered() {
     let db = DbState::open(&path).unwrap();
     let flow = db.save(FlowRecord::new("legacy".into())).unwrap();
     let result = db.simulate_interrupted(flow.id).unwrap();
-    rusqlite::Connection::open(&path)
-        .unwrap()
-        .execute("DELETE FROM desk_run_owners WHERE run_id=?1", [&result.id])
+    let run_id = result.id.clone();
+    db.storage()
+        .call(move |c| {
+            Box::pin(async move {
+                sqlx::query("DELETE FROM desk_run_owners WHERE run_id=?")
+                    .bind(run_id)
+                    .execute(c)
+                    .await?;
+                Ok(())
+            })
+        })
         .unwrap();
     drop(db);
     assert_eq!(
         DbState::open(&path).unwrap().executions(flow.id).unwrap()[0].status,
         RunStatus::Running
     );
+}
+
+#[test]
+fn shutdown_only_ownerless_legacy_migration_is_opt_in_and_idempotent() {
+    // Isolated fixture only — never a user database. Keep this DbState open so the
+    // owned Running row stays live; ordinary open still refuses ownerless recovery
+    // (see ownerless_legacy_running_is_not_falsely_recovered).
+    let dir = tempfile::tempdir().unwrap();
+    let path = dir.path().join("migration-fixture.db");
+    let db = DbState::open(&path).unwrap();
+    let flow = db.save(FlowRecord::new("legacy-upgrade".into())).unwrap();
+
+    let ownerless = db.simulate_interrupted(flow.id).unwrap();
+    let ownerless_id = ownerless.id.clone();
+    db.storage()
+        .call(move |c| {
+            Box::pin(async move {
+                sqlx::query("DELETE FROM desk_run_owners WHERE run_id=?")
+                    .bind(ownerless_id)
+                    .execute(c)
+                    .await?;
+                Ok(())
+            })
+        })
+        .unwrap();
+
+    let owned = db.simulate_interrupted(flow.id).unwrap();
+    let completed = db
+        .execute_workflow_with(
+            flow.id,
+            Graph {
+                nodes: vec![node("text_input", &[("text", "ok")])],
+                edges: vec![],
+            },
+            &|_, _, _| unreachable!("no model call"),
+        )
+        .unwrap();
+    assert!(matches!(completed.status, RunStatus::Completed));
+
+    let before = db.executions(flow.id).unwrap();
+    assert_eq!(
+        before.iter().find(|r| r.id == ownerless.id).unwrap().status,
+        RunStatus::Running
+    );
+    assert_eq!(
+        before.iter().find(|r| r.id == owned.id).unwrap().status,
+        RunStatus::Running
+    );
+
+    assert_eq!(db.migrate_ownerless_legacy_running().unwrap(), 1);
+
+    let after = db.executions(flow.id).unwrap();
+    let migrated = after.iter().find(|r| r.id == ownerless.id).unwrap();
+    assert!(
+        matches!(migrated.status, RunStatus::Failed { ref error, failed_node: None }
+            if error.contains("ownerless legacy") && error.contains("offline upgrade"))
+    );
+    assert!(migrated.finished_at.is_some());
+    assert!(migrated.results.is_empty());
+    assert_eq!(
+        after.iter().find(|r| r.id == owned.id).unwrap().status,
+        RunStatus::Running
+    );
+    assert!(matches!(
+        after.iter().find(|r| r.id == completed.id).unwrap().status,
+        RunStatus::Completed
+    ));
+
+    let snapshot: Vec<(String, String)> = after
+        .iter()
+        .map(|r| (r.id.clone(), serde_json::to_string(r).unwrap()))
+        .collect();
+    assert_eq!(db.migrate_ownerless_legacy_running().unwrap(), 0);
+    let again = db.executions(flow.id).unwrap();
+    let again_snapshot: Vec<(String, String)> = again
+        .iter()
+        .map(|r| (r.id.clone(), serde_json::to_string(r).unwrap()))
+        .collect();
+    assert_eq!(snapshot, again_snapshot);
+    assert!(crate::db::OWNERLESS_LEGACY_RUNNING_MIGRATION_SQL.contains("ownerless legacy"));
 }
 
 // A real ephemeral-port HTTP fixture. Callers join every worker. Accept and I/O
@@ -737,7 +872,7 @@ fn chat_preserves_attachment_bytes_and_validates_role_and_size() {
         attachments: vec![Attachment {
             name: "notes.txt".into(),
             mime_type: "text/plain".into(),
-            size_bytes: text.len() as u64,
+            size_bytes: text.len() as u32,
             data: text.into(),
         }],
     };
@@ -1045,11 +1180,9 @@ fn rollback_preserves_external_changes_and_retains_original_backup_with_exact_pa
 #[test]
 fn current_output_graph_fixture_validates_and_historical_demo_does_not() {
     assert_eq!(crate::nodes::all_schemas().len(), 11);
-    let current: Graph = serde_json::from_str(include_str!(
-        "../../../../output/current-text-transform-graph.json"
-    ))
-    .unwrap();
+    let current: Graph =
+        serde_json::from_str(include_str!("fixtures/current-text-transform-graph.json")).unwrap();
     current.validate().unwrap();
-    let historical = include_str!("../../../../output/historical/demo-nlp-to-code-flow.json");
+    let historical = include_str!("fixtures/demo-nlp-to-code-flow.json");
     assert!(serde_json::from_str::<Graph>(historical).is_err());
 }

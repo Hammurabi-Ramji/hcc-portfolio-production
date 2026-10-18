@@ -1,15 +1,15 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct Attachment {
     pub name: String,
     pub mime_type: String,
-    pub size_bytes: u64,
+    pub size_bytes: u32,
     pub data: String,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct CodeFile {
     pub id: String,
@@ -18,7 +18,7 @@ pub struct CodeFile {
     pub is_dirty: bool,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, specta::Type)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct ModelSettings {
     pub model: String,

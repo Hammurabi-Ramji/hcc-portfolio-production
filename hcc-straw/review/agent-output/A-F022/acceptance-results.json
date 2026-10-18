@@ -1,0 +1,229 @@
+{
+  "agent": "A-F022",
+  "passed": 44,
+  "failed": 0,
+  "cookie": "straw_session",
+  "boundary": "middleware presence-only navigation hint; Rust API rejects missing/expired/forged cookies",
+  "results": [
+    {
+      "name": "missing-cookie-redirect:/dashboard",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fdashboard"
+    },
+    {
+      "name": "missing-cookie-callback:/dashboard",
+      "pass": true,
+      "detail": "callbackUrl=/dashboard"
+    },
+    {
+      "name": "missing-cookie-redirect:/settings",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fsettings"
+    },
+    {
+      "name": "missing-cookie-callback:/settings",
+      "pass": true,
+      "detail": "callbackUrl=/settings"
+    },
+    {
+      "name": "missing-cookie-redirect:/profile",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fprofile"
+    },
+    {
+      "name": "missing-cookie-callback:/profile",
+      "pass": true,
+      "detail": "callbackUrl=/profile"
+    },
+    {
+      "name": "missing-cookie-redirect:/projects",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fprojects"
+    },
+    {
+      "name": "missing-cookie-callback:/projects",
+      "pass": true,
+      "detail": "callbackUrl=/projects"
+    },
+    {
+      "name": "missing-cookie-redirect:/projects/abc",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fprojects%2Fabc"
+    },
+    {
+      "name": "missing-cookie-callback:/projects/abc",
+      "pass": true,
+      "detail": "callbackUrl=/projects/abc"
+    },
+    {
+      "name": "cookie-present-allows-protected:session-shaped",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "cookie-present-allows-protected:forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "cookie-present-allows-protected:expired-shaped",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "empty-cookie-redirects",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fdashboard"
+    },
+    {
+      "name": "wrong-cookie-name-redirects",
+      "pass": true,
+      "detail": "status=307 location=http://localhost:3000/login?callbackUrl=%2Fdashboard"
+    },
+    {
+      "name": "public-allows:/:none",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/:straw_session=forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/:straw_session=ok",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/login:none",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/login:straw_session=forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/login:straw_session=ok",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/signup:none",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/signup:straw_session=forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/signup:straw_session=ok",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/about:none",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/about:straw_session=forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/about:straw_session=ok",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/features:none",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/features:straw_session=forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/features:straw_session=ok",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/docs:none",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/docs:straw_session=forged",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "public-allows:/docs:straw_session=ok",
+      "pass": true,
+      "detail": "status=200 location=null"
+    },
+    {
+      "name": "matcher-excludes-api",
+      "pass": true,
+      "detail": "/((?!api|_next/static|_next/image|favicon.ico).*)"
+    },
+    {
+      "name": "matcher-excludes-next-static",
+      "pass": true,
+      "detail": "/((?!api|_next/static|_next/image|favicon.ico).*)"
+    },
+    {
+      "name": "matcher-excludes-favicon",
+      "pass": true,
+      "detail": "/((?!api|_next/static|_next/image|favicon.ico).*)"
+    },
+    {
+      "name": "api-auth-login-not-matched",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "api-auth-me-not-matched",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "api-projects-not-matched",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard-matched",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "login-matched",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "source-cookie-straw_session",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "source-imports-NextRequest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "source-no-jwt-todo",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

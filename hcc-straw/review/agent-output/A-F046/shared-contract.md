@@ -1,0 +1,9 @@
+# A-F046 flow and listener lifecycle contract
+
+All 13 IPC command names, arguments and sync/async declarations are preserved. `FlowRegistry` clones share one Arc-backed mutex. Each save/delete blocking closure owns both its registry and DbState clone. Registry authorization and SQLite persistence occur while the same lifecycle mutex is held; an operation queued before deletion is authorized only when its closure actually runs. A successful deletion retains a Deleted tombstone until application exit, including IDs minted but never saved. Repeated deletion of a tombstoned ID succeeds; foreign absent identities fail. A failed database mutation does not change registry authorization. IDs already persisted in SQLite are accepted after restart, while deleted IDs no longer have a persisted record and are rejected.
+
+The mutex serializes lifecycle mutations across all flows in this application instance. This is not a distributed cross-process mutation lock; the read-only Axum routes do not write flows. F051 must also ignore stale UI save completions after deletion and preserve unsaved drafts. Do not revive tombstoned IDs through a UI retry; create a new flow identity when recovery is desired.
+
+DbState clones keep F035's execution session lock alive throughout blocking work. Ownerless legacy Running rows remain subject to the previously documented stopped-app/backup migration; no user database migration was performed here.
+
+LoopService takes its RunningLoop exactly once at exit, signals graceful shutdown, and joins its task. The owned transition returns StoppedLoop only after successful join. A three-second timeout aborts/joins the server task and reports an error. Initial bind errors still fail setup explicitly. Actual native WebView2/IPC, Trunk-stopped packaged launch, UI concurrency and installer interactions are W4 acceptance; Rust helper/loopback tests do not establish those observations. Whole-tree release hold remains in force.

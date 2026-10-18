@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09",
+  "bundle_count": 18,
+  "component_copy_count": 236,
+  "matching_component_copies": 225,
+  "drifted_component_copies": 11,
+  "compared_nested_folders": 453,
+  "generated_entrypoints_present": 0
+}
+templates/creative_agency_saas: 5 components, 0 drifted, entrypoints=[]
+templates/ecommerce_saas: 6 components, 0 drifted, entrypoints=[]
+templates/education_saas: 5 components, 0 drifted, entrypoints=[]
+templates/finance_saas: 6 components, 0 drifted, entrypoints=[]
+templates/healthcare_saas: 6 components, 0 drifted, entrypoints=[]
+templates/legal_saas: 5 components, 0 drifted, entrypoints=[]
+templates/logistics_saas: 5 components, 1 drifted, entrypoints=[]
+templates/marketing_saas: 5 components, 1 drifted, entrypoints=[]
+templates/real_estate_saas: 5 components, 1 drifted, entrypoints=[]
+output/creative_agency_saas: 20 components, 1 drifted, entrypoints=[]
+output/ecommerce_saas: 22 components, 1 drifted, entrypoints=[]
+output/education_saas: 20 components, 1 drifted, entrypoints=[]
+output/finance_saas: 22 components, 1 drifted, entrypoints=[]
+output/healthcare_saas: 22 components, 0 drifted, entrypoints=[]
+output/legal_saas: 19 components, 1 drifted, entrypoints=[]
+output/logistics_saas: 21 components, 1 drifted, entrypoints=[]
+output/marketing_saas: 22 components, 1 drifted, entrypoints=[]
+output/real_estate_saas: 20 components, 1 drifted, entrypoints=[]

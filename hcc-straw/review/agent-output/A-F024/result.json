@@ -1,0 +1,69 @@
+{
+  "agent": "A-F024",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\services",
+  "wave": 1,
+  "files_touched": [
+    "apps/web/services/auth.service.ts",
+    "apps/web/services/file.service.ts",
+    "apps/web/services/project.service.ts",
+    "apps/web/services/user.service.ts",
+    "apps/web/services/service-utils.ts"
+  ],
+  "gates_passed": [
+    "strict scoped TypeScript compile",
+    "all20 supported operations exact endpoints/payloads and one envelope",
+    "all20 logical/HTTP/malformedHTTP/network failure matrix including void",
+    "empty list metadata and void null",
+    "query/path encoding, normalized pagination/search",
+    "rememberMe false and recovery501 preservation",
+    "files/avatar/batches truthful UNSUPPORTED501 without transport",
+    "canonical multipart utility adapter semantics",
+    "five validated unified patches and byte-hash snapshots"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\source-hashes.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\regression.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\verify.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\save-evidence.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\tsconfig.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\auth.service.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\file.service.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\project.service.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\service-utils.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\user.service.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\01.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\02.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\03.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\before\\apps\\web\\services\\auth.service.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\before\\apps\\web\\services\\file.service.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\before\\apps\\web\\services\\project.service.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\before\\apps\\web\\services\\user.service.ts"
+  ],
+  "commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F024/tsconfig.json",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\01.log",
+      "acceptance": true
+    },
+    {
+      "command": "node --test review/agent-output/A-F024/regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\02.log",
+      "acceptance": true
+    },
+    {
+      "command": "python review/agent-output/A-F024/save-evidence.py",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\logs\\03.log",
+      "acceptance": true
+    }
+  ],
+  "blocker": null,
+  "primary": "Repaired canonical service envelopes, imports, DTOs, void failures, encoding and pagination; truthful unsupported storage.",
+  "secondary": "Published exact backend endpoint contracts; page/docs and real persistence/authorization owners retain downstream gates.",
+  "tertiary": "Five validated patches, byte snapshots/hashes and strict offline Axios matrix; no live backend/release claim."
+}

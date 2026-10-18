@@ -1,0 +1,60 @@
+{
+  "agent": "A-F038",
+  "status": "DONE",
+  "folder": "straw-app/crates/wasm-frontend/src",
+  "wave": "W2-desktop",
+  "files_touched": [
+    "straw-app/crates/wasm-frontend/src/lib.rs"
+  ],
+  "gates_passed": [
+    "crate_test_offline_locked",
+    "browser_fibonacci_0_1_10_46",
+    "browser_invalid_rejection_47",
+    "module_init_failure_handling",
+    "native_wasm_fibonacci_agreement_rejects_47"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\crate-test-reverify.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\crate-test.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\wasm32-build-reverify.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\wasm-bindgen-reverify.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\browser-harness-result.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\browser-harness-result-reverify.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\diffs\\lib.rs.diff",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\inventory.json"
+  ],
+  "commands": [
+    {
+      "command": "cargo test -p wasm-frontend --offline --locked -- --nocapture",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\crate-test-reverify.log",
+      "acceptance": true,
+      "note": "W2 reverify 2026-10-18; 4 tests ok"
+    },
+    {
+      "command": "cargo build -p wasm-frontend --target wasm32-unknown-unknown --offline --locked",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\wasm32-build-reverify.log",
+      "acceptance": true
+    },
+    {
+      "command": "wasm-bindgen --target web --out-dir review/agent-output/A-F038/browser-harness --out-name wasm-frontend <isolated wasm>",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\wasm-bindgen-reverify.log",
+      "acceptance": true
+    },
+    {
+      "command": "browser harness http://127.0.0.1:8791/ (import map wasm-frontend -> /wasm-frontend.js)",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F038\\logs\\browser-harness-result-reverify.json",
+      "acceptance": true,
+      "title": "A-F038 PASS"
+    }
+  ],
+  "blocker": null,
+  "coordination": "F037 still owns Trunk import-map emission and live Desk UI wiring (STACK-F037 unchecked). F038 src contract verified independently; did not edit F037 exclusive paths.",
+  "primary": "Owned fibonacci/greet source verified: crate tests pass; browser WASM returns 0/1/10/46, rejects 47, and surfaces init-before-use plus missing-module init failure; native wasm_fibonacci shares the same function and rejects 47.",
+  "secondary": "F037 still owns Trunk import-map emission and live Desk UI wiring; this harness uses the same import-map URL shape (/wasm-frontend.js) without editing the crate root.",
+  "tertiary": "Live packaged WebView2/S15 observation remains W4; whole-tree source-scan release hold retained."
+}

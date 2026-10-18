@@ -1,0 +1,46 @@
+[
+  {
+    "id": "compile-middleware",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "middleware.ts",
+      "--module",
+      "commonjs",
+      "--moduleResolution",
+      "node",
+      "--esModuleInterop",
+      "--skipLibCheck",
+      "--target",
+      "ES2020",
+      "--outDir",
+      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F022\\compiled",
+      "--rootDir",
+      "."
+    ],
+    "expectedExit": 0,
+    "actualExit": 0,
+    "log": "logs/compile-middleware.log"
+  },
+  {
+    "id": "acceptance",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "command": [
+      "node",
+      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F022\\acceptance.cjs"
+    ],
+    "expectedExit": 0,
+    "actualExit": 0,
+    "log": "logs/acceptance.log",
+    "results": "acceptance-results.json"
+  },
+  {
+    "id": "housekeeping-remove-empty-dir",
+    "cwd": "C:\\IEDB\\STRAW Stack",
+    "command": "node inventory+rmdir apps/web/middleware when children=[]",
+    "expectedExit": 0,
+    "actualExit": 0,
+    "evidence": "housekeeping.json"
+  }
+]

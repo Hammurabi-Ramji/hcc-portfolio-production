@@ -1,0 +1,20 @@
+[
+  {
+    "command": "C:\\Program Files\\nodejs\\node.exe C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\node_modules\\typescript\\bin\\tsc --project C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F010\\tsconfig.json",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F010\\logs\\01-typescript.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Program Files\\nodejs\\node.exe C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F010\\static-checks.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F010\\logs\\02-static.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:\\Program Files\\nodejs\\node.exe C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F010\\run-tests.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F010\\logs\\03-browser.log",
+    "acceptance": true
+  }
+]

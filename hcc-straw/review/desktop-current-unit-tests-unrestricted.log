@@ -1,0 +1,38 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.37s
+     Running unittests src\lib.rs (target\debug\deps\straw_engine-abba639f4bb4f6d2.exe)
+
+running 12 tests
+test tests::images_are_explicitly_rejected_without_silent_degradation ... ok
+test tests::identities_cannot_be_empty_or_nil_and_are_distinct ... ok
+test tests::local_client_rejects_every_nonliteral_endpoint_before_connect ... ok
+test tests::actual_wire_contract_roundtrips_camel_case ... ok
+test tests::named_same_language_blocks_preserve_both_files_and_close_correctly ... ok
+test tests::graph_rejects_empty_duplicates_unknown_ports_and_cycles ... ok
+test tests::path_guard_rejects_traversal_roots_and_platform_aliases ... ok
+test tests::generation_batch_validation_happens_before_writes ... ok
+test tests::two_flows_survive_restart_without_overwrite ... ok
+test tests::successful_pipeline_executes_total_order_and_records_completion ... ok
+test tests::cycle_failure_is_persisted_with_real_distinct_times ... ok
+test tests::failed_upstream_never_writes_downstream_file ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+     Running unittests src\lib.rs (target\debug\deps\wasm_frontend-005ef13b532cc9f6.exe)
+
+running 1 test
+test tests::bounded_compute ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests wasm_frontend
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

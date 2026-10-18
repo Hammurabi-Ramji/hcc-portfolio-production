@@ -1,0 +1,37 @@
+{
+  "agent": "A-F007",
+  "status": "PASS",
+  "passes": [
+    "Next register returns 201 user envelope and HttpOnly Strict straw_session cookie",
+    "Next GET /api/auth/me succeeds with cookie before reload",
+    "browser reload retains straw_session; Next /me restores identity",
+    "Next POST /api/auth/refresh-token rotates session cookie",
+    "revoked pre-refresh cookie rejected by Next /me (401)",
+    "Next POST /api/auth/logout returns data:null and clears cookie",
+    "browser reload after logout keeps anonymous /me 401",
+    "Next login → reload → /me restores session",
+    "verify-email GET/POST, forgot-password, reset-password remain HTTP 501 UNSUPPORTED"
+  ],
+  "count": 9,
+  "origin": "http://127.0.0.1:59450",
+  "backendPort": 59449,
+  "binary": {
+    "executable": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\api\\target\\debug\\straw-web-api.exe",
+    "sha256": "e204bf5f5da339570ee7fc1780e2887bec89d366078d8d85ad272070e2b73c59",
+    "size": 7329280,
+    "modifiedUtc": "2026-10-10T09:23:04.614Z",
+    "sourceContract": "A-F007 Next auth routes proxy to A-F007 Rust auth; no F019/F022 file edits",
+    "observedAt": "2026-10-18T10:45:28.855Z"
+  },
+  "binaryUnchanged": true,
+  "dependencies": {
+    "F019": "provider/session cookie contract consumed; AuthProvider/context files not edited",
+    "F022": "middleware straw_session navigation contract noted; middleware files not edited"
+  },
+  "boundary": "Chromium → Next compiled App Router auth handlers → Rust/SQLite; cookie reload observed; no page/middleware ownership claimed",
+  "unsupported": [
+    "verify-email",
+    "forgot-password",
+    "reset-password"
+  ]
+}

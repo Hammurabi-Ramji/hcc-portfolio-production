@@ -1,0 +1,30 @@
+[
+  {
+    "file": "apps/web/lib/api-client.ts",
+    "before_sha256": "9d1837e282e8202650f420b7748d447773f037ecfdc1c5d5febd7d6a89cbd167",
+    "after_sha256": "fc0ddae37f6ec13c1973e1b812991e09ad900fa2139a7bccdd7a18acf8dd9cb4",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\api-client.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/lib/api.ts",
+    "before_sha256": "0026ecb16bdd6f256d98f9ef5f7f096b692dc949a393758a8e270304888fb7f4",
+    "after_sha256": "b2ee09f1afdfed29b41ae5fab9827a91d4d6dd6cde5f1de3031ba310d3406736",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\api.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/lib/utils.ts",
+    "before_sha256": "e1780a38ee6ef03c7d95d6a6cc3dea4b2ff23ad719d5b3679f03d08c0ff1776b",
+    "after_sha256": "8c4c062fbe648d4f5426c7f256733059b1d140f6b59418657769a7bc39bf4cc6",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\utils.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/lib/backend-proxy.ts",
+    "before_sha256": null,
+    "after_sha256": "b935ef4dba31060cb493c27b585f8d14a868ac8d702ca725c11c3eb613f2ee5c",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\backend-proxy.ts.patch",
+    "validated": true
+  }
+]

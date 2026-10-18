@@ -20,11 +20,39 @@ pub fn greet(name: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// Browser Modules compute exercises these inputs (0, 1, 10, 46).
     #[test]
-    fn bounded_compute() {
+    fn browser_compute_boundaries() {
         assert_eq!(fibonacci(0), Ok(0));
+        assert_eq!(fibonacci(1), Ok(1));
         assert_eq!(fibonacci(10), Ok(55));
-        assert_eq!(fibonacci(46), Ok(1836311903));
+        assert_eq!(fibonacci(46), Ok(1_836_311_903));
+    }
+
+    #[test]
+    fn rejects_out_of_range() {
+        let err = fibonacci(47).expect_err("47 must be rejected");
+        assert_eq!(err, "fibonacci input must be 0..46");
+        assert!(fibonacci(100).is_err());
+        assert!(fibonacci(u32::MAX).is_err());
+    }
+
+    /// Native Tauri `wasm_fibonacci` delegates to this same function.
+    #[test]
+    fn native_wasm_fibonacci_agreement() {
+        assert_eq!(fibonacci(0), Ok(0));
+        assert_eq!(fibonacci(1), Ok(1));
+        assert_eq!(fibonacci(10), Ok(55));
+        assert_eq!(fibonacci(46), Ok(1_836_311_903));
         assert!(fibonacci(47).is_err());
+    }
+
+    #[test]
+    fn greet_export() {
+        assert_eq!(
+            greet("STRAW"),
+            "Hello, STRAW. Computed in WebAssembly."
+        );
     }
 }

@@ -1,0 +1,50 @@
+{
+  "agent": "A-F018",
+  "folder": "apps/web/components",
+  "wave": 0,
+  "status": "DONE",
+  "files_changed": [
+    "apps/web/components/ProtectedRoute.tsx",
+    "apps/web/components/Navbar.tsx",
+    "apps/web/components/Footer.tsx",
+    "apps/web/components/Features.tsx"
+  ],
+  "gates_passed": [
+    "Typed UserRole allowlist predicate; loading/anonymous/allowed/denied/empty-role cases",
+    "Denied and anonymous children never mounted",
+    "Footer destinations limited to existing app routes; unverified social omitted",
+    "Feature copy no longer claims production-ready Docker",
+    "Navbar mobile toggle accessible name/expanded/controls; keyboard focus/activation",
+    "Guard emits login?callbackUrl= matching middleware and login page contract",
+    "Offline React/Chrome harness: 9 passes",
+    "Focused strict TypeScript check of components: exit 0"
+  ],
+  "verify": [
+    {
+      "command": "node review/agent-output/A-F018/run-tests.cjs",
+      "exit": 0,
+      "log": "review/agent-output/A-F018/logs/component-tests.log",
+      "results": "review/agent-output/A-F018/browser-results.json"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --noEmit --incremental false --pretty false -p review/agent-output/A-F018/tsconfig.components.json",
+      "exit": 0,
+      "log": "review/agent-output/A-F018/logs/component-type-check.log"
+    },
+    {
+      "command": "node review/agent-output/A-F018/make-evidence.cjs",
+      "exit": 0,
+      "log": "review/agent-output/A-F018/logs/evidence.log"
+    }
+  ],
+  "blockers": [
+    "Live cookie session login and successful return navigation against the running Rust API remain A-F019/A-S13 integration observation; component emits the agreed callbackUrl contract and AuthProvider is already mounted in app/layout.tsx.",
+    "Legal pages and approved social profile URLs remain absent; footer omits them until route/deployment owners publish destinations."
+  ],
+  "evidence_refs": [
+    "review/agent-output/A-F018.md",
+    "review/agent-output/A-F018/browser-results.json",
+    "review/agent-output/A-F018/source-hashes.json",
+    "review/agent-output/A-F018/diffs"
+  ]
+}

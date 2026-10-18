@@ -1,0 +1,37 @@
+[
+  {
+    "file": "apps/web/services/auth.service.ts",
+    "before_sha256": "8113fa2135a3745ee64b538502eb16ab75d5ad10abb93af507d6181dd84c65d1",
+    "after_sha256": "03841f89074ca478967f0e7d3012d33d0ea68f25551aa8a5990c6a47d0aa374e",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\auth.service.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/services/file.service.ts",
+    "before_sha256": "b4a433f896cdc4d4eeb5cf448f6b4b5f831c6aa507531ea9f2722f48b755de5d",
+    "after_sha256": "824cbfb7b537f91cf0c629bfd4e13438643425299c453206c20e97ae6b230e44",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\file.service.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/services/project.service.ts",
+    "before_sha256": "c7f38e4baaabbdc1111fdd4942c99f78bf43396286068725d182c98ba35d6184",
+    "after_sha256": "e5e52890aeb0b95093cfb9610009d0a67c98a7e9a425d7048ace48fce73dc2d7",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\project.service.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/services/user.service.ts",
+    "before_sha256": "253efacdcab9c7f1f7afbf5a08fbb3f27c6852908c7c0d4a0f6870e625f2937d",
+    "after_sha256": "15e81bd6d38f84fc2304ef20d8702efb753a3615a75c8362ec26be7dc74367ad",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\user.service.ts.patch",
+    "validated": true
+  },
+  {
+    "file": "apps/web/services/service-utils.ts",
+    "before_sha256": null,
+    "after_sha256": "3e6169de562ec33c250c1d10c1df1d815f0fb1fa3de7e13279478724ecce495a",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\patches\\service-utils.ts.patch",
+    "validated": true
+  }
+]

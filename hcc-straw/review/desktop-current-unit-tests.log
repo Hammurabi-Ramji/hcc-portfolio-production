@@ -1,0 +1,71 @@
+   Compiling serde_core v1.0.229
+   Compiling smallvec v1.16.2
+   Compiling memchr v2.8.3
+   Compiling syn v3.0.6
+   Compiling percent-encoding v2.3.2
+   Compiling serde_json v1.0.151
+   Compiling windows-sys v0.61.2
+   Compiling rusqlite v0.31.0
+   Compiling form_urlencoded v1.2.2
+   Compiling csv-core v0.1.13
+   Compiling tempfile v3.27.0
+   Compiling synstructure v0.14.0
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v2.0.21
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling uuid v1.27.0
+   Compiling csv v1.4.0
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling thiserror v2.0.21
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling serde v1.0.229
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling chrono v0.4.45
+   Compiling icu_provider v2.3.1
+   Compiling icu_properties v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling ureq v2.12.1
+   Compiling straw-engine v0.1.0 (C:\IEDB\STRAW Stack\review\current-desktop-fixture\crates\engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.80s
+     Running unittests src\lib.rs (target\debug\deps\straw_engine-abba639f4bb4f6d2.exe)
+
+running 12 tests
+test tests::actual_wire_contract_roundtrips_camel_case ... ok
+test tests::identities_cannot_be_empty_or_nil_and_are_distinct ... ok
+test tests::local_client_rejects_every_nonliteral_endpoint_before_connect ... ok
+test tests::graph_rejects_empty_duplicates_unknown_ports_and_cycles ... ok
+test tests::named_same_language_blocks_preserve_both_files_and_close_correctly ... ok
+test tests::images_are_explicitly_rejected_without_silent_degradation ... ok
+test tests::path_guard_rejects_traversal_roots_and_platform_aliases ... ok
+test tests::generation_batch_validation_happens_before_writes ... FAILED
+test tests::successful_pipeline_executes_total_order_and_records_completion ... ok
+test tests::failed_upstream_never_writes_downstream_file ... ok
+test tests::two_flows_survive_restart_without_overwrite ... ok
+test tests::cycle_failure_is_persisted_with_real_distinct_times ... ok
+
+failures:
+
+---- tests::generation_batch_validation_happens_before_writes stdout ----
+
+thread 'tests::generation_batch_validation_happens_before_writes' (10624) panicked at crates\engine\src\tests.rs:231:61:
+called `Result::unwrap()` on an `Err` value: "Access is denied. (os error 5)"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::generation_batch_validation_happens_before_writes
+
+test result: FAILED. 11 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+error: test failed, to rerun pass `-p straw-engine --lib`

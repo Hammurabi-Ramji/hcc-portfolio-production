@@ -1,0 +1,32 @@
+[
+  {
+    "command": "node --version",
+    "exit_code": 0,
+    "log": "review/agent-output/A-F013/logs/01.log",
+    "required": true
+  },
+  {
+    "command": "node C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\node_modules\\typescript\\bin\\tsc --version",
+    "exit_code": 0,
+    "log": "review/agent-output/A-F013/logs/02.log",
+    "required": true
+  },
+  {
+    "command": "node C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\node_modules\\typescript\\bin\\tsc -p C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F013\\tsconfig.json --pretty false",
+    "exit_code": 0,
+    "log": "review/agent-output/A-F013/logs/03.log",
+    "required": true
+  },
+  {
+    "command": "node --test C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F013\\regression.cjs",
+    "exit_code": 0,
+    "log": "review/agent-output/A-F013/logs/04.log",
+    "required": true
+  },
+  {
+    "command": "npm.cmd run type-check",
+    "exit_code": 0,
+    "log": "review/agent-output/A-F013/logs/05.log",
+    "required": false
+  }
+]

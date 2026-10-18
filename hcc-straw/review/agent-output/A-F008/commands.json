@@ -1,0 +1,31 @@
+[
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\tsconfig.json\"",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\logs\\typescript-compile.log",
+    "acceptance": true,
+    "notes": "Scoped compile of projects collection/item/archive/activate plus auth login/register for the Next method-mapper adapter. Also emits lib/backend-proxy.js."
+  },
+  {
+    "command": "TEMP=C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008 TMP=C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008 cargo test --manifest-path apps/api/Cargo.toml --offline --locked --test projects_http -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\logs\\rust-projects-http.log",
+    "acceptance": true,
+    "notes": "Reconfirm prior F008 Rust ownership/concurrency/400 matrix (2/2)."
+  },
+  {
+    "command": "NEXT_TELEMETRY_DISABLED=1 npm_config_offline=true node \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\next-http-regression.cjs\"",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\logs\\next-http-initial-limit.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\logs\\next-http-final.log",
+    "diagnostic": "Harness assumed default limit 20; backend and service-utils default is 10. Assertion fixed; no production route change."
+  },
+  {
+    "command": "NEXT_TELEMETRY_DISABLED=1 npm_config_offline=true node \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\next-http-regression.cjs\"",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F008\\logs\\next-http-final.log",
+    "acceptance": true,
+    "notes": "152 assertions: list/create envelopes, detail/update/delete/archive/activate ownership, CORS/preflight/HEAD405 through compiled Next project routes to Rust/SQLite."
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "01-scoped-tsc",
+    "command": [
+      "node",
+      "C:\\IEDB\\STRAW Stack\\apps\\web\\node_modules\\typescript\\bin\\tsc",
+      "--project",
+      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\tsconfig.json"
+    ],
+    "exit": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\logs\\01-scoped-tsc.log"
+  },
+  {
+    "name": "02-browser-regression",
+    "command": [
+      "node",
+      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\run-regression.cjs"
+    ],
+    "exit": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\logs\\02-browser-regression.log"
+  },
+  {
+    "name": "03-api-session-probe",
+    "command": [
+      "node",
+      "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\api-session-probe.cjs"
+    ],
+    "exit": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\logs\\03-live-session.log"
+  }
+]

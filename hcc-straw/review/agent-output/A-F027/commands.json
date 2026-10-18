@@ -1,0 +1,22 @@
+[
+  {
+    "command": "node --version",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\01.log"
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --version",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\02.log"
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2017 --module commonjs --strict --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --outDir review/agent-output/A-F027/compiled apps\\web\\utils\\config.ts apps\\web\\utils\\helpers.ts apps\\web\\utils\\index.ts apps\\web\\utils\\pagination.ts apps\\web\\utils\\validation.ts",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\03.log"
+  },
+  {
+    "command": "node --test review/agent-output/A-F027/regression.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\04.log"
+  }
+]

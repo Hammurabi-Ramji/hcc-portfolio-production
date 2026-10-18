@@ -1,0 +1,60 @@
+{
+  "runtime": {
+    "react": "19.3.0",
+    "typescript": "5.9.3",
+    "browser": "156.0.8078.36"
+  },
+  "passes": [
+    "SSR/client deterministic hydration",
+    "debounce latest arguments/callback, delay and unmount cancellation, value behavior",
+    "localStorage batch/key/absent/corrupt/zero/removal",
+    "sessionStorage batch/key/absent/corrupt/zero/removal",
+    "storage access failure preserves usable state",
+    "custom storage serialization",
+    "protected route pending/authenticated/logout with replace redirect",
+    "shared four-variant toast stack, accessible dismissal, expiration and unmount cleanup",
+    "theme import/hydration/toggle"
+  ],
+  "contrasts": [
+    {
+      "mode": "light",
+      "variant": 0,
+      "ratio": 9.110868528921165
+    },
+    {
+      "mode": "light",
+      "variant": 1,
+      "ratio": 10.019596426078444
+    },
+    {
+      "mode": "light",
+      "variant": 2,
+      "ratio": 8.670952254632683
+    },
+    {
+      "mode": "light",
+      "variant": 3,
+      "ratio": 10.357982247884618
+    },
+    {
+      "mode": "dark",
+      "variant": 0,
+      "ratio": 9.110868528921165
+    },
+    {
+      "mode": "dark",
+      "variant": 1,
+      "ratio": 10.019596426078444
+    },
+    {
+      "mode": "dark",
+      "variant": 2,
+      "ratio": 8.670952254632683
+    },
+    {
+      "mode": "dark",
+      "variant": 3,
+      "ratio": 10.357982247884618
+    }
+  ]
+}

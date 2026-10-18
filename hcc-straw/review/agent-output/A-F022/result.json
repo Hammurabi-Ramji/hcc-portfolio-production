@@ -1,0 +1,36 @@
+{
+  "agent": "A-F022",
+  "folder": "apps/web/middleware",
+  "wave": 0,
+  "status": "DONE",
+  "checkbox": "CLOSED",
+  "summary": "Root middleware.ts presence-only straw_session guard acceptance 44/44; empty apps/web/middleware/ removed as housekeeping.",
+  "filesChanged": [
+    "apps/web/middleware/ (removed empty directory)"
+  ],
+  "filesUnchanged": [
+    "apps/web/middleware.ts"
+  ],
+  "verify": [
+    {
+      "name": "tsc compile middleware.ts → A-F022/compiled",
+      "exit": 0
+    },
+    {
+      "name": "acceptance.cjs (44 checks)",
+      "exit": 0
+    },
+    {
+      "name": "housekeeping remove empty middleware/",
+      "exit": 0,
+      "afterExists": false
+    }
+  ],
+  "f019Coordination": {
+    "mode": "read-only",
+    "cookie": "straw_session",
+    "alignment": "AuthContext mutates via AuthService Set-Cookie lifecycle; middleware reads the same HttpOnly cookie name and does not validate JWT locally."
+  },
+  "blockers": [],
+  "evidence": "review/agent-output/A-F022.md"
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F047-remaining\\isolated\\straw-app",
+    "exit_code": 4294967295,
+    "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F047-remaining\\logs\\compiler-clean-build.log"
+  }
+]

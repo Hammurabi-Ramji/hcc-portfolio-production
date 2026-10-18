@@ -97,7 +97,12 @@ pub fn generate(
     {
         return Err("invalid model settings".into());
     }
-    let body = serde_json::json!({"model":settings.model,"prompt":prompt,"system":system,"stream":false,"options":{"temperature":settings.temperature}});
+    let openai = settings.api_url.ends_with("/v1/chat/completions");
+    let body = if openai {
+        serde_json::json!({"model":settings.model,"messages":[{"role":"system","content":system},{"role":"user","content":prompt}],"stream":false,"temperature":settings.temperature,"max_tokens":1500})
+    } else {
+        serde_json::json!({"model":settings.model,"prompt":prompt,"system":system,"stream":false,"options":{"temperature":settings.temperature,"num_ctx":8192,"num_predict":1500,"repeat_penalty":1.5}})
+    };
     let (status, text) = request(
         "POST",
         &settings.api_url,
@@ -108,9 +113,12 @@ pub fn generate(
         return Err(format!("local model returned HTTP {status}"));
     }
     let value: serde_json::Value = serde_json::from_str(&text).map_err(|e| e.to_string())?;
-    value
-        .get("response")
-        .and_then(|r| r.as_str())
-        .map(str::to_owned)
-        .ok_or("local model response missing text".into())
+    (if openai {
+        value.pointer("/choices/0/message/content")
+    } else {
+        value.get("response")
+    })
+    .and_then(|r| r.as_str())
+    .map(str::to_owned)
+    .ok_or("local model response missing text".into())
 }

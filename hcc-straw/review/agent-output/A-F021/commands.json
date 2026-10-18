@@ -1,0 +1,41 @@
+[
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2020 --lib esnext,dom,dom.iterable --module commonjs --moduleResolution node --strict --esModuleInterop --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --rootDir apps/web --outDir review/agent-output/A-F021/compiled apps/web/types/index.ts apps/web/lib/api-client.ts apps/web/lib/api.ts apps/web/lib/utils.ts apps/web/lib/backend-proxy.ts",
+    "exit_code": 2,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\01.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log"
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2020 --lib esnext,dom,dom.iterable --module commonjs --moduleResolution node --strict --esModuleInterop --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --rootDir apps/web --outDir review/agent-output/A-F021/compiled apps/web/types/index.ts apps/web/lib/api-client.ts apps/web/lib/api.ts apps/web/lib/utils.ts apps/web/lib/backend-proxy.ts",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\02.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log"
+  },
+  {
+    "command": "node --test review/agent-output/A-F021/regression.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\03.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\05.log"
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2020 --lib esnext,dom,dom.iterable --module commonjs --moduleResolution node --strict --esModuleInterop --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --rootDir apps/web --outDir review/agent-output/A-F021/compiled apps/web/types/index.ts apps/web/lib/api-client.ts apps/web/lib/api.ts apps/web/lib/utils.ts apps/web/lib/backend-proxy.ts",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log",
+    "acceptance": true
+  },
+  {
+    "command": "node --test review/agent-output/A-F021/regression.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\05.log",
+    "acceptance": true
+  },
+  {
+    "command": "python review/agent-output/A-F021/save-evidence.py",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\06.log",
+    "acceptance": true
+  }
+]

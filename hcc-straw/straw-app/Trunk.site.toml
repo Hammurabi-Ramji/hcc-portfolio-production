@@ -13,7 +13,7 @@ no_autoreload = true
 
 [watch]
 watch = ["ui", "site", "index.html", "crates/wasm-frontend", "tools/frontend-build"]
-ignore = ["target", "dist", "site-dist", "public"]
+ignore = ["target", "dist", "desktop-dist", "site-dist", "public"]
 
 [[hooks]]
 stage = "pre_build"

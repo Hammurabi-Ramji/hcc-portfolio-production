@@ -1,0 +1,84 @@
+{
+  "runtime": {
+    "react": "19.3.0",
+    "typescript": "5.9.3",
+    "browser": "156.0.8078.36"
+  },
+  "passed": 5,
+  "failed": 0,
+  "groups": [
+    {
+      "name": "delayed-auth-blocks-blank-submit",
+      "ok": true,
+      "detail": {
+        "firstName": null,
+        "lastName": null,
+        "bio": null,
+        "website": null,
+        "location": null
+      }
+    },
+    {
+      "name": "anonymous-redirect-after-loading",
+      "ok": true,
+      "detail": {
+        "redirects": [
+          "/login?callbackUrl=%2Fsettings"
+        ]
+      }
+    },
+    {
+      "name": "authenticated-five-field-hydration",
+      "ok": true,
+      "detail": {
+        "values": {
+          "firstName": "Grace",
+          "lastName": "Hopper",
+          "bio": "Admiral",
+          "website": "https://grace.example",
+          "location": "Arlington"
+        },
+        "getProfileCalls": 1
+      }
+    },
+    {
+      "name": "user-switch-no-leak",
+      "ok": true,
+      "detail": {
+        "first": {
+          "firstName": "Ada",
+          "lastName": "Lovelace",
+          "bio": "Mathematician",
+          "website": "https://ada.example",
+          "location": "London"
+        },
+        "second": {
+          "firstName": "Alan",
+          "lastName": "Turing",
+          "bio": "Cryptanalyst",
+          "website": "https://alan.example",
+          "location": "Bletchley"
+        }
+      }
+    },
+    {
+      "name": "save-feedback-context-and-saving-clears",
+      "ok": true,
+      "detail": {
+        "toasts": [
+          "success",
+          "error"
+        ],
+        "payload": {
+          "firstName": "Augusta",
+          "lastName": "King",
+          "bio": "Updated bio",
+          "website": "https://updated.example",
+          "location": "Cambridge"
+        },
+        "updateUserCalls": 1
+      }
+    }
+  ],
+  "ok": true
+}

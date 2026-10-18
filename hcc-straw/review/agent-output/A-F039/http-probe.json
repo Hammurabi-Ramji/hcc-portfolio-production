@@ -1,0 +1,60 @@
+{
+    "timestamp_utc":  "2026-10-18T11:03:27.8798698Z",
+    "base_url":  "http://127.0.0.1:18083/",
+    "http_probes":  [
+                        {
+                            "path":  "/index.html",
+                            "status":  200,
+                            "bytes":  1115
+                        },
+                        {
+                            "path":  "/public/ui/main.js",
+                            "status":  200,
+                            "bytes":  121
+                        },
+                        {
+                            "path":  "/public/ui/App.js",
+                            "status":  200,
+                            "bytes":  20968
+                        },
+                        {
+                            "path":  "/public/ui/CoreRecovery.js",
+                            "status":  200,
+                            "bytes":  4915
+                        },
+                        {
+                            "path":  "/public/ui/VaultPanel.js",
+                            "status":  200,
+                            "bytes":  8122
+                        },
+                        {
+                            "path":  "/public/ui/vendor/svelte/index-client.js",
+                            "status":  200,
+                            "bytes":  8566
+                        },
+                        {
+                            "path":  "/public/ui/tauri-core.js",
+                            "status":  200,
+                            "bytes":  289
+                        },
+                        {
+                            "path":  "/public/ui/vendor/env.js",
+                            "status":  200,
+                            "bytes":  76
+                        },
+                        {
+                            "path":  "/public/ui/vendor/clsx.mjs",
+                            "status":  200,
+                            "bytes":  388
+                        },
+                        {
+                            "path":  "/wasm-frontend.js",
+                            "status":  200,
+                            "bytes":  7103
+                        }
+                    ],
+    "http_all_200":  true,
+    "public_core":  true,
+    "dist_core":  true,
+    "desktop_core":  false
+}

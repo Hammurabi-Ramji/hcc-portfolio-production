@@ -1,4 +1,4 @@
-const paths = { modules: 'modules', flows: 'flows', chat: 'chat', code: 'code' };
+const paths = { modules: 'modules', flows: 'flows', chat: 'chat', code: 'code', models:'models',documents:'documents',fabricator:'fabricator',vault:'vault',ledger:'ledger',records:'records',validate:'validate' };
 
 export function readRoute() {
   const path = window.location.hash.replace(/^#\/?/, '').split(/[/?]/)[0];

@@ -1,0 +1,56 @@
+{
+  "agent": "A-F012",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\features",
+  "relative": "apps/web/app/features",
+  "wave": 2,
+  "files_touched": [
+    "apps/web/app/features/page.tsx",
+    "apps/web/app/features/CapabilityShowcase.tsx"
+  ],
+  "gates_passed": [
+    "session-aware Navbar mapped from useAuth",
+    "capability copy distinguishes available vs planned integrations",
+    "static route/mobile Navbar contract",
+    "npm run type-check exit 0"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\result.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\source-manifest.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\static-route-nav.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\type-check.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build-realpath.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\patches\\page.tsx.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\patches\\CapabilityShowcase.tsx.patch"
+  ],
+  "commands": [
+    {
+      "command": "static-route-nav contract checks",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\static-route-nav.log"
+    },
+    {
+      "command": "npm run type-check",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\type-check.log"
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build.log"
+    },
+    {
+      "command": "npm run build (junction real path)",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\logs\\build-realpath.log"
+    }
+  ],
+  "blocker": null,
+  "notes": "Full next build remains deferred to A-F003 (pre-existing /_document PageNotFoundError after successful compile). Browser anonymous/authenticated mobile observation deferred to integration/W4. Shared components/Features.tsx unchanged (A-F018).",
+  "primary": "Features route no longer hardcodes guest Navbar and no longer publishes unverified PostgreSQL/Redis/JWT/Turbo/Docker claims as delivered facts.",
+  "secondary": "AuthProvider from F019/layout is consumed with the same username/avatar mapping used on the homepage/dashboard.",
+  "tertiary": "Homepage still imports shared Features.tsx; components owner can align marketing copy later without blocking this route."
+}

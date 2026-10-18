@@ -1,0 +1,182 @@
+{
+  "boundary": "Playwright Chrome + compiled A-F006 App Router handlers + real Rust/SQLite; Origin/cookie jar/preflight browser-enforced; no Next CLI",
+  "passes": [
+    "register_201",
+    "register_cors_readable",
+    "me_200_cookie",
+    "me_cors_readable",
+    "logout_200",
+    "logout_cors_readable",
+    "me_401_after_logout",
+    "me_after_logout_cors",
+    "bare_api_404_cors",
+    "browser_preflight_register",
+    "browser_preflight_logout",
+    "adapter_register_origin_cors",
+    "evil_origin_no_acao"
+  ],
+  "failures": [],
+  "results": [
+    {
+      "name": "register_201",
+      "ok": true,
+      "detail": "{\"status\":201,\"type\":\"cors\"}"
+    },
+    {
+      "name": "register_cors_readable",
+      "ok": true,
+      "detail": "type=cors status=201"
+    },
+    {
+      "name": "me_200_cookie",
+      "ok": true,
+      "detail": "{\"status\":200,\"email\":\"browser-cors-1792320981630@example.test\"}"
+    },
+    {
+      "name": "me_cors_readable",
+      "ok": true,
+      "detail": "type=cors"
+    },
+    {
+      "name": "logout_200",
+      "ok": true,
+      "detail": "status=200 type=cors"
+    },
+    {
+      "name": "logout_cors_readable",
+      "ok": true,
+      "detail": "type=cors"
+    },
+    {
+      "name": "me_401_after_logout",
+      "ok": true,
+      "detail": "status=401"
+    },
+    {
+      "name": "me_after_logout_cors",
+      "ok": true,
+      "detail": "type=cors"
+    },
+    {
+      "name": "bare_api_404_cors",
+      "ok": true,
+      "detail": "{\"status\":404,\"type\":\"cors\"}"
+    }
+  ],
+  "preflights": [],
+  "requestLog": [
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": null,
+      "match": true,
+      "status": 401,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "OPTIONS",
+      "url": "/api/auth/register",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": "POST",
+      "match": true,
+      "status": 204,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "POST",
+      "url": "/api/auth/register",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": null,
+      "match": true,
+      "status": 201,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": null,
+      "match": true,
+      "status": 200,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "OPTIONS",
+      "url": "/api/auth/logout",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": "POST",
+      "match": true,
+      "status": 204,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "POST",
+      "url": "/api/auth/logout",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": null,
+      "match": true,
+      "status": 200,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": null,
+      "match": true,
+      "status": 401,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    },
+    {
+      "method": "GET",
+      "url": "/api",
+      "rawOrigin": "http://localhost:53381",
+      "requestOrigin": "http://localhost:53381",
+      "strawWebOrigin": "http://localhost:53381",
+      "acrm": null,
+      "match": true,
+      "status": 404,
+      "acao": "http://localhost:53381",
+      "acac": "true"
+    }
+  ],
+  "browserVersion": "156.0.8078.36",
+  "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "playwright": "C:/Users/hammu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+  "pageOrigin": "http://localhost:53381",
+  "apiOrigin": "http://localhost:53382",
+  "backendPort": 53383,
+  "console": [
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "error: Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "evilOrigin": "http://localhost:54566",
+  "evil": {
+    "readable": false,
+    "error": "TypeError: Failed to fetch"
+  },
+  "exitCode": 0
+}

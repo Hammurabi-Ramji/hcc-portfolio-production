@@ -1,0 +1,127 @@
+{
+  "agent": "A-F020",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\hooks",
+  "wave": 0,
+  "files_touched": [
+    "apps/web/hooks/useBrowserStorage.ts",
+    "apps/web/hooks/useDebounce.ts",
+    "apps/web/hooks/useLocalStorage.ts",
+    "apps/web/hooks/useSessionStorage.ts",
+    "apps/web/hooks/useProtectedRoute.ts",
+    "apps/web/hooks/useTheme.ts",
+    "apps/web/hooks/useToast.tsx"
+  ],
+  "gates_passed": [
+    "9 real offline React/browser hook behavior groups",
+    "Focused strict TypeScript compile of all changed standalone modules and helper",
+    "Toast rendered stack and accessible dismissal/expiry/timer cleanup",
+    "Computed toast body contrast >=8.67:1 in both light/dark modes and 8px spacing grid",
+    "Byte-exact preimages, seven unified diffs and source hashes"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\browser-tests.js",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\run-tests.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\browser-results.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\source-hashes.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\make-evidence.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useBrowserStorage.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useDebounce.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useLocalStorage.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useProtectedRoute.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useSessionStorage.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useTheme.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\diffs\\useToast.tsx.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\before\\useDebounce.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\before\\useLocalStorage.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\before\\useProtectedRoute.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\before\\useSessionStorage.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\before\\useTheme.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\before\\useToast.tsx",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\evidence.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests-attempt1.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests-attempt2-edge.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests-attempt3-loopback.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-type-check.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\web-type-check.log"
+  ],
+  "commands": [
+    {
+      "command": "node review/agent-output/A-F020/run-tests.cjs",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests-attempt1.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests.log"
+    },
+    {
+      "command": "node review/agent-output/A-F020/run-tests.cjs",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests-attempt2-edge.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests.log"
+    },
+    {
+      "command": "node review/agent-output/A-F020/run-tests.cjs",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests-attempt3-loopback.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests.log"
+    },
+    {
+      "command": "node review/agent-output/A-F020/run-tests.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-tests.log",
+      "acceptance": true
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --noEmit --target ES2017 --module commonjs --strict --skipLibCheck --types node,react --typeRoots apps/web/node_modules/@types --jsx react-jsx --esModuleInterop apps/web/hooks/useBrowserStorage.ts apps/web/hooks/useDebounce.ts apps/web/hooks/useLocalStorage.ts apps/web/hooks/useSessionStorage.ts apps/web/hooks/useTheme.ts apps/web/hooks/useToast.tsx",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\hook-type-check.log",
+      "acceptance": true
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --noEmit --incremental false --project apps/web/tsconfig.json",
+      "exit_code": 2,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\web-type-check.log",
+      "acceptance": false,
+      "deferred_to": "A-S03/A-F003",
+      "diagnostic": "Whole application check outside W0 hook scope; failed, not superseded by a full web pass."
+    },
+    {
+      "command": "python review/agent-output/A-F020/make-evidence.py",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F020\\logs\\evidence.log",
+      "acceptance": false
+    }
+  ],
+  "blocker": null,
+  "primary": "Repaired debounce lifecycle, storage hydration/batched writes/key/reset behavior, pending authorization denial, theme import, and shared accessible toast lifecycle.",
+  "secondary": "A-S13 must mount ToastProvider once around AuthProvider/page consumers; page callers retain their success/error API. AuthContext session restoration remains with A-F019.",
+  "tertiary": "Offline real React/browser logs, focused compiler pass, preimage bytes, per-file diffs, and hashes provide reviewable evidence without claiming completed full app/page/API runtime acceptance.",
+  "deferred_acceptance": [
+    {
+      "owners": [
+        "A-S13"
+      ],
+      "acceptance": "Mount ToastProvider once around AuthProvider and page children; provider owns its container."
+    },
+    {
+      "owners": [
+        "A-F015",
+        "A-F016",
+        "A-F003"
+      ],
+      "acceptance": "Observe real project/settings success/error notifications in the integrated application."
+    },
+    {
+      "owners": [
+        "A-S03",
+        "A-F003"
+      ],
+      "acceptance": "Resolve outside-hook diagnostics and pass the integrated whole-web compiler/build gate."
+    }
+  ],
+  "scope_settlement": "Root arbitration: W0 direct-hook executable acceptance passed. Downstream mounting/page/whole-web gates do not block this foundation; original failed logs preserved."
+}

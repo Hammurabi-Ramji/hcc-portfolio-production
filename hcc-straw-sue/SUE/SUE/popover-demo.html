@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HCC — Popover Demo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #f3f4f6;
+      padding: 24px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    h1 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    p { font-size: 14px; color: #9ca3af; text-align: center; max-width: 400px; }
+    button {
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #4a9eed, #8b5cf6);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(74,158,237,0.4); }
+    .popover {
+      position: fixed;
+      z-index: 9999;
+      background: rgba(22, 27, 46, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px;
+      max-width: 280px;
+      display: none;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    .popover:popover-open { display: block; }
+    .popover-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .popover-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+    .popover-menu-item:hover { background: rgba(74,158,237,0.15); }
+    .popover-menu-item .icon { font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>HCC Popover Demo</h1>
+  <p>Click the button to test native popover API with glassmorphic styling</p>
+  
+  <button popovertarget="ai-menu" popovertargetaction="toggle">
+    AI Tools ▼
+  </button>
+
+  <div popover id="ai-menu" class="popover popover-ai">
+    <div class="popover-title">AI Assistant</div>
+    <div class="popover-menu">
+      <div class="popover-menu-item">
+        <span class="icon">💬</span>
+        <span class="label">Start Chat</span>
+      </div>
+      <div class="popover-menu-item">
+        <span class="icon">✨</span>
+        <span class="label">Generate Code</span>
+      </div>
+      <div class="popover-menu-item">
+        <span class="icon">🔍</span>
+        <span class="label">Analyze Page</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

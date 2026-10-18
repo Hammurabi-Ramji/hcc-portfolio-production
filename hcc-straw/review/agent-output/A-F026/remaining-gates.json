@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "name": "contracts-remaining",
+      "exit": 0,
+      "logPath": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F026\\logs\\contracts-remaining.log"
+    },
+    {
+      "name": "web-type-check-remaining",
+      "exit": 0,
+      "logPath": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F026\\logs\\web-type-check-remaining.log"
+    },
+    {
+      "name": "web-build-remaining",
+      "exit": 1,
+      "logPath": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F026\\logs\\web-build-remaining.log"
+    }
+  ],
+  "when": "2026-10-18T10:37:48.206Z"
+}

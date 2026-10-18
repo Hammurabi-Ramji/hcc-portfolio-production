@@ -1,0 +1,16 @@
+/target/
+/dist/
+/desktop-dist/
+/site-dist/
+/public/ui/
+/public/compute/
+/src-tauri/target/
+/src-tauri/gen/
+*.db
+*.db-shm
+*.db-wal
+.env
+!/Cargo.lock
+/src-tauri/resources/models/**/*.gguf
+/src-tauri/resources/models/**/tokenizer.json
+/src-tauri/binaries/*.exe

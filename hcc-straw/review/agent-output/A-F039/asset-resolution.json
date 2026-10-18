@@ -1,0 +1,125 @@
+﻿{
+    "timestamp_utc":  "2026-10-18T10:54:23.7501149Z",
+    "import_map_targets":  [
+                               {
+                                   "relative":  "public/ui/vendor/svelte/index-client.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/tauri-core.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/svelte/internal/client/index.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/svelte/internal/flags/legacy.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/svelte/attachments/index.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/svelte/store/index-client.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/svelte/internal/client/constants.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/env.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/clsx.mjs",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/main.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/App.js",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/licenses/NOTICE.md",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/licenses/clsx-LICENSE",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               },
+                               {
+                                   "relative":  "public/ui/vendor/licenses/svelte-LICENSE.md",
+                                   "in_public":  true,
+                                   "in_dist":  true,
+                                   "in_desktop_dist":  true
+                               }
+                           ],
+    "wasm_targets":  [
+                         {
+                             "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\dist\\wasm-frontend.js",
+                             "present":  true
+                         },
+                         {
+                             "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\desktop-dist\\wasm-frontend.js",
+                             "present":  true
+                         }
+                     ],
+    "file_counts":  {
+                        "public":  179,
+                        "dist_public":  179,
+                        "desktop_public":  178
+                    },
+    "public_vs_dist":  {
+                           "public_count":  179,
+                           "dist_public_count":  179,
+                           "missing_in_dist_count":  0,
+                           "extra_in_dist_count":  0,
+                           "size_mismatch_count":  0,
+                           "missing_in_dist_sample":  {
+
+                                                      },
+                           "extra_in_dist_sample":  {
+
+                                                    },
+                           "size_mismatch_sample":  {
+
+                                                    }
+                       },
+    "main_js_snippet":  "import { mount } from \u0027svelte\u0027;\r\nimport App from \u0027./App.js\u0027;\r\nmount(App, { target: document.getElementById(\u0027app\u0027) });",
+    "pass":  true,
+    "failures":  [
+
+                 ]
+}

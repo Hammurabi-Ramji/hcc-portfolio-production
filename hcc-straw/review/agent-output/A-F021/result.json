@@ -1,0 +1,83 @@
+{
+  "agent": "A-F021",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\lib",
+  "wave": 1,
+  "files_touched": [
+    "apps/web/lib/api-client.ts",
+    "apps/web/lib/api.ts",
+    "apps/web/lib/utils.ts",
+    "apps/web/lib/backend-proxy.ts"
+  ],
+  "gates_passed": [
+    "Current strict TypeScript compile of all direct lib source and authoritative types",
+    "8 offline regression tests covering canonical envelopes/upload/legacy storage/formatting/fixed-loopback proxy",
+    "4 valid unified diffs independently reconstruct current source with saved before bytes and SHA-256 hashes"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\regression.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\verify.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\save-evidence.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\source-hashes.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\api-client.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\api.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\backend-proxy.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\patches\\utils.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\before\\apps\\web\\lib\\api-client.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\before\\apps\\web\\lib\\api.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\before\\apps\\web\\lib\\utils.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\01.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\02.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\03.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\05.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\06.log"
+  ],
+  "commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2020 --lib esnext,dom,dom.iterable --module commonjs --moduleResolution node --strict --esModuleInterop --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --rootDir apps/web --outDir review/agent-output/A-F021/compiled apps/web/types/index.ts apps/web/lib/api-client.ts apps/web/lib/api.ts apps/web/lib/utils.ts apps/web/lib/backend-proxy.ts",
+      "exit_code": 2,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\01.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2020 --lib esnext,dom,dom.iterable --module commonjs --moduleResolution node --strict --esModuleInterop --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --rootDir apps/web --outDir review/agent-output/A-F021/compiled apps/web/types/index.ts apps/web/lib/api-client.ts apps/web/lib/api.ts apps/web/lib/utils.ts apps/web/lib/backend-proxy.ts",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\02.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log"
+    },
+    {
+      "command": "node --test review/agent-output/A-F021/regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\03.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\05.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2020 --lib esnext,dom,dom.iterable --module commonjs --moduleResolution node --strict --esModuleInterop --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --rootDir apps/web --outDir review/agent-output/A-F021/compiled apps/web/types/index.ts apps/web/lib/api-client.ts apps/web/lib/api.ts apps/web/lib/utils.ts apps/web/lib/backend-proxy.ts",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\04.log",
+      "acceptance": true
+    },
+    {
+      "command": "node --test review/agent-output/A-F021/regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\05.log",
+      "acceptance": true
+    },
+    {
+      "command": "python review/agent-output/A-F021/save-evidence.py",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F021\\logs\\06.log",
+      "acceptance": true
+    }
+  ],
+  "blocker": null,
+  "primary": "Canonical single-envelope Axios client, same-origin cookie path, upload merging, SSR-safe legacy storage and formatting fixes; fixed-loopback server proxy; scoped acceptance passes.",
+  "secondary": "F007/F009/F008 receive proxy/config contract; F024/F019 consume one singleton and authoritative DTOs without browser credentials.",
+  "tertiary": "Byte-exact snapshots, hashes, validated patches and exact final logs preserve review evidence; live integration and release-blocking whole-tree source scan remain separate."
+}

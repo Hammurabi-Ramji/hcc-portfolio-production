@@ -1,0 +1,20 @@
+[
+  "apps/web/app/api/auth/register/route.ts",
+  "apps/web/app/api/auth/login/route.ts",
+  "apps/web/app/api/auth/logout/route.ts",
+  "apps/web/app/api/auth/me/route.ts",
+  "apps/web/app/api/auth/refresh-token/route.ts",
+  "apps/web/app/api/auth/verify-email/route.ts",
+  "apps/web/app/api/auth/forgot-password/route.ts",
+  "apps/web/app/api/auth/reset-password/route.ts",
+  "apps/api/Cargo.toml",
+  "apps/api/src/lib.rs",
+  "apps/api/src/config.rs",
+  "apps/api/src/store.rs",
+  "apps/api/src/auth.rs",
+  "apps/api/src/main.rs",
+  "apps/api/.gitignore",
+  "apps/api/README.md",
+  "apps/api/Cargo.lock",
+  "apps/api/tests/auth_http.rs"
+]

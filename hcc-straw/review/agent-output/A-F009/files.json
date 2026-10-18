@@ -1,0 +1,10 @@
+[
+  "apps/api/src/users.rs",
+  "apps/api/src/lib.rs",
+  "apps/api/src/auth.rs",
+  "apps/api/tests/users_http.rs",
+  "apps/web/app/api/users/route.ts",
+  "apps/web/app/api/users/profile/route.ts",
+  "apps/web/app/api/users/avatar/route.ts",
+  "apps/web/app/api/users/[id]/route.ts"
+]

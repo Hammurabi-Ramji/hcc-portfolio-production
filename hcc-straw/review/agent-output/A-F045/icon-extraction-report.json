@@ -1,0 +1,147 @@
+﻿{
+    "sourceIconIco":  {
+                          "name":  "icon.ico",
+                          "bytes":  86642,
+                          "sha256":  "392206B573A809997F3FF16FE68F456A52E931C372107EADE9572B329BBE3321",
+                          "mtime":  "2026-10-09T15:17:43.2427132Z"
+                      },
+    "installedExe":  {
+                         "extractions":  [
+                                             {
+                                                 "path":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\installed-exe-associated.png",
+                                                 "sha256":  "2D0A1409C21D170FA102E6F33CF49BB0D9886099DF6067FEB45B2C36C722CAE8",
+                                                 "width":  32,
+                                                 "height":  32,
+                                                 "kind":  "ExtractAssociatedIcon"
+                                             },
+                                             {
+                                                 "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                                 "size":  16,
+                                                 "kind":  "PrivateExtractIcons"
+                                             },
+                                             {
+                                                 "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                                 "size":  32,
+                                                 "kind":  "PrivateExtractIcons"
+                                             },
+                                             {
+                                                 "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                                 "size":  48,
+                                                 "kind":  "PrivateExtractIcons"
+                                             },
+                                             {
+                                                 "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                                 "size":  64,
+                                                 "kind":  "PrivateExtractIcons"
+                                             },
+                                             {
+                                                 "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                                 "size":  128,
+                                                 "kind":  "PrivateExtractIcons"
+                                             },
+                                             {
+                                                 "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                                 "size":  256,
+                                                 "kind":  "PrivateExtractIcons"
+                                             }
+                                         ],
+                         "path":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\install\\STRAWDesk\\straw-stack.exe",
+                         "length":  13439488,
+                         "mtime":  "2026-10-09T17:54:56.0000000Z",
+                         "present":  true
+                     },
+    "releaseExe":  {
+                       "extractions":  [
+                                           {
+                                               "path":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\release-exe-associated.png",
+                                               "sha256":  "2D0A1409C21D170FA102E6F33CF49BB0D9886099DF6067FEB45B2C36C722CAE8",
+                                               "width":  32,
+                                               "height":  32,
+                                               "kind":  "ExtractAssociatedIcon"
+                                           },
+                                           {
+                                               "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                               "size":  16,
+                                               "kind":  "PrivateExtractIcons"
+                                           },
+                                           {
+                                               "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                               "size":  32,
+                                               "kind":  "PrivateExtractIcons"
+                                           },
+                                           {
+                                               "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                               "size":  48,
+                                               "kind":  "PrivateExtractIcons"
+                                           },
+                                           {
+                                               "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                               "size":  64,
+                                               "kind":  "PrivateExtractIcons"
+                                           },
+                                           {
+                                               "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                               "size":  128,
+                                               "kind":  "PrivateExtractIcons"
+                                           },
+                                           {
+                                               "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                               "size":  256,
+                                               "kind":  "PrivateExtractIcons"
+                                           }
+                                       ],
+                       "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\target\\release\\straw-stack.exe",
+                       "length":  25125888,
+                       "mtime":  "2026-10-16T22:35:52.2005790Z",
+                       "present":  true
+                   },
+    "nsisSetup":  {
+                      "extractions":  [
+                                          {
+                                              "path":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\nsis-setup-associated.png",
+                                              "sha256":  "E8C1EE55F2F15384E636BAF410B27287A1F96F85B0C871DCEBB8FF3AF877E08A",
+                                              "width":  32,
+                                              "height":  32,
+                                              "kind":  "ExtractAssociatedIcon"
+                                          },
+                                          {
+                                              "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                              "size":  16,
+                                              "kind":  "PrivateExtractIcons"
+                                          },
+                                          {
+                                              "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                              "size":  32,
+                                              "kind":  "PrivateExtractIcons"
+                                          },
+                                          {
+                                              "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                              "size":  48,
+                                              "kind":  "PrivateExtractIcons"
+                                          },
+                                          {
+                                              "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                              "size":  64,
+                                              "kind":  "PrivateExtractIcons"
+                                          },
+                                          {
+                                              "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                              "size":  128,
+                                              "kind":  "PrivateExtractIcons"
+                                          },
+                                          {
+                                              "error":  "Exception calling \"Save\" with \"3\" argument(s): \"Unable to find an entry point named \u0027PrivateExtractIcons\u0027 in DLL \u0027Shell32.dll\u0027.\"",
+                                              "size":  256,
+                                              "kind":  "PrivateExtractIcons"
+                                          }
+                                      ],
+                      "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\target\\release\\bundle\\nsis\\STRAW Desk_0.1.0_x64-setup.exe",
+                      "length":  3472439,
+                      "mtime":  "2026-10-09T17:55:03.3577391Z",
+                      "present":  true
+                  },
+    "sourceIcoAssociated":  {
+                                "height":  32,
+                                "width":  32
+                            }
+}

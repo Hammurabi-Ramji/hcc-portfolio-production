@@ -1,0 +1,25 @@
+{
+  "passes": [
+    "provider register and reload hydrate through actual Rust HTTP and HttpOnly session cookie",
+    "provider hydration survives Rust service restart on the same SQLite database",
+    "provider logout revokes server credential; replayed old cookie fails refresh",
+    "rememberMe reaches actual persistent-cookie policy; forged session refresh clears user",
+    "actual 401 logout clears stale user and resolves as already signed out",
+    "actual service outage rejects logout without falsely claiming revocation"
+  ],
+  "count": 6,
+  "runtime": {
+    "react": "19.3.0",
+    "browser": "156.0.8078.36"
+  },
+  "boundary": "real browser React/AuthService/Axios -> Rust HTTP -> isolated SQLite; fixture HTML only, no Next/page/middleware claim",
+  "binary": {
+    "executable": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\api\\target\\debug\\straw-web-api.exe",
+    "sha256": "e204bf5f5da339570ee7fc1780e2887bec89d366078d8d85ad272070e2b73c59",
+    "size": 7329280,
+    "modifiedUtc": "2026-10-10T09:23:04.614Z",
+    "sourceContract": "A-F007 accepted authentication endpoints; no backend source compilation or modification by A-F019",
+    "observedAt": "2026-10-18T10:33:20.844Z"
+  },
+  "binaryUnchanged": true
+}

@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS secure_identity(slot INTEGER PRIMARY KEY CHECK(slot=1),salt BLOB NOT NULL CHECK(length(salt)=16),verifier BLOB NOT NULL,signer BLOB NOT NULL,public BLOB NOT NULL CHECK(length(public)=32));
+CREATE TABLE IF NOT EXISTS secure_vault(id TEXT PRIMARY KEY,ciphertext BLOB NOT NULL);
+CREATE TABLE IF NOT EXISTS secure_ledger(seq INTEGER PRIMARY KEY,kind TEXT NOT NULL,subject TEXT NOT NULL,at INTEGER NOT NULL,previous TEXT NOT NULL,hash TEXT NOT NULL,signature BLOB NOT NULL CHECK(length(signature)=64));
+CREATE TRIGGER IF NOT EXISTS secure_ledger_no_update BEFORE UPDATE ON secure_ledger BEGIN SELECT RAISE(ABORT,'append-only ledger'); END;
+CREATE TRIGGER IF NOT EXISTS secure_ledger_no_delete BEFORE DELETE ON secure_ledger BEGIN SELECT RAISE(ABORT,'append-only ledger'); END;
+CREATE TABLE IF NOT EXISTS secure_grants(id TEXT PRIMARY KEY,permissions TEXT NOT NULL,subject TEXT NOT NULL,expires INTEGER NOT NULL,signature BLOB NOT NULL CHECK(length(signature)=64),used INTEGER NOT NULL DEFAULT 0 CHECK(used IN (0,1)));
+CREATE TABLE IF NOT EXISTS secure_precedent(seq INTEGER PRIMARY KEY REFERENCES secure_ledger(seq),id TEXT NOT NULL UNIQUE,title TEXT NOT NULL,body TEXT NOT NULL,author TEXT NOT NULL,created_at TEXT NOT NULL,judge TEXT NOT NULL,rationale TEXT NOT NULL,judged_at TEXT NOT NULL,rules_version INTEGER NOT NULL CHECK(rules_version>=0),digest TEXT NOT NULL UNIQUE CHECK(length(digest)=64));
+CREATE TRIGGER IF NOT EXISTS secure_precedent_no_update BEFORE UPDATE ON secure_precedent BEGIN SELECT RAISE(ABORT,'append-only precedent'); END;
+CREATE TRIGGER IF NOT EXISTS secure_precedent_no_delete BEFORE DELETE ON secure_precedent BEGIN SELECT RAISE(ABORT,'append-only precedent'); END;
+CREATE TABLE IF NOT EXISTS secure_digital_hands(seq INTEGER PRIMARY KEY REFERENCES secure_ledger(seq),digest TEXT NOT NULL UNIQUE CHECK(length(digest)=64),source_path TEXT NOT NULL,owner_id TEXT NOT NULL,credential_ids TEXT NOT NULL,imported_at INTEGER NOT NULL,ciphertext BLOB NOT NULL);
+CREATE TRIGGER IF NOT EXISTS secure_digital_hands_no_update BEFORE UPDATE ON secure_digital_hands BEGIN SELECT RAISE(ABORT,'immutable credential import'); END;
+CREATE TRIGGER IF NOT EXISTS secure_digital_hands_no_delete BEFORE DELETE ON secure_digital_hands BEGIN SELECT RAISE(ABORT,'immutable credential import'); END;

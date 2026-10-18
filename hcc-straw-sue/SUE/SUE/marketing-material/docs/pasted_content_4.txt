@@ -1,0 +1,219 @@
+ SUE AGENT SPECIFICATION
+# For AI Assistants (Desktop Commander, GitHub Copilot, etc.)
+# ──────────────────────────────────────────────────────────────
+
+## OVERVIEW
+SUE (Sovereign Unified Extension) is a browser extension that provides:
+- Sovereign AI chat via local Ollama or premium Venice.AI
+- Cloud storage status (Koofr, IceDrive, Degoo)
+- Project management UI
+- Zero telemetry, zero external calls except user's own endpoints
+
+## FILES TO KNOW
+
+### Core Extension Files
+- `manifest.json` - Extension metadata, permissions, content scripts
+- `background.js` - Service worker, message routing, storage
+- `content.js` - Optional content script for page injection
+- `sue.html` - Sidebar HTML shell
+- `styles.css` - Dark theme, sovereign UI
+
+### Rust Workspace
+- `Cargo.toml` - Workspace root with all dependencies
+- `sue-core/src/lib.rs` - Shared types, browser APIs
+- `sue-view/src/main.rs` - Leptos UI, WASM entry
+
+### Build System
+- `package.json` - npm scripts, webpack config
+- `webpack.config.js` - Bundle WASM + JS for production
+- `wasm-pack` - Rust → WASM compiler
+
+## API ENDPOINTS (LOCAL ONLY)
+
+### HCC REST API
+```
+GET    http://localhost:8080/api/v1/projects
+POST   http://localhost:8080/api/v1/projects
+DELETE http://localhost:8080/api/v1/projects/:id
+
+GET    http://localhost:8080/api/v1/audit
+POST   http://localhost:8080/api/v1/auth/login
+POST   http://localhost:8080/api/v1/auth/register
+```
+
+### Ollama Chat API
+```
+POST http://localhost:11434/api/chat
+{
+  "model": "qwen3-coder",
+  "messages": [{"role": "user", "content": "Hello"}]
+}
+```
+
+### Ollama Embed API
+```
+POST http://localhost:11434/api/embed
+{
+  "model": "qwen3-embedding:8b",
+  "input": "text to embed"
+}
+```
+
+## EXTENSION PERMISSIONS
+
+```json
+{
+  "permissions": [
+    "storage",           // Local user data
+    "activeTab",         // Current tab access
+    "scripting",         // Inject content scripts
+    "tabs",              // Tab management
+    "notifications"      // User alerts
+  ]
+}
+```
+
+**Zero** external access. All data stays in browser.
+
+## SECURITY MODEL
+
+### Vault Key Storage
+- Generated on first run
+- Stored in `chrome.storage.local` as hex
+- Never sent to external servers
+- Decrypted in-memory only for AES-256-GCM operations
+
+### Content Script Isolation
+- Cannot access `localStorage`, `sessionStorage`
+- Cannot access `document.cookie`
+- Cannot access `parent.window` (if in iframe)
+- Only reads: URL, title, user-selected text
+
+### CORS Enforcement
+- Only allows: `http://localhost:11434` (Ollama)
+- Only allows: `http://localhost:8080` (HCC API)
+- Blocks all external endpoints
+
+## EXTENSION LIFECYCLE
+
+1. **Install** → `manifest.json` loaded
+2. **Background** → `background.js` service worker starts
+3. **User clicks icon** → Sidebar opens
+4. **Sidebar loads** → `sue.html` renders
+5. **WASM hydrates** → `sue-view.wasm` + `sue-view.js`
+6. **UI renders** → Leptos components mount
+7. **User interacts** → Messages routed to local APIs
+
+## DEBUGGING
+
+### Background Script
+```
+chrome://extensions → Inspect views → background page
+```
+
+### Sidebar
+```
+Right-click sidebar → Inspect
+DevTools → Console tab
+```
+
+### WASM Logs
+```rust
+// In lib.rs
+if cfg!(debug_assertions) {
+    tracing_subscriber::fmt()
+        .with_env_filter(
+            tracing_subscriber::EnvFilter::from_default_env()
+                .add_directive(tracing::Level::DEBUG.into())
+        )
+        .init();
+}
+```
+
+## BUILD COMMANDS
+
+### Development
+```bash
+# Build with hot-reload
+wasm-pack build --dev --target web --watch
+
+# Load in browser
+chrome://extensions → Load unpacked → ./pkg/
+```
+
+### Production
+```bash
+# Optimized build
+wasm-pack build --release --target web
+
+# Bundle with webpack
+npm run bundle
+
+# Package for store
+zip -r extension.zip dist/
+```
+
+## DEPLOYMENT
+
+### Chrome Web Store
+1. Build production bundle
+2. Upload ZIP to [Chrome Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard)
+3. Fill store listing (privacy policy, screenshots)
+4. Submit for review (~7 days)
+
+### Firefox Add-ons
+1. Same build process
+2. Upload to [Add-ons Developer Hub](https://addons.mozilla.org/)
+3. 2-day review process
+4. Requires privacy policy link
+
+## TROUBLESHOOTING
+
+### "WASM not loading"
+- Check `web_accessible_resources` in `manifest.json`
+- Ensure WASM file exists in `dist/`
+- Verify CORS headers allow extension origin
+
+### "Storage access denied"
+- Browser may block in incognito mode
+- Add `"incognito": "split"` to `manifest.json`
+
+### "CORS errors"
+- HCC API must allow extension origin
+- Add header: `Access-Control-Allow-Origin: null`
+- Or restrict to `localhost` only
+
+### "Sidebar not appearing"
+- Verify `manifest_version: 3`
+- Check `sidebar_action` section in `manifest.json`
+- Ensure icon files exist
+
+## INTEGRATION CHECKLIST
+
+- [x] Rust workspace with `sue-core` and `sue-view`
+- [x] Leptos UI with dashboard, AI chat, projects, cloud status
+- [x] Manifest v3 with minimal permissions
+- [x] Background service worker for storage routing
+- [x] Content script for optional injection (zero-trace)
+- [x] Dark theme, sovereign UI
+- [x] Local-only API calls (localhost:8080, localhost:11434)
+- [x] Vault key in extension storage
+- [x] WASM bundle build with wasm-pack
+- [x] Webpack bundling for production
+- [x] Chrome and Firefox support
+- [x] Zero telemetry, zero external calls
+
+## NEXT STEPS
+
+1. **Run setup**: `bash setup.sh`
+2. **Build extension**: `wasm-pack build --dev --target web`
+3. **Start local HCC API**: `cd /SUE/hcc-api && cargo run`
+4. **Load in browser**: Chrome → `chrome://extensions` → Load unpacked
+5. **Test AI chat**: Send messages to Ollama (if running)
+6. **Test projects**: Create/deleting projects via API
+
+---
+
+*Agent spec created by R.K. Girdhari | Hammurabi Coding Company*
+*"Keep the faith, the good exists."*
+

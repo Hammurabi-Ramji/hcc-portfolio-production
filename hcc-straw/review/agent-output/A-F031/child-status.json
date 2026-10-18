@@ -1,0 +1,80 @@
+{
+  "agent": "A-F031",
+  "folder": "straw-app/crates",
+  "reconciled_at_utc": "2026-10-18T10:45:30Z",
+  "desktop_integration_accepted": false,
+  "desktop_integration_reason": "Container membership and shell paths are intact, but open child findings (F032/F033/F037/F038) and W4 observed desktop acceptance remain outstanding. F031 withholds desktop-integration acceptance.",
+  "children": [
+    {
+      "id": "A-F032",
+      "folder": "straw-app/crates/axum-loop",
+      "registry_state": "PLANNED",
+      "agent_output": null,
+      "status": "OPEN",
+      "summary": "Manifest ownership: preserve workspace membership, sibling engine path dep, tempfile test-only. No A-F032 settlement yet."
+    },
+    {
+      "id": "A-F033",
+      "folder": "straw-app/crates/axum-loop/src",
+      "registry_state": "PLANNED",
+      "depends_on": ["A-F032"],
+      "agent_output": null,
+      "status": "OPEN",
+      "summary": "P2: integration test binds fixed port 8741; needs ephemeral-port isolation, listener-rejection and shutdown/rebind checks; Tauri exit drain is caller-owned."
+    },
+    {
+      "id": "A-F034",
+      "folder": "straw-app/crates/engine",
+      "registry_state": "DONE",
+      "agent_output": "review/agent-output/A-F034.md",
+      "status": "DONE",
+      "summary": "Manifest preserved; no Tauri in resolved deps; focused engine tests 12/12 PASS (workspace TEMP)."
+    },
+    {
+      "id": "A-F035",
+      "folder": "straw-app/crates/engine/src",
+      "registry_state": "DONE",
+      "agent_output": "review/agent-output/A-F035.md",
+      "status": "DONE",
+      "summary": "Prefix/static DAG/recovery/loopback regressions 31 PASS; shared-contract published for F036/F046; legacy ownerless migration documented."
+    },
+    {
+      "id": "A-F036",
+      "folder": "straw-app/crates/engine/src/nodes",
+      "registry_state": "DONE",
+      "agent_output": "review/agent-output/A-F036.md",
+      "status": "DONE",
+      "summary": "Node regressions 40 PASS; workspace 49 PASS observed by F036; UI-to-engine observation deferred to F051/W4."
+    },
+    {
+      "id": "A-F037",
+      "folder": "straw-app/crates/wasm-frontend",
+      "registry_state": "PLANNED",
+      "agent_output": null,
+      "status": "OPEN",
+      "summary": "Package integration: Trunk import-map module URL + browser init; boundaries 0/46 and native agreement still require provisioned build verification."
+    },
+    {
+      "id": "A-F038",
+      "folder": "straw-app/crates/wasm-frontend/src",
+      "registry_state": "PLANNED",
+      "depends_on": ["A-F037"],
+      "agent_output": null,
+      "status": "OPEN",
+      "summary": "No actionable source defect in review; crate test + browser 0/1/10/46 + native wasm_fibonacci agreement and 47 rejection still unverified by owner."
+    }
+  ],
+  "non_review_children_present": [
+    "accordion",
+    "crucible",
+    "eduba-ledger",
+    "eduba-server",
+    "fabricator",
+    "inference",
+    "security",
+    "stele",
+    "storage",
+    "straw-ledger"
+  ],
+  "non_review_children_note": "Present under crates/ and listed in straw-app/Cargo.toml members; outside STACK-F032–F038 review indexes. Membership/shell paths verified; no F031 relocation performed."
+}

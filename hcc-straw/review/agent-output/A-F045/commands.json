@@ -1,0 +1,34 @@
+{
+  "note": "Session used PowerShell validation only; no cargo/tauri build; no network; no commit.",
+  "commands": [
+    {
+      "purpose": "Inventory exclusive icons folder",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "summary": "Get-ChildItem straw-app/src-tauri/icons; SHA256 inventory → icons-inventory.json"
+    },
+    {
+      "purpose": "Resolve Start Menu / Desktop shortcuts",
+      "summary": "WScript.Shell CreateShortcut → A-S15 install straw-stack.exe; IconLocation ,0"
+    },
+    {
+      "purpose": "Extract associated icons from installed exe, release exe, NSIS setup",
+      "summary": "System.Drawing.Icon.ExtractAssociatedIcon → extracted/*-associated.png"
+    },
+    {
+      "purpose": "Decode icon.ico entries and pixel-compare to installed associated icon",
+      "summary": "ICO entry 32x32 SHA256 2D0A1409… identical to installed-exe-associated.png"
+    },
+    {
+      "purpose": "Live launch + screenshot taskbar/desktop",
+      "summary": "Start A-S15 install straw-stack.exe; window title STRAW Desk; CopyFromScreen → screenshots/"
+    },
+    {
+      "purpose": "Coordinate with retained bundles / F041 gate",
+      "summary": "Hash NSIS/MSI; confirm icons mtime predates bundles; record no fresh build"
+    }
+  ],
+  "not_run": [
+    "cargo tauri build --offline --locked",
+    "cargo build --offline --locked -p straw-stack --release"
+  ]
+}

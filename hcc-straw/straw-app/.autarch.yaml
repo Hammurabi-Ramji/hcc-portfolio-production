@@ -1,0 +1,85 @@
+# AUTARCH schema for STRAW Desk (BSM-C v4.0, Level 1).
+# Read by: Crucible Gate 1 (`files`), Accordion (`entities`).
+
+project:
+  name: "straw-desk"
+  version: "0.1.0"
+  owner: "Hammurabi Coding Company"
+  license: "HCC-PROPRIETARY"
+  methodology: "BSM-C v4.0"
+
+# Crucible Gate 1: every path below must exist. A trailing "/" requires a directory.
+files:
+  - Cargo.toml
+  - Cargo.lock
+  - README.md
+  - HYBRID-MERGE.md
+  - index.html
+  - Trunk.toml
+  - ui/App.svelte
+  - ui/main.js
+  - ui/RecordsPanel.svelte
+  - ui/ValidationPanel.svelte
+  - ui/PrecedentPanel.svelte
+  - ui/EdubaArchive.svelte
+  - ui/CredentialImport.svelte
+  - ui/CoreRecovery.svelte
+  - src-tauri/src/recovery.rs
+  - crates/security/src/recovery.rs
+  - src-tauri/src/credentials.rs
+  - src-tauri/src/credential_tests.rs
+  - crates/security/src/digital_hands.rs
+  - src-tauri/src/archive.rs
+  - src-tauri/windows-app-manifest.xml
+  - src-tauri/src/validation.rs
+  - src-tauri/src/command_tests.rs
+  - src-tauri/build.rs
+  - src-tauri/tauri.conf.json
+  - src-tauri/src/lib.rs
+  - crates/engine/
+  - crates/storage/
+  - crates/storage/tests/eduba_sql_safety.rs
+  - crates/security/
+  - crates/crucible/
+  - crates/accordion/
+  - crates/stele/
+  - packages/origami-fe/
+  - packages/origami-fe/src/OrigamiCanvas.svelte
+  - tools/frontend-build/
+
+# Accordion: workspace topics and notes served through the shared Origami canvas.
+# Schema is embedded in the native binary: edit, rebuild, then restart.
+entities:
+  - name: topic
+    label: Topic
+    audit: true
+    fields:
+      - { name: name, type: string, required: true, unique: true, searchable: true }
+      - { name: summary, type: text }
+
+  - name: note
+    label: Note
+    audit: true
+    fields:
+      - { name: title, type: string, required: true, searchable: true }
+      - { name: body, type: text }
+      - { name: topic, type: relation, to: topic, display_field: name }
+      - { name: status, type: enum, values: [draft, active, archived], default: draft, required: true }
+      - { name: priority, type: integer, min: 0, max: 5, default: 0 }
+      - { name: due, type: datetime }
+      - { name: pinned, type: boolean }
+      - { name: created, type: datetime, auto: true }
+
+infrastructure:
+  frontend: "origami.fe"
+  conduit: "tauri-2"
+  backend: "accordion.be"
+  database: "sqlite3+sqlx"
+
+constraints:
+  offline_capable: true
+  zero_cloud_dependency: true
+  data_sovereignty: "client-owned"
+  frontend_session: "memory-only application state; no forensic erasure guarantee"
+  records_at_rest: "ordinary local SQLite; secrets belong in the encrypted vault"
+  cost: "no required cloud subscription; hardware and electricity still have costs"

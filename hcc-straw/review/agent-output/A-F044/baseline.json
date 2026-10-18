@@ -1,0 +1,98 @@
+﻿{
+    "inventory_before":  {
+                             "acl-manifests.json":  {
+                                                        "bytes":  68996,
+                                                        "sha256":  "a3ad7c154de6efb52a058145b879b934c999f7ed85e2d42eb5f200b2eb3ee7e4",
+                                                        "lastWriteTime":  "2026-10-10T10:29:49.2534422-05:00"
+                                                    },
+                             "capabilities.json":  {
+                                                       "bytes":  146,
+                                                       "sha256":  "4fca70b5437f720b9a72c727c0663349aa9e8b31917dcc0a870012de02406b07",
+                                                       "lastWriteTime":  "2026-10-09T01:32:01.9065006-05:00"
+                                                   },
+                             "desktop-schema.json":  {
+                                                         "bytes":  121297,
+                                                         "sha256":  "4444ad5cda6787552fd55ea85b270b311998bf70e0bc31db0c32cfc4199b754e",
+                                                         "lastWriteTime":  "2026-10-10T10:29:49.2649293-05:00"
+                                                     },
+                             "windows-schema.json":  {
+                                                         "bytes":  121297,
+                                                         "sha256":  "4444ad5cda6787552fd55ea85b270b311998bf70e0bc31db0c32cfc4199b754e",
+                                                         "lastWriteTime":  "2026-10-10T10:29:49.2649293-05:00"
+                                                     }
+                         },
+    "desktop_equals_windows":  true,
+    "capability_match":  {
+                             "identifier":  true,
+                             "windows":  true,
+                             "permissions":  true,
+                             "local":  true,
+                             "source":  {
+                                            "identifier":  "default",
+                                            "windows":  [
+                                                            "main"
+                                                        ],
+                                            "permissions":  [
+                                                                "core:default"
+                                                            ]
+                                        },
+                             "generated":  {
+                                               "identifier":  "default",
+                                               "windows":  [
+                                                               "main"
+                                                           ],
+                                               "permissions":  [
+                                                                   "core:default"
+                                                               ],
+                                               "local":  true
+                                           }
+                         },
+    "all_capability_fields_match":  true,
+    "acl_top_level_keys":  [
+                               "core",
+                               "core:app",
+                               "core:event",
+                               "core:image",
+                               "core:menu",
+                               "core:path",
+                               "core:resources",
+                               "core:tray",
+                               "core:webview",
+                               "core:window",
+                               "dialog"
+                           ],
+    "acl_vs_schema":  {
+                          "acl_perm_id_count":  351,
+                          "schema_const_count":  351,
+                          "acl_ids_not_in_schema_count":  0,
+                          "acl_ids_not_in_schema":  [
+
+                                                    ],
+                          "dialog_schema_identifiers":  [
+                                                            "dialog:allow-ask",
+                                                            "dialog:allow-confirm",
+                                                            "dialog:allow-message",
+                                                            "dialog:allow-open",
+                                                            "dialog:allow-save",
+                                                            "dialog:default",
+                                                            "dialog:deny-ask",
+                                                            "dialog:deny-confirm",
+                                                            "dialog:deny-message",
+                                                            "dialog:deny-open",
+                                                            "dialog:deny-save"
+                                                        ]
+                      },
+    "cargo_tauri_related_lines":  [
+                                      "tauri-build = { version = \"=2.7.1\", features = [] }",
+                                      "tauri = { version = \"=2.12.2\", features = [] }",
+                                      "tauri-plugin-dialog = \"=2.7.3\"",
+                                      "tauri-specta = { version = \"=2.0.0-rc.25\", features = [\"derive\", \"typescript\", \"javascript\"] }",
+                                      "tauri = { version = \"=2.12.2\", features = [\"test\"] }"
+                                  ],
+    "f043_dependency":  {
+                            "registry_state":  "PLANNED",
+                            "agent_output_present":  false,
+                            "note":  "F044 regenerates/attributes schemas after F043 gen-parent consistency; do not edit gen/ outside schemas."
+                        },
+    "g3":  "TRACK-ONLY; release hold remains with A-F029; F044 does not clear G3."
+}

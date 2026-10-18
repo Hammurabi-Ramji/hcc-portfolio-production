@@ -1,0 +1,12 @@
+[
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe test --offline --locked --package frontend-build -- --nocapture",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 101,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\initial\\staging-unit-tests.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\staging-unit-tests.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  }
+]

@@ -1,0 +1,25 @@
+# Folder 21 — Generator no-code workflow backend
+
+Scope: `C:\IEDB\STRAW SaaS Generator\components\no_code_workflow_builder\src`. All six direct files were read with numbered lines: `build.rs`, `database.rs`, `executor.rs`, `main.rs`, `types.rs`, `workflow_executor.rs`. No applicable ancestor AGENTS.md was found. Evidence below uses paths relative to this folder unless stated otherwise.
+
+The code contains SQLite CRUD/history/templates/statistics, twelve Tauri commands, JSON/value types, and two executors with one simple test each. `main.rs:8–12` selects `executor.rs`; `workflow_executor.rs` is unreferenced alternate material. The component has no Cargo manifest or Tauri configuration, and root `Cargo.toml:2–35` excludes it despite `core/config.json:47` listing it. Generator `docs/README.md:3,40` promises modular desktop-first components; `docs/FINAL_VERIFICATION_REPORT.md:7,36–37` claims no placeholders and workspace coverage. Those claims do not establish this folder's buildability. Stack's DAG engine guide concerns another engine; the generator UI samples independently establish conditional port routing (`../ui/workflows.ts:82–92`). Desktop duplicate reports provide context, not verification of this copy.
+
+## Findings and patch targets
+
+1. **P1, verified static compilation defects.** `main.rs:183–192` promises `Result<String,String>` but returns `Database::save_workflow`'s `Result<(),String>` (`database.rs:177`). `types.rs:83–91` applies serde default to `NodePosition`, which lacks Default. `executor.rs:64–121` recursively awaits an unboxed async function. Alternate `workflow_executor.rs:90–107` also lacks NodeConfig Default; `:482` matches Some against a String; `:547` clones a Result whose ExecutionError lacks Clone (`:62`). Patch the import command to save then return its ID, derive defaults, replace recursion with an iterative scheduler, and consolidate/remove the alternate implementation rather than wiring it unchanged. Packaging/build-script placement (`build.rs` currently under src) depends on the parent-folder integration decision.
+
+2. **P1, graph execution contradicts samples.** `executor.rs:118–121` follows only the first outgoing edge, ignores ports, and has no cycle/endpoint validation. Conditional evaluation produces an object (`:183–191`) without selecting true/false edges. Multiple roots share the previous path's mutable value (`:25,38–44,109`). `:297–315` ignores the condition's field token: `{amount:600}` with `amount > 500` fails numeric conversion. Patch backend validation plus per-node/port values, deterministic scheduling, conditional edge selection, merge semantics and bounded execution. Resolve fields explicitly. Alternate `workflow_executor.rs:474` passes an empty map to roots, dropping initial input; consolidating must preserve input.
+
+3. **P1, false successful effects; documented implementation gaps.** `executor.rs:244–286` returns saved/sent/csv metadata without database, email, HTTP or CSV effects; unknown logic labels silently pass through (`:162–167`). Transform ignores config; Loop wraps items instead of executing a body. Alternate save/email similarly lack effects (`workflow_executor.rs:337–350,403–416`), and its CSV emits unordered key=value rows (`:367–381`). Patch explicit unsupported errors first, then configured service adapters and stable CSV serialization. Seed executable graphs: all five default templates currently contain empty arrays (`database.rs:119–166`), so newly created template workflows cannot execute.
+
+4. **P1, persistence loses metadata; P2, incomplete history.** `database.rs:184–196` replaces workflow rows, resetting created_at and counters. Foreign-key cascades are declared (`:57,78`) without enabling enforcement at connection initialization (`:14–19`). `save_execution:266–317` lacks a transaction; it records input as `{}`, identical start/end timestamps, hardcoded logic types and drops node errors/inputs (`:273,277–278,292–304`); details reconstruct empty inputs/no errors (`:382–384`). Patch ON CONFLICT UPDATE, foreign-key initialization and atomic execution/log/counter writes. Pass original input and real timing/type/error metadata through main/types/database. Propagate corrupt JSON errors instead of silently emptying graphs (`:216–217`).
+
+## Acceptance, dependencies and confidence
+
+Dependencies: chosen Cargo/Tauri package, UI IPC/schema, rusqlite/serde/chrono/uuid, operation adapters and template definitions. High confidence in static findings; no compilation, tests, installs or network used. Root's 35 passing tests cover 32 workspace crates and exclude this component.
+
+- [ ] Compile the chosen package and consolidated executor.
+- [ ] Round-trip import/save/load; preserve counters/created_at/history on resave.
+- [ ] Test independent roots, fan-out/merge, both conditional ports, cycles and dangling edges.
+- [ ] Verify effects independently; unsupported operations fail; templates execute.
+- [ ] Verify original input, node errors/types/timing; rollback partial persistence and cascade deletion.

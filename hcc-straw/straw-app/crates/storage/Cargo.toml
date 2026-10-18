@@ -1,0 +1,16 @@
+[package]
+name = "straw-storage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sqlx.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+specta.workspace = true
+uuid.workspace = true
+sha2.workspace = true
+
+[dev-dependencies]
+tempfile = "=3.27.0"

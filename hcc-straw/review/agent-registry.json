@@ -1,0 +1,1472 @@
+[
+  {
+    "index": 1,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\core",
+    "relative": "core",
+    "task_name": "review_001",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--core.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_001",
+    "scope_status": "active"
+  },
+  {
+    "index": 2,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src",
+    "relative": "straw-app/src-tauri/src",
+    "task_name": "review_002",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--src.md",
+    "completed": true,
+    "agent_id": "/root/review_002_current",
+    "scope_status": "active"
+  },
+  {
+    "index": 3,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\ai_engine_ollama\\src",
+    "relative": "components/ai_engine_ollama/src",
+    "task_name": "review_003",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--ai_engine_ollama--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_003",
+    "scope_status": "active"
+  },
+  {
+    "index": 4,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_gateway_proxy\\src",
+    "relative": "components/api_gateway_proxy/src",
+    "task_name": "review_004",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--api_gateway_proxy--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_004",
+    "scope_status": "active"
+  },
+  {
+    "index": 5,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_layer_axum\\src",
+    "relative": "components/api_layer_axum/src",
+    "task_name": "review_005",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--api_layer_axum--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_005",
+    "scope_status": "active"
+  },
+  {
+    "index": 6,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\auth_system\\src",
+    "relative": "components/auth_system/src",
+    "task_name": "review_006",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--auth_system--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_006",
+    "scope_status": "active"
+  },
+  {
+    "index": 7,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\background_job_processor\\src",
+    "relative": "components/background_job_processor/src",
+    "task_name": "review_007",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--background_job_processor--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_007",
+    "scope_status": "active"
+  },
+  {
+    "index": 8,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\billing_stripe\\src",
+    "relative": "components/billing_stripe/src",
+    "task_name": "review_008",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--billing_stripe--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_008",
+    "scope_status": "active"
+  },
+  {
+    "index": 9,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\caching_layer_redis\\src",
+    "relative": "components/caching_layer_redis/src",
+    "task_name": "review_009",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--caching_layer_redis--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_009",
+    "scope_status": "active"
+  },
+  {
+    "index": 10,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\crm_integration_hub\\src",
+    "relative": "components/crm_integration_hub/src",
+    "task_name": "review_010",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--crm_integration_hub--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_010",
+    "scope_status": "active"
+  },
+  {
+    "index": 11,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\dashboard_analytics\\src",
+    "relative": "components/dashboard_analytics/src",
+    "task_name": "review_011",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--dashboard_analytics--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_011",
+    "scope_status": "active"
+  },
+  {
+    "index": 12,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_pipeline_etl\\src",
+    "relative": "components/data_pipeline_etl/src",
+    "task_name": "review_012",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--data_pipeline_etl--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_012",
+    "scope_status": "active"
+  },
+  {
+    "index": 13,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_warehouse_connector\\src",
+    "relative": "components/data_warehouse_connector/src",
+    "task_name": "review_013",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--data_warehouse_connector--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_013",
+    "scope_status": "active"
+  },
+  {
+    "index": 14,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\database_sqlite\\src",
+    "relative": "components/database_sqlite/src",
+    "task_name": "review_014",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--database_sqlite--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_014",
+    "scope_status": "active"
+  },
+  {
+    "index": 15,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\email_template_system\\src",
+    "relative": "components/email_template_system/src",
+    "task_name": "review_015",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--email_template_system--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_015",
+    "scope_status": "active"
+  },
+  {
+    "index": 16,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\error_tracking_sentry\\src",
+    "relative": "components/error_tracking_sentry/src",
+    "task_name": "review_016",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--error_tracking_sentry--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_016",
+    "scope_status": "active"
+  },
+  {
+    "index": 17,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\file_storage_local\\src",
+    "relative": "components/file_storage_local/src",
+    "task_name": "review_017",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--file_storage_local--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_017",
+    "scope_status": "active"
+  },
+  {
+    "index": 18,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\log_aggregation_loki\\src",
+    "relative": "components/log_aggregation_loki/src",
+    "task_name": "review_018",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--log_aggregation_loki--src.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_018",
+    "scope_status": "active"
+  },
+  {
+    "index": 19,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\microservices_orchestrator\\src",
+    "relative": "components/microservices_orchestrator/src",
+    "task_name": "review_019",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--microservices_orchestrator--src.md",
+    "completed": true,
+    "agent_id": "/root/review_019",
+    "scope_status": "active"
+  },
+  {
+    "index": 20,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\monitoring_prometheus\\src",
+    "relative": "components/monitoring_prometheus/src",
+    "task_name": "review_020",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--monitoring_prometheus--src.md",
+    "completed": true,
+    "agent_id": "/root/review_020",
+    "scope_status": "active"
+  },
+  {
+    "index": 21,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\no_code_workflow_builder\\src",
+    "relative": "components/no_code_workflow_builder/src",
+    "task_name": "review_021",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--no_code_workflow_builder--src.md",
+    "completed": true,
+    "agent_id": "/root/review_021",
+    "scope_status": "active"
+  },
+  {
+    "index": 22,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\no_code_workflow_builder\\ui",
+    "relative": "components/no_code_workflow_builder/ui",
+    "task_name": "review_022",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--no_code_workflow_builder--ui.md",
+    "completed": true,
+    "agent_id": "/root/review_022",
+    "scope_status": "active"
+  },
+  {
+    "index": 23,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\notification_system\\src",
+    "relative": "components/notification_system/src",
+    "task_name": "review_023",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--notification_system--src.md",
+    "completed": true,
+    "agent_id": "/root/review_023",
+    "scope_status": "active"
+  },
+  {
+    "index": 24,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\object_storage_s3\\src",
+    "relative": "components/object_storage_s3/src",
+    "task_name": "review_024",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--object_storage_s3--src.md",
+    "completed": true,
+    "agent_id": "/root/review_024",
+    "scope_status": "active"
+  },
+  {
+    "index": 25,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\read_replicas_manager\\src",
+    "relative": "components/read_replicas_manager/src",
+    "task_name": "review_025",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--read_replicas_manager--src.md",
+    "completed": true,
+    "agent_id": "/root/review_025",
+    "scope_status": "active"
+  },
+  {
+    "index": 26,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\reporting_engine\\src",
+    "relative": "components/reporting_engine/src",
+    "task_name": "review_026",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--reporting_engine--src.md",
+    "completed": true,
+    "agent_id": "/root/review_026",
+    "scope_status": "active"
+  },
+  {
+    "index": 27,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\search_engine_local\\src",
+    "relative": "components/search_engine_local/src",
+    "task_name": "review_027",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--search_engine_local--src.md",
+    "completed": true,
+    "agent_id": "/root/review_027",
+    "scope_status": "active"
+  },
+  {
+    "index": 28,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\secrets_management_vault\\src",
+    "relative": "components/secrets_management_vault/src",
+    "task_name": "review_028",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--secrets_management_vault--src.md",
+    "completed": true,
+    "agent_id": "/root/review_028",
+    "scope_status": "active"
+  },
+  {
+    "index": 29,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\security_zero_trust\\src",
+    "relative": "components/security_zero_trust/src",
+    "task_name": "review_029",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--security_zero_trust--src.md",
+    "completed": true,
+    "agent_id": "/root/review_029",
+    "scope_status": "active"
+  },
+  {
+    "index": 30,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\tax_calculation_service\\src",
+    "relative": "components/tax_calculation_service/src",
+    "task_name": "review_030",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--tax_calculation_service--src.md",
+    "completed": true,
+    "agent_id": "/root/review_030",
+    "scope_status": "active"
+  },
+  {
+    "index": 31,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\timeseries_db_influx\\src",
+    "relative": "components/timeseries_db_influx/src",
+    "task_name": "review_031",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--timeseries_db_influx--src.md",
+    "completed": true,
+    "agent_id": "/root/review_031",
+    "scope_status": "active"
+  },
+  {
+    "index": 32,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\uptime_monitor\\src",
+    "relative": "components/uptime_monitor/src",
+    "task_name": "review_032",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--uptime_monitor--src.md",
+    "completed": true,
+    "agent_id": "/root/review_032",
+    "scope_status": "active"
+  },
+  {
+    "index": 33,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_analytics_posthog\\src",
+    "relative": "components/user_analytics_posthog/src",
+    "task_name": "review_033",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--user_analytics_posthog--src.md",
+    "completed": true,
+    "agent_id": "/root/review_033",
+    "scope_status": "active"
+  },
+  {
+    "index": 34,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_management\\src",
+    "relative": "components/user_management/src",
+    "task_name": "review_034",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--user_management--src.md",
+    "completed": true,
+    "agent_id": "/root/review_034",
+    "scope_status": "active"
+  },
+  {
+    "index": 35,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\waf_security_layer\\src",
+    "relative": "components/waf_security_layer/src",
+    "task_name": "review_035",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--waf_security_layer--src.md",
+    "completed": true,
+    "agent_id": "/root/review_035",
+    "scope_status": "active"
+  },
+  {
+    "index": 36,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\webhook_system\\src",
+    "relative": "components/webhook_system/src",
+    "task_name": "review_036",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--webhook_system--src.md",
+    "completed": true,
+    "agent_id": "/root/review_036",
+    "scope_status": "active"
+  },
+  {
+    "index": 37,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\docs",
+    "relative": "docs",
+    "task_name": "review_037",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--docs.md",
+    "completed": true,
+    "agent_id": "/root/review_037",
+    "scope_status": "active"
+  },
+  {
+    "index": 38,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src",
+    "relative": "straw-app/src",
+    "task_name": "review_038",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src.md",
+    "completed": true,
+    "agent_id": "/root/review_038_current",
+    "scope_status": "active"
+  },
+  {
+    "index": 39,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\wasm-compute\\src",
+    "relative": "straw-app/src-tauri/wasm-compute/src",
+    "task_name": "review_039",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--wasm-compute--src.md",
+    "completed": true,
+    "agent_id": "/root/review_039",
+    "scope_status": "removed"
+  },
+  {
+    "index": 40,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src\\lib",
+    "relative": "straw-app/src/lib",
+    "task_name": "review_040",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src--lib.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_040",
+    "scope_status": "removed"
+  },
+  {
+    "index": 41,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src\\no-code",
+    "relative": "straw-app/src/no-code",
+    "task_name": "review_041",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src--no-code.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_041",
+    "scope_status": "removed"
+  },
+  {
+    "index": 42,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\admin_dashboard_ui",
+    "relative": "components/admin_dashboard_ui",
+    "task_name": "review_042",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--admin_dashboard_ui.md",
+    "completed": true,
+    "agent_id": "/root/review_042",
+    "scope_status": "active"
+  },
+  {
+    "index": 43,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\ai_engine_ollama",
+    "relative": "components/ai_engine_ollama",
+    "task_name": "review_043",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--ai_engine_ollama.md",
+    "completed": true,
+    "agent_id": "/root/review_043",
+    "scope_status": "active"
+  },
+  {
+    "index": 44,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_gateway_proxy",
+    "relative": "components/api_gateway_proxy",
+    "task_name": "review_044",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--api_gateway_proxy.md",
+    "completed": true,
+    "agent_id": "/root/review_044",
+    "scope_status": "active"
+  },
+  {
+    "index": 45,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_layer_axum",
+    "relative": "components/api_layer_axum",
+    "task_name": "review_045",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--api_layer_axum.md",
+    "completed": true,
+    "agent_id": "/root/review_045",
+    "scope_status": "active"
+  },
+  {
+    "index": 46,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\auth_system",
+    "relative": "components/auth_system",
+    "task_name": "review_046",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--auth_system.md",
+    "completed": true,
+    "agent_id": "/root/review_046",
+    "scope_status": "active"
+  },
+  {
+    "index": 47,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\background_job_processor",
+    "relative": "components/background_job_processor",
+    "task_name": "review_047",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--background_job_processor.md",
+    "completed": true,
+    "agent_id": "/root/review_047",
+    "scope_status": "active"
+  },
+  {
+    "index": 48,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\billing_stripe",
+    "relative": "components/billing_stripe",
+    "task_name": "review_048",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--billing_stripe.md",
+    "completed": true,
+    "agent_id": "/root/review_048",
+    "scope_status": "active"
+  },
+  {
+    "index": 49,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\caching_layer_redis",
+    "relative": "components/caching_layer_redis",
+    "task_name": "review_049",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--caching_layer_redis.md",
+    "completed": true,
+    "agent_id": "/root/review_049",
+    "scope_status": "active"
+  },
+  {
+    "index": 50,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\cicd_github_actions",
+    "relative": "components/cicd_github_actions",
+    "task_name": "review_050",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--cicd_github_actions.md",
+    "completed": true,
+    "agent_id": "/root/review_050",
+    "scope_status": "active"
+  },
+  {
+    "index": 51,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\component_library_ui",
+    "relative": "components/component_library_ui",
+    "task_name": "review_051",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--component_library_ui.md",
+    "completed": true,
+    "agent_id": "/root/review_051",
+    "scope_status": "active"
+  },
+  {
+    "index": 52,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\crm_integration_hub",
+    "relative": "components/crm_integration_hub",
+    "task_name": "review_052",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--crm_integration_hub.md",
+    "completed": true,
+    "agent_id": "/root/review_052",
+    "scope_status": "active"
+  },
+  {
+    "index": 53,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\dashboard_analytics",
+    "relative": "components/dashboard_analytics",
+    "task_name": "review_053",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--dashboard_analytics.md",
+    "completed": true,
+    "agent_id": "/root/review_053",
+    "scope_status": "active"
+  },
+  {
+    "index": 54,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_pipeline_etl",
+    "relative": "components/data_pipeline_etl",
+    "task_name": "review_054",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--data_pipeline_etl.md",
+    "completed": true,
+    "agent_id": "/root/review_054",
+    "scope_status": "active"
+  },
+  {
+    "index": 55,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_warehouse_connector",
+    "relative": "components/data_warehouse_connector",
+    "task_name": "review_055",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--data_warehouse_connector.md",
+    "completed": true,
+    "agent_id": "/root/review_055",
+    "scope_status": "active"
+  },
+  {
+    "index": 56,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\database_sqlite",
+    "relative": "components/database_sqlite",
+    "task_name": "review_056",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--database_sqlite.md",
+    "completed": true,
+    "agent_id": "/root/review_056",
+    "scope_status": "active"
+  },
+  {
+    "index": 57,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\desktop_shell_tauri",
+    "relative": "components/desktop_shell_tauri",
+    "task_name": "review_057",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--desktop_shell_tauri.md",
+    "completed": true,
+    "agent_id": "/root/review_057",
+    "scope_status": "active"
+  },
+  {
+    "index": 58,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\email_template_system",
+    "relative": "components/email_template_system",
+    "task_name": "review_058",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--email_template_system.md",
+    "completed": true,
+    "agent_id": "/root/review_058",
+    "scope_status": "active"
+  },
+  {
+    "index": 59,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\error_tracking_sentry",
+    "relative": "components/error_tracking_sentry",
+    "task_name": "review_059",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--error_tracking_sentry.md",
+    "completed": true,
+    "agent_id": "/root/review_059",
+    "scope_status": "active"
+  },
+  {
+    "index": 60,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\file_storage_local",
+    "relative": "components/file_storage_local",
+    "task_name": "review_060",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--file_storage_local.md",
+    "completed": true,
+    "agent_id": "/root/review_060",
+    "scope_status": "active"
+  },
+  {
+    "index": 61,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\frontend_svelte",
+    "relative": "components/frontend_svelte",
+    "task_name": "review_061",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--frontend_svelte.md",
+    "completed": true,
+    "agent_id": "/root/review_061",
+    "scope_status": "active"
+  },
+  {
+    "index": 62,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\iac_terraform_scripts",
+    "relative": "components/iac_terraform_scripts",
+    "task_name": "review_062",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--iac_terraform_scripts.md",
+    "completed": true,
+    "agent_id": "/root/review_062",
+    "scope_status": "active"
+  },
+  {
+    "index": 63,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\landing_page_marketing",
+    "relative": "components/landing_page_marketing",
+    "task_name": "review_063",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--landing_page_marketing.md",
+    "completed": true,
+    "agent_id": "/root/review_063",
+    "scope_status": "active"
+  },
+  {
+    "index": 64,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\log_aggregation_loki",
+    "relative": "components/log_aggregation_loki",
+    "task_name": "review_064",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--log_aggregation_loki.md",
+    "completed": true,
+    "agent_id": "/root/review_064",
+    "scope_status": "active"
+  },
+  {
+    "index": 65,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\microservices_orchestrator",
+    "relative": "components/microservices_orchestrator",
+    "task_name": "review_065",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--microservices_orchestrator.md",
+    "completed": true,
+    "agent_id": "/root/review_065",
+    "scope_status": "active"
+  },
+  {
+    "index": 66,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\mobile_app_shell",
+    "relative": "components/mobile_app_shell",
+    "task_name": "review_066",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--mobile_app_shell.md",
+    "completed": true,
+    "agent_id": "/root/review_066",
+    "scope_status": "active"
+  },
+  {
+    "index": 67,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\monitoring_prometheus",
+    "relative": "components/monitoring_prometheus",
+    "task_name": "review_067",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--monitoring_prometheus.md",
+    "completed": true,
+    "agent_id": "/root/review_067",
+    "scope_status": "active"
+  },
+  {
+    "index": 68,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\notification_system",
+    "relative": "components/notification_system",
+    "task_name": "review_068",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--notification_system.md",
+    "completed": true,
+    "agent_id": "/root/review_068",
+    "scope_status": "active"
+  },
+  {
+    "index": 69,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\object_storage_s3",
+    "relative": "components/object_storage_s3",
+    "task_name": "review_069",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--object_storage_s3.md",
+    "completed": true,
+    "agent_id": "/root/review_069",
+    "scope_status": "active"
+  },
+  {
+    "index": 70,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\read_replicas_manager",
+    "relative": "components/read_replicas_manager",
+    "task_name": "review_070",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--read_replicas_manager.md",
+    "completed": true,
+    "agent_id": "/root/review_070",
+    "scope_status": "active"
+  },
+  {
+    "index": 71,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\reporting_engine",
+    "relative": "components/reporting_engine",
+    "task_name": "review_071",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--reporting_engine.md",
+    "completed": true,
+    "agent_id": "/root/review_071",
+    "scope_status": "active"
+  },
+  {
+    "index": 72,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\search_engine_local",
+    "relative": "components/search_engine_local",
+    "task_name": "review_072",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--search_engine_local.md",
+    "completed": true,
+    "agent_id": "/root/review_072",
+    "scope_status": "active"
+  },
+  {
+    "index": 73,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\secrets_management_vault",
+    "relative": "components/secrets_management_vault",
+    "task_name": "review_073",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--secrets_management_vault.md",
+    "completed": true,
+    "agent_id": "/root/review_073",
+    "scope_status": "active"
+  },
+  {
+    "index": 74,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\security_zero_trust",
+    "relative": "components/security_zero_trust",
+    "task_name": "review_074",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--security_zero_trust.md",
+    "completed": true,
+    "agent_id": "/root/review_074",
+    "scope_status": "active"
+  },
+  {
+    "index": 75,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\support_portal_internal",
+    "relative": "components/support_portal_internal",
+    "task_name": "review_075",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--support_portal_internal.md",
+    "completed": true,
+    "agent_id": "/root/review_075",
+    "scope_status": "active"
+  },
+  {
+    "index": 76,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\tax_calculation_service",
+    "relative": "components/tax_calculation_service",
+    "task_name": "review_076",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--tax_calculation_service.md",
+    "completed": true,
+    "agent_id": "/root/review_076",
+    "scope_status": "active"
+  },
+  {
+    "index": 77,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\timeseries_db_influx",
+    "relative": "components/timeseries_db_influx",
+    "task_name": "review_077",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--timeseries_db_influx.md",
+    "completed": true,
+    "agent_id": "/root/review_077",
+    "scope_status": "active"
+  },
+  {
+    "index": 78,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\uptime_monitor",
+    "relative": "components/uptime_monitor",
+    "task_name": "review_078",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--uptime_monitor.md",
+    "completed": true,
+    "agent_id": "/root/review_078",
+    "scope_status": "active"
+  },
+  {
+    "index": 79,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_analytics_posthog",
+    "relative": "components/user_analytics_posthog",
+    "task_name": "review_079",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--user_analytics_posthog.md",
+    "completed": true,
+    "agent_id": "/root/review_079",
+    "scope_status": "active"
+  },
+  {
+    "index": 80,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_management",
+    "relative": "components/user_management",
+    "task_name": "review_080",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--user_management.md",
+    "completed": true,
+    "agent_id": "/root/review_080",
+    "scope_status": "active"
+  },
+  {
+    "index": 81,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\waf_security_layer",
+    "relative": "components/waf_security_layer",
+    "task_name": "review_081",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--waf_security_layer.md",
+    "completed": true,
+    "agent_id": "/root/review_081",
+    "scope_status": "active"
+  },
+  {
+    "index": 82,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\webhook_system",
+    "relative": "components/webhook_system",
+    "task_name": "review_082",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--webhook_system.md",
+    "completed": true,
+    "agent_id": "/root/review_082",
+    "scope_status": "active"
+  },
+  {
+    "index": 83,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\zap_hosting_management\\docs",
+    "relative": "components/zap_hosting_management/docs",
+    "task_name": "review_083",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--zap_hosting_management--docs.md",
+    "completed": true,
+    "agent_id": "/root/review_083",
+    "scope_status": "active"
+  },
+  {
+    "index": 84,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates",
+    "relative": "templates",
+    "task_name": "review_084",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--templates.md",
+    "completed": true,
+    "agent_id": "/root/review_084",
+    "scope_status": "active"
+  },
+  {
+    "index": 85,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "relative": "apps/web",
+    "task_name": "review_085",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web.md",
+    "completed": true,
+    "agent_id": "/root/review_085",
+    "scope_status": "active"
+  },
+  {
+    "index": 86,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app",
+    "relative": "apps/web/app",
+    "task_name": "review_086",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app.md",
+    "completed": true,
+    "agent_id": "/root/review_086",
+    "scope_status": "active"
+  },
+  {
+    "index": 87,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\about",
+    "relative": "apps/web/app/about",
+    "task_name": "review_087",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--about.md",
+    "completed": true,
+    "agent_id": "/root/review_087",
+    "scope_status": "active"
+  },
+  {
+    "index": 88,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api",
+    "relative": "apps/web/app/api",
+    "task_name": "review_088",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--api.md",
+    "completed": true,
+    "agent_id": "/root/review_088",
+    "scope_status": "active"
+  },
+  {
+    "index": 89,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\projects",
+    "relative": "apps/web/app/api/projects",
+    "task_name": "review_089",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--api--projects.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_089",
+    "scope_status": "active"
+  },
+  {
+    "index": 90,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\users",
+    "relative": "apps/web/app/api/users",
+    "task_name": "review_090",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--api--users.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_090",
+    "scope_status": "active"
+  },
+  {
+    "index": 91,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\dashboard",
+    "relative": "apps/web/app/dashboard",
+    "task_name": "review_091",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--dashboard.md",
+    "completed": true,
+    "agent_id": "/root/review_091",
+    "scope_status": "active"
+  },
+  {
+    "index": 92,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\docs",
+    "relative": "apps/web/app/docs",
+    "task_name": "review_092",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--docs.md",
+    "completed": true,
+    "agent_id": "/root/review_092",
+    "scope_status": "active"
+  },
+  {
+    "index": 93,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\features",
+    "relative": "apps/web/app/features",
+    "task_name": "review_093",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--features.md",
+    "completed": true,
+    "agent_id": "/root/review_093",
+    "scope_status": "active"
+  },
+  {
+    "index": 94,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\login",
+    "relative": "apps/web/app/login",
+    "task_name": "review_094",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--login.md",
+    "completed": true,
+    "agent_id": "/root/review_094",
+    "scope_status": "active"
+  },
+  {
+    "index": 95,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\projects",
+    "relative": "apps/web/app/projects",
+    "task_name": "review_095",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--projects.md",
+    "completed": true,
+    "agent_id": "/root/review_095",
+    "scope_status": "active"
+  },
+  {
+    "index": 96,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\settings",
+    "relative": "apps/web/app/settings",
+    "task_name": "review_096",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--settings.md",
+    "completed": true,
+    "agent_id": "/root/review_096",
+    "scope_status": "active"
+  },
+  {
+    "index": 97,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\signup",
+    "relative": "apps/web/app/signup",
+    "task_name": "review_097",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--signup.md",
+    "completed": true,
+    "agent_id": "/root/review_097",
+    "scope_status": "active"
+  },
+  {
+    "index": 98,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\components",
+    "relative": "apps/web/components",
+    "task_name": "review_098",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--components.md",
+    "completed": true,
+    "agent_id": "/root/review_098",
+    "scope_status": "active"
+  },
+  {
+    "index": 99,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\context",
+    "relative": "apps/web/context",
+    "task_name": "review_099",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--context.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_099",
+    "scope_status": "active"
+  },
+  {
+    "index": 100,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\hooks",
+    "relative": "apps/web/hooks",
+    "task_name": "review_100",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--hooks.md",
+    "completed": true,
+    "agent_id": "/root/review_100",
+    "scope_status": "active"
+  },
+  {
+    "index": 101,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\lib",
+    "relative": "apps/web/lib",
+    "task_name": "review_101",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--lib.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_101",
+    "scope_status": "active"
+  },
+  {
+    "index": 102,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\services",
+    "relative": "apps/web/services",
+    "task_name": "review_102",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--services.md",
+    "completed": true,
+    "agent_id": "/root/review_102",
+    "scope_status": "active"
+  },
+  {
+    "index": 103,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\types",
+    "relative": "apps/web/types",
+    "task_name": "review_103",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--types.md",
+    "completed": true,
+    "agent_id": "/root/review_103",
+    "scope_status": "active"
+  },
+  {
+    "index": 104,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\utils",
+    "relative": "apps/web/utils",
+    "task_name": "review_104",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--utils.md",
+    "completed": true,
+    "agent_id": "/root/review_104",
+    "scope_status": "active"
+  },
+  {
+    "index": 105,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app",
+    "relative": "straw-app",
+    "task_name": "review_105",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app.md",
+    "completed": true,
+    "agent_id": "/root/review_105",
+    "scope_status": "active"
+  },
+  {
+    "index": 106,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\.vscode",
+    "relative": "straw-app/.vscode",
+    "task_name": "review_106",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--.vscode.md",
+    "completed": true,
+    "agent_id": "/root/review_106",
+    "scope_status": "active"
+  },
+  {
+    "index": 107,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\e2e",
+    "relative": "straw-app/e2e",
+    "task_name": "review_107",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--e2e.md",
+    "completed": true,
+    "agent_id": "/root/review_107",
+    "scope_status": "removed"
+  },
+  {
+    "index": 108,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri",
+    "relative": "straw-app/src-tauri",
+    "task_name": "review_108",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri.md",
+    "completed": true,
+    "agent_id": "/root/review_108",
+    "scope_status": "active"
+  },
+  {
+    "index": 109,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\capabilities",
+    "relative": "straw-app/src-tauri/capabilities",
+    "task_name": "review_109",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--capabilities.md",
+    "completed": true,
+    "agent_id": "/root/review_109",
+    "scope_status": "active"
+  },
+  {
+    "index": 110,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen\\schemas",
+    "relative": "straw-app/src-tauri/gen/schemas",
+    "task_name": "review_110",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--gen--schemas.md",
+    "completed": true,
+    "agent_id": "/root/review_110",
+    "scope_status": "active"
+  },
+  {
+    "index": 111,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\icons",
+    "relative": "straw-app/src-tauri/icons",
+    "task_name": "review_111",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--icons.md",
+    "completed": true,
+    "agent_id": "/root/review_111",
+    "scope_status": "active"
+  },
+  {
+    "index": 112,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src\\code_gen",
+    "relative": "straw-app/src-tauri/src/code_gen",
+    "task_name": "review_112",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--src--code_gen.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 113,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src\\no_code",
+    "relative": "straw-app/src-tauri/src/no_code",
+    "task_name": "review_113",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--src--no_code.md",
+    "completed": true,
+    "agent_id": "/root/folder_review_dispatcher/review_113",
+    "scope_status": "removed"
+  },
+  {
+    "index": 114,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src\\nodes",
+    "relative": "straw-app/src-tauri/src/nodes",
+    "task_name": "review_114",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--src--nodes.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 115,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\wasm-compute",
+    "relative": "straw-app/src-tauri/wasm-compute",
+    "task_name": "review_115",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--wasm-compute.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 116,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\wasm-compute\\pkg",
+    "relative": "straw-app/src-tauri/wasm-compute/pkg",
+    "task_name": "review_116",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--wasm-compute--pkg.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 117,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src\\routes",
+    "relative": "straw-app/src/routes",
+    "task_name": "review_117",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src--routes.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 118,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\static",
+    "relative": "straw-app/static",
+    "task_name": "review_118",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--static.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 119,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tests",
+    "relative": "straw-app/tests",
+    "task_name": "review_119",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--tests.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 120,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tests\\e2e",
+    "relative": "straw-app/tests/e2e",
+    "task_name": "review_120",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--tests--e2e.md",
+    "completed": false,
+    "agent_id": null,
+    "scope_status": "removed"
+  },
+  {
+    "index": 121,
+    "folder": "C:\\IEDB\\STRAW Stack\\tests",
+    "relative": "tests",
+    "task_name": "review_121",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--tests.md",
+    "completed": true,
+    "agent_id": "/root/review_121",
+    "scope_status": "active"
+  },
+  {
+    "index": 122,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components",
+    "relative": "components",
+    "task_name": "review_122",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components.md",
+    "completed": true,
+    "agent_id": "/root/review_122",
+    "scope_status": "active"
+  },
+  {
+    "index": 123,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\no_code_workflow_builder",
+    "relative": "components/no_code_workflow_builder",
+    "task_name": "review_123",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--no_code_workflow_builder.md",
+    "completed": true,
+    "agent_id": "/root/review_123",
+    "scope_status": "active"
+  },
+  {
+    "index": 124,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\zap_hosting_management",
+    "relative": "components/zap_hosting_management",
+    "task_name": "review_124",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--zap_hosting_management.md",
+    "completed": true,
+    "agent_id": "/root/review_124",
+    "scope_status": "active"
+  },
+  {
+    "index": 125,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\zap_hosting_management\\scripts",
+    "relative": "components/zap_hosting_management/scripts",
+    "task_name": "review_125",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--components--zap_hosting_management--scripts.md",
+    "completed": true,
+    "agent_id": "/root/review_125",
+    "scope_status": "active"
+  },
+  {
+    "index": 126,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth",
+    "relative": "apps/web/app/api/auth",
+    "task_name": "review_126",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--api--auth.md",
+    "completed": true,
+    "agent_id": "/root/review_126",
+    "scope_status": "active"
+  },
+  {
+    "index": 127,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\profile",
+    "relative": "apps/web/app/profile",
+    "task_name": "review_127",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--app--profile.md",
+    "completed": true,
+    "agent_id": "/root/review_127",
+    "scope_status": "active"
+  },
+  {
+    "index": 128,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\middleware",
+    "relative": "apps/web/middleware",
+    "task_name": "review_128",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--middleware.md",
+    "completed": true,
+    "agent_id": "/root/review_128",
+    "scope_status": "active"
+  },
+  {
+    "index": 129,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\public",
+    "relative": "apps/web/public",
+    "task_name": "review_129",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--public.md",
+    "completed": true,
+    "agent_id": "/root/review_129",
+    "scope_status": "active"
+  },
+  {
+    "index": 130,
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\styles",
+    "relative": "apps/web/styles",
+    "task_name": "review_130",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--apps--web--styles.md",
+    "completed": true,
+    "agent_id": "/root/review_130",
+    "scope_status": "active"
+  },
+  {
+    "index": 131,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen",
+    "relative": "straw-app/src-tauri/gen",
+    "task_name": "review_131",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--src-tauri--gen.md",
+    "completed": true,
+    "agent_id": "/root/review_131",
+    "scope_status": "active"
+  },
+  {
+    "index": 132,
+    "folder": "C:\\IEDB\\STRAW Stack\\output",
+    "relative": "output",
+    "task_name": "review_132",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--output.md",
+    "completed": true,
+    "agent_id": "/root/review_132",
+    "scope_status": "active"
+  },
+  {
+    "index": 133,
+    "folder": "C:\\IEDB\\STRAW SaaS Generator",
+    "relative": ".",
+    "task_name": "review_133",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\generator--root.md",
+    "completed": true,
+    "agent_id": "/root/review_133",
+    "scope_status": "active"
+  },
+  {
+    "index": 134,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates",
+    "relative": "straw-app/crates",
+    "task_name": "/root/review_134",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates.md",
+    "completed": true,
+    "agent_id": "/root/review_134",
+    "scope_status": "active"
+  },
+  {
+    "index": 135,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\axum-loop",
+    "relative": "straw-app/crates/axum-loop",
+    "task_name": "/root/review_135",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--axum-loop.md",
+    "completed": true,
+    "agent_id": "/root/review_135",
+    "scope_status": "active"
+  },
+  {
+    "index": 136,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\axum-loop\\src",
+    "relative": "straw-app/crates/axum-loop/src",
+    "task_name": "/root/review_136",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--axum-loop--src.md",
+    "completed": true,
+    "agent_id": "/root/review_136",
+    "scope_status": "active"
+  },
+  {
+    "index": 137,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine",
+    "relative": "straw-app/crates/engine",
+    "task_name": "/root/review_137",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--engine.md",
+    "completed": true,
+    "agent_id": "/root/review_137",
+    "scope_status": "active"
+  },
+  {
+    "index": 138,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src",
+    "relative": "straw-app/crates/engine/src",
+    "task_name": "/root/review_138",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--engine--src.md",
+    "completed": true,
+    "agent_id": "/root/review_138",
+    "scope_status": "active"
+  },
+  {
+    "index": 139,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes",
+    "relative": "straw-app/crates/engine/src/nodes",
+    "task_name": "/root/review_139",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--engine--src--nodes.md",
+    "completed": true,
+    "agent_id": "/root/review_139",
+    "scope_status": "active"
+  },
+  {
+    "index": 140,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\wasm-frontend",
+    "relative": "straw-app/crates/wasm-frontend",
+    "task_name": "/root/review_140",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--wasm-frontend.md",
+    "completed": true,
+    "agent_id": "/root/review_140",
+    "scope_status": "active"
+  },
+  {
+    "index": 141,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\wasm-frontend\\src",
+    "relative": "straw-app/crates/wasm-frontend/src",
+    "task_name": "/root/review_141",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--crates--wasm-frontend--src.md",
+    "completed": true,
+    "agent_id": "/root/review_141",
+    "scope_status": "active"
+  },
+  {
+    "index": 142,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public",
+    "relative": "straw-app/public",
+    "task_name": "/root/review_142",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--public.md",
+    "completed": true,
+    "agent_id": "/root/review_142",
+    "scope_status": "active"
+  },
+  {
+    "index": 143,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party",
+    "relative": "straw-app/third-party",
+    "task_name": "/root/review_143",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--third-party.md",
+    "completed": true,
+    "agent_id": "/root/review_143",
+    "scope_status": "active"
+  },
+  {
+    "index": 144,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools",
+    "relative": "straw-app/tools",
+    "task_name": "/root/review_144",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--tools.md",
+    "completed": true,
+    "agent_id": "/root/review_144",
+    "scope_status": "active"
+  },
+  {
+    "index": 145,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build",
+    "relative": "straw-app/tools/frontend-build",
+    "task_name": "/root/review_145",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--tools--frontend-build.md",
+    "completed": true,
+    "agent_id": "/root/review_145",
+    "scope_status": "active"
+  },
+  {
+    "index": 146,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build\\src",
+    "relative": "straw-app/tools/frontend-build/src",
+    "task_name": "/root/review_146",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--tools--frontend-build--src.md",
+    "completed": true,
+    "agent_id": "/root/review_146",
+    "scope_status": "active"
+  },
+  {
+    "index": 147,
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\ui",
+    "relative": "straw-app/ui",
+    "task_name": "/root/review_147",
+    "report": "C:\\IEDB\\STRAW Stack\\review\\folders\\stack--straw-app--ui.md",
+    "completed": true,
+    "agent_id": "/root/review_147",
+    "scope_status": "active"
+  }
+]

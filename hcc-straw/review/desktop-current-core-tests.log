@@ -1,0 +1,148 @@
+     Locking 128 packages to latest compatible versions
+      Adding axum v0.7.9 (available: v0.8.9)
+      Adding js-sys v0.3.98 (available: v0.3.106)
+      Adding rusqlite v0.31.0 (available: v0.40.2)
+      Adding ureq v2.12.1 (available: v3.4.2)
+      Adding wasm-bindgen v0.2.121 (available: v0.2.129)
+      Adding wasm-bindgen-macro v0.2.121 (available: v0.2.129)
+      Adding wasm-bindgen-macro-support v0.2.121 (available: v0.2.129)
+      Adding wasm-bindgen-shared v0.2.121 (available: v0.2.129)
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling once_cell v1.21.4
+   Compiling stable_deref_trait v1.2.1
+   Compiling itoa v1.0.18
+   Compiling serde_core v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling windows-link v0.2.1
+   Compiling smallvec v1.16.2
+   Compiling writeable v0.6.4
+   Compiling litemap v0.8.3
+   Compiling utf8_iter v1.0.4
+   Compiling icu_properties_data v2.3.0
+   Compiling icu_normalizer_data v2.3.0
+   Compiling rustversion v1.0.23
+   Compiling windows-sys v0.61.2
+   Compiling serde v1.0.229
+   Compiling version_check v0.9.5
+   Compiling pin-project-lite v0.2.17
+   Compiling zerocopy v0.8.62
+   Compiling memchr v2.8.3
+   Compiling log v0.4.34
+   Compiling shlex v2.0.1
+   Compiling percent-encoding v2.3.2
+   Compiling find-msvc-tools v0.1.14
+   Compiling zmij v1.0.23
+   Compiling ahash v0.8.12
+   Compiling form_urlencoded v1.2.2
+   Compiling pkg-config v0.3.34
+   Compiling bytes v1.12.1
+   Compiling cc v1.6.0
+   Compiling futures-core v0.3.34
+   Compiling serde_json v1.0.151
+   Compiling vcpkg v0.2.15
+   Compiling getrandom v0.4.3
+   Compiling autocfg v1.5.1
+   Compiling wasm-bindgen-shared v0.2.121
+   Compiling ryu v1.0.23
+   Compiling mio v1.2.4
+   Compiling http v1.5.0
+   Compiling socket2 v0.6.5
+   Compiling num-traits v0.2.19
+   Compiling thiserror v2.0.21
+   Compiling httparse v1.10.1
+   Compiling csv-core v0.1.13
+   Compiling tracing-core v0.1.36
+   Compiling syn v3.0.6
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling futures-task v0.3.34
+   Compiling slab v0.4.12
+   Compiling bitflags v2.13.2
+   Compiling fallible-iterator v0.3.0
+   Compiling tower-service v0.3.3
+   Compiling libsqlite3-sys v0.28.0
+   Compiling http-body v1.1.0
+   Compiling base64 v0.22.1
+   Compiling futures-util v0.3.34
+   Compiling csv v1.4.0
+   Compiling uuid v1.27.0
+   Compiling tracing v0.1.44
+   Compiling syn v2.0.119
+   Compiling sync_wrapper v1.0.2
+   Compiling bumpalo v3.20.3
+   Compiling tower-layer v0.3.3
+   Compiling httpdate v1.0.3
+   Compiling atomic-waker v1.1.2
+   Compiling http-body-util v0.1.5
+   Compiling wasm-bindgen v0.2.121
+   Compiling fastrand v2.5.0
+   Compiling mime v0.3.17
+   Compiling serde_path_to_error v0.1.20
+   Compiling matchit v0.7.3
+   Compiling tempfile v3.27.0
+   Compiling wasm-bindgen-macro-support v0.2.121
+   Compiling hashbrown v0.14.5
+   Compiling synstructure v0.14.0
+   Compiling wasm-bindgen-macro v0.2.121
+   Compiling hashlink v0.9.1
+   Compiling rusqlite v0.31.0
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.2
+   Compiling thiserror-impl v2.0.21
+   Compiling async-trait v0.1.92
+   Compiling wasm-frontend v0.1.0 (C:\IEDB\STRAW Stack\review\current-desktop-fixture\crates\wasm-frontend)
+   Compiling tokio v1.53.2
+   Compiling zerofrom v0.1.8
+   Compiling axum-core v0.4.5
+   Compiling yoke v0.8.3
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling chrono v0.4.45
+   Compiling serde_urlencoded v0.7.1
+   Compiling icu_provider v2.3.1
+   Compiling icu_normalizer v2.3.0
+   Compiling icu_properties v2.3.0
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling ureq v2.12.1
+   Compiling straw-engine v0.1.0 (C:\IEDB\STRAW Stack\review\current-desktop-fixture\crates\engine)
+   Compiling hyper v1.12.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.7.9
+   Compiling axum-loop v0.1.0 (C:\IEDB\STRAW Stack\review\current-desktop-fixture\crates\axum-loop)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 40.03s
+     Running unittests src\lib.rs (target\debug\deps\axum_loop-51f28ab4c891bbd2.exe)
+
+running 2 tests
+test tests::production_listener_is_exact_ipv4_loopback ... ok
+test tests::real_server_lists_real_sqlite_rows ... FAILED
+
+failures:
+
+---- tests::real_server_lists_real_sqlite_rows stdout ----
+
+thread 'tokio-rt-worker' (9168) panicked at crates\axum-loop\src\lib.rs:69:14:
+called `Result::unwrap()` on an `Err` value: "http://127.0.0.1:8741/flows: Connection Failed: Connect error: An attempt was made to access a socket in a way forbidden by its access permissions. (os error 10013)"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tests::real_server_lists_real_sqlite_rows' (19732) panicked at crates\axum-loop\src\lib.rs:72:10:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(2), "called `Result::unwrap()` on an `Err` value: \"http://127.0.0.1:8741/flows: Connection Failed: Connect error: An attempt was made to access a socket in a way forbidden by its access permissions. (os error 10013)\"", ...)
+
+
+failures:
+    tests::real_server_lists_real_sqlite_rows
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+error: test failed, to rerun pass `-p axum-loop --lib`

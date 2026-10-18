@@ -1,0 +1,12 @@
+{
+  "template_id": "education_saas",
+  "industry": "Education",
+  "bundled_components": [
+    "auth_system",
+    "user_management",
+    "file_storage_local",
+    "frontend_svelte",
+    "database_sqlite"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

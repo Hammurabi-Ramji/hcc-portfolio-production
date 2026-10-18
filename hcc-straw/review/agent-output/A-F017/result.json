@@ -1,0 +1,52 @@
+{
+  "agent": "A-F017",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\signup",
+  "relative": "apps/web/app/signup",
+  "status": "DONE",
+  "wave": 2,
+  "source_files_changed": [
+    "apps/web/app/signup/page.tsx",
+    "apps/web/app/signup/terms/page.tsx",
+    "apps/web/app/signup/privacy/page.tsx"
+  ],
+  "commands": [
+    {
+      "name": "01-scoped-tsc",
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F017/tsconfig.json",
+      "exit": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\logs\\01-scoped-tsc.log"
+    },
+    {
+      "name": "02-browser-regression",
+      "command": "node review/agent-output/A-F017/run-regression.cjs",
+      "exit": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\logs\\02-browser-regression.log",
+      "results": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\browser-results.json",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "name": "03-api-session-probe",
+      "command": "node review/agent-output/A-F017/api-session-probe.cjs",
+      "exit": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\logs\\03-live-session.log",
+      "results": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017\\live-session.json",
+      "note": "Direct loopback API register + straw_session cookie + two /me reads (reload survival)."
+    },
+    {
+      "name": "run-all.cmd",
+      "command": "review/agent-output/A-F017/run-all.cmd",
+      "exit": 0,
+      "summary": "TSC=0 BR=0 LIVE=0"
+    }
+  ],
+  "acceptance": {
+    "dependencies_typecheck_load": "PASS",
+    "client_validation_no_request": "PASS",
+    "pending_single_submit_retry": "PASS",
+    "dashboard_and_session_reload": "PASS",
+    "errors_a11y_policy_links": "PASS"
+  },
+  "blockers": [],
+  "report": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F017.md"
+}

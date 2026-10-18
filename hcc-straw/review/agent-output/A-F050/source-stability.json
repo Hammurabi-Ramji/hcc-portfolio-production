@@ -1,0 +1,1188 @@
+{
+  "all_tested_inputs_equal_current": true,
+  "files": [
+    {
+      "path": "Cargo.toml",
+      "tested_sha256": "9223c8a969408bf4942bcb180a19b5bb7428116b06a67d4db917b42e188e41e3",
+      "current_sha256": "9223c8a969408bf4942bcb180a19b5bb7428116b06a67d4db917b42e188e41e3",
+      "equal": true
+    },
+    {
+      "path": "Cargo.lock",
+      "tested_sha256": "54742d7610ea0b06506796a662b50bfd1514d6a8d69f15ca7585382341292a9f",
+      "current_sha256": "54742d7610ea0b06506796a662b50bfd1514d6a8d69f15ca7585382341292a9f",
+      "equal": true
+    },
+    {
+      "path": "Trunk.toml",
+      "tested_sha256": "357786adce64247f5ab47f76b1c8928b60b3e1acf48d460e0bc487f612a97f5c",
+      "current_sha256": "357786adce64247f5ab47f76b1c8928b60b3e1acf48d460e0bc487f612a97f5c",
+      "equal": true
+    },
+    {
+      "path": "index.html",
+      "tested_sha256": "c582b58740bb41567405bf2fb9071858af770e7667e14a4a2cfbd60a7c22f398",
+      "current_sha256": "c582b58740bb41567405bf2fb9071858af770e7667e14a4a2cfbd60a7c22f398",
+      "equal": true
+    },
+    {
+      "path": "tools/frontend-build/Cargo.toml",
+      "tested_sha256": "d0bec38c340e511084510ab84bd83ec9d0f07c48d9e6b711ea488e673915fb3a",
+      "current_sha256": "d0bec38c340e511084510ab84bd83ec9d0f07c48d9e6b711ea488e673915fb3a",
+      "equal": true
+    },
+    {
+      "path": "tools/frontend-build/src/main.rs",
+      "tested_sha256": "fdcea317270dcf3b77459e52e0fd7a2744a80aca6f2c0f1decb50692433fd5f1",
+      "current_sha256": "fdcea317270dcf3b77459e52e0fd7a2744a80aca6f2c0f1decb50692433fd5f1",
+      "equal": true
+    },
+    {
+      "path": "tools/frontend-build/src/site_cache.rs",
+      "tested_sha256": "71ea5543ac20049399ba790d9fa242e8a76764c79cbfc5ab8fe0a633abe3a93d",
+      "current_sha256": "71ea5543ac20049399ba790d9fa242e8a76764c79cbfc5ab8fe0a633abe3a93d",
+      "equal": true
+    },
+    {
+      "path": "ui/App.svelte",
+      "tested_sha256": "7c5483575e918a63b4376342178f9c0d793976b58059fa52d5c10d2f3b9928c6",
+      "current_sha256": "7c5483575e918a63b4376342178f9c0d793976b58059fa52d5c10d2f3b9928c6",
+      "equal": true
+    },
+    {
+      "path": "ui/BrowserFlows.svelte",
+      "tested_sha256": "d269b1155893d25ffe1111e6492677ab3c28e45786351ca152937b871e6481ae",
+      "current_sha256": "d269b1155893d25ffe1111e6492677ab3c28e45786351ca152937b871e6481ae",
+      "equal": true
+    },
+    {
+      "path": "ui/CodeGenPanel.svelte",
+      "tested_sha256": "9573b9d6c88527dce478ce9bced91e6244532e8d6f0584ddea418cfd34bb5640",
+      "current_sha256": "9573b9d6c88527dce478ce9bced91e6244532e8d6f0584ddea418cfd34bb5640",
+      "equal": true
+    },
+    {
+      "path": "ui/FlowCanvas.svelte",
+      "tested_sha256": "35a1f170e65a17d343dcfd86e85dd2139c5c4b0e698f2c1d046c4e33ec19febe",
+      "current_sha256": "35a1f170e65a17d343dcfd86e85dd2139c5c4b0e698f2c1d046c4e33ec19febe",
+      "equal": true
+    },
+    {
+      "path": "ui/main.js",
+      "tested_sha256": "c7423216aeba8a6b36adbaffbc6502a89886354063949f9bf456b01932549e7f",
+      "current_sha256": "c7423216aeba8a6b36adbaffbc6502a89886354063949f9bf456b01932549e7f",
+      "equal": true
+    },
+    {
+      "path": "ui/NlpChatPanel.svelte",
+      "tested_sha256": "fd59e57f6fce94e788099b3588a3de999e8f9a1f1d27de7ad5df5843e6d54162",
+      "current_sha256": "fd59e57f6fce94e788099b3588a3de999e8f9a1f1d27de7ad5df5843e6d54162",
+      "equal": true
+    },
+    {
+      "path": "ui/NodeConfigPanel.svelte",
+      "tested_sha256": "51ab5789128830ffa5b6e48f03cee481b70668ea45ab9c81d0dc37c0edad2e2c",
+      "current_sha256": "51ab5789128830ffa5b6e48f03cee481b70668ea45ab9c81d0dc37c0edad2e2c",
+      "equal": true
+    },
+    {
+      "path": "ui/PwaStatus.svelte",
+      "tested_sha256": "2f56ee2b897002c5654b7119febcb2632f41088d5008dd4d301e3cc372d2485f",
+      "current_sha256": "2f56ee2b897002c5654b7119febcb2632f41088d5008dd4d301e3cc372d2485f",
+      "equal": true
+    },
+    {
+      "path": "ui/routes.js",
+      "tested_sha256": "93189f26ccaaf850f86c572dc242898e0cc129eacaaf1e4eac5f28b8c6346c05",
+      "current_sha256": "93189f26ccaaf850f86c572dc242898e0cc129eacaaf1e4eac5f28b8c6346c05",
+      "equal": true
+    },
+    {
+      "path": "ui/Toast.svelte",
+      "tested_sha256": "88467d34b36306aa64453b156be30c70f2b4acd98be671ffdda8a316ca02c878",
+      "current_sha256": "88467d34b36306aa64453b156be30c70f2b4acd98be671ffdda8a316ca02c878",
+      "equal": true
+    },
+    {
+      "path": "third-party/clsx/clsx.mjs",
+      "tested_sha256": "d949e5cdbfebc76a6642b1901095e900fc3f2262d8dc0373aa44850a9bc75522",
+      "current_sha256": "d949e5cdbfebc76a6642b1901095e900fc3f2262d8dc0373aa44850a9bc75522",
+      "equal": true
+    },
+    {
+      "path": "third-party/clsx/LICENSE",
+      "tested_sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "current_sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "equal": true
+    },
+    {
+      "path": "third-party/NOTICE.md",
+      "tested_sha256": "4e1cb9dded5792129bbc41cc6fd125c250a2953e7a84539a6b1e999cf8ee7b4a",
+      "current_sha256": "4e1cb9dded5792129bbc41cc6fd125c250a2953e7a84539a6b1e999cf8ee7b4a",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/LICENSE.md",
+      "tested_sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3",
+      "current_sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/action/public.d.ts",
+      "tested_sha256": "d998c4aebb47ee92a1e21a92e11fe5b6f96f3c2a3da068a2467e9d1f02347f3e",
+      "current_sha256": "d998c4aebb47ee92a1e21a92e11fe5b6f96f3c2a3da068a2467e9d1f02347f3e",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/ambient.d.ts",
+      "tested_sha256": "29a869f5609e7accebfbfbcd3a481315ca874c31e5d073503860f8c6ebf28b72",
+      "current_sha256": "29a869f5609e7accebfbfbcd3a481315ca874c31e5d073503860f8c6ebf28b72",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/animate/index.js",
+      "tested_sha256": "32a21789fcc67e4184d2b553ff2f4fd114590fed116a098bdfa27e5b91abf80f",
+      "current_sha256": "32a21789fcc67e4184d2b553ff2f4fd114590fed116a098bdfa27e5b91abf80f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/animate/public.d.ts",
+      "tested_sha256": "7f44c96998053d2607ae3ce60ed411b616eb84efbd743ec192da912e17d5b52e",
+      "current_sha256": "7f44c96998053d2607ae3ce60ed411b616eb84efbd743ec192da912e17d5b52e",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/attachments/index.js",
+      "tested_sha256": "fa3e61d5d56834da6c261cc179e4ca67e1b363026505c7f20ffef6ac8bff69ce",
+      "current_sha256": "fa3e61d5d56834da6c261cc179e4ca67e1b363026505c7f20ffef6ac8bff69ce",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/attachments/public.d.ts",
+      "tested_sha256": "328b6474ed5a660f8544a5dddc96f619f2e25e688d0a666c1afca887222fb8cc",
+      "current_sha256": "328b6474ed5a660f8544a5dddc96f619f2e25e688d0a666c1afca887222fb8cc",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/constants.js",
+      "tested_sha256": "dee72099f192667f0ad225dbf2ad2972395e4074eb27f02ce59d2cb01556c18b",
+      "current_sha256": "dee72099f192667f0ad225dbf2ad2972395e4074eb27f02ce59d2cb01556c18b",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/easing/index.js",
+      "tested_sha256": "de4d0ad455556e8e303a5eb798c5cda90287449af0f0e3498dfa4f0357282248",
+      "current_sha256": "de4d0ad455556e8e303a5eb798c5cda90287449af0f0e3498dfa4f0357282248",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/escaping.js",
+      "tested_sha256": "5f15dd885f983a9b8212d103dbfe5b9c8e66896618b5e67e10a7c7fde3da9eb9",
+      "current_sha256": "5f15dd885f983a9b8212d103dbfe5b9c8e66896618b5e67e10a7c7fde3da9eb9",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/events/index.js",
+      "tested_sha256": "8c3646d2798af17d8c494fec0d1d99679d654e61ac481bcbb950aff26864e2ca",
+      "current_sha256": "8c3646d2798af17d8c494fec0d1d99679d654e61ac481bcbb950aff26864e2ca",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/events/public.d.ts",
+      "tested_sha256": "eb94a4f56ac3b4107508ec0f1d4c4427913904ae5d0c1e4a6da0f10d1a76a47d",
+      "current_sha256": "eb94a4f56ac3b4107508ec0f1d4c4427913904ae5d0c1e4a6da0f10d1a76a47d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/html-tree-validation.js",
+      "tested_sha256": "4b6bffc4208f3b63cf82637eb1662e1da93a7ce856603a2e624367178d691efd",
+      "current_sha256": "4b6bffc4208f3b63cf82637eb1662e1da93a7ce856603a2e624367178d691efd",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/index-client.js",
+      "tested_sha256": "6cfcb7b6eec91f8bdc364298177efab5e1a2f9e8e115f4f24086d54ea1795487",
+      "current_sha256": "6cfcb7b6eec91f8bdc364298177efab5e1a2f9e8e115f4f24086d54ea1795487",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/index-server.js",
+      "tested_sha256": "a9b756af9ebab6623a19cf8f0e0436943a9fe69e9c121f4f5461788114574604",
+      "current_sha256": "a9b756af9ebab6623a19cf8f0e0436943a9fe69e9c121f4f5461788114574604",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/index.d.ts",
+      "tested_sha256": "573777c0b438fd33e8d209fb1ef0267a6edb712a7d96e4123d5f48853e8b0e75",
+      "current_sha256": "573777c0b438fd33e8d209fb1ef0267a6edb712a7d96e4123d5f48853e8b0e75",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/constants.js",
+      "tested_sha256": "ab4f44fb6f25bd0cefb904681bea7488b1b88999a3d44efa69daa5b76b01ff8f",
+      "current_sha256": "ab4f44fb6f25bd0cefb904681bea7488b1b88999a3d44efa69daa5b76b01ff8f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/context.js",
+      "tested_sha256": "cacd54b36ebdbe6eacdea90e2b22620fd6de2cf39b8ace8a5412170fe387cca1",
+      "current_sha256": "cacd54b36ebdbe6eacdea90e2b22620fd6de2cf39b8ace8a5412170fe387cca1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/assign.js",
+      "tested_sha256": "90c689bd8654f6cd197a40a94e1e0c766d2dea771f1ee4efeb2d57544024f86f",
+      "current_sha256": "90c689bd8654f6cd197a40a94e1e0c766d2dea771f1ee4efeb2d57544024f86f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/console-log.js",
+      "tested_sha256": "31d8638bfdd8ec0189c5a89f48f07d9ccaff95416e4e10421a4d73690914b366",
+      "current_sha256": "31d8638bfdd8ec0189c5a89f48f07d9ccaff95416e4e10421a4d73690914b366",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/css.js",
+      "tested_sha256": "4807cfd43b6c91bbcc3a361c4a9e9df630c15abf0add7db4d503300131f01bc7",
+      "current_sha256": "4807cfd43b6c91bbcc3a361c4a9e9df630c15abf0add7db4d503300131f01bc7",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/debug.js",
+      "tested_sha256": "8cc8ab76d473085ba9466300ea4fe118167a38c72a8abfb0d8b10874de412c53",
+      "current_sha256": "8cc8ab76d473085ba9466300ea4fe118167a38c72a8abfb0d8b10874de412c53",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/elements.js",
+      "tested_sha256": "9ebab8b28739790670b5f8655008893a3215a095739d10ee69639202b15ba103",
+      "current_sha256": "9ebab8b28739790670b5f8655008893a3215a095739d10ee69639202b15ba103",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/equality.js",
+      "tested_sha256": "1ef3595aee1d9a929d47e018f710568a7da0bc1e09eb4493a85bd15e53c97992",
+      "current_sha256": "1ef3595aee1d9a929d47e018f710568a7da0bc1e09eb4493a85bd15e53c97992",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/hmr.js",
+      "tested_sha256": "04ff3dd3a14baac84b1523462ee3628e7dad4ed13d481ae94815be10ec8dadff",
+      "current_sha256": "04ff3dd3a14baac84b1523462ee3628e7dad4ed13d481ae94815be10ec8dadff",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/inspect.js",
+      "tested_sha256": "c836cb68ae8c62c5f29e9e5364e66fe966ae347c3c479f191850745ae60bd96d",
+      "current_sha256": "c836cb68ae8c62c5f29e9e5364e66fe966ae347c3c479f191850745ae60bd96d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/legacy.js",
+      "tested_sha256": "82269e83a2f3073741abebc6e8142cc3e3185944d316d5f266deac42a0d88cfe",
+      "current_sha256": "82269e83a2f3073741abebc6e8142cc3e3185944d316d5f266deac42a0d88cfe",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/ownership.js",
+      "tested_sha256": "b1bfd9da0294d6b9504141eed2b0eb1114b146d61f1e663451f348a0638d0f00",
+      "current_sha256": "b1bfd9da0294d6b9504141eed2b0eb1114b146d61f1e663451f348a0638d0f00",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/tracing.js",
+      "tested_sha256": "33709688253daaaae1f5cc3e7cd5bf5333f7c8ee5776ed27532c433abdabbfc0",
+      "current_sha256": "33709688253daaaae1f5cc3e7cd5bf5333f7c8ee5776ed27532c433abdabbfc0",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dev/validation.js",
+      "tested_sha256": "0f4a23946da79e6311821f6b586302d3031df9ef0a9b4667796e41411adf0242",
+      "current_sha256": "0f4a23946da79e6311821f6b586302d3031df9ef0a9b4667796e41411adf0242",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/async.js",
+      "tested_sha256": "8b8b33f4fb8238c4d4624fad6765219f04b60133a58b3a76f8bcd6c2c0febcd2",
+      "current_sha256": "8b8b33f4fb8238c4d4624fad6765219f04b60133a58b3a76f8bcd6c2c0febcd2",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/await.js",
+      "tested_sha256": "75be74f9a6db1e9eaf8000e4577027ac090f874ec93576caa0b47377a672dcc3",
+      "current_sha256": "75be74f9a6db1e9eaf8000e4577027ac090f874ec93576caa0b47377a672dcc3",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/boundary.js",
+      "tested_sha256": "aeacfe7e3102bc77c3d68fff5bf7578d8b1f25cb563d744a4f2c205ed3e5d55f",
+      "current_sha256": "aeacfe7e3102bc77c3d68fff5bf7578d8b1f25cb563d744a4f2c205ed3e5d55f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/branches.js",
+      "tested_sha256": "01d3b5e6144a2f94456e09a794c16b53cf40d658cfbac1392fdeceb927dbf44c",
+      "current_sha256": "01d3b5e6144a2f94456e09a794c16b53cf40d658cfbac1392fdeceb927dbf44c",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/css-props.js",
+      "tested_sha256": "2033ec7651668927aa642006b90e872099297203ae845d01ab9797b8b68da54d",
+      "current_sha256": "2033ec7651668927aa642006b90e872099297203ae845d01ab9797b8b68da54d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/each.js",
+      "tested_sha256": "20fee32956016ffdfd7553ec9a96c4e55d20c3b9abd2b0bb791893c323adafa0",
+      "current_sha256": "20fee32956016ffdfd7553ec9a96c4e55d20c3b9abd2b0bb791893c323adafa0",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/html.js",
+      "tested_sha256": "63baad7bbff3e85acde22c8db4435f0eefc61e1c6db61b478b5a7c5c2aaa4850",
+      "current_sha256": "63baad7bbff3e85acde22c8db4435f0eefc61e1c6db61b478b5a7c5c2aaa4850",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/if.js",
+      "tested_sha256": "451a5e1d2633bf2c2bce6def8dbda815415205050ef8931d2c7ca4c93a23e86a",
+      "current_sha256": "451a5e1d2633bf2c2bce6def8dbda815415205050ef8931d2c7ca4c93a23e86a",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/key.js",
+      "tested_sha256": "9a76c14bf72d0412906b2fafaec99901171563b21a7f8dbdbe619ad4e2fdc1cb",
+      "current_sha256": "9a76c14bf72d0412906b2fafaec99901171563b21a7f8dbdbe619ad4e2fdc1cb",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/slot.js",
+      "tested_sha256": "780aa2b464d1539cedc32404513c7f4ae6dbb7c041b0011df6087cdcc936fdd1",
+      "current_sha256": "780aa2b464d1539cedc32404513c7f4ae6dbb7c041b0011df6087cdcc936fdd1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/snippet.js",
+      "tested_sha256": "cd1e11c8c4309758c9c7101641877810e8a15cdb73103380b46924e4eb813c17",
+      "current_sha256": "cd1e11c8c4309758c9c7101641877810e8a15cdb73103380b46924e4eb813c17",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/svelte-component.js",
+      "tested_sha256": "9b078c99494b6b70107ae0fd49dce72a18620b15155017619d82763857e2dbb1",
+      "current_sha256": "9b078c99494b6b70107ae0fd49dce72a18620b15155017619d82763857e2dbb1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/svelte-element.js",
+      "tested_sha256": "31215b53e86f456e75ed234c60184a98dee1b9b83a14a914ad290bd2c9b7ec95",
+      "current_sha256": "31215b53e86f456e75ed234c60184a98dee1b9b83a14a914ad290bd2c9b7ec95",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/blocks/svelte-head.js",
+      "tested_sha256": "424c76c573ec07b39538cf7b08edc5bb108490c4a5b3cfd91417bf4a141754c5",
+      "current_sha256": "424c76c573ec07b39538cf7b08edc5bb108490c4a5b3cfd91417bf4a141754c5",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/css.js",
+      "tested_sha256": "4ee852d05de609d1be51629be38ad7ab100df09d86ba27044a9f0c0df2ba0456",
+      "current_sha256": "4ee852d05de609d1be51629be38ad7ab100df09d86ba27044a9f0c0df2ba0456",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/actions.js",
+      "tested_sha256": "c228f0879250bd3670917a4d6a6d05c7bbba22abf97244e4c5dc4e16df8f7693",
+      "current_sha256": "c228f0879250bd3670917a4d6a6d05c7bbba22abf97244e4c5dc4e16df8f7693",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/attachments.js",
+      "tested_sha256": "7c6523cef1e6be580279ce810a881c4a87f206fe71c08ee40a84b31224b4bb70",
+      "current_sha256": "7c6523cef1e6be580279ce810a881c4a87f206fe71c08ee40a84b31224b4bb70",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/attributes.js",
+      "tested_sha256": "de87c650c48ef1e72e9a6828bf15e0d867fdebf9c33b16dd58d0ef380f52cb28",
+      "current_sha256": "de87c650c48ef1e72e9a6828bf15e0d867fdebf9c33b16dd58d0ef380f52cb28",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/document.js",
+      "tested_sha256": "9ca54745e27b2de4dc5f8e205ca93549315bba6c168c6d528a924fafb724d877",
+      "current_sha256": "9ca54745e27b2de4dc5f8e205ca93549315bba6c168c6d528a924fafb724d877",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/input.js",
+      "tested_sha256": "9adf41ec57c7f5d2518424f2047f1abc9e7bf84d2044aa7a771a19266c27fd86",
+      "current_sha256": "9adf41ec57c7f5d2518424f2047f1abc9e7bf84d2044aa7a771a19266c27fd86",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/media.js",
+      "tested_sha256": "e89d8fab7f093b9f2e43937246cca9443a65dd98b4f0c29b23b27d66a7dac46b",
+      "current_sha256": "e89d8fab7f093b9f2e43937246cca9443a65dd98b4f0c29b23b27d66a7dac46b",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/navigator.js",
+      "tested_sha256": "9244cb2f5dd9b583d4ef8274e163adcb50b22408d53314a360c8f32a93df4a5b",
+      "current_sha256": "9244cb2f5dd9b583d4ef8274e163adcb50b22408d53314a360c8f32a93df4a5b",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/props.js",
+      "tested_sha256": "09367eb44ff377d7f388222ef08d9ee1c33ed6f0241f8e6539ba577f4845f143",
+      "current_sha256": "09367eb44ff377d7f388222ef08d9ee1c33ed6f0241f8e6539ba577f4845f143",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/select.js",
+      "tested_sha256": "3d513ede7700dc944a2a3c6c688c986a8346ad4bad44b0387c9dc8f2f86f69bf",
+      "current_sha256": "3d513ede7700dc944a2a3c6c688c986a8346ad4bad44b0387c9dc8f2f86f69bf",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/shared.js",
+      "tested_sha256": "9b2aa3fffe1bac8b84f1c230956a32a5c0ddc5aa68af625c32bfc73736378955",
+      "current_sha256": "9b2aa3fffe1bac8b84f1c230956a32a5c0ddc5aa68af625c32bfc73736378955",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/size.js",
+      "tested_sha256": "e23fc5b0a399eeb1b017615607ea78373955e55d321fb96c811ace8f84d2dc3d",
+      "current_sha256": "e23fc5b0a399eeb1b017615607ea78373955e55d321fb96c811ace8f84d2dc3d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/this.js",
+      "tested_sha256": "6ffe829e3b369fde90c2d494aefe943aaa83feb968fa32cc45fbae302e786cc3",
+      "current_sha256": "6ffe829e3b369fde90c2d494aefe943aaa83feb968fa32cc45fbae302e786cc3",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/universal.js",
+      "tested_sha256": "23f664c4a093891d39c3ea7ea3be8410d637c441b9b63e6818e0f1bcc151d781",
+      "current_sha256": "23f664c4a093891d39c3ea7ea3be8410d637c441b9b63e6818e0f1bcc151d781",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/bindings/window.js",
+      "tested_sha256": "83e943a9c6e5e23363fbf226b39fb914dca7ef6aaadac64ccc16042a01c4c43d",
+      "current_sha256": "83e943a9c6e5e23363fbf226b39fb914dca7ef6aaadac64ccc16042a01c4c43d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/class.js",
+      "tested_sha256": "c9f807c682961d9bf29a019d68ada6c3c734deee7cb29cb66aef61391b1ab846",
+      "current_sha256": "c9f807c682961d9bf29a019d68ada6c3c734deee7cb29cb66aef61391b1ab846",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/custom-element.js",
+      "tested_sha256": "d1b82447d2e6e17bf86d15a85d579369a038d1849f701852b5b93499e6dc91e2",
+      "current_sha256": "d1b82447d2e6e17bf86d15a85d579369a038d1849f701852b5b93499e6dc91e2",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/customizable-select.js",
+      "tested_sha256": "a0f3ec295dca70a7789e171c9e08f20db8866688fc154cf447421a65b8c57e27",
+      "current_sha256": "a0f3ec295dca70a7789e171c9e08f20db8866688fc154cf447421a65b8c57e27",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/events.js",
+      "tested_sha256": "21e9cf6139ed152cd4c4071cc4f75e0a3dda61128175b488f177be6a76c38713",
+      "current_sha256": "21e9cf6139ed152cd4c4071cc4f75e0a3dda61128175b488f177be6a76c38713",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/misc.js",
+      "tested_sha256": "67343880905ec434762146fc06aa3acf64ab0a992bbfd6a15a11d74d705f9438",
+      "current_sha256": "67343880905ec434762146fc06aa3acf64ab0a992bbfd6a15a11d74d705f9438",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/style.js",
+      "tested_sha256": "603a51d1840f4ca4a40e9bef2ae40728fa9d3ab9ce170c9f15635124fff365f1",
+      "current_sha256": "603a51d1840f4ca4a40e9bef2ae40728fa9d3ab9ce170c9f15635124fff365f1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/elements/transitions.js",
+      "tested_sha256": "da7d0d81848a4a10d95d7c0d6cbc9d51e39bd72b0a1ef41c87441fe850b3e5fe",
+      "current_sha256": "da7d0d81848a4a10d95d7c0d6cbc9d51e39bd72b0a1ef41c87441fe850b3e5fe",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/hydration.js",
+      "tested_sha256": "31c2e03b02e21f55ff3d1ea5156c72d52c9cc22f8a88e0c5e4f91212b2569143",
+      "current_sha256": "31c2e03b02e21f55ff3d1ea5156c72d52c9cc22f8a88e0c5e4f91212b2569143",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/legacy/event-modifiers.js",
+      "tested_sha256": "1586c18b35c9523ecbc5f4bf170547ccc07e2078eb432f727321b93ee60d7644",
+      "current_sha256": "1586c18b35c9523ecbc5f4bf170547ccc07e2078eb432f727321b93ee60d7644",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/legacy/lifecycle.js",
+      "tested_sha256": "c5d3fbdb3b5ffc5a8a935b74327e02ddd41b7cd6e1ec02bd15e3039903ca5fc7",
+      "current_sha256": "c5d3fbdb3b5ffc5a8a935b74327e02ddd41b7cd6e1ec02bd15e3039903ca5fc7",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/legacy/misc.js",
+      "tested_sha256": "724decb934defca4396b8b526485d0651a81801a8a4af152ec58d4a3ab278f8d",
+      "current_sha256": "724decb934defca4396b8b526485d0651a81801a8a4af152ec58d4a3ab278f8d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/operations.js",
+      "tested_sha256": "97bb8c09671c5e78b45c37e1a873d9325632a7c9ae1bfe1c5f096c67bb65d210",
+      "current_sha256": "97bb8c09671c5e78b45c37e1a873d9325632a7c9ae1bfe1c5f096c67bb65d210",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/reconciler.js",
+      "tested_sha256": "5f961d37c8f9b19df3351178732e4aa4d4823ff81079f27fa69777f297cdcf50",
+      "current_sha256": "5f961d37c8f9b19df3351178732e4aa4d4823ff81079f27fa69777f297cdcf50",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/task.js",
+      "tested_sha256": "e429d36e2da31f9e28824004e16c05d8f7626f8d0961d56dd9ce0851d67551ae",
+      "current_sha256": "e429d36e2da31f9e28824004e16c05d8f7626f8d0961d56dd9ce0851d67551ae",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/template.js",
+      "tested_sha256": "62f7817de020a41b753107a8dcbd4c112dedeba0a95a7f5a886f1ff0dcf565af",
+      "current_sha256": "62f7817de020a41b753107a8dcbd4c112dedeba0a95a7f5a886f1ff0dcf565af",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/dom/types.d.ts",
+      "tested_sha256": "cfa204429b3b4b7185933333dddb3306791f3408f2e8407466a079217e504f65",
+      "current_sha256": "cfa204429b3b4b7185933333dddb3306791f3408f2e8407466a079217e504f65",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/error-handling.js",
+      "tested_sha256": "93ae41e9c79cb5d28c548f7fa6a3a8c33229503eb5b55977f8f43441ecb16cdf",
+      "current_sha256": "93ae41e9c79cb5d28c548f7fa6a3a8c33229503eb5b55977f8f43441ecb16cdf",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/error-handling.test.ts",
+      "tested_sha256": "1d846f8f88eb8dcead5726e3c6e01c53594f9d7efadb27cb8ce3ca93e36a6bd1",
+      "current_sha256": "1d846f8f88eb8dcead5726e3c6e01c53594f9d7efadb27cb8ce3ca93e36a6bd1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/errors.js",
+      "tested_sha256": "0a920b99eb2486ac40eeb8788a3920f0640afb039220674c36ed40a2d09b56a2",
+      "current_sha256": "0a920b99eb2486ac40eeb8788a3920f0640afb039220674c36ed40a2d09b56a2",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/hydratable.js",
+      "tested_sha256": "7b6cd3e6bc513b99328086f6af5cc9e2685b956b61ada9330d77aba0107a6938",
+      "current_sha256": "7b6cd3e6bc513b99328086f6af5cc9e2685b956b61ada9330d77aba0107a6938",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/index.js",
+      "tested_sha256": "5b16e981b8093b9c49512fc642c1b8364e8b1f4a3e3a4731446cc70032c523a9",
+      "current_sha256": "5b16e981b8093b9c49512fc642c1b8364e8b1f4a3e3a4731446cc70032c523a9",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/legacy.js",
+      "tested_sha256": "c297f8f5f11faf93c50e588b0f3e4ca4bb70c738a000c4931f9e990bbd08b88c",
+      "current_sha256": "c297f8f5f11faf93c50e588b0f3e4ca4bb70c738a000c4931f9e990bbd08b88c",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/loop.js",
+      "tested_sha256": "f74396b64272045b3c80e77ecf10a9f03d9ade17217f44cc48b253379afebf0d",
+      "current_sha256": "f74396b64272045b3c80e77ecf10a9f03d9ade17217f44cc48b253379afebf0d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/proxy.js",
+      "tested_sha256": "cb7695e354c9d2c8c5910e89184bcab623094412e8fdd1b8ffa9534ddc93d3fb",
+      "current_sha256": "cb7695e354c9d2c8c5910e89184bcab623094412e8fdd1b8ffa9534ddc93d3fb",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/proxy.test.ts",
+      "tested_sha256": "34b739d2a4aafdf64c601f0f72313ece253095233b13c50a844bf10bcd8ff8e6",
+      "current_sha256": "34b739d2a4aafdf64c601f0f72313ece253095233b13c50a844bf10bcd8ff8e6",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/async.js",
+      "tested_sha256": "f99128f35d2f12b8d665265ca0576827f9b6a3c19be773c09ba01114d0a21bd2",
+      "current_sha256": "f99128f35d2f12b8d665265ca0576827f9b6a3c19be773c09ba01114d0a21bd2",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/batch.js",
+      "tested_sha256": "e13ed4a14639865f2a4caa81db6b1c0ad150dafe58d02262628c29866efc5509",
+      "current_sha256": "e13ed4a14639865f2a4caa81db6b1c0ad150dafe58d02262628c29866efc5509",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/deriveds.js",
+      "tested_sha256": "99ad4d68c1183dcdf47be564a8b878f556097ede8979730bdcb5b295b957d58f",
+      "current_sha256": "99ad4d68c1183dcdf47be564a8b878f556097ede8979730bdcb5b295b957d58f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/effects.js",
+      "tested_sha256": "e5fe83a0b7580836ecee8f9cd985ef8de920a711fd1ced77579bc854101d07b6",
+      "current_sha256": "e5fe83a0b7580836ecee8f9cd985ef8de920a711fd1ced77579bc854101d07b6",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/equality.js",
+      "tested_sha256": "ea5e0f8e35685e01c85840d884b7dd1d3f47e8b04ae5835db3d8e70590ed51c9",
+      "current_sha256": "ea5e0f8e35685e01c85840d884b7dd1d3f47e8b04ae5835db3d8e70590ed51c9",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/props.js",
+      "tested_sha256": "474c7ded9179e566626c45e79a114b1cd706330ea5d15cc80027ee20c1d74eb0",
+      "current_sha256": "474c7ded9179e566626c45e79a114b1cd706330ea5d15cc80027ee20c1d74eb0",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/sources.js",
+      "tested_sha256": "0ce48a16e6c64754adb266ff44f1ed984b4d9305999dc82dc6e3845c440a10f1",
+      "current_sha256": "0ce48a16e6c64754adb266ff44f1ed984b4d9305999dc82dc6e3845c440a10f1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/status.js",
+      "tested_sha256": "f0ac3f9d655103f99abee0356f8688111f786f9bb7bf0ac867df7cc63587013f",
+      "current_sha256": "f0ac3f9d655103f99abee0356f8688111f786f9bb7bf0ac867df7cc63587013f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/store.js",
+      "tested_sha256": "c4a2a66b9dedb2a0572f203576ebcbf89b407aadc64ad55221b043b072791004",
+      "current_sha256": "c4a2a66b9dedb2a0572f203576ebcbf89b407aadc64ad55221b043b072791004",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/types.d.ts",
+      "tested_sha256": "f1d6f72ac0fb3eb8b3bff43186939bfa539e9bc79d2c37884233020403772736",
+      "current_sha256": "f1d6f72ac0fb3eb8b3bff43186939bfa539e9bc79d2c37884233020403772736",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/reactivity/utils.js",
+      "tested_sha256": "8feb909737472b4e49acabeed21d76b0700ac95a9fa825f5e0d82299c05be5ee",
+      "current_sha256": "8feb909737472b4e49acabeed21d76b0700ac95a9fa825f5e0d82299c05be5ee",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/render.js",
+      "tested_sha256": "bb359607038cd2256802f75857b2f4b92cf5ec405dffafe327a9316c0c5f100f",
+      "current_sha256": "bb359607038cd2256802f75857b2f4b92cf5ec405dffafe327a9316c0c5f100f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/runtime.js",
+      "tested_sha256": "9105167919723d5c5d5b21dcd09bf1030251e0771516f25c0e1841e00a06b3c7",
+      "current_sha256": "9105167919723d5c5d5b21dcd09bf1030251e0771516f25c0e1841e00a06b3c7",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/timing.js",
+      "tested_sha256": "fae8ab9442e913b184e1b23e071826ba6b28ec63ca9763595c2af5207eda7d09",
+      "current_sha256": "fae8ab9442e913b184e1b23e071826ba6b28ec63ca9763595c2af5207eda7d09",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/types.d.ts",
+      "tested_sha256": "c020ea97b98d7c40bf53a97c37e5c8105dcf5baf08543121ceed8fe2b7f025ec",
+      "current_sha256": "c020ea97b98d7c40bf53a97c37e5c8105dcf5baf08543121ceed8fe2b7f025ec",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/validate.js",
+      "tested_sha256": "5c6f5f1cdc948db94509f5378f0e3acfab84359b671b7e755af1301721d4872c",
+      "current_sha256": "5c6f5f1cdc948db94509f5378f0e3acfab84359b671b7e755af1301721d4872c",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/client/warnings.js",
+      "tested_sha256": "9c7221cdd177a1faaad1f772cf66717cfd30c83490fda2491b806e7779c2a7ca",
+      "current_sha256": "9c7221cdd177a1faaad1f772cf66717cfd30c83490fda2491b806e7779c2a7ca",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/disclose-version.js",
+      "tested_sha256": "241f4b965f8d1e6456992f0a6d5c1a57a0685fd9fe69b97cc006c39d37082b53",
+      "current_sha256": "241f4b965f8d1e6456992f0a6d5c1a57a0685fd9fe69b97cc006c39d37082b53",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/flags/async.js",
+      "tested_sha256": "6ee5968a02be6e14f03f70a9588c64ce7074723b9bc8971d4762719276262a8c",
+      "current_sha256": "6ee5968a02be6e14f03f70a9588c64ce7074723b9bc8971d4762719276262a8c",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/flags/index.js",
+      "tested_sha256": "fb105f79ec805a76bab151563951d7581f99f9d0b6ccb45665d97a2b619d2903",
+      "current_sha256": "fb105f79ec805a76bab151563951d7581f99f9d0b6ccb45665d97a2b619d2903",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/flags/legacy.js",
+      "tested_sha256": "9357eaaaed84f5c5952e0db0c335218dd7b1545dafc12b9069546072093a42ce",
+      "current_sha256": "9357eaaaed84f5c5952e0db0c335218dd7b1545dafc12b9069546072093a42ce",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/flags/tracing.js",
+      "tested_sha256": "195e7525a4b3ba288405b708aac32c62e954d1248abb7bac47c972cb026c6c3d",
+      "current_sha256": "195e7525a4b3ba288405b708aac32c62e954d1248abb7bac47c972cb026c6c3d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/index.js",
+      "tested_sha256": "920fedf966bf16be0caa3efd9348d601f0a8cb58629d43573e80ee88ad2e2d53",
+      "current_sha256": "920fedf966bf16be0caa3efd9348d601f0a8cb58629d43573e80ee88ad2e2d53",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/abort-signal.js",
+      "tested_sha256": "2c9e19eb68aba0db130ddbc485d23565badbc421c5b4d4922c90ac3e86443c14",
+      "current_sha256": "2c9e19eb68aba0db130ddbc485d23565badbc421c5b4d4922c90ac3e86443c14",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/blocks/html.js",
+      "tested_sha256": "eec5cd7431472874db7e44c2f0228042986163a99b99402b79007e6e08ac329e",
+      "current_sha256": "eec5cd7431472874db7e44c2f0228042986163a99b99402b79007e6e08ac329e",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/blocks/snippet.js",
+      "tested_sha256": "0558b684787163a51bda8c0850bec04416d40ced6bf52339ad43d14e1d981b5f",
+      "current_sha256": "0558b684787163a51bda8c0850bec04416d40ced6bf52339ad43d14e1d981b5f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/context.js",
+      "tested_sha256": "1121c2faf3d9ae6265fb42b729b51a0a7040c829e1bc5a63168c1c28beed2ae7",
+      "current_sha256": "1121c2faf3d9ae6265fb42b729b51a0a7040c829e1bc5a63168c1c28beed2ae7",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/crypto.js",
+      "tested_sha256": "616f60ce16d77fac0aa91e2a8beaa3180dcf371d8f9aec2ee51e043186c6894f",
+      "current_sha256": "616f60ce16d77fac0aa91e2a8beaa3180dcf371d8f9aec2ee51e043186c6894f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/crypto.test.ts",
+      "tested_sha256": "e4291cdd951d55d19b92f2d26df2f38772cbbb9981ad874d9eac6d7f5460c50e",
+      "current_sha256": "e4291cdd951d55d19b92f2d26df2f38772cbbb9981ad874d9eac6d7f5460c50e",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/dev.js",
+      "tested_sha256": "bccc29673fba9d4ef26a63811d23f34cd91fad0a90e608b6cfb1d45cdaf0302b",
+      "current_sha256": "bccc29673fba9d4ef26a63811d23f34cd91fad0a90e608b6cfb1d45cdaf0302b",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/errors.js",
+      "tested_sha256": "fc45a794d422f2b987dc3081660a153c2efa3095098a5d5404aee1589dbafcd2",
+      "current_sha256": "fc45a794d422f2b987dc3081660a153c2efa3095098a5d5404aee1589dbafcd2",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/hydratable.js",
+      "tested_sha256": "5bc3072d39a6cbae57ffc4a4e6bb6842099411e746edc0b50d690683d3bc5da0",
+      "current_sha256": "5bc3072d39a6cbae57ffc4a4e6bb6842099411e746edc0b50d690683d3bc5da0",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/hydratable.test.ts",
+      "tested_sha256": "989da970dd6bb81ecb9935c4b2244a428354cccbf451e1e12f8c038e8f36e93e",
+      "current_sha256": "989da970dd6bb81ecb9935c4b2244a428354cccbf451e1e12f8c038e8f36e93e",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/hydration.js",
+      "tested_sha256": "3e4aea111d61616439adce09997292802a81911191255e9b54aef1aa33cbe4fc",
+      "current_sha256": "3e4aea111d61616439adce09997292802a81911191255e9b54aef1aa33cbe4fc",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/index.js",
+      "tested_sha256": "2b67fdb96fa0c5250399ab383df84ea95f923aeab69e4a51249cee3d670a008b",
+      "current_sha256": "2b67fdb96fa0c5250399ab383df84ea95f923aeab69e4a51249cee3d670a008b",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/render-context.js",
+      "tested_sha256": "a02c2b5342d85c65699188def837e12a34fbc737fcae20c8d5e7a59dd19a5b14",
+      "current_sha256": "a02c2b5342d85c65699188def837e12a34fbc737fcae20c8d5e7a59dd19a5b14",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/renderer.js",
+      "tested_sha256": "d906ae970adb0270c41e539bfac06d327284c124e276a3fbc6ba5eee24472ae1",
+      "current_sha256": "d906ae970adb0270c41e539bfac06d327284c124e276a3fbc6ba5eee24472ae1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/renderer.test.ts",
+      "tested_sha256": "ef16e6822235eebe1412f1f3f57178833c4fdc7771c2d100551f2db8225fa22f",
+      "current_sha256": "ef16e6822235eebe1412f1f3f57178833c4fdc7771c2d100551f2db8225fa22f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/types.d.ts",
+      "tested_sha256": "3fed1516cc3cfb7b198ef56225fca276f29fbea097bcb3ff3149dad2f2b563da",
+      "current_sha256": "3fed1516cc3cfb7b198ef56225fca276f29fbea097bcb3ff3149dad2f2b563da",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/server/warnings.js",
+      "tested_sha256": "030daa03dfbf35f12cb179532d323ebb12ca8b855e0fba0d293f9d284016a336",
+      "current_sha256": "030daa03dfbf35f12cb179532d323ebb12ca8b855e0fba0d293f9d284016a336",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/attributes.js",
+      "tested_sha256": "c2d87d8265614027e0ee8317a4e6c7f64a827664d17882eefdfe7fe81a4114ea",
+      "current_sha256": "c2d87d8265614027e0ee8317a4e6c7f64a827664d17882eefdfe7fe81a4114ea",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/clone.js",
+      "tested_sha256": "cb2cc695bd829180b3cabdc430f71235aeb7c7c591328c25bf5d5824e22be6c4",
+      "current_sha256": "cb2cc695bd829180b3cabdc430f71235aeb7c7c591328c25bf5d5824e22be6c4",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/clone.test.ts",
+      "tested_sha256": "9e39545e713b773fd3543aaf286791e03c5a27277050c6afffc80ba839b32c8f",
+      "current_sha256": "9e39545e713b773fd3543aaf286791e03c5a27277050c6afffc80ba839b32c8f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/context.js",
+      "tested_sha256": "fa80f9b0bb062437d45963012a1e8551af9e9b0d61eb51402d0a0a65187889fe",
+      "current_sha256": "fa80f9b0bb062437d45963012a1e8551af9e9b0d61eb51402d0a0a65187889fe",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/dev.js",
+      "tested_sha256": "9a6184b11d08964c4fd61118c8b213474baf617830cc7baf77ecae86859b87a5",
+      "current_sha256": "9a6184b11d08964c4fd61118c8b213474baf617830cc7baf77ecae86859b87a5",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/errors.js",
+      "tested_sha256": "5c8c8697675b634e9b5f525e4ab49b69b315a413904673adbb853a2ce6a84dc0",
+      "current_sha256": "5c8c8697675b634e9b5f525e4ab49b69b315a413904673adbb853a2ce6a84dc0",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/types.d.ts",
+      "tested_sha256": "917d120581a2156c9f224f04926a88041c1005ac3699056c7b50b038f88e7478",
+      "current_sha256": "917d120581a2156c9f224f04926a88041c1005ac3699056c7b50b038f88e7478",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/utils.js",
+      "tested_sha256": "799e9d1524b3c507bf3c381733340aa47377832604cdc56e4247156e5969fc37",
+      "current_sha256": "799e9d1524b3c507bf3c381733340aa47377832604cdc56e4247156e5969fc37",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/validate.js",
+      "tested_sha256": "fc3222683fcf98a17b4138b53ef12b6926d97ab1530127ca2cbf7f0732186a30",
+      "current_sha256": "fc3222683fcf98a17b4138b53ef12b6926d97ab1530127ca2cbf7f0732186a30",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/shared/warnings.js",
+      "tested_sha256": "af3fb78d28b5aa427d738ccc513559de7699d2be11e3ffb2ed98e250173ce940",
+      "current_sha256": "af3fb78d28b5aa427d738ccc513559de7699d2be11e3ffb2ed98e250173ce940",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/internal/types.d.ts",
+      "tested_sha256": "610a19a4a5665c9dcaba52765f29818e2f0dd55d67665092d0b5fecdd07d31b8",
+      "current_sha256": "610a19a4a5665c9dcaba52765f29818e2f0dd55d67665092d0b5fecdd07d31b8",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/legacy/legacy-client.js",
+      "tested_sha256": "f3d904904e71b695ae99c13b9978114ef4f59abfbf77dae9d4d2d9b480f37be1",
+      "current_sha256": "f3d904904e71b695ae99c13b9978114ef4f59abfbf77dae9d4d2d9b480f37be1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/legacy/legacy-server.js",
+      "tested_sha256": "adde39468606886ab8b48cd1c55921b534e7a0894d784c4153f0a4cf4a202d43",
+      "current_sha256": "adde39468606886ab8b48cd1c55921b534e7a0894d784c4153f0a4cf4a202d43",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/motion/index.js",
+      "tested_sha256": "1bfdae760837be37b35fea0c5cad2a7279e103d74a0f300cecadd96d0c1bb327",
+      "current_sha256": "1bfdae760837be37b35fea0c5cad2a7279e103d74a0f300cecadd96d0c1bb327",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/motion/private.d.ts",
+      "tested_sha256": "62d0f51ff4120faea3befccb3f64e6290b8ba7b403a5a3bcd3b550e83fff657f",
+      "current_sha256": "62d0f51ff4120faea3befccb3f64e6290b8ba7b403a5a3bcd3b550e83fff657f",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/motion/public.d.ts",
+      "tested_sha256": "0336dbae9b1adf2fcabbee215fbc3432bf9d0716edb297b7128d71f6ec4b7f48",
+      "current_sha256": "0336dbae9b1adf2fcabbee215fbc3432bf9d0716edb297b7128d71f6ec4b7f48",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/motion/spring.js",
+      "tested_sha256": "6634cf848d94fdc1995c0a91d1ded2f91ac4625325a237b8dbb62d7c23ebd08b",
+      "current_sha256": "6634cf848d94fdc1995c0a91d1ded2f91ac4625325a237b8dbb62d7c23ebd08b",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/motion/tweened.js",
+      "tested_sha256": "56d083e2a773f5c47e7557ad6512675f61d08d5b1d58131f0c63a5d740da227e",
+      "current_sha256": "56d083e2a773f5c47e7557ad6512675f61d08d5b1d58131f0c63a5d740da227e",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/motion/utils.js",
+      "tested_sha256": "b368664805e83f1aa3c662e68c1287ffa5dc8ef637bb287d57a6f165daa88aea",
+      "current_sha256": "b368664805e83f1aa3c662e68c1287ffa5dc8ef637bb287d57a6f165daa88aea",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/create-subscriber.js",
+      "tested_sha256": "1d8f7e6ce12ec4c1fdc53f4c001c0b2864dac1a8340749519cf8dd1f82c79d0d",
+      "current_sha256": "1d8f7e6ce12ec4c1fdc53f4c001c0b2864dac1a8340749519cf8dd1f82c79d0d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/date.js",
+      "tested_sha256": "eb2aa36417fc587d69ee7c4e3bccc2704bfd8514cbe173e313a0a0de5cbd71e5",
+      "current_sha256": "eb2aa36417fc587d69ee7c4e3bccc2704bfd8514cbe173e313a0a0de5cbd71e5",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/date.test.ts",
+      "tested_sha256": "e88817863d2e6ccee3a78da49dff2e55b1ab6385afac7d6424513f0570940e26",
+      "current_sha256": "e88817863d2e6ccee3a78da49dff2e55b1ab6385afac7d6424513f0570940e26",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/index-client.js",
+      "tested_sha256": "20c818190e450e38af248948625cc1cd3375a0354ce54c7f2baa664aace052b8",
+      "current_sha256": "20c818190e450e38af248948625cc1cd3375a0354ce54c7f2baa664aace052b8",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/index-server.js",
+      "tested_sha256": "916de40171a0946b1ef04eaf634a0c9d032f2f0d9e3a43ec39b4fd5a36c6cfe8",
+      "current_sha256": "916de40171a0946b1ef04eaf634a0c9d032f2f0d9e3a43ec39b4fd5a36c6cfe8",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/map.js",
+      "tested_sha256": "d1a07c6ea3d80938b81a8da3ce437bd42d35b41c88dd1d352b5a97787ef52c61",
+      "current_sha256": "d1a07c6ea3d80938b81a8da3ce437bd42d35b41c88dd1d352b5a97787ef52c61",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/map.test.ts",
+      "tested_sha256": "77dd4e1eb21aa79430100642a0ec9036e9042b9ee15dd0da5021551fdcaf92a6",
+      "current_sha256": "77dd4e1eb21aa79430100642a0ec9036e9042b9ee15dd0da5021551fdcaf92a6",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/media-query.js",
+      "tested_sha256": "51e50d551eeb359b991b165e56c2253e54936019cb417720e5c1c349618127bd",
+      "current_sha256": "51e50d551eeb359b991b165e56c2253e54936019cb417720e5c1c349618127bd",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/reactive-value.js",
+      "tested_sha256": "b74eb3147b4d36d1e758c49bc02125e34431b610740c54b9b0bab9319358befd",
+      "current_sha256": "b74eb3147b4d36d1e758c49bc02125e34431b610740c54b9b0bab9319358befd",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/set.js",
+      "tested_sha256": "eb17a3ea8d216fb06d349634cdc52c5673f2a97478f0642775fac8818bfd8c48",
+      "current_sha256": "eb17a3ea8d216fb06d349634cdc52c5673f2a97478f0642775fac8818bfd8c48",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/set.test.ts",
+      "tested_sha256": "b78d0090ad2da905fe34b317fef14c9693c26e106e33469885c6a6d0fbe2210a",
+      "current_sha256": "b78d0090ad2da905fe34b317fef14c9693c26e106e33469885c6a6d0fbe2210a",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/url-search-params.js",
+      "tested_sha256": "23b8f4d04de8c7e8c65817506527deac199f66415e829abf65286a3376efe345",
+      "current_sha256": "23b8f4d04de8c7e8c65817506527deac199f66415e829abf65286a3376efe345",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/url-search-params.test.ts",
+      "tested_sha256": "0388628f9b8260f8c3877d6bd4ff26f2851718f699662894a0912a995c6dd589",
+      "current_sha256": "0388628f9b8260f8c3877d6bd4ff26f2851718f699662894a0912a995c6dd589",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/url.js",
+      "tested_sha256": "c32dd5f221652322bd3e620f768e3e49ad216510ab44b18071456a82b03971fb",
+      "current_sha256": "c32dd5f221652322bd3e620f768e3e49ad216510ab44b18071456a82b03971fb",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/url.test.ts",
+      "tested_sha256": "045b4784f34d97753d463ce61b4c6972557f4a849daf6985c1d8c2eb655c90ea",
+      "current_sha256": "045b4784f34d97753d463ce61b4c6972557f4a849daf6985c1d8c2eb655c90ea",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/reactivity/window/index.js",
+      "tested_sha256": "dd35c83c6a3f668fd9aebfe503f7d6eac60380aef68578c066c05331691f72d8",
+      "current_sha256": "dd35c83c6a3f668fd9aebfe503f7d6eac60380aef68578c066c05331691f72d8",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/server/index.d.ts",
+      "tested_sha256": "64655312cacd1a2edaf1b59be06a65bb69e8ec653edfad4a2d419a3001e67fca",
+      "current_sha256": "64655312cacd1a2edaf1b59be06a65bb69e8ec653edfad4a2d419a3001e67fca",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/server/index.js",
+      "tested_sha256": "b23b4568b557068fb4c294e5c04df7045b869435e2b59258f8843f473eace198",
+      "current_sha256": "b23b4568b557068fb4c294e5c04df7045b869435e2b59258f8843f473eace198",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/server/public.d.ts",
+      "tested_sha256": "00668bb1dbf9f1358a61f43e94626d7ecb6af83c60e7bb6a95a212f45d283260",
+      "current_sha256": "00668bb1dbf9f1358a61f43e94626d7ecb6af83c60e7bb6a95a212f45d283260",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/store/index-client.js",
+      "tested_sha256": "d9d942a8882d9dd442b3d3fbc18e55e682461ec9784b8dff205c8135db2f8b4d",
+      "current_sha256": "d9d942a8882d9dd442b3d3fbc18e55e682461ec9784b8dff205c8135db2f8b4d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/store/index-server.js",
+      "tested_sha256": "c4ecdd491d8fd3802083a14c3f783e4276cef371c23fe1d0b32d63d9eea2aa18",
+      "current_sha256": "c4ecdd491d8fd3802083a14c3f783e4276cef371c23fe1d0b32d63d9eea2aa18",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/store/private.d.ts",
+      "tested_sha256": "d152284705a8cf5c24475c8f6ca2f7e9b23043120365a20611c214374e835812",
+      "current_sha256": "d152284705a8cf5c24475c8f6ca2f7e9b23043120365a20611c214374e835812",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/store/public.d.ts",
+      "tested_sha256": "1c52d751fb979a191d7a1a39ec19e1ad44d35a90ca2ca22996bf0aaf44ee0b44",
+      "current_sha256": "1c52d751fb979a191d7a1a39ec19e1ad44d35a90ca2ca22996bf0aaf44ee0b44",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/store/shared/index.js",
+      "tested_sha256": "193ee05b45c970870d171ffd4a978ffffe0571098d8d23278f28d68a53a9c9e1",
+      "current_sha256": "193ee05b45c970870d171ffd4a978ffffe0571098d8d23278f28d68a53a9c9e1",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/store/utils.js",
+      "tested_sha256": "3d68c108c09e63aa94c343142ae30ea1d7e05775fe45d1d4c9ae823ef5bc7e9a",
+      "current_sha256": "3d68c108c09e63aa94c343142ae30ea1d7e05775fe45d1d4c9ae823ef5bc7e9a",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/transition/index.js",
+      "tested_sha256": "f429cda19284cac4576ed7aea0d533aa99cf3b87d7c67f6d4993b2a7fd4a0b8a",
+      "current_sha256": "f429cda19284cac4576ed7aea0d533aa99cf3b87d7c67f6d4993b2a7fd4a0b8a",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/transition/public.d.ts",
+      "tested_sha256": "e3b3b89dcbbf8ba79a263d391987898b5329f19dfbe1c0ba076a84775320d9a0",
+      "current_sha256": "e3b3b89dcbbf8ba79a263d391987898b5329f19dfbe1c0ba076a84775320d9a0",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/utils.js",
+      "tested_sha256": "1dfabb5beaa255fb949653afa14016085d0e99d04a194655fd0e192dbb967d6d",
+      "current_sha256": "1dfabb5beaa255fb949653afa14016085d0e99d04a194655fd0e192dbb967d6d",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/utils.test.ts",
+      "tested_sha256": "c42368342b177f05c4357e8d9fd03847f37818ce59c7ab82c668e1d98be90a45",
+      "current_sha256": "c42368342b177f05c4357e8d9fd03847f37818ce59c7ab82c668e1d98be90a45",
+      "equal": true
+    },
+    {
+      "path": "third-party/svelte/src/version.js",
+      "tested_sha256": "a911ffcffc800c74b3aea515a7e21714084aa8639e008836671552193ba12338",
+      "current_sha256": "a911ffcffc800c74b3aea515a7e21714084aa8639e008836671552193ba12338",
+      "equal": true
+    },
+    {
+      "path": "site/icon.svg",
+      "tested_sha256": "9472811227a51ae8a65f277f3e0c5f24a78a85a7d76edd708e4e1340aab28c35",
+      "current_sha256": "9472811227a51ae8a65f277f3e0c5f24a78a85a7d76edd708e4e1340aab28c35",
+      "equal": true
+    },
+    {
+      "path": "site/index-site.html",
+      "tested_sha256": "1f986085c2171c623d7d4af0b9c9ed1e20ffc7da9d10abc78ba9ebda6a6ee5d5",
+      "current_sha256": "1f986085c2171c623d7d4af0b9c9ed1e20ffc7da9d10abc78ba9ebda6a6ee5d5",
+      "equal": true
+    },
+    {
+      "path": "site/manifest.webmanifest",
+      "tested_sha256": "82e80a63f00eb2ffa34a05f41140904d534091d53389d166d011937d3f8d8f3e",
+      "current_sha256": "82e80a63f00eb2ffa34a05f41140904d534091d53389d166d011937d3f8d8f3e",
+      "equal": true
+    },
+    {
+      "path": "site/sw.js",
+      "tested_sha256": "313546ef06fd39cf1e64b37d179660bdcfbdbb06920d5328b56daafb5d92a6af",
+      "current_sha256": "313546ef06fd39cf1e64b37d179660bdcfbdbb06920d5328b56daafb5d92a6af",
+      "equal": true
+    }
+  ],
+  "note": "Snapshot byte equality only; concurrent source activity is not frozen by this check."
+}

@@ -1,0 +1,29 @@
+{
+  "agent": "A-F032",
+  "status": "DONE",
+  "folder": "straw-app/crates/axum-loop",
+  "source_changes": ["straw-app/crates/axum-loop/README.md"],
+  "unchanged": ["straw-app/crates/axum-loop/Cargo.toml"],
+  "deferred_owners": {
+    "A-F033": "src/ ephemeral-port isolation + listener/shutdown acceptance",
+    "A-F046": "Tauri Exit LoopService stop/join verification document"
+  },
+  "verify": [
+    {
+      "cmd": "cargo test -p axum-loop --offline --locked -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit": 0,
+      "tests_passed": 5,
+      "log": "review/agent-output/A-F032/logs/axum-loop-tests-utf8.log"
+    },
+    {
+      "cmd": "cargo tree -p axum-loop --offline --locked --edges normal,build,dev",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit": 0,
+      "tempfile_dev_only": true,
+      "tauri_dependency": false,
+      "log": "review/agent-output/A-F032/logs/axum-loop-tree.log"
+    }
+  ],
+  "blockers": []
+}

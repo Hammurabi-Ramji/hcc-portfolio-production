@@ -1,0 +1,13 @@
+﻿{
+    "wave":  2,
+    "compiler_revision":  "5ed8ea3a3401b9fbbe780d3b18d6f90073291d6b",
+    "compiler_version":  "0.12.6",
+    "oxc":  "0.149.0",
+    "sha2":  "0.10.9",
+    "base64":  "0.22.1",
+    "svelte_runtime_declared":  "5.57.1",
+    "clsx_declared":  "2.1.1",
+    "lock_and_hook_aligned":  true,
+    "manifest_sha256":  "c8497760a43d41a50847000ddf0e28f42220dede0fd3791c9c45003a3dd99925",
+    "production_manifest_sha256":  "c8497760a43d41a50847000ddf0e28f42220dede0fd3791c9c45003a3dd99925"
+}

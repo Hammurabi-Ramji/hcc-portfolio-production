@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "C:\\IEDB\\STRAW Stack\\apps\\web\\node_modules\\@types"
+    ]
+  },
+  "files": [
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\forgot-password\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\login\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\logout\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\me\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\refresh-token\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\register\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\reset-password\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth\\verify-email\\route.ts"
+  ]
+}

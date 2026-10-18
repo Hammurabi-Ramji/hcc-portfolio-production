@@ -1,0 +1,98 @@
+﻿[
+    {
+        "name":  "128x128.png",
+        "bytes":  3512,
+        "sha256":  "19B4FEC485DB7DF51A691FCCE72A3DD6F983E754FC4262DA7154E4A4C688F69E",
+        "mtime":  "2026-10-09T15:17:43.2269393Z"
+    },
+    {
+        "name":  "128x128@2x.png",
+        "bytes":  7012,
+        "sha256":  "6C7660390D65217FE8DE0892862254F47AEE77E0AF7096C75B8BFE168C5403F7",
+        "mtime":  "2026-10-09T15:17:43.2269393Z"
+    },
+    {
+        "name":  "32x32.png",
+        "bytes":  974,
+        "sha256":  "1C6782DC65C8111C12CBC1882A0FEA5E71AB8E51B18DA2CE9580F5C88860ED02",
+        "mtime":  "2026-10-09T15:17:43.2269393Z"
+    },
+    {
+        "name":  "icon.icns",
+        "bytes":  98451,
+        "sha256":  "3DC10493B7DE48A61DE58F768F8A5708D3A44A068C148CEDF0502B9B9B71BA5D",
+        "mtime":  "2026-10-09T15:17:43.2427132Z"
+    },
+    {
+        "name":  "icon.ico",
+        "bytes":  86642,
+        "sha256":  "392206B573A809997F3FF16FE68F456A52E931C372107EADE9572B329BBE3321",
+        "mtime":  "2026-10-09T15:17:43.2427132Z"
+    },
+    {
+        "name":  "icon.png",
+        "bytes":  14183,
+        "sha256":  "273CD669E07C455AD1C7C095890A37984652157CEE73128A867300067DFB80E7",
+        "mtime":  "2026-10-09T15:17:43.2427132Z"
+    },
+    {
+        "name":  "Square107x107Logo.png",
+        "bytes":  2863,
+        "sha256":  "54F7A0F58C96A4B023C1EDC4B53FC443E27DACE50E345F6936FA29BC20F785CA",
+        "mtime":  "2026-10-09T15:17:43.2341282Z"
+    },
+    {
+        "name":  "Square142x142Logo.png",
+        "bytes":  3858,
+        "sha256":  "FEC1E2080CA73CD4C4A123B23B1CD364059A8A8EFEBA3076E21DFEFED390693B",
+        "mtime":  "2026-10-09T15:17:43.2341282Z"
+    },
+    {
+        "name":  "Square150x150Logo.png",
+        "bytes":  3966,
+        "sha256":  "65FB570CB0E61FFCE02AD67784CB200A0BF058400300980A46FA0D0C8F43A77A",
+        "mtime":  "2026-10-09T15:17:43.2351372Z"
+    },
+    {
+        "name":  "Square284x284Logo.png",
+        "bytes":  7737,
+        "sha256":  "EA0B7C5D4B1D1AB9C91D2F7C9B069C8DFBF4557B0649A5777D47332CDE610262",
+        "mtime":  "2026-10-09T15:17:43.2351372Z"
+    },
+    {
+        "name":  "Square30x30Logo.png",
+        "bytes":  903,
+        "sha256":  "CC72279C41B4ED343E8DB7E7541CEEF7B6B23EDAA83D4E7338421DFCB8D63C33",
+        "mtime":  "2026-10-09T15:17:43.2351372Z"
+    },
+    {
+        "name":  "Square310x310Logo.png",
+        "bytes":  8591,
+        "sha256":  "9733A89C539115DE3C49BD06720BFC99639D9A918F5DF48A810E267CF3554119",
+        "mtime":  "2026-10-09T15:17:43.2351372Z"
+    },
+    {
+        "name":  "Square44x44Logo.png",
+        "bytes":  1299,
+        "sha256":  "10BE9840E58FB018EB9029601D42008E16C0C9CFA66B8F9467FEE94F600160D4",
+        "mtime":  "2026-10-09T15:17:43.2381393Z"
+    },
+    {
+        "name":  "Square71x71Logo.png",
+        "bytes":  2011,
+        "sha256":  "2937FC83324CD9A1FDDCFEFD5927C791AF31996A6840BFB3E2F1D578AD4129DE",
+        "mtime":  "2026-10-09T15:17:43.2427132Z"
+    },
+    {
+        "name":  "Square89x89Logo.png",
+        "bytes":  2468,
+        "sha256":  "12AED0E7EE06CB631427DC9DA72C0C7ECF03857FBC4884D0C31F78314FEB6C7F",
+        "mtime":  "2026-10-09T15:17:43.2427132Z"
+    },
+    {
+        "name":  "StoreLogo.png",
+        "bytes":  1523,
+        "sha256":  "91A54024DD47230991546088F2E75D3E3199B3CCC9FE40F3F6B7D3BF1CBF7776",
+        "mtime":  "2026-10-09T15:17:43.2427132Z"
+    }
+]

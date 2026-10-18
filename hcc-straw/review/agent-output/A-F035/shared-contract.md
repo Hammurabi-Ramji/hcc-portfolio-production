@@ -1,0 +1,14 @@
+# A-F035 shared schema and skip contract
+
+Published during implementation, 2026-10-09; F036 owns child implementations after F035 DONE.
+
+- NodeSchema structure and its existing `inputs`/`outputs` string vectors remain unchanged so every child `schema()` constructor and UI consumer remains compatible.
+- `NodeSchema::input_specs()` returns `Vec<InputSpec { name:String, required:bool, types:Vec<ValueType> }>`; `ValueType` is Text, Number, Bool, TextList, Table. TextList requires all members Text (including vacuous empty lists).
+- Mandatory connections: write_file.content Text; transform.text Text; filter.input Text or TextList; csv_parse.csv Text; join_text.list TextList; conditional.condition Text/Number/Bool; llm_prompt.prompt Text. Optional: http_request.body Text, template.vars Text. Source nodes have no inputs.
+- `NodeSchema::output_types(port,config)` yields transform Number for word_count/line_count, TextList for split_lines, Text otherwise; filter outputs TextList; csv_parse Table; http_request.status Number and response Text. Other outputs Text. Conditional outputs preserve its upstream condition type, inferred by DAG in topological order.
+- `NodeSchema::validated_config(supplied)` validates select/bool/finite-number values and required presence; missing keys with schema defaults are populated (explicit empty values are preserved and validated). HTTP URL/header JSON, LLM URL/model/temperature and numeric filter thresholds are preflighted. DAG passes this effective config to executors. Child direct-executor defaults remain F036 responsibility.
+- `NodeValue::Skipped` uses existing tagged serde form: `{"type":"Skipped"}`. It is control state, not data. DAG records each skipped node with every declared output Skipped, without calling its executor, whenever any connected input is Skipped. One-input join_text propagates skip; no multi-branch merge node exists or is claimed.
+- F035 explicitly interprets Null only when produced by a conditional as Skipped for compatibility with current child implementations. Ordinary Null fails typed input checks. F036 must change inactive conditional output to Skipped; compatibility can remain for old graphs/results.
+- InputSpec metadata is available through Rust methods; the current NodeSchema JSON/UI shape is intentionally unchanged.
+
+Recovery contract for F046: one DbState open owns an exclusive OS File lock on a UUID session file beside its database; clones retain that same session. Running row and desk_run_owners row are inserted atomically. Opening another DbState probes owner session locks and only marks abandoned owned runs Failed/interrupted with finish timestamps. No re-execution occurs; live session locks prevent false recovery. Keep the shared DbState alive throughout spawned work. Ownerless pre-upgrade Running rows remain untouched because their liveness cannot be established; the report supplies an offline migration disposition.

@@ -1,0 +1,125 @@
+{
+  "agent": "A-F006",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api",
+  "wave": 1,
+  "files_touched": [
+    "apps/web/app/api/route.ts",
+    "apps/web/lib/backend-proxy.ts",
+    "apps/web/app/api/auth/forgot-password/route.ts",
+    "apps/web/app/api/auth/login/route.ts",
+    "apps/web/app/api/auth/logout/route.ts",
+    "apps/web/app/api/auth/me/route.ts",
+    "apps/web/app/api/auth/refresh-token/route.ts",
+    "apps/web/app/api/auth/register/route.ts",
+    "apps/web/app/api/auth/reset-password/route.ts",
+    "apps/web/app/api/auth/verify-email/route.ts"
+  ],
+  "gates_passed": [
+    "Strict current-source TypeScript compile of bare route, common proxy, eight auth routes and canonical types",
+    "1205 current HTTP/proxy assertions: parent404, method/preflight/origin/credentials/headers, child cookie lifecycle and 401/403/501, safe errors and security/cookie preservation",
+    "Current backend executable built locked/offline without backend source changes",
+    "10 byte-exact snapshot/diff reconstructions and preservation of all eight auth GET/POST implementations"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\files.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\tsconfig.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\http-regression.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\verify.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\save-evidence.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\source-manifest.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\typescript-final.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\rust-build-final.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-attempt1.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-final.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\typescript-current.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-current.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\evidence-final.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\lib\\backend-proxy.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\lib\\backend-proxy.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--lib--backend-proxy.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\forgot-password\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\forgot-password\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--forgot-password--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\login\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\login\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--login--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\logout\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\logout\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--logout--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\me\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\me\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--me--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\refresh-token\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\refresh-token\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--refresh-token--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\register\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\register\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--register--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\reset-password\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\reset-password\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--reset-password--route.ts.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\verify-email\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\verify-email\\route.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--verify-email--route.ts.patch"
+  ],
+  "commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\tsconfig.json\"",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\typescript-final.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\typescript-current.log"
+    },
+    {
+      "command": "C:/Users/hammu/.cargo/bin/cargo.exe build --offline --locked --manifest-path apps/api/Cargo.toml",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\rust-build-final.log",
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F006/http-regression.cjs",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-attempt1.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-current.log",
+      "diagnostic": "Sandboxed loopback readiness fetches failed despite the Rust listening message. The exact same harness passed under approved own-loopback execution; all test servers/data were stopped/removed in both runs."
+    },
+    {
+      "command": "node review/agent-output/A-F006/http-regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-final.log",
+      "acceptance": false,
+      "execution_access": "Approved own loopback HTTP test only",
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-current.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\tsconfig.json\"",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\typescript-current.log",
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F006/http-regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\http-current.log",
+      "acceptance": true,
+      "execution_access": "Approved own loopback HTTP test only"
+    },
+    {
+      "command": "python review/agent-output/A-F006/save-evidence.py",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\logs\\evidence-final.log",
+      "acceptance": true
+    }
+  ],
+  "blocker": null,
+  "primary": "Named bare App Router methods preserve canonical404; one exact-local-Origin credentialed CORS/preflight policy covers parent and eight auth routes; scoped gates pass.",
+  "secondary": "Reusable preflightResponse is ready for serialized F009/F008; backend auth, fixed-loopback restrictions, status/body/cookies/cache and existing auth methods preserved.",
+  "tertiary": "10 byte-exact snapshots/validated unified patches and exact current logs retain superseded sandbox diagnostic history; full Next/browser/release gates retain downstream owners."
+}

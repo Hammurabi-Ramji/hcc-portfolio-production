@@ -1,0 +1,92 @@
+[
+  {
+    "file": "apps/web/app/api/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--route.ts.patch",
+    "before_sha256": "71b0ae8ef4b98aea276a6f04f8714734e89806c84e5971eade7a5e61f0012c10",
+    "after_sha256": "97111873549e16efadbf3e40b037a965417a966ffa6f479ea07469e8f908d085",
+    "validated": true
+  },
+  {
+    "file": "apps/web/lib/backend-proxy.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\lib\\backend-proxy.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\lib\\backend-proxy.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--lib--backend-proxy.ts.patch",
+    "before_sha256": "b935ef4dba31060cb493c27b585f8d14a868ac8d702ca725c11c3eb613f2ee5c",
+    "after_sha256": "ad51f07bb9d0610a2293f1e053d506b9173651820092478c43795c2f9b2a74da",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/forgot-password/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\forgot-password\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\forgot-password\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--forgot-password--route.ts.patch",
+    "before_sha256": "1a468f1ec126c30d36a1c800727a34849ec94f8b4c52fd4fb3298001b30f661f",
+    "after_sha256": "5ada2bfcf2009c6b238f84ff5192b909d354afb783d41b6286a32ed812d9e04a",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/login/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\login\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\login\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--login--route.ts.patch",
+    "before_sha256": "0426cfd0d9b5284a66353d76290a2f07483a2474aef010af0d1497800132a042",
+    "after_sha256": "6b080baeec2d644d3862c40985f021701d2ef209e04f0f26f13aea51345ded7c",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/logout/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\logout\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\logout\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--logout--route.ts.patch",
+    "before_sha256": "b859df399316c7edfd74a7745b414ab329595b0cb9090e5c395290a3f15fbbe7",
+    "after_sha256": "9d4d84280691fa01f960d238068e6d454ad2d36126f25ab88352b223dbed878b",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/me/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\me\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\me\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--me--route.ts.patch",
+    "before_sha256": "37bed5184f1d3c98e6847cd164884085e974fe4a9e3ff4fd712a8d89f1b66c69",
+    "after_sha256": "0c30db372cc13a7f2b707d7182fd76c0799d749f74cf170405b7feb3e16679ea",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/refresh-token/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\refresh-token\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\refresh-token\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--refresh-token--route.ts.patch",
+    "before_sha256": "4803e1a61a814257488a590f5033732d02670dd30fc7a2ab4cb55e5f57aa7bb3",
+    "after_sha256": "150f5ae9a54d2b15533f44c177dba813755c6b5bade625cb32a484dc41947c97",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/register/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\register\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\register\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--register--route.ts.patch",
+    "before_sha256": "ee1d50db755a16f5b7adc5d74f52b8076cf1dbe4c5e9a7d88e29add2d26888fe",
+    "after_sha256": "6efe5609e76b1238cdea4bdb29aae9ce31e1d69c0c486b84e9ff51b77558cbff",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/reset-password/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\reset-password\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\reset-password\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--reset-password--route.ts.patch",
+    "before_sha256": "483c52ec03fad539fa0d11889ee1aaf8d6536ba66ceb7036697bacb5cf926eee",
+    "after_sha256": "0f4756c01a902ce8d1c94a34dcd0b9b2cec0cadc71bd79a75b697c6affefe5d7",
+    "validated": true
+  },
+  {
+    "file": "apps/web/app/api/auth/verify-email/route.ts",
+    "before": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\before\\apps\\web\\app\\api\\auth\\verify-email\\route.ts",
+    "after": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\after\\apps\\web\\app\\api\\auth\\verify-email\\route.ts",
+    "patch": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F006\\patches\\apps--web--app--api--auth--verify-email--route.ts.patch",
+    "before_sha256": "9bde41abd5fd171c212f75b6b2c7dd32555722f8d31cf00ee92fe7e050a4390c",
+    "after_sha256": "8605c1fc8d88280acef0330cd1a0054c28bde704e2225993bf2f49b4d9479a88",
+    "validated": true
+  }
+]

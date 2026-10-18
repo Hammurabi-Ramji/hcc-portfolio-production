@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "file": "apps/web/app/features/page.tsx",
+      "before_sha256": "9fc0d2aaa523fd9e6e50ac5f27307af1312214b46d1e97160dd8717e54aefaa1",
+      "after_sha256": "458f5ab7f81c34dae3dbda1aa92deff9199bc8c408ce7a0e8c629ae9d04793ae",
+      "before_bytes": 833,
+      "after_bytes": 1084,
+      "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\patches\\page.tsx.patch"
+    },
+    {
+      "file": "apps/web/app/features/CapabilityShowcase.tsx",
+      "before_sha256": null,
+      "after_sha256": "7f5aed1bb89996a97b62ae40cefb003a6169be8a882781068f47272806dffc3d",
+      "before_bytes": 0,
+      "after_bytes": 5909,
+      "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F012\\patches\\CapabilityShowcase.tsx.patch",
+      "created": true
+    }
+  ]
+}

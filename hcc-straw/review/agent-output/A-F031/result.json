@@ -1,0 +1,78 @@
+{
+  "agent": "A-F031",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates",
+  "wave": 1,
+  "files_touched": [],
+  "gates_passed": [
+    "All 13 crates/* directories are workspace members; no disk/toml orphans",
+    "All src-tauri ../crates/* path deps resolve on disk",
+    "All sibling path deps under crates/* resolve on disk",
+    "default-members remain crates/engine, crates/axum-loop, crates/wasm-frontend",
+    "cargo metadata --no-deps --offline --locked exit 0",
+    "cargo tree default-members --offline --locked --depth 1 exit 0",
+    "Child F032–F038 findings reconciled; desktop integration not accepted"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\inventory.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\child-status.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\membership-shell-path-audit.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-metadata-workspace.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-tree-default-members.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-check-default-members-lockwait.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-check-default-members-private-target.log"
+  ],
+  "commands": [
+    {
+      "command": "cargo metadata --no-deps --offline --locked --format-version 1",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-metadata-workspace.log",
+      "acceptance": true
+    },
+    {
+      "command": "membership/shell/sibling path audit (PowerShell)",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\membership-shell-path-audit.log",
+      "acceptance": true
+    },
+    {
+      "command": "cargo tree -p straw-engine -p axum-loop -p wasm-frontend --offline --locked --depth 1",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-tree-default-members.log",
+      "acceptance": true
+    },
+    {
+      "command": "cargo check -p straw-engine -p axum-loop -p wasm-frontend --offline --locked",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": null,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-check-default-members-lockwait.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-check-default-members-private-target.log",
+      "diagnostic": "Blocked waiting for shared build-directory lock from concurrent agents."
+    },
+    {
+      "command": "cargo check -p straw-engine -p axum-loop -p wasm-frontend --offline --locked (CARGO_TARGET_DIR=A-F031/target)",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 101,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\logs\\cargo-check-default-members-private-target.log",
+      "acceptance": false,
+      "diagnostic": "rustc STATUS_STACK_BUFFER_OVERRUN compiling syn under concurrent cargo load; not a membership/path defect. Membership gates are metadata, path audit, and tree."
+    }
+  ],
+  "environment": {
+    "path_prefix": "C:\\Users\\hammu\\.cargo\\bin",
+    "network": "No fetching; Cargo --offline --locked",
+    "node_desktop_path": false,
+    "private_target_dir": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F031\\target"
+  },
+  "blocker": null,
+  "desktop_integration_accepted": false,
+  "primary": "Crates container membership and shell/sibling path deps preserved without relocation; offline metadata and default-member tree resolve; no crates-level manifest patch required.",
+  "secondary": "Child findings reconciled: F034–F036 DONE; F032/F033/F037/F038 remain OPEN. Desktop integration withheld until those owners and W4 settle.",
+  "tertiary": "W4/desktop/runtime acceptance and whole-tree source-scan release hold remain outside this DONE.",
+  "settlement_record": "A-F031 | W1 | DONE | straw-app/crates | source changes: none | membership/shell paths PASS; child findings reconciled; desktop integration NOT accepted | evidence: review/agent-output/A-F031/result.json | F032/F033/F037/F038 open | release gate blocked"
+}

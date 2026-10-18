@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO enrollment (id, learner_id, course_id, enrolled_at) VALUES (?1, ?2, ?3, ?4)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "35a8be23ccc6c9087981c0d3e38898d2ee0b7e6f548d098262d0d8eb23fda6b4"
+}

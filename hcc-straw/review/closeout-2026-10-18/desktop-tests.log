@@ -1,0 +1,604 @@
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_storage-13y9p5kn4yjp2\s-hnbs0entvi-0ig8mo6-working`
+
+warning: `straw-storage` (lib) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_engine-3dk0jn1e8p3mc\s-hnbs131g77-1x5zmet-working`
+
+warning: `straw-engine` (lib) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_fabricator-1ci8i4ls605dr\s-hnbs1sdohy-09x1txv-working`
+
+warning: `straw-fabricator` (lib) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_accordion-2432hr0ug51mi\s-hnbs134t2q-0nv8h3f-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_inference-132lu606woy56\s-hnbs1sdl8v-06o7c3c-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\axum_loop-2fk02dj488qok\s-hnbs1sfou8-1rg4736-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\build_script_build-2sckwmu25vpxk\s-hnbs0fk83q-0rc1v1e-working`
+
+warning: `straw-accordion` (lib) generated 1 warning
+warning: `straw-inference` (lib) generated 1 warning
+warning: `axum-loop` (lib) generated 1 warning
+warning: `straw-stack` (build script) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\service-0vyl1zhak19u8\s-hnbs1xvt86-0rys7mb-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\wasm_frontend-1yueo64te2w8t\s-hnbs0fqbtr-1qv808x-working`
+
+warning: `straw-accordion` (test "service") generated 1 warning
+warning: `wasm-frontend` (lib test) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_fabricator-3dfojswi7ix7w\s-hnbs2ijz60-0cw2k0a-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\straw_accordion-1ojgfxnql76z7\s-hnbs19xsn6-0e3zbe3-working`
+
+warning: `straw-fabricator` (bin "straw-fabricator") generated 1 warning
+warning: `straw-accordion` (lib test) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\frontend_build-3gs4n91z3q6zl\s-hnbs0fqj6p-0qh87n2-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\C:\IEDB\external\BSM-C\hcc-straw\hcc-straw\straw-app\target\debug\incremental\frontend_build-2yxk7gbgvifo6\s-hnbs0fq9dt-0aoapal-working`
+
+warning: `frontend-build` (bin "frontend-build") generated 1 warning
+warning: `frontend-build` (bin "frontend-build" test) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 07s
+     Running unittests src\lib.rs (target\debug\deps\axum_loop-ec181d6b5806a2fd.exe)
+
+running 5 tests
+test tests::production_listener_is_exact_ipv4_loopback ... ok
+test tests::browser_access_allows_only_the_fixed_local_origin_and_no_write_route ... ok
+test tests::real_server_lists_real_sqlite_rows ... ok
+test tests::serve_rejects_non_loopback_listeners_and_releases_the_port ... ok
+test tests::graceful_shutdown_releases_listener_for_rebind ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running unittests src\lib.rs (target\debug\deps\crucible-d1eeaf1591546cf2.exe)
+
+running 11 tests
+test certification_tests::certification_requires_every_distinct_gate ... ok
+test gates::philosophy::tests::forbids_telemetry_and_subscription_sdks ... ok
+test gates::tests::parsing::counts_across_test_binaries ... ok
+test gates::tests::parsing::reads_line_coverage_from_total_row ... ok
+test report::tests::reports_distinguish_failed_warned_skipped_and_certified_runs ... ok
+test report::tests::terminal_bounds_violation_lists_while_json_retains_every_location ... ok
+test gates::lint::tests::parses_short_format_diagnostics ... ok
+test gates::reproducibility::tests::cargo_requirement_classes ... ok
+test gates::reproducibility::tests::npm_requirement_classes ... ok
+test evidence::tests::windows_manifest_changes_are_reviewed_but_generated_xml_is_excluded ... ok
+test evidence::tests::edits_additions_and_deletions_change_evidence_but_build_output_does_not ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src\main.rs (target\debug\deps\crucible-9582642d8ad8a745.exe)
+
+running 3 tests
+test cli_tests::process_exit_codes_preserve_failure_and_incomplete_policy ... ok
+test cli_tests::validation_does_not_require_signing_or_a_passphrase ... ok
+test cli_tests::signing_requires_a_database_and_its_checkpoint_together ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\cli_contract.rs (target\debug\deps\cli_contract-f5a3c4d3065182be.exe)
+
+running 3 tests
+test actual_cli_preserves_exit_codes_and_both_output_formats ... ok
+test actual_cli_verifies_the_shared_chain_and_refuses_quarantined_history ... ok
+test actual_cli_certifies_a_real_project_and_carves_with_the_existing_vault_signer ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.80s
+
+     Running tests\gates.rs (target\debug\deps\gates-21412f8145dbc595.exe)
+
+running 13 tests
+test gate_names_parse_by_name_and_number ... ok
+test structure_rejects_traversal_and_absolute_paths ... ok
+test structure_fails_without_manifest_or_files ... ok
+test structure_fails_on_missing_file_and_wrong_kind ... ok
+test structure_passes_when_all_declared_files_exist ... ok
+test completeness_ignores_word_fragments_and_placeholder_api_use ... ok
+test completeness_flags_markers_with_locations ... ok
+test completeness_skips_build_and_dependency_dirs ... ok
+test security_enforces_https_but_allows_loopback ... ok
+test security_allows_env_references_and_short_values ... ok
+test security_flags_secrets_without_echoing_values ... ok
+test completeness_flags_placeholder_prose_and_honors_suppressions ... ok
+test security_env_handling ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests\gates_all.rs (target\debug\deps\gates_all-706d920b16abadde.exe)
+
+running 20 tests
+test non_directory_root_is_an_error ... ok
+test compilation_fails_without_anything_to_build ... ok
+test compilation_follows_the_build_exit_code ... ok
+test reproducibility_fails_when_there_is_nothing_to_verify ... ok
+test lint_fails_only_on_errors_and_reports_warnings ... ok
+test reproducibility_requires_a_lockfile_and_rejects_floating_ranges ... ok
+test lint_runs_biome_when_configured_and_fails_with_no_linter ... ok
+test philosophy_warns_when_the_declaration_is_missing ... ok
+test compilation_runs_the_node_build_the_lockfile_names ... ok
+test reproducibility_checks_package_json ... ok
+test gitignored_build_output_directories_are_not_scanned ... ok
+test philosophy_catches_transitive_telemetry_in_lockfiles ... ok
+test portability_flags_os_paths_and_honors_suppression ... ok
+test failure_dominates_composite_status ... ok
+test successful_rust_build_cannot_hide_a_failed_trunk_frontend ... ok
+test a_clean_tree_with_green_tools_is_sovereign_certified ... ok
+test tests_gate_fails_on_any_failing_test ... ok
+test reproducibility_warns_on_lockfile_only_pins_and_passes_on_exact ... ok
+test tests_gate_never_invents_coverage ... ok
+test tests_gate_measures_coverage_when_the_tool_exists ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests\mint.rs (target\debug\deps\mint-162b815760809b7f.exe)
+
+running 8 tests
+test the_passphrase_comes_from_a_file_without_its_newline ... ok
+test crucible_never_creates_the_identity_that_signs_for_the_app ... ok
+test partial_duplicate_warned_and_failed_reports_cannot_be_carved ... ok
+test a_wrong_passphrase_writes_nothing ... ok
+test the_verdict_body_carries_the_gate_report_and_manifest_digest ... ok
+test desktop_mint_reuses_the_open_signer_and_retains_the_unlocked_session ... ok
+test a_tampered_ledger_is_refused_before_anything_is_written ... ok
+test verdicts_join_the_apps_one_chain_under_the_apps_one_signer ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 14.71s
+
+     Running tests\structure_contract.rs (target\debug\deps\structure_contract-af2ac397e5db1a1b.exe)
+
+running 2 tests
+test published_gate_identifiers_and_skipped_results_are_consistent ... ok
+test duplicate_normalized_paths_and_directories_disguised_as_files_cannot_pass ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src\lib.rs (target\debug\deps\eduba_ledger-012b3c72e59eeadb.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\records.rs (target\debug\deps\records-f1edfbf6ea761b18.exe)
+
+running 2 tests
+test foreign_key_miss_returns_error ... ok
+test round_trips_each_record_in_list_order ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.64s
+
+     Running unittests src\main.rs (target\debug\deps\eduba_server-d44bb490b10c7609.exe)
+
+running 5 tests
+test tests::rejects_unspecified_and_ipv6_bind_targets ... ok
+test tests::parameter_routes_work_with_the_shared_axum_version ... ok
+test tests::http_roundtrip_preserves_ids_relationships_and_sql_shaped_content ... ok
+test tests::cors_allows_only_the_two_reviewed_local_origins ... ok
+test tests::storage_failure_is_reported_on_every_http_surface ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running unittests src\main.rs (target\debug\deps\frontend_build-7c001dd05218bb44.exe)
+
+running 14 tests
+test site_cache::tests::cache_version_tracks_content_and_ignores_creation_order_and_prior_manifest ... ok
+test site_cache::tests::finalized_shell_has_an_exact_importmap_hash_and_survives_verification ... ok
+test site_cache::tests::unsafe_asset_urls_and_unfinalized_policies_are_rejected ... ok
+test tests::lock_and_validation_failure_leave_prior_output_and_clean_staging ... ok
+test tests::refused_rollback_retains_previous_tree_with_recovery_path ... ok
+test tests::fresh_output_publishes_once_and_refuses_non_directory_destinations ... ok
+test tests::successful_swap_removes_stale_files_and_releases_lock ... ok
+test tests::rename_failures_preserve_previous_complete_output ... ok
+test origami_package_tests::origami_package_has_no_browser_persistence ... ok
+test tests::browser_graph_checks_cycles_bare_imports_compute_mapping_and_escape_attempts ... ok
+test site_cache::tests::module_order_initialization_and_manifest_routing_are_checked ... ok
+test tests::compiling_packages_and_copying_runtime_files_respects_file_types ... ok
+test site_cache::tests::missing_assets_and_modified_contents_fail_closed ... ok
+test origami_package_tests::origami_package_compiles_with_a_closed_import_graph ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.01s
+
+     Running tests\cli_contract.rs (target\debug\deps\cli_contract-d60bf586002a3c27.exe)
+
+running 1 test
+test actual_native_frontend_build_compiles_the_workspace_and_checks_hook_arguments ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.43s
+
+     Running tests\rune_conformance.rs (target\debug\deps\rune_conformance-b82af67a1602e6e8.exe)
+
+running 5 tests
+test call_scanner_ignores_member_access_on_other_identifiers ... ok
+test export_parser_handles_renames_and_declarations ... ok
+test each_invalid_rune_use_fails_with_the_upstream_error_code ... ok
+test each_rune_compiles_to_its_specified_runtime_call ... ok
+test every_emitted_runtime_call_is_exported_by_the_vendored_runtime ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.41s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_accordion-6ab4a5c0bf9f9d0f.exe)
+
+running 1 test
+test autarch::authorization_tests::reserved_role_policies_cannot_silently_claim_enforcement ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\service.rs (target\debug\deps\service-d05940caeb42f560.exe)
+
+running 12 tests
+test bad_definitions_fail_at_load ... ok
+test failed_validation_writes_no_audit_row ... ok
+test validation_is_authoritative ... ok
+test the_repository_manifest_loads ... ok
+test auto_field_is_server_owned ... ok
+test schema_commands_match_the_origami_contract ... ok
+test crud_round_trip ... ok
+test unique_fields_are_enforced_among_live_records ... ok
+test audited_entities_log_every_write_and_the_log_is_append_only ... ok
+test soft_delete_keeps_the_row_and_hard_delete_removes_it ... ok
+test data_survives_reopening_the_database ... ok
+test relations_are_checked_and_protected ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.27s
+
+     Running tests\value_contract.rs (target\debug\deps\value_contract-729e2f32959f4045.exe)
+
+running 4 tests
+test whole_records_preserve_server_managed_fields_defaults_and_explicit_null ... ok
+test scalar_values_enforce_type_size_bounds_and_optional_normalization ... ok
+test schema_rejects_inapplicable_constraints_nested_relations_and_invalid_display_fields ... ok
+test structured_values_normalize_metadata_and_reject_invalid_shapes ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_engine-ffcc90771b1e29d5.exe)
+
+running 44 tests
+test tests::crashed_process_owner_probe ... ok
+test nodes::regression::conditional_rejects_unsupported_values_and_preserves_supported_values ... ok
+test dag::graph_contract_tests::graph_identity_ports_and_ownership_are_checked_before_execution ... ok
+test tests::actual_wire_contract_roundtrips_camel_case ... ok
+test tests::current_output_graph_fixture_validates_and_historical_demo_does_not ... ok
+test nodes::regression::csv_preserves_headers_first_headerless_row_and_quoted_fields ... ok
+test tests::chat_preserves_attachment_bytes_and_validates_role_and_size ... ok
+test tests::exact_http_body_limit_is_accepted ... ok
+test nodes::regression::writer_rejects_every_invalid_content_before_touch_and_preserves_valid_modes ... ok
+test tests::graph_rejects_empty_duplicates_unknown_ports_and_cycles ... ok
+test tests::identities_cannot_be_empty_or_nil_and_are_distinct ... ok
+test tests::images_are_explicitly_rejected_without_silent_degradation ... ok
+test tests::generation_batch_validation_happens_before_writes ... ok
+test tests::generation_refinement_fixture_preserves_identity_current_content_and_disk ... ok
+test tests::concurrent_destination_is_not_clobbered_and_prior_commit_rolls_back ... ok
+test tests::local_client_rejects_every_nonliteral_endpoint_before_connect ... ok
+test tests::model_fixture_status_json_and_request_response_body_bounds ... ok
+test tests::named_same_language_blocks_preserve_both_files_and_close_correctly ... ok
+test tests::late_commit_failure_rolls_back_new_files_and_restores_overwrites ... ok
+test tests::path_guard_rejects_traversal_roots_and_platform_aliases ... ok
+test tests::prefix_conflicts_both_orders_and_directory_destinations_do_not_write ... ok
+test tests::proxy_environment_is_disabled_in_isolated_process ... ok
+test tests::proxy_environment_probe ... ok
+test tests::redirect_fixture_is_not_followed ... ok
+test nodes::regression::template_json_vars_are_connectable_nonrecursive_and_fail_when_malformed ... ok
+test tests::failed_upstream_never_writes_downstream_file ... ok
+test nodes::regression::successful_csv_graph_records_headerless_rows_and_transform_outputs_match_metadata ... ok
+test tests::inactive_branch_propagates_recorded_skips_through_filter_and_join ... ok
+test nodes::regression::latin1_read_transform_filter_join_writer_graph_and_mixed_list_errors ... ok
+test nodes::regression::http_and_llm_nodes_execute_real_loopback_graphs_with_schema_default_parity ... ok
+test nodes::regression::both_branches_record_explicit_skips_through_filter_join_and_writer ... ok
+test tests::cycle_failure_is_persisted_with_real_distinct_times ... ok
+test tests::bundled_model_workflow_uses_injected_worker_and_persists_terminal_result ... ok
+test tests::ownerless_legacy_running_is_not_falsely_recovered ... ok
+test tests::rollback_preserves_external_changes_and_retains_original_backup_with_exact_path ... ok
+test tests::graph_preflight_prevents_http_side_effect_and_optional_http_body_executes ... ok
+test tests::killed_process_recovery_preserves_live_run_then_marks_interrupted_without_replay ... ok
+test nodes::regression::invalid_writer_and_csv_graphs_persist_failures_before_side_effects ... ok
+test tests::restart_recovers_abandoned_run_without_replay_and_preserves_live_owner ... ok
+test tests::conditional_skip_records_inactive_writer_without_executing_it ... ok
+test tests::successful_pipeline_executes_total_order_and_records_completion ... ok
+test tests::two_flows_survive_restart_without_overwrite ... ok
+test tests::shutdown_only_ownerless_legacy_migration_is_opt_in_and_idempotent ... ok
+test tests::disconnected_config_and_type_errors_prevent_all_side_effects ... ok
+
+test result: ok. 44 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.22s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_fabricator-fbe6fee5c7373ece.exe)
+
+running 1 test
+test tests::reviewed_source_bundle_is_complete_and_preserves_previous_output ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+
+     Running unittests src\main.rs (target\debug\deps\straw_fabricator-ac4f80238de917de.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\cli_contract.rs (target\debug\deps\cli_contract-1a42c84cf91ec7d1.exe)
+
+running 1 test
+test cli_lists_generates_and_refuses_invalid_or_overwriting_requests ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.94s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_inference-506b2542fb733950.exe)
+
+running 10 tests
+test protocol::tests::io_failure_and_unknown_request_fields_are_not_swallowed ... ok
+test protocol::tests::frames_preserve_boundaries_accept_final_eof_and_stop_at_the_hard_limit ... ok
+test discovery::tests::local_discovery_excludes_remote_models_and_load_rechecks_opaque_aliases ... ok
+test discovery::tests::provider_scan_and_selection_validate_local_lists_and_http_errors ... ok
+test discovery::tests::ollama_warmup_checks_metadata_before_loading_and_preserves_server_failures ... ok
+test supervisor::tests::stop_interrupts_a_blocked_request_and_poisoned_locks_fail_closed ... ok
+test supervisor::tests::child_lifecycle_transitions_and_generation_use_the_real_framing_path ... ok
+test supervisor::tests::deadlines_busy_requests_and_shutdown_remain_bounded ... ok
+test supervisor::tests::invalid_frames_and_unexpected_exits_discard_the_worker_and_allow_clean_recovery ... ok
+test supervisor::tests::model_refusal_wrong_response_and_oversized_requests_do_not_succeed ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.77s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_ledger-a970ff2c7692a310.exe)
+
+running 7 tests
+test tests::empty_ledger_seals_and_verifies_at_genesis ... ok
+test tests::seal_then_verify_passes ... ok
+test tests::head_mismatch_detected ... ok
+test tests::ordering_is_deterministic ... ok
+test tests::sha256_known_vector ... ok
+test tests::tampered_payload_fails_verification ... ok
+test tests::broken_link_fails_verification ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests\chain.rs (target\debug\deps\chain-ff0c9dbd40eca1c8.exe)
+
+running 6 tests
+test sequence_changes_deletions_duplicates_and_reordering_are_rejected ... ok
+test byte_length_framing_and_fixed_width_fields_distinguish_outcomes ... ok
+test trusted_head_detects_suffix_truncation_and_whole_chain_replacement ... ok
+test imported_records_must_pass_verification_before_receipts_are_available ... ok
+test payload_timestamp_record_hash_and_genesis_link_tampering_are_rejected ... ok
+test record_encoding_matches_independent_digest_for_unicode_payload ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\sha256_vectors.rs (target\debug\deps\sha256_vectors-44b3b358b797a8a0.exe)
+
+running 2 tests
+test independent_digest_vectors_cover_padding_and_streaming_boundaries ... ok
+test million_a_known_vector ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_security-9eb15a2403f92a4e.exe)
+
+running 22 tests
+test digital_hands::tests::non_local_paths_are_refused_before_access ... ok
+test tests::canonical_digest_ignores_object_insertion_order ... ok
+test digital_hands::tests::unsupported_schema_types_size_and_owner_are_rejected_before_decryption ... ok
+test digital_hands::tests::missing_import_is_detected_even_after_its_delete_trigger_is_removed ... ok
+test digital_hands::tests::immutable_import_and_signed_ciphertext_detect_offline_tampering ... ok
+test tests::dropping_a_trigger_cannot_hide_an_altered_precedent ... ok
+test tests::a_signed_entry_without_its_precedent_is_quarantined ... ok
+test tests::checkpoint_rollback_quarantines_and_triggers_reject_mutation ... ok
+test recovery::tests::mismatched_checkpoint_incomplete_copy_unknown_version_and_oversized_files_fail ... ok
+test digital_hands::tests::captured_snapshot_stays_exact_and_changed_source_gets_a_new_digest ... ok
+test recovery::tests::signed_manifest_rejects_plain_document_tampering_even_with_recomputed_checksum ... ok
+test tests::a_rejected_precedent_leaves_no_ledger_entry ... ok
+test digital_hands::tests::wrong_key_and_corrupt_later_record_leave_no_partial_import ... ok
+test digital_hands::tests::invalid_utf8_and_encoded_size_fail_without_leaking_secret_bytes ... ok
+test recovery::tests::even_resigned_copies_cannot_substitute_security_views_or_generated_columns ... ok
+test tests::expired_signed_grant_and_concurrent_replay_are_rejected ... ok
+test tests::precedents_survive_restart_and_reading_needs_no_unlock ... ok
+test recovery::tests::existing_destination_lock_and_quarantine_are_refused ... ok
+test digital_hands::tests::independent_legacy_fixture_round_trip_owner_isolation_restart_and_plaintext_exclusion ... ok
+test recovery::tests::live_wal_copy_restores_vault_documents_and_spent_grants_without_changing_source ... ok
+test tests::precedents_share_the_one_chain_and_the_one_signer ... ok
+test tests::encrypted_vault_restart_grants_replay_scope_and_plaintext_exclusion ... ok
+
+test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.39s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_stack_lib-a0570857b6f4ad87.exe)
+
+running 37 tests
+test carve_tests::the_dialog_text_names_the_permanence_and_the_scope ... ok
+test command_tests::approval_summaries_and_permission_sets_cover_the_actual_operation_scope ... ok
+test command_tests::documents_and_vectors_preserve_revisions_and_reject_stale_or_invalid_writes ... ok
+test command_tests::model_and_utility_ipc_report_unavailable_resources_and_reject_remote_providers ... ok
+test command_tests::blocking_panics_and_listener_failures_surface_without_leaving_background_work ... ok
+test carve_tests::titles_and_rationales_are_trimmed_after_the_grant_is_checked ... ok
+test command_tests::records_ipc_uses_the_embedded_schema_and_enforces_validation_and_relations ... ok
+test archive::tests::export_is_scoped_to_content_and_path_and_never_overwrites ... ok
+test archive::tests::changed_source_fails_before_consuming_consent_or_writing ... ok
+test credential_tests::credential_consent_is_closed_and_does_not_encode_installation_keys ... ok
+test archive::tests::locked_vault_and_wrong_content_grant_cannot_import ... ok
+test carve_tests::a_grant_covers_exactly_what_the_operator_approved ... ok
+test error::tests::stable_error_codes_preserve_the_message_and_prioritize_specific_failures ... ok
+test command_tests::loopback_ipc_reports_bind_conflict_shares_shell_rows_and_shuts_down ... ok
+test carve_tests::an_approved_carve_lands_in_the_ledger_and_the_grant_is_single_use ... ok
+test command_tests::quarantined_ledger_blocks_all_command_mutations_but_keeps_record_reads_available ... ok
+test lifecycle_tests::production_bind_conflict_surfaces_and_loop_service_stop_is_idempotent ... ok
+test carve_tests::invalid_requests_are_refused_without_spending_the_grant ... ok
+test lifecycle_tests::blocking_work_owns_database_session_after_managed_state_is_dropped ... ok
+test lifecycle_tests::real_listener_shares_rows_reports_bind_conflict_and_joins_before_rebind ... ok
+test validation::tests::project_validation_permission_is_bound_to_the_selected_folder ... ok
+test lifecycle_tests::identity_persistence_restart_failures_and_history_use_same_database ... ok
+test lifecycle_tests::delayed_owned_save_cannot_recreate_deleted_minted_or_persisted_flow ... ok
+test command_tests::precedent_ipc_returns_verified_receipts_and_keeps_the_same_signer ... ok
+test command_tests::approved_assistance_ipc_uses_only_the_selected_local_service_and_preserves_export_review ... ok
+test command_tests::assistance_ipc_requires_exact_approval_and_reports_a_cold_engine_without_exporting ... ok
+test command_tests::archive_ipc_previews_imports_exports_and_refuses_invalid_or_replayed_requests ... ok
+test command_tests::export_ipc_binds_the_approved_bytes_and_path_and_fabrication_preserves_output ... ok
+test carve_tests::a_locked_vault_cannot_carve ... ok
+test command_tests::workflow_ipc_persists_failed_runs_and_archives_them_without_reexecution ... ok
+test recovery::tests::backup_approval_binds_destination_and_is_single_use ... ok
+test recovery::tests::recovery_ipc_returns_verified_identity_and_stays_available_while_locked ... ok
+test credential_tests::credential_ipc_changed_source_preserves_grant_wrong_key_spends_it_without_importing ... ok
+test credential_tests::credential_ipc_import_reveal_scope_replay_lock_and_secret_free_receipts ... ok
+test command_tests::workflow_ipc_rejects_foreign_ids_and_retains_history_across_restart ... ok
+test validation::tests::real_project_checks_and_certificate_share_the_existing_signer ... ok
+test command_tests::vault_ipc_requires_unlock_and_exact_single_use_approval_for_unsealing ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.02s
+
+     Running unittests src\bin\bindings.rs (target\debug\deps\bindings-7746a8ee2571b33b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\debug\deps\straw_stack-821a9f349b2b8fa1.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\bindings_contract.rs (target\debug\deps\bindings_contract-0ded3dc88d8d6b61.exe)
+
+running 1 test
+test native_binding_generator_exports_the_real_desktop_commands ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.72s
+
+     Running tests\startup_contract.rs (target\debug\deps\startup_contract-78817a27df1afe3d.exe)
+
+running 1 test
+test desktop_bootstraps_isolated_stores_and_exits_its_own_runtime_cleanly ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.92s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_stele-4daaa99fa89d5ed4.exe)
+
+running 12 tests
+test stele::tests::the_record_is_deterministic_and_uses_nanosecond_timestamps ... ok
+test stele::tests::fields_cannot_bleed_into_each_other ... ok
+test stele::tests::ledger_reconstruction_rejects_malformed_identity_and_timestamps_at_the_record_sequence ... ok
+test stele::tests::every_field_changes_the_digest ... ok
+test scribe::tests::convenience_constructors_stamp_identity_and_time ... ok
+test scribe::tests::rolling_the_database_back_is_caught_by_the_anchor ... ok
+test scribe::tests::a_precedent_is_carved_exactly_once ... ok
+test scribe::tests::carved_precedents_endure_a_restart ... ok
+test scribe::tests::the_laws_hold_in_sql_and_replay_catches_a_dropped_trigger ... ok
+test scribe::tests::replay_reproduces_what_was_carved ... ok
+test scribe::tests::carve_and_replay_in_one_chain_with_grants ... ok
+test scribe::tests::carving_needs_the_unlocked_vault_but_reading_does_not ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.38s
+
+     Running unittests src\lib.rs (target\debug\deps\straw_storage-56c75b8b76edc7b7.exe)
+
+running 12 tests
+test eduba::tests::invalid_relationships_and_duplicate_ids_are_rejected ... ok
+test eduba::tests::network_and_device_paths_are_rejected_before_opening ... ok
+test eduba::tests::export_never_overwrites_even_if_target_already_exists ... ok
+test eduba::tests::canonical_order_deduplicates_same_records_from_different_sources ... ok
+test tests::vector_search_filters_model_dimension_and_invalid_values ... ok
+test tests::revisions_survive_restart_and_reject_stale_write_inside_runtime ... ok
+test eduba::tests::archives_are_immutable_and_corruption_is_detected_before_export ... ok
+test eduba::tests::version_unknown_fields_row_and_json_limits_are_enforced ... ok
+test eduba::tests::unsupported_columns_are_rejected_without_discarding_fields ... ok
+test eduba::tests::missing_tables_and_views_are_rejected ... ok
+test eduba::tests::live_wal_source_roundtrips_exactly_and_survives_restart ... ok
+test eduba::tests::sqlite_invalid_types_and_oversize_are_rejected_before_loading ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+
+     Running tests\eduba_sql_safety.rs (target\debug\deps\eduba_sql_safety-c75522298a16934c.exe)
+
+running 2 tests
+test fixed_archive_queries_still_reject_bad_types_and_extra_columns ... ok
+test fixed_archive_queries_preserve_all_five_tables_and_sql_shaped_text ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running unittests src\lib.rs (target\debug\deps\wasm_frontend-c681d15bfa0eb4d5.exe)
+
+running 4 tests
+test tests::browser_compute_boundaries ... ok
+test tests::greet_export ... ok
+test tests::native_wasm_fibonacci_agreement ... ok
+test tests::rejects_out_of_range ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests axum_loop
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests crucible
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests eduba_ledger
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_accordion
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_fabricator
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_inference
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_ledger
+
+running 5 tests
+test crates\straw-ledger\src\lib.rs - (line 32) - compile fail ... ok
+test crates\straw-ledger\src\lib.rs - (line 26) - compile fail ... ok
+test crates\straw-ledger\src\lib.rs - (line 10) - compile fail ... ok
+test crates\straw-ledger\src\lib.rs - (line 21) - compile fail ... ok
+test crates\straw-ledger\src\lib.rs - (line 16) - compile fail ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.09s
+
+   Doc-tests straw_security
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_stack_lib
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_stele
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests straw_storage
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests wasm_frontend
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

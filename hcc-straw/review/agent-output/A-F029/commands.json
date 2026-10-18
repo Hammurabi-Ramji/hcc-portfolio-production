@@ -1,0 +1,43 @@
+[
+  {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File review/agent-output/A-F029/snapshot-packaging.ps1",
+    "cwd": "C:\\IEDB\\STRAW Stack",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F029\\packaging-snapshot.json",
+    "expected": "zero"
+  },
+  {
+    "command": "cargo run --offline --locked -p frontend-build -- verify-site",
+    "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+    "exit_code": 1,
+    "env": { "NO_COLOR": "true", "CARGO_NET_OFFLINE": "true" },
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F029\\logs\\frontend-build-verify.log",
+    "expected": "zero",
+    "note": "Blocked by concurrent cargo file lock; not acceptance failure of frontend-build itself"
+  },
+  {
+    "command": "trunk build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+    "exit_code": 1,
+    "env": { "NO_COLOR": "true", "CARGO_NET_OFFLINE": "true" },
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F029\\logs\\trunk-clean-release-retry.log",
+    "expected": "zero",
+    "note": "Blocked by concurrent cargo/trunk lock; retained A-F050/A-S14 exit-0 clean builds instead"
+  },
+  {
+    "command": "trunk build --offline --release",
+    "cwd": "retained A-F050 isolated workspace",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\trunk-clean-release.log",
+    "expected": "zero",
+    "retained": true
+  },
+  {
+    "command": "trunk build --offline --release",
+    "cwd": "retained A-S14 isolated workspace",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\trunk-clean-release.log",
+    "expected": "zero",
+    "retained": true
+  }
+]

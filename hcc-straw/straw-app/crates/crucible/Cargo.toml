@@ -1,0 +1,46 @@
+[package]
+name = "crucible"
+version = "0.1.0"
+edition = "2021"
+description = "Crucible: the Nine Gates validation CLI (Posse Comitatus L4)"
+
+[features]
+default = ["stele"]
+# Carve a signed precedent into the vault ledger for each SOVEREIGN CERTIFIED run.
+# Disable for a lean standalone build with no vault, sqlx or signing dependencies.
+stele = [
+    "dep:straw-stele",
+    "dep:straw-security",
+    "dep:straw-storage",
+    "dep:uuid",
+    "dep:chrono",
+    "dep:zeroize",
+]
+
+[lib]
+name = "crucible"
+path = "src/lib.rs"
+
+[[bin]]
+name = "crucible"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "=4.6.7", features = ["derive"] }
+walkdir = "=2.5.0"
+regex = "=1.13.1"
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml = "=0.9.34"
+toml = "=1.1.8"
+thiserror.workspace = true
+straw-stele = { path = "../stele", optional = true }
+straw-security = { path = "../security", optional = true }
+straw-storage = { path = "../storage", optional = true }
+sha2.workspace = true
+uuid = { workspace = true, optional = true }
+chrono = { workspace = true, optional = true }
+zeroize = { version = "=1.9.1", optional = true }
+
+[dev-dependencies]
+tempfile = "=3.27.0"

@@ -1,0 +1,12 @@
+{
+  "template_id": "marketing_saas",
+  "industry": "Marketing",
+  "bundled_components": [
+    "dashboard_analytics",
+    "ai_engine_ollama",
+    "notification_system",
+    "reporting_engine",
+    "api_layer_axum"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

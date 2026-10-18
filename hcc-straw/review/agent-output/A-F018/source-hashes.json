@@ -1,0 +1,34 @@
+[
+  {
+    "file": "apps/web/components/ProtectedRoute.tsx",
+    "before_sha256": "b824c1dc0c20744ef141a470d736bb59009eca9bef911d204db892cd040bba14",
+    "after_sha256": "7ec5c3ab62ced6bbe1ed255b5a4582804b6696519e40e54404ed130c21869b00",
+    "baseline_fingerprint_match": false,
+    "baseline_fingerprint": "ec63f436b43e94aa8b59c3ca154c877e3beb28fc3203e7e5ca1ee464e94af3db",
+    "diff": "review/agent-output/A-F018/diffs/ProtectedRoute.tsx.patch"
+  },
+  {
+    "file": "apps/web/components/Navbar.tsx",
+    "before_sha256": "9dd5e3bc6bc63e4e89a65c570384abd741af4e953b286ecb56ded6d534b6b14e",
+    "after_sha256": "eef2aa9557b9340f3ca31607168822f0fbc218bc237d924a122e5cac96ef3cc9",
+    "baseline_fingerprint_match": true,
+    "baseline_fingerprint": "9dd5e3bc6bc63e4e89a65c570384abd741af4e953b286ecb56ded6d534b6b14e",
+    "diff": "review/agent-output/A-F018/diffs/Navbar.tsx.patch"
+  },
+  {
+    "file": "apps/web/components/Footer.tsx",
+    "before_sha256": "f5a4f775152682bb5464c6eb64164dec73d9d1c407b5c432b2de4589d5c9ee58",
+    "after_sha256": "03272c6020ea0a37560d60e8ce6c211ddacff49a612612b1b9c3aea9be6034b8",
+    "baseline_fingerprint_match": true,
+    "baseline_fingerprint": "f5a4f775152682bb5464c6eb64164dec73d9d1c407b5c432b2de4589d5c9ee58",
+    "diff": "review/agent-output/A-F018/diffs/Footer.tsx.patch"
+  },
+  {
+    "file": "apps/web/components/Features.tsx",
+    "before_sha256": "352d3ba9fa7ce66620fe56413f4c9d9f077fa45dcf010ebec33862ea21e695b2",
+    "after_sha256": "6d4cabcf04126837da709dca6e1b010451ea5a843845c11543e16c54f1147e39",
+    "baseline_fingerprint_match": true,
+    "baseline_fingerprint": "352d3ba9fa7ce66620fe56413f4c9d9f077fa45dcf010ebec33862ea21e695b2",
+    "diff": "review/agent-output/A-F018/diffs/Features.tsx.patch"
+  }
+]

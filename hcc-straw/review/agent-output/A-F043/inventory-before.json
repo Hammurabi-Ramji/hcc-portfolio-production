@@ -1,0 +1,39 @@
+﻿{
+    "children":  [
+                     "schemas"
+                 ],
+    "agent":  "A-F043",
+    "baselineCapturedAtUtc":  "2026-10-18T10:50:24.5876206Z",
+    "directFileCount":  0,
+    "folder":  "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen",
+    "schemaFiles":  [
+                        {
+                            "name":  "acl-manifests.json",
+                            "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen\\schemas\\acl-manifests.json",
+                            "length":  68996,
+                            "lastWriteTimeUtc":  "2026-10-10T15:29:49.2534422Z",
+                            "sha256":  "a3ad7c154de6efb52a058145b879b934c999f7ed85e2d42eb5f200b2eb3ee7e4"
+                        },
+                        {
+                            "name":  "capabilities.json",
+                            "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen\\schemas\\capabilities.json",
+                            "length":  146,
+                            "lastWriteTimeUtc":  "2026-10-09T06:32:01.9065006Z",
+                            "sha256":  "4fca70b5437f720b9a72c727c0663349aa9e8b31917dcc0a870012de02406b07"
+                        },
+                        {
+                            "name":  "desktop-schema.json",
+                            "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen\\schemas\\desktop-schema.json",
+                            "length":  121297,
+                            "lastWriteTimeUtc":  "2026-10-10T15:29:49.2649293Z",
+                            "sha256":  "4444ad5cda6787552fd55ea85b270b311998bf70e0bc31db0c32cfc4199b754e"
+                        },
+                        {
+                            "name":  "windows-schema.json",
+                            "path":  "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen\\schemas\\windows-schema.json",
+                            "length":  121297,
+                            "lastWriteTimeUtc":  "2026-10-10T15:29:49.2649293Z",
+                            "sha256":  "4444ad5cda6787552fd55ea85b270b311998bf70e0bc31db0c32cfc4199b754e"
+                        }
+                    ]
+}

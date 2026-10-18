@@ -1,0 +1,7 @@
+﻿{
+  "file": "straw-app/crates/wasm-frontend/src/lib.rs",
+  "bytes": 1658,
+  "sha256": "46EF3E7262CDA2009099DFA2C196C9E3C61B9B75A01A7799186940A162B63AB4",
+  "before_bytes": 771,
+  "note": "Production fibonacci/greet unchanged; tests expanded."
+}

@@ -1,0 +1,98 @@
+﻿{
+    "timestamp":  "2026-10-18T11:00:07.8615449Z",
+    "icoEntriesDecoded":  [
+                              {
+                                  "index":  0,
+                                  "width":  16,
+                                  "height":  16,
+                                  "bytes":  1128,
+                                  "offset":  70,
+                                  "raw":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-0-16x16.bin",
+                                  "png":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-0-16x16.png",
+                                  "decoded":  true,
+                                  "sha256":  "8A5074AA098338DA3589232798D416F8CD288A1EF239579A9AA381C7F2D30A4F"
+                              },
+                              {
+                                  "index":  1,
+                                  "width":  32,
+                                  "height":  32,
+                                  "bytes":  4264,
+                                  "offset":  1198,
+                                  "raw":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-1-32x32.bin",
+                                  "png":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-1-32x32.png",
+                                  "decoded":  true,
+                                  "sha256":  "2D0A1409C21D170FA102E6F33CF49BB0D9886099DF6067FEB45B2C36C722CAE8"
+                              },
+                              {
+                                  "index":  2,
+                                  "width":  128,
+                                  "height":  128,
+                                  "bytes":  67624,
+                                  "offset":  5462,
+                                  "raw":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-2-128x128.bin",
+                                  "png":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-2-128x128.png",
+                                  "decoded":  true,
+                                  "sha256":  "ADACC4EF443D3F71195469382AB306B9ACD2E5B920AA55CC4F27EA91107DC3F8"
+                              },
+                              {
+                                  "index":  3,
+                                  "width":  256,
+                                  "height":  256,
+                                  "bytes":  13556,
+                                  "offset":  73086,
+                                  "raw":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-3-256x256.bin",
+                                  "png":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-3-256x256.png",
+                                  "decoded":  true,
+                                  "sha256":  "B940F2834F50E8D53EC04DC5107B7256579B4078BE5AB5A67F329641BB5B020B"
+                              }
+                          ],
+    "compare_ico32_vs_installed":  {
+                                       "ah":  32,
+                                       "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\installed-exe-associated.png",
+                                       "identical":  true,
+                                       "bh":  32,
+                                       "bw":  32,
+                                       "aw":  32,
+                                       "sameDims":  true,
+                                       "pixelsDiffer":  0,
+                                       "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-1-32x32.png"
+                                   },
+    "compare_ico32_vs_source32png":  {
+                                         "ah":  32,
+                                         "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\source-32x32.png",
+                                         "identical":  false,
+                                         "bh":  32,
+                                         "bw":  32,
+                                         "aw":  32,
+                                         "sameDims":  true,
+                                         "pixelsDiffer":  482,
+                                         "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\ico-entry-1-32x32.png"
+                                     },
+    "compare_startmenu_vs_installed":  {
+                                           "ah":  32,
+                                           "b":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\installed-exe-associated.png",
+                                           "identical":  false,
+                                           "bh":  32,
+                                           "bw":  32,
+                                           "aw":  32,
+                                           "sameDims":  true,
+                                           "pixelsDiffer":  567,
+                                           "a":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\extracted\\startmenu-lnk-associated.png"
+                                       },
+    "launch":  {
+                   "attempted":  true,
+                   "exe":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\install\\STRAWDesk\\straw-stack.exe",
+                   "pid":  15084,
+                   "mainWindowTitle":  "STRAW Desk",
+                   "hasMainWindow":  true,
+                   "screenshots":  [
+                                       "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\screenshots\\desktop-with-app.png",
+                                       "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F045\\screenshots\\taskbar-strip.png"
+                                   ],
+                   "screen":  {
+                                  "h":  1080,
+                                  "w":  1920
+                              },
+                   "stopped":  true
+               }
+}

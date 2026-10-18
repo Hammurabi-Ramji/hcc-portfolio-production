@@ -1,0 +1,53 @@
+[
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F016/tsconfig.json",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\01-scoped-tsc.log",
+    "acceptance": true,
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "npm_config_offline": "true"
+    }
+  },
+  {
+    "command": "node review/agent-output/A-F016/run-regression.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\02-regression.log",
+    "acceptance": true,
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "npm_config_offline": "true"
+    },
+    "notes": "5 offline React/Chrome groups; AuthContext/userApi/useToast/Navbar/Footer stubbed; real settings page.tsx bundled."
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --noEmit --incremental false",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\03-web-type-check.log",
+    "acceptance": true,
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "npm_config_offline": "true"
+    }
+  },
+  {
+    "command": "npm run build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\04-web-build.log",
+    "acceptance": true,
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "npm_config_offline": "true"
+    },
+    "notes": "Production build lists /settings. Initial interrupted attempt retained as diagnostic if present is superseded by this pass."
+  },
+  {
+    "command": "node review/agent-output/A-F016/save-evidence.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F016\\logs\\05-evidence.log",
+    "acceptance": true,
+    "notes": "Byte-exact HEAD before snapshot, unified patch, patch apply reproduces current page.tsx."
+  }
+]

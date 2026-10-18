@@ -1,0 +1,112 @@
+{
+  "agent": "A-F036",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes",
+  "wave": 1,
+  "files_touched": [
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\conditional.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\csv_parse.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\filter.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\http_request.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\join_text.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\llm_prompt.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\mod.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\read_file.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\regression.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\template.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\text_input.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\transform.rs",
+    "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\write_file.rs"
+  ],
+  "gates_passed": [
+    "Writer missing/wrong typed input sentinel survival before filesystem operations",
+    "Both branch outcomes and persisted explicit skips through filter/join/writer",
+    "Fallible CSV delimiter validation, headered/quoted and one-based headerless row contracts; terminal errors",
+    "Connectable JSON template vars, nonrecursive replacement and malformed input failures",
+    "Strict UTF-8 and full ISO-8859-1 byte mapping",
+    "Schema/direct/Graph default parity including captured HTTP model/system payloads and newline join",
+    "Indexed mixed-list errors, invalid filter values rejected, all transform operations/output metadata",
+    "All 11 node kinds execute via public DbState/Graph regressions",
+    "40 current engine entries pass offline/locked, preserving 31 F035 entries",
+    "49 current workspace test entries and all doc tests pass offline/locked",
+    "Final owned-file rustfmt check"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\inventory.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\verification-index.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\shared-contract.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\conditional.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\csv_parse.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\filter.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\http_request.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\join_text.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\llm_prompt.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\mod.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\read_file.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\regression.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\template.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\text_input.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\transform.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\write_file.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-01.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-02.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-final.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\workspace.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\format-final.log"
+  ],
+  "commands": [
+    {
+      "command": "$env:PATH='C:\\Users\\hammu\\.cargo\\bin;'+$env:PATH; $env:TEMP='C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\tmp'; $env:TMP=$env:TEMP; & 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 101,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-01.log",
+      "acceptance": false,
+      "note": "Diagnostic: sandbox blocked loopback sockets with Windows 10013; superseded by engine-final.log.",
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-final.log",
+      "diagnostic": "Sandboxed loopback sockets denied Windows 10013; exact offline locked test passed with approved test-owned loopback execution. Historical failure retained."
+    },
+    {
+      "command": "$env:PATH='C:\\Users\\hammu\\.cargo\\bin;'+$env:PATH; $env:TEMP='C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\tmp'; $env:TMP=$env:TEMP; & 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-02.log",
+      "acceptance": false,
+      "note": "Intermediate 39-entry pass before final ninth regression; superseded by engine-final.log."
+    },
+    {
+      "command": "$env:PATH='C:\\Users\\hammu\\.cargo\\bin;'+$env:PATH; $env:TEMP='C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\tmp'; $env:TMP=$env:TEMP; & 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\engine-final.log",
+      "acceptance": true,
+      "note": "Final 40 engine entries pass. Loopback only, approved escalation; no external service/dependency fetch."
+    },
+    {
+      "command": "$env:PATH='C:\\Users\\hammu\\.cargo\\bin;'+$env:PATH; $env:TEMP='C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\tmp'; $env:TMP=$env:TEMP; & 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test --workspace --offline --locked",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\workspace.log",
+      "acceptance": true,
+      "note": "49 workspace test entries pass; all doc tests pass; no UI/runtime observation claimed."
+    },
+    {
+      "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\rustfmt.exe' --check --edition 2021 --config skip_children=true 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\conditional.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\csv_parse.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\filter.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\http_request.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\join_text.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\llm_prompt.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\mod.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\read_file.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\regression.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\template.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\text_input.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\transform.rs' 'C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\write_file.rs'",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\logs\\format-final.log",
+      "acceptance": true,
+      "note": "All 13 owned node Rust sources format cleanly."
+    }
+  ],
+  "blocker": null,
+  "primary": "Node defects repaired and regression-covered; 40 engine/49 workspace entries pass with F035 contract preserved.",
+  "secondary": "F051/W4 owns actual UI-to-engine observation for eleven node kinds; published CSV/template/default/skip contract. No multi-branch merge node exists.",
+  "tertiary": "S17/W4 destructive-input rollout and S16 documentation/release reconciliation remain; whole-tree source-scan release hold retained.",
+  "limitations": [
+    "Native UI/installer/live Ollama not observed; actual UI leg explicitly F051/W4",
+    "Existing one-input join records propagated skips; no multi-branch merge node claimed",
+    "Parent DAG retains legacy conditional Null compatibility",
+    "No global side-effect rollback or release certification claimed"
+  ]
+}

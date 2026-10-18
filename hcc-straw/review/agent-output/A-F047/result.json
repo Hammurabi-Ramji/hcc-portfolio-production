@@ -1,0 +1,52 @@
+{
+  "agent": "A-F047",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party",
+  "wave": 0,
+  "files_touched": [
+    "straw-app/third-party/NOTICE.md",
+    "straw-app/tools/frontend-build/src/main.rs"
+  ],
+  "gates_passed": [
+    "offline locked native compiler build",
+    "clean release Trunk pre-build hook",
+    "9 byte-exact license/NOTICE assertions across compiler-public, Trunk-public and Trunk-dist",
+    "upstream inventory hash preservation"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\byte-exact-evidence.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\source-inventory.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\before\\sha256.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\verification.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\initial-trunk-clean-build.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\retry-verification.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\patches\\straw-app--tools--frontend-build--src--main.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\patches\\straw-app--third-party--NOTICE.md.patch"
+  ],
+  "commands": [
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\compiler-clean-build.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\trunk-clean-build.log"
+    },
+    {
+      "command": "python 'C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\verify.py'",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\logs\\verification.log"
+    }
+  ],
+  "blocker": null,
+  "primary": "Preserve complete local Svelte/clsx license texts and NOTICE byte-for-byte through the native compiler and Trunk release distribution.",
+  "secondary": "A-F050 must preserve the three license copies while replacing output staging; A-F039 consumes the emitted vendor/licenses directory.",
+  "tertiary": "A-S16 must inspect the packaged frontend in W4; whole-tree source scanning remains release-blocking with upstream identifiers and notices intact.",
+  "deferred_acceptance": "W4 A-S16 packaged frontend/installer inspection; G3 whole-tree source scan release hold remains"
+}

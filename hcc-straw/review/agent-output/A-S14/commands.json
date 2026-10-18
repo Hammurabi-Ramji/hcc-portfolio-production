@@ -1,0 +1,27 @@
+[
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe test --offline --locked --package frontend-build",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\staging-unit-tests.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\compiler-clean.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\deleted-import.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\renamed-import.log"
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S14\\logs\\trunk-clean-release.log"
+  }
+]

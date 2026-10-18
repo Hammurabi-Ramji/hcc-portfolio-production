@@ -1,0 +1,7 @@
+﻿{
+    "fibonacci_0":  0,
+    "fibonacci_46":  1836311903,
+    "fibonacci_47_err":  "fibonacci input must be 0..46",
+    "source":  "cargo test -p wasm-frontend tests::bounded_compute + src/lib.rs contract",
+    "tauri_command":  "wasm_fibonacci delegates to wasm_frontend::fibonacci"
+}

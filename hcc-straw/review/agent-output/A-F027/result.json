@@ -1,0 +1,56 @@
+{
+  "agent": "A-F027",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\utils",
+  "wave": 0,
+  "files_touched": [
+    "apps/web/utils/helpers.ts",
+    "apps/web/utils/index.ts",
+    "apps/web/utils/pagination.ts",
+    "apps/web/utils/validation.ts"
+  ],
+  "gates_passed": [
+    "Strict targeted TypeScript compile of all five direct utility modules",
+    "8 offline node:test regressions: required fields, false/zero, custom messages, pagination defaults/boundaries/calculation, server/browser URL origins, clipboard failure/success, canonical barrel compatibility"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027.md",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\regression.cjs",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\verify.py",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\source-hashes.json",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\01.log",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\02.log",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\03.log",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\04.log",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\patches\\helpers.ts.patch",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\patches\\index.ts.patch",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\patches\\pagination.ts.patch",
+    "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\patches\\validation.ts.patch"
+  ],
+  "commands": [
+    {
+      "command": "node --version",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\01.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --version",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\02.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --target ES2017 --module commonjs --strict --skipLibCheck --types node --typeRoots apps/web/node_modules/@types --outDir review/agent-output/A-F027/compiled apps\\web\\utils\\config.ts apps\\web\\utils\\helpers.ts apps\\web\\utils\\index.ts apps\\web\\utils\\pagination.ts apps\\web\\utils\\validation.ts",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\03.log"
+    },
+    {
+      "command": "node --test review/agent-output/A-F027/regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\review\\agent-output\\A-F027\\logs\\04.log"
+    }
+  ],
+  "blocker": null,
+  "primary": "Fixed rule-driven required validation, explicit required messages and false/zero handling; configured pagination defaults and invalid-input rejection; boolean clipboard contract and server-safe URL construction; helpers/index canonical ownership.",
+  "secondary": "A-F021 and A-S03 can consume validated utilities. getPaginationParams/buildPaginationUrl now throw RangeError for invalid parameters; calculateTotalPages rejects invalid total/limit. Relative server URLs require an explicit origin. No current application consumers were found; future callers should handle these documented errors.",
+  "tertiary": "Byte-exact snapshots, per-file diffs, source hashes and current offline command logs make review/reproduction possible without claiming browser/HTTP integration. Full web build belongs to A-S03/A-F003; W4 integration observation remains with its owners."
+}

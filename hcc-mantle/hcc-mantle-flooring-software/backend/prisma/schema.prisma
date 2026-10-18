@@ -1,0 +1,624 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// CORE ENTITIES
+// ============================================================================
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  firstName String
+  lastName  String
+  phone     String?
+  avatar    String?
+  role      String   @default("customer") // admin, manager, employee, customer, vendor
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company   Company? @relation(fields: [companyId], references: [id])
+  companyId String?
+
+  quotes            Quote[]
+  projects          Project[]
+  tasks             Task[]
+  invoices          Invoice[]
+  timeEntries       TimeEntry[]
+  measurements      Measurement[]
+  notifications     Notification[]
+
+  @@index([email])
+  @@index([companyId])
+}
+
+model Company {
+  id            String   @id @default(uuid())
+  name          String
+  email         String   @unique
+  phone         String?
+  website       String?
+  address       String?
+  city          String?
+  state         String?
+  zipCode       String?
+  logo          String?
+  status        String   @default("active")
+  subscriptionLevel String @default("basic") // basic, pro, enterprise
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  users              User[]
+  customers          Customer[]
+  projects           Project[]
+  quotes             Quote[]
+  invoices           Invoice[]
+  inventory          InventoryItem[]
+  employees          Employee[]
+  vendors            Vendor[]
+  schedules          Schedule[]
+  timeEntries        TimeEntry[]
+  measurements       Measurement[]
+  aqiReadings        AQIReading[]
+  vendorOrders       VendorOrder[]
+  paymentMethods     PaymentMethod[]
+  communicationLogs  CommunicationLog[]
+  documentVersions   DocumentVersion[]
+  auditLogs          AuditLog[]
+
+  @@index([name])
+}
+
+// ============================================================================
+// CUSTOMER MANAGEMENT
+// ============================================================================
+
+model Customer {
+  id        String   @id @default(uuid())
+  name      String
+  email     String?
+  phone     String?
+  address   String?
+  city      String?
+  state     String?
+  zipCode   String?
+  notes     String?
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  projects          Project[]
+  quotes            Quote[]
+  invoices          Invoice[]
+  measurements      Measurement[]
+  communicationLogs CommunicationLog[]
+
+  @@index([companyId])
+  @@index([email])
+}
+
+// ============================================================================
+// PROJECT MANAGEMENT
+// ============================================================================
+
+model Project {
+  id              String   @id @default(uuid())
+  name            String
+  description     String?
+  address         String?
+  city            String?
+  state           String?
+  zipCode         String?
+  squareFootage   Float?
+  startDate       DateTime?
+  endDate         DateTime?
+  budget          Float?
+  flooringType    String?
+  status          String   @default("planning") // planning, active, completed, on-hold
+  priority        String   @default("medium")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+
+  user   User? @relation(fields: [userId], references: [id])
+  userId String?
+
+  quotes           Quote[]
+  tasks            Task[]
+  measurements     Measurement[]
+  invoices         Invoice[]
+  schedules        Schedule[]
+  documents        ProjectDocument[]
+  aqiReadings      AQIReading[]
+  communicationLogs CommunicationLog[]
+
+  @@index([companyId])
+  @@index([customerId])
+  @@index([status])
+}
+
+// ============================================================================
+// QUOTING & PRICING
+// ============================================================================
+
+model Quote {
+  id           String   @id @default(uuid())
+  quoteNumber  String   @unique
+  description  String?
+  materialCost Float    @default(0)
+  laborCost    Float    @default(0)
+  taxRate      Float    @default(0.08)
+  tax          Float    @default(0)
+  discount     Float    @default(0)
+  total        Float    @default(0)
+  status       String   @default("pending") // pending, accepted, rejected, expired
+  validUntil   DateTime?
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  user   User? @relation(fields: [userId], references: [id])
+  userId String?
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  items      QuoteItem[]
+  invoices   Invoice[]
+
+  @@index([projectId])
+  @@index([status])
+  @@index([companyId])
+}
+
+model QuoteItem {
+  id        String   @id @default(uuid())
+  description String
+  quantity  Int
+  unitPrice Float
+  lineTotal Float
+  createdAt DateTime @default(now())
+
+  quote   Quote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  quoteId String
+
+  @@index([quoteId])
+}
+
+// ============================================================================
+// INVOICING & PAYMENTS
+// ============================================================================
+
+model Invoice {
+  id            String   @id @default(uuid())
+  invoiceNumber String   @unique
+  amount        Float
+  tax           Float    @default(0)
+  total         Float
+  dueDate       DateTime
+  paidDate      DateTime?
+  status        String   @default("unpaid") // unpaid, paid, overdue, cancelled
+  notes         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+
+  quote   Quote? @relation(fields: [quoteId], references: [id])
+  quoteId String?
+
+  user   User? @relation(fields: [userId], references: [id])
+  userId String?
+
+  payments       Payment[]
+  paymentMethods PaymentMethod[]
+
+  @@index([projectId])
+  @@index([status])
+  @@index([companyId])
+}
+
+model Payment {
+  id             String   @id @default(uuid())
+  amount         Float
+  paymentMethod  String // credit_card, check, bank_transfer, cash
+  transactionId  String?
+  status         String   @default("completed") // completed, pending, failed, refunded
+  notes          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  invoice   Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  invoiceId String
+
+  @@index([invoiceId])
+  @@index([status])
+}
+
+model PaymentMethod {
+  id        String   @id @default(uuid())
+  type      String // credit_card, bank_account, check
+  details   String   // Encrypted payment details
+  isDefault Boolean  @default(false)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  invoice   Invoice? @relation(fields: [invoiceId], references: [id])
+  invoiceId String?
+
+  @@index([companyId])
+}
+
+// ============================================================================
+// INVENTORY MANAGEMENT
+// ============================================================================
+
+model InventoryItem {
+  id           String   @id @default(uuid())
+  name         String
+  sku          String
+  category     String
+  description  String?
+  quantity     Int      @default(0)
+  unitPrice    Float
+  reorderLevel Int      @default(10)
+  supplier     String?
+  status       String   @default("active")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  usages InventoryUsage[]
+
+  @@unique([sku, companyId])
+  @@index([companyId])
+  @@index([category])
+}
+
+model InventoryUsage {
+  id        String   @id @default(uuid())
+  quantity  Int
+  notes     String?
+  createdAt DateTime @default(now())
+
+  item   InventoryItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  itemId String
+
+  @@index([itemId])
+}
+
+// ============================================================================
+// TASK & PROJECT MANAGEMENT
+// ============================================================================
+
+model Task {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  status      String   @default("pending") // pending, in-progress, completed, on-hold
+  priority    String   @default("medium")
+  dueDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  user   User? @relation(fields: [userId], references: [id])
+  userId String?
+
+  timeEntries TimeEntry[]
+
+  @@index([projectId])
+  @@index([status])
+  @@index([userId])
+}
+
+// ============================================================================
+// EMPLOYEE & TIME TRACKING
+// ============================================================================
+
+model Employee {
+  id        String   @id @default(uuid())
+  firstName String
+  lastName  String
+  email     String   @unique
+  phone     String?
+  position  String?
+  salary    Float?
+  status    String   @default("active")
+  hireDate  DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  schedules  Schedule[]
+  timeEntries TimeEntry[]
+
+  @@index([companyId])
+}
+
+model TimeEntry {
+  id        String   @id @default(uuid())
+  date      DateTime
+  hours     Float
+  description String?
+  status    String   @default("pending") // pending, approved, rejected
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  employee   Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  employeeId String
+
+  task   Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId String
+
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([employeeId])
+  @@index([taskId])
+  @@index([status])
+  @@index([companyId])
+}
+
+model Schedule {
+  id        String   @id @default(uuid())
+  date      DateTime
+  startTime DateTime
+  endTime   DateTime
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  employee   Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  employeeId String
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([projectId])
+  @@index([employeeId])
+  @@index([date])
+}
+
+// ============================================================================
+// MEASUREMENTS & ASSESSMENTS
+// ============================================================================
+
+model Measurement {
+  id        String   @id @default(uuid())
+  type      String // flooring, substrate, moisture
+  value     Float
+  unit      String
+  notes     String?
+  imageUrl  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([projectId])
+  @@index([customerId])
+  @@index([type])
+}
+
+// ============================================================================
+// AIR QUALITY & ENVIRONMENTAL
+// ============================================================================
+
+model AQIReading {
+  id        String   @id @default(uuid())
+  temperature Float?
+  humidity  Float?
+  co2       Float?
+  voc       Float?
+  readings  String? // JSON object with additional data
+  notes     String?
+  createdAt DateTime @default(now())
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([projectId])
+  @@index([createdAt])
+}
+
+// ============================================================================
+// VENDOR MANAGEMENT
+// ============================================================================
+
+model Vendor {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  phone     String?
+  address   String?
+  city      String?
+  state     String?
+  zipCode   String?
+  contactPerson String?
+  rating    Float    @default(0)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  orders VendorOrder[]
+
+  @@index([companyId])
+}
+
+model VendorOrder {
+  id              String   @id @default(uuid())
+  orderNumber     String   @unique
+  orderDate       DateTime
+  expectedDelivery DateTime?
+  deliveredDate   DateTime?
+  amount          Float
+  status          String   @default("pending") // pending, confirmed, shipped, delivered, cancelled
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  vendor   Vendor @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  vendorId String
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([vendorId])
+  @@index([status])
+  @@index([companyId])
+}
+
+// ============================================================================
+// COMMUNICATION & DOCUMENTS
+// ============================================================================
+
+model CommunicationLog {
+  id        String   @id @default(uuid())
+  type      String   // email, call, meeting, sms
+  subject   String?
+  message   String?
+  status    String   @default("completed")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  projectId String?
+
+  customer   Customer? @relation(fields: [customerId], references: [id], onDelete: SetNull)
+  customerId String?
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([projectId])
+  @@index([customerId])
+  @@index([type])
+}
+
+model ProjectDocument {
+  id        String   @id @default(uuid())
+  name      String
+  type      String   // contract, spec, photo, invoice, other
+  url       String
+  fileSize  Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+
+  @@index([projectId])
+  @@index([type])
+}
+
+model DocumentVersion {
+  id          String   @id @default(uuid())
+  documentId  String
+  version     Int
+  content     String?
+  createdAt   DateTime @default(now())
+  createdBy   String?
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([documentId])
+  @@index([companyId])
+}
+
+// ============================================================================
+// NOTIFICATIONS & AUDIT
+// ============================================================================
+
+model Notification {
+  id        String   @id @default(uuid())
+  title     String
+  message   String
+  type      String   // info, warning, error, success
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  @@index([userId])
+  @@index([isRead])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  action    String
+  entity    String
+  entityId  String
+  changes   String?  // JSON of what changed
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  companyId String
+
+  @@index([entityId])
+  @@index([action])
+  @@index([companyId])
+}

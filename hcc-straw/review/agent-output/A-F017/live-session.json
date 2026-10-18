@@ -1,0 +1,27 @@
+{
+  "email": "af017_1792320307835@example.com",
+  "username": "af017_1792320307835",
+  "port": 3001,
+  "mechanism": "HttpOnly straw_session",
+  "steps": [
+    {
+      "step": "register",
+      "status": 201,
+      "success": true,
+      "cookiePresent": true
+    },
+    {
+      "step": "me-after-register",
+      "status": 200,
+      "success": true,
+      "email": "af017_1792320307835@example.com"
+    },
+    {
+      "step": "me-after-reload",
+      "status": 200,
+      "success": true,
+      "email": "af017_1792320307835@example.com"
+    }
+  ],
+  "ok": true
+}

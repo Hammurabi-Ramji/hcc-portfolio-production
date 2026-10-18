@@ -1,0 +1,71 @@
+﻿{
+    "utc":  "2026-10-18T10:41:54.4247516Z",
+    "folder":  "C:\\IEDB\\STRAW Stack\\straw-app\\crates",
+    "direct_files":  [
+
+                     ],
+    "note":  "No crates/Cargo.toml; container has no direct files. Workspace root straw-app/Cargo.toml lists members (F031 shared_files).",
+    "crate_dirs":  [
+                       "accordion",
+                       "axum-loop",
+                       "crucible",
+                       "eduba-ledger",
+                       "eduba-server",
+                       "engine",
+                       "fabricator",
+                       "inference",
+                       "security",
+                       "stele",
+                       "storage",
+                       "straw-ledger",
+                       "wasm-frontend"
+                   ],
+    "workspace_members_crates":  [
+                                     "accordion",
+                                     "axum-loop",
+                                     "crucible",
+                                     "eduba-ledger",
+                                     "eduba-server",
+                                     "engine",
+                                     "fabricator",
+                                     "inference",
+                                     "security",
+                                     "stele",
+                                     "storage",
+                                     "straw-ledger",
+                                     "wasm-frontend"
+                                 ],
+    "default_members":  [
+                            "crates/engine",
+                            "crates/axum-loop",
+                            "crates/wasm-frontend"
+                        ],
+    "shell_crate_paths":  [
+                              "accordion",
+                              "axum-loop",
+                              "crucible",
+                              "engine",
+                              "fabricator",
+                              "inference",
+                              "security",
+                              "stele",
+                              "storage",
+                              "wasm-frontend"
+                          ],
+    "disk_not_in_toml":  [
+
+                         ],
+    "toml_not_on_disk":  [
+
+                         ],
+    "shell_missing":  [
+
+                      ],
+    "sibling_path_issues":  [
+
+                            ],
+    "cargo_metadata_exit":  0,
+    "cargo_tree_default_members_exit":  0,
+    "cargo_check_default_members_exit":  101,
+    "membership_pass":  true
+}

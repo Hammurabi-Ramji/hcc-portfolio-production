@@ -1,0 +1,13 @@
+{
+  "decision": "remove",
+  "reason": "Empty container; Next entry is apps/web/middleware.ts; no duplicate implementation belongs in apps/web/middleware/",
+  "before": {
+    "exists": true,
+    "isDirectory": true,
+    "children": []
+  },
+  "after": {
+    "exists": false
+  },
+  "removedAt": "2026-10-18T10:32:25.837Z"
+}

@@ -1,0 +1,19 @@
+# Web type-check and production build
+Date: 2026-10-09
+Package: apps/web
+Environment: NEXT_TELEMETRY_DISABLED=1, npm_config_offline=true
+@hookform/resolvers was not added. It is absent from the offline lockfile.
+Login and signup validate with the existing zod and react-hook-form packages.
+
+## npm run type-check
+Exit: 0
+tsc --noEmit reported no diagnostics.
+The earlier 19-diagnostic snapshot in this file is superseded by this run.
+The four diagnostics that remained before this patch (missing @hookform/resolvers/zod,
+ProjectDto createdAt string versus a local Date Project, and unnamed NextRequest)
+are resolved.
+
+## npm run build
+Exit: 0
+next build compiled, linted with warnings only, and generated all static pages.
+No provider exception during prerender after AuthProvider and ToastProvider were mounted.

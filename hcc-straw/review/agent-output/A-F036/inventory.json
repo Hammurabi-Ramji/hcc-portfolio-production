@@ -1,0 +1,132 @@
+[
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\conditional.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 1357,
+    "after_bytes": 1427,
+    "before_sha256": "58c088f8de462e5ece8cd8ac0a54eb4ac9267eb41dd8a7c589091450b26aba54",
+    "after_sha256": "a2a50be6c0ac4756a39d3dd7cf2d233c7df697d92883017e92e76c02e4a8b101",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\conditional.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\csv_parse.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 2031,
+    "after_bytes": 2946,
+    "before_sha256": "42169d728507a3c3207c515214ab45a0f4ceec4e72ebb0b66a10d91f3601b60c",
+    "after_sha256": "6bda2face43cda8ba20f9c448af90b53dfb4f8aef9361a97b960ac9026ac73ce",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\csv_parse.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\filter.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 2989,
+    "after_bytes": 3533,
+    "before_sha256": "0ea1b1b8d98536445f443011acb8a0b36128e712530161efc0581c50dbcb1621",
+    "after_sha256": "49e14a33514f4b333564f26dd27d2f0f7f62a31a68a2ad6a7068ae3b0b096c6f",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\filter.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\http_request.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 2384,
+    "after_bytes": 2562,
+    "before_sha256": "2dde78cfd859fbcd087ff0a613960aeb7500d5e2bb2d263ba1953f1627cdc238",
+    "after_sha256": "8bea3f8aa6039477b90e11ffccf2e86e998c6e6cb28af3725775be7f8ad91c21",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\http_request.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\join_text.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 1386,
+    "after_bytes": 1670,
+    "before_sha256": "92b5b5a6c7bd23a0407a8aec74e7b0db902178583e85847f423ad4b6dec7da9c",
+    "after_sha256": "5bcf37215e90c086b6a409cbba60292db9df1a5694ad306232b4e54752bb0b8c",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\join_text.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\llm_prompt.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 2700,
+    "after_bytes": 2831,
+    "before_sha256": "f950e06b7860d280b1356d7e256e615f67b1a5fee572fd48a45797937a8d9840",
+    "after_sha256": "34a41a9845d671e98d544811571bdf6b453eac5fb3d8c6d324e7ad432a2b3a05",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\llm_prompt.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\mod.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 9264,
+    "after_bytes": 9294,
+    "before_sha256": "b62aa120d127aa96eac9d61bdb40229b88c7e460141e20c222d8b7ef84ae2d9f",
+    "after_sha256": "2b478d1c46210c043b2b3200be11510de8abf99014ef816c13b103eed358cf8f",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\mod.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\read_file.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 1347,
+    "after_bytes": 1767,
+    "before_sha256": "7fd90c48d0bab9cabe06e00c09c5ad35617edb17ceda54bae6925f70707e51fc",
+    "after_sha256": "ccb16bdc7710fe74b601e6ad074f809c1fc269e274b70a088c94971d2965b5ce",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\read_file.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\regression.rs",
+    "changed": true,
+    "new_file": true,
+    "before_bytes": null,
+    "after_bytes": 22518,
+    "before_sha256": null,
+    "after_sha256": "127dbebe8f10ae711ad02b1c1e8f897f302325443b6b965a329ab9e672cac38d",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\regression.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\template.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 1473,
+    "after_bytes": 2254,
+    "before_sha256": "24f1da58bd940fdf2bc381add4def603dce3987125e7fdb625079f1918f56732",
+    "after_sha256": "1002c532064e96030d18ed12e818c69b57bc11d70cc67475f34860ab84bf5319",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\template.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\text_input.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 948,
+    "after_bytes": 1100,
+    "before_sha256": "15c34321271b590487a81ec4b6bafbb6e1dbc5f8f0a1a7beb91fc4222d672012",
+    "after_sha256": "9ae1c80668af83c488a5f2368dc0580d35506a1e8a2fc8208b1f1e50b21ee585",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\text_input.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\transform.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 3059,
+    "after_bytes": 3160,
+    "before_sha256": "770b9fe68097e7ac85a4caf9a856833e6ad84ee379c311e2df6b53cad27f21f6",
+    "after_sha256": "93b847d0b99ad47d9b2a03872c749d817ee850de4ad83ff4362e03e7ab87eed1",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\transform.rs.patch"
+  },
+  {
+    "path": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes\\write_file.rs",
+    "changed": true,
+    "new_file": false,
+    "before_bytes": 1823,
+    "after_bytes": 2016,
+    "before_sha256": "381c4f005e58244ab8efc68d1b27f568b395a7e6d9af907fb8f19b181d363ebb",
+    "after_sha256": "67fd7646520b9ac32fa91fb5703489a42e91169ef9b4067e4038de25f9dbdbe4",
+    "diff": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F036\\diffs\\write_file.rs.patch"
+  }
+]

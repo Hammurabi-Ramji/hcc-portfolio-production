@@ -1,0 +1,25 @@
+# Current-tree review: Stack/output (index 132)
+
+Reviewed 2026-10-09. Scope: every direct file's present contents, plus current desktop README, workspace manifest, command registration, contracts, graph validation, and targeted generator requirements. No source changes, installs, network access, or builds/tests were performed. No applicable root AGENTS.md was present. The 15 output files remained substantive throughout inspection; no one-byte replacements were observed. Removed desktop sources are historical references, not current requirements.
+
+## Inventory and specified behavior
+
+Fourteen Markdown files: CODEBASE_VERIFICATION_REPORT, COMPLETION_SUMMARY, ENGINES_BUILT_SUMMARY, ENGINES_IMPLEMENTATION_GUIDE, FINAL_STATUS, FINAL_VERIFICATION_100PCT, IMPLEMENTATION_COMPLETE, IMPLEMENTATION_STATUS, NLP_AI_CODE_CREATION_GUIDE, NODE_REFERENCE, QUICK_REFERENCE, TESTING_GUIDE, VERIFICATION_REPORT, and WEB_PLATFORM_SUMMARY. The remaining file is demo-nlp-to-code-flow.json. All Markdown documents describe May-era desktop/web implementations; none identifies its desktop instructions as superseded.
+
+Current `straw-app/README.md:18` specifies Cargo/Trunk builds, `:44` explicitly excludes import of the previous incompatible graph format, `:48` lists the current commands, `:50` specifies camelCase contracts, and `:56` limits attachments to UTF-8 text/JSON. Generator docs describe a sovereign desktop-first framework, but their completion claims do not establish current desktop functionality.
+
+## Findings and patch targets
+
+1. **P2 — Active desktop guides invoke removed tooling and APIs.** `QUICK_REFERENCE.md:23`, `TESTING_GUIDE.md:93`, and `NLP_AI_CODE_CREATION_GUIDE.md:26` direct users to npm commands; the current desktop folder has Cargo.toml/Trunk.toml and no package.json. `ENGINES_IMPLEMENTATION_GUIDE.md:185` documents `nlp_fetch_url`, `refine_file`, and `run_flow`, which are absent from current registration (`straw-app/src-tauri/src/lib.rs:141`). Its snake_case request/response examples (`:404`, `:447`) contradict strict camelCase types (`crates/engine/src/contract.rs:4`, `nlp.rs:5`). Multimodal claims at guide `:25` conflict with actual text-only attachment checks (`nlp.rs:25`). **Patch:** mark all desktop May reports as historical with a prominent link to the current desktop README, then replace QUICK_REFERENCE and TESTING_GUIDE examples with supported commands, contracts, limits, and named-file generation format. Preserve historical evidence without presenting it as current instructions.
+
+2. **P2 — Shipped demo cannot deserialize or validate against the current engine.** `demo-nlp-to-code-flow.json:6` uses non-UUID node IDs; `:55` adds unsupported edge IDs and `:57` uses snake_case handles. Current `dag.rs:8` wraps UUIDs and `:31` rejects unknown edge fields while requiring camelCase. Root description/metadata are also outside Graph (`dag.rs:39`). Even after serialization repairs, the filter edge targets `list` (`demo:73`) instead of the registered `input` port (`nodes/filter.rs:10`); its condition string (`demo:34`) does not use the separate condition/value configuration. The endpoint at `demo:17` uses rejected hostname localhost. **Patch:** replace with a current Graph fixture using UUIDs, sourceHandle/targetHandle, valid ports/configuration, and literal 127.0.0.1; document attaching it to an application-minted FlowRecord. Do not add import support merely to retain this historical example.
+
+3. **P2 — Readiness and compatibility claims lack current scope.** `CODEBASE_VERIFICATION_REPORT.md:172` asserts production readiness, `FINAL_VERIFICATION_100PCT.md:95` claims every owned file compiles, and `NODE_REFERENCE.md:184` promises unchanged old-flow compatibility, directly contradicted by current README `:44`. Counts also disagree: NODE_REFERENCE `:102` says 14 while listing 11. Web completion report `IMPLEMENTATION_COMPLETE.md:5` says production-ready while `:174` calls endpoints mock. **Patch:** identify date/revision and exact checks for historical reports; replace present-tense readiness claims with current verified results and pending runtime checks. Correct counts and qualify web scaffolding claims.
+
+## Dependencies and acceptance
+
+Documentation fixes depend on current engine/command owners confirming canonical contracts, not restoration of removed files. Validate the replacement demo with serde Graph deserialization and graph validation; use a temporary output directory and an explicitly provisioned local model for runtime execution. Confirm every advertised command exists, all current links resolve, and current instructions match Cargo/Trunk. Historical build results must remain dated and separate from current acceptance. Confidence: high for documented mismatches and demo rejection; runtime/model/build behavior remains unrun by this reviewer.
+
+- [ ] Supersede historical desktop guides and refresh supported quick-start/API examples.
+- [ ] Replace or explicitly archive the incompatible demo; validate any replacement fixture.
+- [ ] Scope readiness/compatibility claims to dated evidence and correct node counts.

@@ -1,0 +1,15 @@
+# Local build products and regenerated application bundles.
+/target/
+/output/
+**/node_modules/
+**/target/
+**/__pycache__/
+*.pyc
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
+!/Cargo.lock

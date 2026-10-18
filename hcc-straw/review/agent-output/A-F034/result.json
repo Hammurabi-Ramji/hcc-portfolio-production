@@ -1,0 +1,63 @@
+{
+  "agent": "A-F034",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine",
+  "wave": 1,
+  "files_touched": [],
+  "gates_passed": [
+    "Engine resolved normal/build/dev dependencies contain no Tauri dependency",
+    "Current focused engine unit tests: 12 passed, 0 failed, offline and locked",
+    "Current engine doc tests passed: 0 tests"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\inventory.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-dependency-tree.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-independence.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-tests.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-tests-workspace-temp.log"
+  ],
+  "commands": [
+    {
+      "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' tree -p straw-engine --offline --locked --edges normal,build,dev",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-dependency-tree.log",
+      "acceptance": true
+    },
+    {
+      "command": "Select-String -LiteralPath 'C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-dependency-tree.log' -Pattern '\\btauri(?:[- ]|\\b)'",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-independence.log",
+      "acceptance": true,
+      "matches": 0
+    },
+    {
+      "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 101,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-tests.log",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-tests-workspace-temp.log",
+      "diagnostic": "Default sandbox TEMP/TMP produced Windows access denied at tests.rs:231; no source workaround."
+    },
+    {
+      "command": "$env:TEMP = 'C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\tmp'; $env:TMP = $env:TEMP; & 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\logs\\engine-tests-workspace-temp.log",
+      "acceptance": true
+    }
+  ],
+  "environment": {
+    "path_prefix": "C:\\Users\\hammu\\.cargo\\bin",
+    "network": "No fetching; Cargo --offline --locked",
+    "final_temp": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F034\\tmp"
+  },
+  "blocker": null,
+  "primary": "Manifest preserved with no speculative patch; resolved engine dependencies independent of Tauri; all 12 current focused tests pass offline/locked.",
+  "secondary": "A-F035 foundation prerequisite satisfied, then A-F036 follows its serialized contract. Future changed-child focused checks remain their owners. Root workspace checks remain desktop/root integration owner responsibility.",
+  "tertiary": "W4 observed desktop/runtime/model acceptance remains A-S15/A-F051 and S17/S18 rollout ownership; no runtime observation claimed. Whole-tree source-scan release gate remains blocked.",
+  "settlement_record": "A-F034 | W1 | DONE | straw-app/crates/engine | source changes: none | dependency independence PASS; focused tests 12/12 PASS (workspace TEMP) | evidence: review/agent-output/A-F034/result.json | downstream acceptance retained | release gate blocked"
+}

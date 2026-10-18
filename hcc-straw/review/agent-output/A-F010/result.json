@@ -1,0 +1,55 @@
+{
+  "agent": "A-F010",
+  "status": "DONE",
+  "folder": "apps/web/app/dashboard",
+  "files_touched": [
+    "apps/web/app/dashboard/page.tsx"
+  ],
+  "gates_passed": [
+    "scoped strict TypeScript compile of dashboard + consumed modules",
+    "5 static source contracts covering all checklist themes",
+    "7 offline React/Chrome acceptance groups: loading, unauth replace, real data, empty, fail/retry, mobile a11y/focus, logout"
+  ],
+  "commands": [
+    {
+      "command": "node review/agent-output/A-F010/verify.cjs",
+      "exit_code": 0,
+      "log": "review/agent-output/A-F010/logs/{01-typescript,02-static,03-browser}.log",
+      "acceptance": true
+    }
+  ],
+  "child_commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F010/tsconfig.json",
+      "exit_code": 0,
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F010/static-checks.cjs",
+      "exit_code": 0,
+      "acceptance": true
+    },
+    {
+      "command": "node review/agent-output/A-F010/run-tests.cjs",
+      "exit_code": 0,
+      "acceptance": true
+    }
+  ],
+  "evidence_refs": [
+    "review/agent-output/A-F010.md",
+    "review/agent-output/A-F010/commands.json",
+    "review/agent-output/A-F010/result.json",
+    "review/agent-output/A-F010/source-hashes.json",
+    "review/agent-output/A-F010/static-results.json",
+    "review/agent-output/A-F010/browser-results.json",
+    "review/agent-output/A-F010/patches/page.tsx.patch",
+    "review/agent-output/A-F010/before/apps/web/app/dashboard/page.tsx",
+    "review/agent-output/A-F010/logs/01-typescript.log",
+    "review/agent-output/A-F010/logs/02-static.log",
+    "review/agent-output/A-F010/logs/03-browser.log"
+  ],
+  "blocker": null,
+  "primary": "Dashboard loading guard, reachable nav/actions, real project metrics with load/fail/empty/real states, and accessible mobile drawer.",
+  "secondary": "Depends on settled F019/F021 provider/client; does not advertise absent users/analytics screens.",
+  "tertiary": "Scoped offline verification only; full Next cookie reload and whole-web build remain integration owners."
+}

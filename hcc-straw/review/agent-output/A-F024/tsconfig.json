@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "C:\\IEDB\\STRAW Stack\\apps\\web\\node_modules\\@types"
+    ],
+    "baseUrl": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "rootDir": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "outDir": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024\\compiled"
+  },
+  "files": [
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\types\\index.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\lib\\api-client.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\services\\auth.service.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\services\\file.service.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\services\\project.service.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\services\\service-utils.ts",
+    "C:\\IEDB\\STRAW Stack\\apps\\web\\services\\user.service.ts"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "agent": "A-F019",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\context",
+  "wave": 1,
+  "files_touched": [
+    "apps/web/context/AuthContext.tsx"
+  ],
+  "gates_passed": [
+    "scoped strict TypeScript of AuthContext + AuthService + api-client + types",
+    "DTO contract verify (rememberMe AuthState; no types api export)",
+    "10 offline React/browser AuthProvider lifecycle groups",
+    "6 live Axum/SQLite provider HTTP session groups",
+    "AuthContext unified diff reproduces current source from before snapshot",
+    "session cookie straw_session agreement documented for F021/F022"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\SHARED-CONTRACT.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\before\\apps\\web\\context\\AuthContext.tsx",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\diffs\\apps--web--context--AuthContext.tsx.diff",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\snapshot-manifest.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\browser-results.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\http-results.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\http-binary-provenance.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\lifecycle-tests.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\http-tests.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\dto-types.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\evidence.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\commands.json"
+  ],
+  "commands": [
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F019/tsconfig.json",
+      "exit_code": 0,
+      "acceptance": true,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\tsc.log"
+    },
+    {
+      "command": "node review/agent-output/A-F019/verify-types.cjs <apps/web/node_modules/typescript/lib/typescript.js>",
+      "exit_code": 0,
+      "acceptance": true,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\dto-types.log"
+    },
+    {
+      "command": "node review/agent-output/A-F019/run-tests.cjs",
+      "exit_code": 0,
+      "acceptance": true,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\lifecycle-tests.log"
+    },
+    {
+      "command": "node review/agent-output/A-F019/run-http-tests.cjs",
+      "exit_code": 0,
+      "acceptance": true,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\http-tests.log"
+    },
+    {
+      "command": "python review/agent-output/A-F019/save-evidence.py",
+      "exit_code": 0,
+      "acceptance": true,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F019\\logs\\evidence.log"
+    }
+  ],
+  "blocker": null,
+  "primary": "Cookie-only AuthProvider with typed envelopes, /me hydration, truthful logout/refresh, and mutation serialization.",
+  "secondary": "F021/F022/S13 retain straw_session + withCredentials + AuthProvider mount contracts documented in SHARED-CONTRACT.md.",
+  "tertiary": "Before snapshot, unified diff, hashes, offline and live HTTP logs under review/agent-output/A-F019/."
+}

@@ -1,0 +1,12 @@
+{
+  "page": "C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\app\\dashboard\\page.tsx",
+  "bytes": 15577,
+  "passes": [
+    "loading-aware replace guard",
+    "reachable destinations and supported quick actions",
+    "metrics and activity real/empty/fail/load contracts",
+    "mobile control names, Escape, focus restoration",
+    "logout and mobile layout markers"
+  ],
+  "count": 5
+}

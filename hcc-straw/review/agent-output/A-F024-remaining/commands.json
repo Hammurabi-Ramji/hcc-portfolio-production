@@ -1,0 +1,44 @@
+[
+  {
+    "command": "docs-reconcile-services-readme",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\00-docs.log",
+    "acceptance": true
+  },
+  {
+    "command": "reuse C:\\IEDB\\STRAW Stack\\apps\\api\\target\\debug\\straw-web-api.exe",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\01.log",
+    "acceptance": true
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F024-remaining/tsconfig.json",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\02.log",
+    "acceptance": true
+  },
+  {
+    "command": "node --test review/agent-output/A-F024-remaining/live-integration.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\03.log",
+    "acceptance": true
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F024/tsconfig.json",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\04.log",
+    "acceptance": true
+  },
+  {
+    "command": "node --test review/agent-output/A-F024/regression.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\05.log",
+    "acceptance": true
+  },
+  {
+    "command": "scan-services-no-upload-advertising",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\06.log",
+    "acceptance": true
+  }
+]

@@ -1,0 +1,37 @@
+{
+    "blocker":  null,
+    "agent":  "A-S15",
+    "wave":  4,
+    "gates_passed":  [
+                         "installed WebView2 window observed",
+                         "WASM fibonacci(10)=55 in installed window",
+                         "IPC save/run/history completed",
+                         "attachment send reached loopback fixture",
+                         "live Ollama response in installed window (strict)"
+                     ],
+    "primary":  "Installed STRAW Desk WebView2 window observed; attachment reached capture fixture; live Ollama answered in-window.",
+    "commands":  [
+                     {
+                         "command":  "powershell -File review/agent-output/A-S15/run-acceptance.ps1",
+                         "log":  "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\logs\\run-stdout.txt",
+                         "exit_code":  0
+                     }
+                 ],
+    "tertiary":  "G3 release hold remains. Broader F051 editor smoke / F041 packaging checklist rows stay separately owned where unchecked.",
+    "relative":  "cross-task S15",
+    "status":  "DONE",
+    "secondary":  "Save/run/history and WASM compute also observed in the installed window.",
+    "evidence_refs":  [
+                          "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\result-evidence.json",
+                          "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\logs\\live-model-strict-evidence.json",
+                          "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\fixture\\requests.jsonl",
+                          "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-S15\\A-S15.md"
+                      ],
+    "files_touched":  [
+                          "to-do.md",
+                          "README.md",
+                          "straw-app/README.md",
+                          "straw-app/STRAW-001-VERIFICATION.md"
+                      ],
+    "folder":  "C:\\IEDB\\STRAW Stack"
+}

@@ -1,0 +1,69 @@
+{
+  "agent": "A-F026",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\types",
+  "wave": 0,
+  "files_touched": [
+    "apps/web/types/index.ts"
+  ],
+  "gates_passed": [
+    "strict DTO separation and negative contract assertions",
+    "JSON timestamp and user/project one-envelope serialization",
+    "cookie metadata and rememberMe false serialization",
+    "void null and error response serialization",
+    "no runtime api export or HTTP dependency",
+    "unified diff applies to before snapshot and reproduces source"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\before\\apps\\web\\types\\index.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\snapshot-manifest.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\diffs\\apps--web--types--index.ts.diff",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\contracts.test.ts",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\verify.cjs",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\verify-diff.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\contracts.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\evidence.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\diff-check.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\contracts-attempt1.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\git-diff-check-attempt.log"
+  ],
+  "commands": [
+    {
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\contracts-attempt1.log",
+      "exit_code": 1,
+      "command": "node review/agent-output/A-F026/verify.cjs 'C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\node_modules\\typescript\\lib\\typescript.js'",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\contracts.log"
+    },
+    {
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\contracts.log",
+      "exit_code": 0,
+      "command": "node review/agent-output/A-F026/verify.cjs 'C:\\IEDB\\external\\BSM-C\\hcc-straw\\hcc-straw\\apps\\web\\node_modules\\typescript\\lib\\typescript.js'",
+      "acceptance": true
+    },
+    {
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\evidence.log",
+      "exit_code": 0,
+      "command": "python review/agent-output/A-F026/save-evidence.py",
+      "acceptance": true
+    },
+    {
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\git-diff-check-attempt.log",
+      "exit_code": 128,
+      "command": "& 'C:\\Users\\hammu\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe' apply --check --reverse review/agent-output/A-F026/diffs/apps--web--types--index.ts.diff",
+      "acceptance": false,
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\diff-check.log"
+    },
+    {
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F026\\logs\\diff-check.log",
+      "exit_code": 0,
+      "command": "python review/agent-output/A-F026/verify-diff.py",
+      "acceptance": true
+    }
+  ],
+  "blocker": null,
+  "primary": "JSON DTO timestamps, explicit flags, discriminated API/list contracts, cookie-only session metadata; foundation gates pass.",
+  "secondary": "Canonical contract and compatibility aliases coordinated with dispatcher for client, service, context and Rust API owners.",
+  "tertiary": "Strict negative tests and preserved snapshots/diffs/logs guard regressions; real integrated HTTP/browser behavior remains W4 observation."
+}

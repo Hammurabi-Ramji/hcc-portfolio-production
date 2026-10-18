@@ -1,0 +1,271 @@
+{
+  "agent": "A-F050",
+  "status": "DONE",
+  "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build\\src",
+  "wave": 1,
+  "files_touched": [
+    "straw-app/tools/frontend-build/src/main.rs"
+  ],
+  "corrective_only_files": [
+    "straw-app/tools/frontend-build/src/site_cache.rs"
+  ],
+  "gates_passed": [
+    "typed fresh staging and guarded rollback publication tests",
+    "deleted/renamed imports fail both clean/incremental native and Trunk builds",
+    "compile/copy/import failures preserve prior complete output byte-exact",
+    "156-file deterministic clean native and release Trunk public/dist trees",
+    "three byte-exact notices retained",
+    "current source snapshot equals tested inputs"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\verify.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\source_stability.py",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\verification-evidence.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\source-stability.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\fixture-input-inventory.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\reference-comparison.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\source-patch-snapshot.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\formatting-recovery\\restoration.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\formatting-recovery\\restoration.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\patches\\straw-app--tools--frontend-build--src--main.rs.patch",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\source-stability.log"
+  ],
+  "commands": [
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe test --offline --locked --package frontend-build -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\staging-unit-tests.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-clean.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-removes-stale-extras.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-incremental-native.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-incremental-trunk.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-clean-native.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-clean-trunk.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-recovery.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-incremental-native.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-incremental-trunk.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-clean-native.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-clean-trunk.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-recovery.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\component-compile-failure.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\license-copy-failure.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\unmapped-import.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\missing-vendor-module.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 1,
+      "expected": "nonzero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\site-map-unmapped-import.log",
+      "acceptance": true,
+      "validated_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-clean-repeat.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+      "exit_code": 0,
+      "expected": "zero",
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\trunk-clean-release.log",
+      "acceptance": true
+    },
+    {
+      "command": "python review/agent-output/A-F050/verify.py",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log",
+      "acceptance": true
+    },
+    {
+      "command": "python review/agent-output/A-F050/source_stability.py",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\source-stability.log",
+      "acceptance": true
+    },
+    {
+      "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe test --offline --locked --package frontend-build -- --nocapture",
+      "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\initial-isolated\\straw-app",
+      "exit_code": 101,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\initial\\staging-unit-tests.log",
+      "acceptance": false,
+      "diagnostic": "Windows sandbox refused directory renames under temporary storage; test fixture root moved into owned review output.",
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\staging-unit-tests.log"
+    },
+    {
+      "command": "python review/agent-output/A-F050/verify.py",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\initial\\verification.log",
+      "acceptance": false,
+      "diagnostic": "Initial harness stopped on the temporary-directory rename restriction.",
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "python review/agent-output/A-F050/verify.py",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\verification.log",
+      "acceptance": false,
+      "diagnostic": "Product rejected site clsx import with correct attributes.js origin; helper incorrectly assumed class.js. Origin assertion corrected.",
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\verification.log"
+    },
+    {
+      "command": "python review/agent-output/A-F050/recover_formatting.py",
+      "cwd": "C:\\IEDB\\STRAW Stack",
+      "exit_code": 1,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\initial\\formatting-reconstruction.log",
+      "acceptance": false,
+      "diagnostic": "Review-only patch reconstruction needed context-aware hunk selection; no production write occurred.",
+      "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\formatting-reconstruction.log"
+    }
+  ],
+  "blocker": null,
+  "primary": "Generate and validate a fresh frontend tree, then publish with guarded renames and rollback so stale modules cannot conceal broken imports.",
+  "secondary": "A-F039 regenerates production assets from source; A-S14 verifies integrated rollout against the latest snapshot (this fixture emitted 156 files and 110 modules).",
+  "tertiary": "Actual browser/desktop/installer observation remains A-S15/A-S16; three packaged notices and whole-tree G3 release hold remain explicit downstream gates.",
+  "publication_limits": "Two-rename visibility gap; filesystem refusal during rollback retains prior tree at reported recovery path; forced termination may retain lock and stage requiring manual recovery.",
+  "deferred_acceptance": [
+    "A-F039 production generated-output refresh",
+    "A-S14 integrated latest-snapshot staging rollout",
+    "A-S15/A-S16 observed UI/desktop/installer/packaged notice gates; G3 release hold"
+  ]
+}

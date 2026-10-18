@@ -1,0 +1,87 @@
+[
+  {
+    "command": "$env:PATH = 'C:\\Users\\hammu\\.cargo\\bin;' + $env:PATH; $env:TEMP = 'C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\tmp'; $env:TMP = $env:TEMP; & 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\initial-hardlink-diagnostic.log",
+    "acceptance": false,
+    "note": "Intermediate implementation: Windows hard_link denied, 11/12 passed. Copied from original tool transcript; wrapper exit 1. Superseded by native Windows no-replace move implementation and full final regressions.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "cargo test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-regressions-01.log",
+    "acceptance": false,
+    "note": "INVALID acceptance: zero tests after an intermediate Python cp1252 write failure truncated tests.rs. Original restored from byte-exact snapshot before rebuilding all regressions.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 101,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-regressions-02.log",
+    "acceptance": false,
+    "note": "Intermediate 20/25 passed; network sandbox blocked five loopback clients with Windows 10013.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-regressions-03.log",
+    "acceptance": false,
+    "note": "Intermediate source passed 25 entries; later tests/source additions supersede it.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-final.log",
+    "acceptance": false,
+    "note": "Intermediate source passed 29 entries; later skip/rollback cases supersede it.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance.log",
+    "acceptance": false,
+    "note": "Intermediate source passed 30 entries; reviewed rollback-preservation fix supersedes it.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 101,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-reviewed.log",
+    "acceptance": false,
+    "note": "Intermediate 30/31 passed; inherited nonblocking Windows fixture stream exposed during large request; fixed with explicit blocking accepted stream.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\rustfmt.exe' --check --edition 2021 --config skip_children=true straw-app/crates/engine/src/codegen.rs straw-app/crates/engine/src/dag.rs straw-app/crates/engine/src/db.rs straw-app/crates/engine/src/nodes/mod.rs straw-app/crates/engine/src/tests.rs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\format-check.log",
+    "acceptance": false,
+    "note": "Intermediate formatting snapshot; superseded by final format check.",
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\format-acceptance.log"
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\cargo.exe' test -p straw-engine --offline --locked -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\engine-acceptance-final.log",
+    "acceptance": true,
+    "note": "Final current-source engine acceptance: 31 entries pass, two are subprocess probes exercised by behavior parent tests; no external network/dependency downloads."
+  },
+  {
+    "command": "& 'C:\\Users\\hammu\\.cargo\\bin\\rustfmt.exe' --check --edition 2021 --config skip_children=true straw-app/crates/engine/src/codegen.rs straw-app/crates/engine/src/dag.rs straw-app/crates/engine/src/db.rs straw-app/crates/engine/src/nodes/mod.rs straw-app/crates/engine/src/tests.rs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\format-acceptance.log",
+    "acceptance": true,
+    "note": "Final owned-source formatting check; skip_children prevents altering other owners."
+  },
+  {
+    "command": "python review/agent-output/A-F035/test-migration.py",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F035\\logs\\migration-fixture.log",
+    "acceptance": true,
+    "note": "Acceptance for proposed shutdown-only legacy migration on isolated fixture, not execution on a user database."
+  }
+]

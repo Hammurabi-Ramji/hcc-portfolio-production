@@ -1,0 +1,57 @@
+[
+  {
+    "command": "cargo check --manifest-path apps/api/Cargo.toml --offline --locked",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\check.log",
+    "acceptance": false,
+    "diagnostic": "Initial compile before unused import cleanup; final Clippy and rustfmt supersede this snapshot."
+  },
+  {
+    "command": "TEMP=C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009 TMP=C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009 cargo test --manifest-path apps/api/Cargo.toml --offline --locked --test users_http -- --nocapture",
+    "exit_code": 101,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\users-http-initial.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\rust-http-final.log",
+    "diagnostic": "Sandbox denied connections to self-started127.0.0.1 sockets with Windows10013. Identical offline local-only tests passed with permitted sockets."
+  },
+  {
+    "command": "TEMP=C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009 TMP=C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009 cargo test --manifest-path apps/api/Cargo.toml --offline --locked --test users_http -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\users-http-permitted.log",
+    "acceptance": false,
+    "diagnostic": "First permitted users HTTP pass; final broader suite includes strengthened cases and auth regressions."
+  },
+  {
+    "command": "C:/Users/hammu/.cargo/bin/cargo.exe fmt --manifest-path apps/api/Cargo.toml -- --check",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\format-final.log"
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\tsconfig.json\"",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\typescript-final.log"
+  },
+  {
+    "command": "C:/Users/hammu/.cargo/bin/cargo.exe clippy --manifest-path apps/api/Cargo.toml --offline --locked --all-targets -- -D warnings",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\clippy-final.log"
+  },
+  {
+    "command": "C:/Users/hammu/.cargo/bin/cargo.exe test --manifest-path apps/api/Cargo.toml --offline --locked -- --nocapture",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\rust-http-final.log"
+  },
+  {
+    "command": "node \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\next-http-regression.cjs\"",
+    "exit_code": 1,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\next-http-initial-path.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\next-http-final.log",
+    "diagnostic": "Dynamic ID encoded slash exposed a path-segment validation defect; fixed encodeURIComponent before fixed-loopback proxy. Passing final rerun required."
+  },
+  {
+    "command": "node \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\next-http-regression.cjs\"",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F009\\logs\\next-http-final.log"
+  }
+]

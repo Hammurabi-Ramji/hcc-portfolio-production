@@ -1,0 +1,423 @@
+
+> straw-stack@0.1.0 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Warning: truncated output (original token count: 14573)
+Total output lines: 1494
+
+Loading svelte-check in workspace: c:\IEDB\STRAW Stack\straw-app
+Getting Svelte diagnostics...
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:246:37
+Error: ';' expected. 
+
+  if (!health) return <div>Checking health...</div>;
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:246:43
+Error: Declaration or statement expected. 
+
+  if (!health) return <div>Checking health...</div>;
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:246:47
+Error: Type expected. 
+
+  if (!health) return <div>Checking health...</div>;
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:263:7
+Error: '>' expected. 
+    <div
+      style={{
+        padding: '12px',
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:263:12
+Error: ')' expected. 
+    <div
+      style={{
+        padding: '12px',
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:263:14
+Error: Property assignment expected. 
+    <div
+      style={{
+        padding: '12px',
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:265:19
+Error: ';' expected. 
+        padding: '12px',
+        background: '#1a1a1a',
+        border: `0.5px solid ${getStatusColor(health.status)}`,
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:266:15
+Error: ';' expected. 
+        background: '#1a1a1a',
+        border: `0.5px solid ${getStatusColor(health.status)}`,
+        borderRadius: '6px',
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:267:21
+Error: ';' expected. 
+        border: `0.5px solid ${getStatusColor(health.status)}`,
+        borderRadius: '6px',
+        fontSize: '11px',
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:268:17
+Error: ';' expected. 
+        borderRadius: '6px',
+        fontSize: '11px',
+        fontFamily: 'monospace',
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:269:19
+Error: ';' expected. 
+        fontSize: '11px',
+        fontFamily: 'monospace',
+      }}
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:270:7
+Error: Expression expected. 
+        fontFamily: 'monospace',
+      }}
+    >
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:271:5
+Error: Expression expected. 
+      }}
+    >
+      <div style={{ marginBottom: '8px' }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:272:12
+Error: '>' expected. 
+    >
+      <div style={{ marginBottom: '8px' }}>
+        <strong style={{ color: getStatusColor(health.status) }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:272:17
+Error: ';' expected. 
+    >
+      <div style={{ marginBottom: '8px' }}>
+        <strong style={{ color: getStatusColor(health.status) }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:272:43
+Error: Expression expected. 
+    >
+      <div style={{ marginBottom: '8px' }}>
+        <strong style={{ color: getStatusColor(health.status) }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:273:17
+Error: '>' expected. 
+      <div style={{ marginBottom: '8px' }}>
+        <strong style={{ color: getStatusColor(health.status) }}>
+          Status: {health.status.toUpperCase()}
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:273:22
+Error: ';' expected. 
+      <div style={{ marginBottom: '8px' }}>
+        <strong style={{ color: getStatusColor(health.status) }}>
+          Status: {health.status.toUpperCase()}
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:273:65
+Error: Expression expected. 
+      <div style={{ marginBottom: '8px' }}>
+        <strong style={{ color: getStatusColor(health.status) }}>
+          Status: {health.status.toUpperCase()}
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:274:17
+Error: ';' expected. 
+        <strong style={{ color: getStatusColor(health.status) }}>
+          Status: {health.status.toUpperCase()}
+        </strong>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:275:10
+Error: Type expected. 
+          Status: {health.status.toUpperCase()}
+        </strong>
+      </div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:276:8
+Error: Unterminated regular expression literal. 
+        </strong>
+      </div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:278:12
+Error: ';' expected. 
+
+      <div style={{ color: '#a8a8a8', marginBottom: '4px' }}>
+        Uptime: {health.uptime}s
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:278:19
+Error: Property assignment expected. 
+
+      <div style={{ color: '#a8a8a8', marginBottom: '4px' }}>
+        Uptime: {health.uptime}s
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:278:51
+Error: ';' expected. 
+
+      <div style={{ color: '#a8a8a8', marginBottom: '4px' }}>
+        Uptime: {health.uptime}s
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:278:60
+Error: Declaration or statement expected. 
+
+      <div style={{ color: '#a8a8a8', marginBottom: '4px' }}>
+        Uptime: {health.uptime}s
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:278:61
+Error: Expression expected. 
+
+      <div style={{ color: '#a8a8a8', marginBottom: '4px' }}>
+        Uptime: {health.uptime}s
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:279:15
+Error: ';' expected. 
+      <div style={{ color: '#a8a8a8', marginBottom: '4px' }}>
+        Uptime: {health.uptime}s
+      </div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:280:8
+Error: Unterminated regular expression literal. 
+        Uptime: {health.uptime}s
+      </div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:282:12
+Error: ';' expected. 
+
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:282:19
+Error: Property assignment expected. 
+
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:282:39
+Error: Declaration or statement expected. 
+
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:282:40
+Error: Expression expected. 
+
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:283:14
+Error: '>' expected. 
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:283:19
+Error: ';' expected. 
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:283:42
+Error: Expression expected. 
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:283:53
+Error: ';' expected. 
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:283:55
+Error: Type expected. 
+      <div style={{ marginTop: '8px' }}>
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:284:14
+Error: ';' expected. 
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+          <div>
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\health-check.ts:284:21
+Error: Property assignment expected. 
+        <div style={{ color: '#787878' }}>Components:</div>
+        <div style={{ marginLeft: '8px', marginTop: '4px' }}>
+          <div>
+
+c:\IEDB\STRAW Stack\stra…10573 tokens truncated…ludes('cycle'))).toBe(true);
+  });
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflow.test.ts:99:25
+Error: Parameter 'e' implicitly has an 'any' type. 
+    const errors = WorkflowValidator.validate(workflow);
+    expect(errors.some((e) => e.message.includes('unreachable'))).toBe(true);
+  });
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflow.test.ts:105:42
+Error: Parameter 'n' implicitly has an 'any' type. 
+      ...validWorkflow,
+      nodes: validWorkflow.nodes.filter((n) => n.node_type !== 'output'),
+    };
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflow.test.ts:109:25
+Error: Parameter 'e' implicitly has an 'any' type. 
+    const errors = WorkflowValidator.validate(workflow);
+    expect(errors.some((e) => e.message.includes('output'))).toBe(true);
+  });
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflow.test.ts:129:26
+Error: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig. 
+  it('should track history correctly', () => {
+    const manager = new (require('../src/lib/undo-redo').UndoRedoManager)('state1');
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflow.test.ts:140:26
+Error: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig. 
+  it('should undo correctly', () => {
+    const manager = new (require('../src/lib/undo-redo').UndoRedoManager)('state1');
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflow.test.ts:151:26
+Error: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig. 
+  it('should redo correctly', () => {
+    const manager = new (require('../src/lib/undo-redo').UndoRedoManager)('state1');
+
+c:\IEDB\STRAW Stack\straw-app\src\no-code\workflows.ts:3:41
+Error: Cannot find module '../types' or its corresponding type declarations. 
+
+import type { WorkflowDefinition } from '../types';
+
+c:\IEDB\STRAW Stack\straw-app\src\lib\CodeGenPanel.svelte:30:23
+Error: Cannot find name 'CreationResult'. (ts)
+  let files = $state<CodeFile[]>([]);
+  let result = $state<CreationResult | null>(null);
+  let error = $state<string | null>(null);
+
+c:\IEDB\STRAW Stack\straw-app\src\lib\CodeGenPanel.svelte:213:36
+Error: Type '{ width: string; }' is not assignable to type 'string'. (ts)
+      <div class="progress-track">
+        <div class="progress-fill" style={{ width: `${(progress.current / progress.total) * 100}%` }}></div>
+      </div>
+
+c:\IEDB\STRAW Stack\straw-app\src\lib\CodeGenPanel.svelte:306:62
+Error: Argument of type 'CodeFile | null' is not assignable to parameter of type 'CodeFile'.
+  Type 'null' is not assignable to type 'CodeFile'. (ts)
+            />
+            <button class="refine-btn" onclick={() => refine(selectedFile)} disabled={!refineInstruction.trim()}>
+              Refine
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:12:7
+Error: Variable '_flows' implicitly has type 'any[]' in some locations where its type cannot be determined. 
+// Flows store for stateful create/delete/load tests
+const _flows = [];
+let _flowCounter = 0;
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:29:8
+Error: Property '__TAURI_MOCK__' does not exist on type 'Window & typeof globalThis'. 
+
+window.__TAURI_MOCK__ = true;
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:32:8
+Error: Property '__TAURI_INTERNALS__' does not exist on type 'Window & typeof globalThis'. 
+// Intercept the invoke mechanism Tauri uses
+window.__TAURI_INTERNALS__ = {
+  invoke: async (cmd, args) => {
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:33:18
+Error: Parameter 'cmd' implicitly has an 'any' type. 
+window.__TAURI_INTERNALS__ = {
+  invoke: async (cmd, args) => {
+    switch (cmd) {
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:33:23
+Error: Parameter 'args' implicitly has an 'any' type. 
+window.__TAURI_INTERNALS__ = {
+  invoke: async (cmd, args) => {
+    switch (cmd) {
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:39:20
+Error: Variable '_flows' implicitly has an 'any[]' type. 
+      case 'list_flows':
+        return [..._flows];
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:44:26
+Error: Variable '_flows' implicitly has an 'any[]' type. 
+        const now = new Date().toISOString();
+        const existing = _flows.findIndex(f => f.id === id);
+        const record = { id, name: args.name, definition: args.definition, created_at: now, updated_at: now };
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:52:19
+Error: Variable '_flows' implicitly has an 'any[]' type. 
+      case 'load_flow': {
+        const f = _flows.find(f => f.id === args.id);
+        return f || null;
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:57:21
+Error: Variable '_flows' implicitly has an 'any[]' type. 
+      case 'delete_flow': {
+        const idx = _flows.findIndex(f => f.id === args.id);
+        if (idx >= 0) _flows.splice(idx, 1);
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:58:23
+Error: Variable '_flows' implicitly has an 'any[]' type. 
+        const idx = _flows.findIndex(f => f.id === args.id);
+        if (idx >= 0) _flows.splice(idx, 1);
+        return null;
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:66:48
+Error: Parameter 'n' implicitly has an 'any' type. 
+        try { flow = JSON.parse(args.flow_json); } catch { flow = { nodes: [], edges: [] }; }
+        const results = (flow.nodes || []).map(n => ({
+          node_id: n.id,
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:71:57
+Error: Parameter 'n' implicitly has an 'any' type. 
+        }));
+        return { results, order: (flow.nodes || []).map(n => n.id) };
+      }
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:116:20
+Error: Parameter 'src' implicitly has an 'any' type. 
+  },
+  convertFileSrc: (src) => src,
+  transformCallback: (cb) => cb,
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\tauri-mock.js:117:23
+Error: Parameter 'cb' implicitly has an 'any' type. 
+  convertFileSrc: (src) => src,
+  transformCallback: (cb) => cb,
+};
+
+c:\IEDB\STRAW Stack\straw-app\tests\ui.spec.ts:65:37
+Error: Object literal may only specify known properties, and 'position' does not exist in type '{ force?: boolean | undefined; noWaitAfter?: boolean | undefined; sourcePosition?: { x: number; y: number; } | undefined; targetPosition?: { x: number; y: number; } | undefined; timeout?: number | undefined; trial?: boolean | undefined; }'. 
+    await nodeType.dragTo(canvas);
+    await nodeType.dragTo(canvas, { position: { x: 200, y: 200 } });
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\fixtures.ts:2:18
+Error: Cannot find module 'path' or its corresponding type declarations. 
+import { test as base, expect, type Page } from '@playwright/test';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\fixtures.ts:3:31
+Error: Cannot find module 'url' or its corresponding type declarations. 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\04-code-gen.test.ts:106:75
+Error: Expected 1 arguments, but got 2. 
+    // Mock updates the content, check that it's different from original
+    await expect(page.locator('.code-content')).not.toBe(originalContent, { timeout: 8000 });
+  });
+
+c:\IEDB\STRAW Stack\straw-app\tests\e2e\05-flow-canvas.test.ts:50:21
+Error: Property '__TAURI_MOCK__' does not exist on type 'Window & typeof globalThis'. 
+      // Check if window.__TAURI_MOCK__ was active (means invoke was called)
+      return window.__TAURI_MOCK__ === true;
+    });
+
+c:\IEDB\STRAW Stack\straw-app\tsconfig.json:1:1
+Warn: Cannot find type definition file for 'node'.
+  The file is in the program because:
+    Entry point of type library 'node' specified in compilerOptions 
+
+
+====================================
+svelte-check found 247 errors and 1 warning in 18 files

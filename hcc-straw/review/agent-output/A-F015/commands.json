@@ -1,0 +1,27 @@
+[
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F015/tsconfig.json",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\logs\\01-tsc.log",
+    "acceptance": true
+  },
+  {
+    "command": "node --test review/agent-output/A-F015/static-acceptance.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\logs\\02-static.log",
+    "acceptance": true
+  },
+  {
+    "command": "node --test review/agent-output/A-F015/contract-acceptance.cjs",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F015\\logs\\03-contract.log",
+    "acceptance": true
+  },
+  {
+    "command": "Invoke-WebRequest http://127.0.0.1:3001/api/projects ; Invoke-WebRequest http://127.0.0.1:3000/projects",
+    "exit_code": 1,
+    "log": "ports 3000/3001 unreachable",
+    "acceptance": false,
+    "note": "Live browser list/create not run; no local web/API listeners"
+  }
+]

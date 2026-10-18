@@ -1,0 +1,6092 @@
+[
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps",
+    "relative": "apps",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web",
+    "relative": "apps/web",
+    "kind": "source",
+    "directFiles": [
+      ".env.example",
+      ".env.local",
+      ".eslintrc.js",
+      ".gitignore",
+      ".prettierrc",
+      "ARCHITECTURE.md",
+      "FILE_STRUCTURE.md",
+      "QUICK_START.md",
+      "README.md",
+      "SETUP_GUIDE.md",
+      "middleware.ts",
+      "next.config.js",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.js",
+      "tailwind.config.js",
+      "tsconfig.json",
+      "tsconfig.tsbuildinfo"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app",
+    "relative": "apps/web/app",
+    "kind": "source",
+    "directFiles": [
+      "globals.css",
+      "layout.tsx",
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\about",
+    "relative": "apps/web/app/about",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api",
+    "relative": "apps/web/app/api",
+    "kind": "source",
+    "directFiles": [
+      "route.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\auth",
+    "relative": "apps/web/app/api/auth",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\projects",
+    "relative": "apps/web/app/api/projects",
+    "kind": "source",
+    "directFiles": [
+      "route.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\api\\users",
+    "relative": "apps/web/app/api/users",
+    "kind": "source",
+    "directFiles": [
+      "route.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\dashboard",
+    "relative": "apps/web/app/dashboard",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\docs",
+    "relative": "apps/web/app/docs",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\features",
+    "relative": "apps/web/app/features",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\login",
+    "relative": "apps/web/app/login",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\profile",
+    "relative": "apps/web/app/profile",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\projects",
+    "relative": "apps/web/app/projects",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\settings",
+    "relative": "apps/web/app/settings",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\app\\signup",
+    "relative": "apps/web/app/signup",
+    "kind": "source",
+    "directFiles": [
+      "page.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\components",
+    "relative": "apps/web/components",
+    "kind": "source",
+    "directFiles": [
+      "Features.tsx",
+      "Footer.tsx",
+      "Navbar.tsx",
+      "ProtectedRoute.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\context",
+    "relative": "apps/web/context",
+    "kind": "source",
+    "directFiles": [
+      "AuthContext.tsx"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\hooks",
+    "relative": "apps/web/hooks",
+    "kind": "source",
+    "directFiles": [
+      "useDebounce.ts",
+      "useLoading.ts",
+      "useLocalStorage.ts",
+      "usePermissions.tsx",
+      "useProtectedRoute.ts",
+      "useSessionStorage.ts",
+      "useTheme.ts",
+      "useToast.tsx",
+      "useWindow.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\lib",
+    "relative": "apps/web/lib",
+    "kind": "source",
+    "directFiles": [
+      "api-client.ts",
+      "api.ts",
+      "utils.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\middleware",
+    "relative": "apps/web/middleware",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\public",
+    "relative": "apps/web/public",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\services",
+    "relative": "apps/web/services",
+    "kind": "source",
+    "directFiles": [
+      "auth.service.ts",
+      "file.service.ts",
+      "project.service.ts",
+      "user.service.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\styles",
+    "relative": "apps/web/styles",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\types",
+    "relative": "apps/web/types",
+    "kind": "source",
+    "directFiles": [
+      "index.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\apps\\web\\utils",
+    "relative": "apps/web/utils",
+    "kind": "source",
+    "directFiles": [
+      "config.ts",
+      "helpers.ts",
+      "index.ts",
+      "pagination.ts",
+      "validation.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\output",
+    "relative": "output",
+    "kind": "source",
+    "directFiles": [
+      "CODEBASE_VERIFICATION_REPORT.md",
+      "COMPLETION_SUMMARY.md",
+      "ENGINES_BUILT_SUMMARY.md",
+      "ENGINES_IMPLEMENTATION_GUIDE.md",
+      "FINAL_STATUS.md",
+      "FINAL_VERIFICATION_100PCT.md",
+      "IMPLEMENTATION_COMPLETE.md",
+      "IMPLEMENTATION_STATUS.md",
+      "NLP_AI_CODE_CREATION_GUIDE.md",
+      "NODE_REFERENCE.md",
+      "QUICK_REFERENCE.md",
+      "TESTING_GUIDE.md",
+      "VERIFICATION_REPORT.md",
+      "WEB_PLATFORM_SUMMARY.md",
+      "demo-nlp-to-code-flow.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app",
+    "relative": "straw-app",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md",
+      "STRAW-001-VERIFICATION.md",
+      "Trunk.toml",
+      "index.html"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\.vscode",
+    "relative": "straw-app/.vscode",
+    "kind": "source",
+    "directFiles": [
+      "extensions.json",
+      "settings.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates",
+    "relative": "straw-app/crates",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\axum-loop",
+    "relative": "straw-app/crates/axum-loop",
+    "kind": "source",
+    "directFiles": [
+      "Cargo.toml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\axum-loop\\src",
+    "relative": "straw-app/crates/axum-loop/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine",
+    "relative": "straw-app/crates/engine",
+    "kind": "source",
+    "directFiles": [
+      "Cargo.toml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src",
+    "relative": "straw-app/crates/engine/src",
+    "kind": "source",
+    "directFiles": [
+      "codegen.rs",
+      "contract.rs",
+      "dag.rs",
+      "db.rs",
+      "flow.rs",
+      "lib.rs",
+      "network.rs",
+      "nlp.rs",
+      "schema.sql",
+      "tests.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes",
+    "relative": "straw-app/crates/engine/src/nodes",
+    "kind": "source",
+    "directFiles": [
+      "conditional.rs",
+      "csv_parse.rs",
+      "filter.rs",
+      "http_request.rs",
+      "join_text.rs",
+      "llm_prompt.rs",
+      "mod.rs",
+      "read_file.rs",
+      "template.rs",
+      "text_input.rs",
+      "transform.rs",
+      "write_file.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\wasm-frontend",
+    "relative": "straw-app/crates/wasm-frontend",
+    "kind": "source",
+    "directFiles": [
+      "Cargo.toml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\wasm-frontend\\src",
+    "relative": "straw-app/crates/wasm-frontend/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public",
+    "relative": "straw-app/public",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui",
+    "relative": "straw-app/public/ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.js",
+      "CodeGenPanel.js",
+      "FlowCanvas.js",
+      "NlpChatPanel.js",
+      "NodeConfigPanel.js",
+      "Toast.js",
+      "main.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor",
+    "relative": "straw-app/public/ui/vendor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "clsx.mjs",
+      "env.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte",
+    "relative": "straw-app/public/ui/vendor/svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "constants.js",
+      "escaping.js",
+      "html-tree-validation.js",
+      "index-client.js",
+      "index-server.js",
+      "utils.js",
+      "version.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\action",
+    "relative": "straw-app/public/ui/vendor/svelte/action",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\animate",
+    "relative": "straw-app/public/ui/vendor/svelte/animate",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\attachments",
+    "relative": "straw-app/public/ui/vendor/svelte/attachments",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\easing",
+    "relative": "straw-app/public/ui/vendor/svelte/easing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\events",
+    "relative": "straw-app/public/ui/vendor/svelte/events",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal",
+    "relative": "straw-app/public/ui/vendor/svelte/internal",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "disclose-version.js",
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "constants.js",
+      "context.js",
+      "error-handling.js",
+      "errors.js",
+      "hydratable.js",
+      "index.js",
+      "legacy.js",
+      "loop.js",
+      "proxy.js",
+      "render.js",
+      "runtime.js",
+      "timing.js",
+      "validate.js",
+      "warnings.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\dev",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/dev",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "assign.js",
+      "console-log.js",
+      "css.js",
+      "debug.js",
+      "elements.js",
+      "equality.js",
+      "hmr.js",
+      "inspect.js",
+      "legacy.js",
+      "ownership.js",
+      "tracing.js",
+      "validation.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\dom",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/dom",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "css.js",
+      "hydration.js",
+      "operations.js",
+      "reconciler.js",
+      "task.js",
+      "template.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\dom\\blocks",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/dom/blocks",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "async.js",
+      "await.js",
+      "boundary.js",
+      "branches.js",
+      "css-props.js",
+      "each.js",
+      "html.js",
+      "if.js",
+      "key.js",
+      "slot.js",
+      "snippet.js",
+      "svelte-component.js",
+      "svelte-element.js",
+      "svelte-head.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\dom\\elements",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/dom/elements",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "actions.js",
+      "attachments.js",
+      "attributes.js",
+      "class.js",
+      "custom-element.js",
+      "customizable-select.js",
+      "events.js",
+      "misc.js",
+      "style.js",
+      "transitions.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\dom\\elements\\bindings",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/dom/elements/bindings",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "document.js",
+      "input.js",
+      "media.js",
+      "navigator.js",
+      "props.js",
+      "select.js",
+      "shared.js",
+      "size.js",
+      "this.js",
+      "universal.js",
+      "window.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\dom\\legacy",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/dom/legacy",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "event-modifiers.js",
+      "lifecycle.js",
+      "misc.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\client\\reactivity",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/client/reactivity",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "async.js",
+      "batch.js",
+      "deriveds.js",
+      "effects.js",
+      "equality.js",
+      "props.js",
+      "sources.js",
+      "status.js",
+      "store.js",
+      "utils.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\flags",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/flags",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "async.js",
+      "index.js",
+      "legacy.js",
+      "tracing.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\server",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/server",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "abort-signal.js",
+      "context.js",
+      "crypto.js",
+      "dev.js",
+      "errors.js",
+      "hydratable.js",
+      "hydration.js",
+      "index.js",
+      "render-context.js",
+      "renderer.js",
+      "warnings.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\server\\blocks",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/server/blocks",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "html.js",
+      "snippet.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\internal\\shared",
+    "relative": "straw-app/public/ui/vendor/svelte/internal/shared",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "attributes.js",
+      "clone.js",
+      "context.js",
+      "dev.js",
+      "errors.js",
+      "utils.js",
+      "validate.js",
+      "warnings.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\legacy",
+    "relative": "straw-app/public/ui/vendor/svelte/legacy",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "legacy-client.js",
+      "legacy-server.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\motion",
+    "relative": "straw-app/public/ui/vendor/svelte/motion",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js",
+      "spring.js",
+      "tweened.js",
+      "utils.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\reactivity",
+    "relative": "straw-app/public/ui/vendor/svelte/reactivity",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "create-subscriber.js",
+      "date.js",
+      "index-client.js",
+      "index-server.js",
+      "map.js",
+      "media-query.js",
+      "reactive-value.js",
+      "set.js",
+      "url-search-params.js",
+      "url.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\reactivity\\window",
+    "relative": "straw-app/public/ui/vendor/svelte/reactivity/window",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\server",
+    "relative": "straw-app/public/ui/vendor/svelte/server",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\store",
+    "relative": "straw-app/public/ui/vendor/svelte/store",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index-client.js",
+      "index-server.js",
+      "utils.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\store\\shared",
+    "relative": "straw-app/public/ui/vendor/svelte/store/shared",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public\\ui\\vendor\\svelte\\transition",
+    "relative": "straw-app/public/ui/vendor/svelte/transition",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "index.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src",
+    "relative": "straw-app/src",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri",
+    "relative": "straw-app/src-tauri",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "build.rs",
+      "tauri.conf.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\capabilities",
+    "relative": "straw-app/src-tauri/capabilities",
+    "kind": "source",
+    "directFiles": [
+      "default.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen",
+    "relative": "straw-app/src-tauri/gen",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\gen\\schemas",
+    "relative": "straw-app/src-tauri/gen/schemas",
+    "kind": "source",
+    "directFiles": [
+      "acl-manifests.json",
+      "capabilities.json",
+      "desktop-schema.json",
+      "windows-schema.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\icons",
+    "relative": "straw-app/src-tauri/icons",
+    "kind": "source",
+    "directFiles": [
+      "128x128.png",
+      "128x128@2x.png",
+      "32x32.png",
+      "Square107x107Logo.png",
+      "Square142x142Logo.png",
+      "Square150x150Logo.png",
+      "Square284x284Logo.png",
+      "Square30x30Logo.png",
+      "Square310x310Logo.png",
+      "Square44x44Logo.png",
+      "Square71x71Logo.png",
+      "Square89x89Logo.png",
+      "StoreLogo.png",
+      "icon.icns",
+      "icon.ico",
+      "icon.png"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src",
+    "relative": "straw-app/src-tauri/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs",
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party",
+    "relative": "straw-app/third-party",
+    "kind": "source",
+    "directFiles": [
+      "NOTICE.md"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools",
+    "relative": "straw-app/tools",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build",
+    "relative": "straw-app/tools/frontend-build",
+    "kind": "source",
+    "directFiles": [
+      "Cargo.toml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build\\src",
+    "relative": "straw-app/tools/frontend-build/src",
+    "kind": "source",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\ui",
+    "relative": "straw-app/ui",
+    "kind": "source",
+    "directFiles": [
+      "App.svelte",
+      "CodeGenPanel.svelte",
+      "FlowCanvas.svelte",
+      "NlpChatPanel.svelte",
+      "NodeConfigPanel.svelte",
+      "Toast.svelte",
+      "main.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW Stack",
+    "folder": "C:\\IEDB\\STRAW Stack\\tests",
+    "relative": "tests",
+    "kind": "source",
+    "directFiles": [
+      "package-lock.json",
+      "package.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components",
+    "relative": "components",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\admin_dashboard_ui",
+    "relative": "components/admin_dashboard_ui",
+    "kind": "source",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\ai_engine_ollama",
+    "relative": "components/ai_engine_ollama",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "engine.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\ai_engine_ollama\\src",
+    "relative": "components/ai_engine_ollama/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_gateway_proxy",
+    "relative": "components/api_gateway_proxy",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "gateway.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_gateway_proxy\\src",
+    "relative": "components/api_gateway_proxy/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_layer_axum",
+    "relative": "components/api_layer_axum",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\api_layer_axum\\src",
+    "relative": "components/api_layer_axum/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\auth_system",
+    "relative": "components/auth_system",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\auth_system\\src",
+    "relative": "components/auth_system/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\background_job_processor",
+    "relative": "components/background_job_processor",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "processor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\background_job_processor\\src",
+    "relative": "components/background_job_processor/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\billing_stripe",
+    "relative": "components/billing_stripe",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\billing_stripe\\src",
+    "relative": "components/billing_stripe/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\caching_layer_redis",
+    "relative": "components/caching_layer_redis",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "cache.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\caching_layer_redis\\src",
+    "relative": "components/caching_layer_redis/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\cicd_github_actions",
+    "relative": "components/cicd_github_actions",
+    "kind": "source",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\component_library_ui",
+    "relative": "components/component_library_ui",
+    "kind": "source",
+    "directFiles": [
+      "Button.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\crm_integration_hub",
+    "relative": "components/crm_integration_hub",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "crm.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\crm_integration_hub\\src",
+    "relative": "components/crm_integration_hub/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\dashboard_analytics",
+    "relative": "components/dashboard_analytics",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\dashboard_analytics\\src",
+    "relative": "components/dashboard_analytics/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\database_sqlite",
+    "relative": "components/database_sqlite",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\database_sqlite\\src",
+    "relative": "components/database_sqlite/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_pipeline_etl",
+    "relative": "components/data_pipeline_etl",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "pipeline.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_pipeline_etl\\src",
+    "relative": "components/data_pipeline_etl/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_warehouse_connector",
+    "relative": "components/data_warehouse_connector",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "warehouse.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\data_warehouse_connector\\src",
+    "relative": "components/data_warehouse_connector/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\desktop_shell_tauri",
+    "relative": "components/desktop_shell_tauri",
+    "kind": "source",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\email_template_system",
+    "relative": "components/email_template_system",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "templates.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\email_template_system\\src",
+    "relative": "components/email_template_system/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\error_tracking_sentry",
+    "relative": "components/error_tracking_sentry",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\error_tracking_sentry\\src",
+    "relative": "components/error_tracking_sentry/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\file_storage_local",
+    "relative": "components/file_storage_local",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\file_storage_local\\src",
+    "relative": "components/file_storage_local/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\frontend_svelte",
+    "relative": "components/frontend_svelte",
+    "kind": "source",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\iac_terraform_scripts",
+    "relative": "components/iac_terraform_scripts",
+    "kind": "source",
+    "directFiles": [
+      "main.tf"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\landing_page_marketing",
+    "relative": "components/landing_page_marketing",
+    "kind": "source",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\log_aggregation_loki",
+    "relative": "components/log_aggregation_loki",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "logger.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\log_aggregation_loki\\src",
+    "relative": "components/log_aggregation_loki/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\microservices_orchestrator",
+    "relative": "components/microservices_orchestrator",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "orchestrator.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\microservices_orchestrator\\src",
+    "relative": "components/microservices_orchestrator/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\mobile_app_shell",
+    "relative": "components/mobile_app_shell",
+    "kind": "source",
+    "directFiles": [
+      "App.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\monitoring_prometheus",
+    "relative": "components/monitoring_prometheus",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "metrics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\monitoring_prometheus\\src",
+    "relative": "components/monitoring_prometheus/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\notification_system",
+    "relative": "components/notification_system",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\notification_system\\src",
+    "relative": "components/notification_system/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\no_code_workflow_builder",
+    "relative": "components/no_code_workflow_builder",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\no_code_workflow_builder\\src",
+    "relative": "components/no_code_workflow_builder/src",
+    "kind": "source",
+    "directFiles": [
+      "build.rs",
+      "database.rs",
+      "executor.rs",
+      "main.rs",
+      "types.rs",
+      "workflow_executor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\no_code_workflow_builder\\ui",
+    "relative": "components/no_code_workflow_builder/ui",
+    "kind": "source",
+    "directFiles": [
+      "App.tsx",
+      "Dashboard.tsx",
+      "ErrorBoundary.tsx",
+      "ExecutionDetailsPage.tsx",
+      "Modal.tsx",
+      "NodeConfigDialog.tsx",
+      "NotificationProvider.tsx",
+      "SettingsPage.tsx",
+      "WorkflowCanvas.tsx",
+      "WorkflowEditor.tsx",
+      "WorkflowSearch.tsx",
+      "health-check.ts",
+      "keyboard.ts",
+      "main.tsx",
+      "schema.ts",
+      "types.ts",
+      "undo-redo.ts",
+      "useWorkflow.ts",
+      "validation.ts",
+      "vite.config.ts",
+      "vitest.config.ts",
+      "workflow.test.ts",
+      "workflows.ts"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\object_storage_s3",
+    "relative": "components/object_storage_s3",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\object_storage_s3\\src",
+    "relative": "components/object_storage_s3/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\read_replicas_manager",
+    "relative": "components/read_replicas_manager",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "replicas.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\read_replicas_manager\\src",
+    "relative": "components/read_replicas_manager/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\reporting_engine",
+    "relative": "components/reporting_engine",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\reporting_engine\\src",
+    "relative": "components/reporting_engine/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\search_engine_local",
+    "relative": "components/search_engine_local",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\search_engine_local\\src",
+    "relative": "components/search_engine_local/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\secrets_management_vault",
+    "relative": "components/secrets_management_vault",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\secrets_management_vault\\src",
+    "relative": "components/secrets_management_vault/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\security_zero_trust",
+    "relative": "components/security_zero_trust",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\security_zero_trust\\src",
+    "relative": "components/security_zero_trust/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\support_portal_internal",
+    "relative": "components/support_portal_internal",
+    "kind": "source",
+    "directFiles": [
+      "SupportPortal.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\tax_calculation_service",
+    "relative": "components/tax_calculation_service",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tax.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\tax_calculation_service\\src",
+    "relative": "components/tax_calculation_service/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\timeseries_db_influx",
+    "relative": "components/timeseries_db_influx",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\timeseries_db_influx\\src",
+    "relative": "components/timeseries_db_influx/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\uptime_monitor",
+    "relative": "components/uptime_monitor",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\uptime_monitor\\src",
+    "relative": "components/uptime_monitor/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_analytics_posthog",
+    "relative": "components/user_analytics_posthog",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_analytics_posthog\\src",
+    "relative": "components/user_analytics_posthog/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_management",
+    "relative": "components/user_management",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\user_management\\src",
+    "relative": "components/user_management/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\waf_security_layer",
+    "relative": "components/waf_security_layer",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "waf.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\waf_security_layer\\src",
+    "relative": "components/waf_security_layer/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\webhook_system",
+    "relative": "components/webhook_system",
+    "kind": "source",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "webhook.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\webhook_system\\src",
+    "relative": "components/webhook_system/src",
+    "kind": "source",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\zap_hosting_management",
+    "relative": "components/zap_hosting_management",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\zap_hosting_management\\docs",
+    "relative": "components/zap_hosting_management/docs",
+    "kind": "source",
+    "directFiles": [
+      "ZAP_HOSTING_DEPLOYMENT_WORKFLOW_BUILDER.md",
+      "ZAP_HOSTING_DOCKER_DEPLOYMENT.md",
+      "ZAP_HOSTING_INTEGRATION_SUMMARY.md",
+      "ZAP_HOSTING_QUICK_REFERENCE.md"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\components\\zap_hosting_management\\scripts",
+    "relative": "components/zap_hosting_management/scripts",
+    "kind": "source",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\core",
+    "relative": "core",
+    "kind": "source",
+    "directFiles": [
+      "config.json",
+      "controller.py"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\docs",
+    "relative": "docs",
+    "kind": "source",
+    "directFiles": [
+      "EXPANDED_SAAS_FRAMEWORK.md",
+      "FINAL_VERIFICATION_REPORT.md",
+      "GENERATED_TEMPLATES.md",
+      "README.md",
+      "TEST_REPORT.md"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output",
+    "relative": "output",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas",
+    "relative": "output/creative_agency_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src",
+    "relative": "output/creative_agency_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\admin_dashboard_ui",
+    "relative": "output/creative_agency_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\api_layer_axum",
+    "relative": "output/creative_agency_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\api_layer_axum\\src",
+    "relative": "output/creative_agency_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\auth_system",
+    "relative": "output/creative_agency_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\auth_system\\src",
+    "relative": "output/creative_agency_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\billing_stripe",
+    "relative": "output/creative_agency_saas/src/billing_stripe",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\billing_stripe\\src",
+    "relative": "output/creative_agency_saas/src/billing_stripe/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\cicd_github_actions",
+    "relative": "output/creative_agency_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\component_library_ui",
+    "relative": "output/creative_agency_saas/src/component_library_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "Button.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\database_sqlite",
+    "relative": "output/creative_agency_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\database_sqlite\\src",
+    "relative": "output/creative_agency_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\desktop_shell_tauri",
+    "relative": "output/creative_agency_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\email_template_system",
+    "relative": "output/creative_agency_saas/src/email_template_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "templates.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\email_template_system\\src",
+    "relative": "output/creative_agency_saas/src/email_template_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\error_tracking_sentry",
+    "relative": "output/creative_agency_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/creative_agency_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\file_storage_local",
+    "relative": "output/creative_agency_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\file_storage_local\\src",
+    "relative": "output/creative_agency_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\frontend_svelte",
+    "relative": "output/creative_agency_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\landing_page_marketing",
+    "relative": "output/creative_agency_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\notification_system",
+    "relative": "output/creative_agency_saas/src/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\notification_system\\src",
+    "relative": "output/creative_agency_saas/src/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\object_storage_s3",
+    "relative": "output/creative_agency_saas/src/object_storage_s3",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\object_storage_s3\\src",
+    "relative": "output/creative_agency_saas/src/object_storage_s3/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\secrets_management_vault",
+    "relative": "output/creative_agency_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/creative_agency_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\support_portal_internal",
+    "relative": "output/creative_agency_saas/src/support_portal_internal",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "SupportPortal.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\uptime_monitor",
+    "relative": "output/creative_agency_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\uptime_monitor\\src",
+    "relative": "output/creative_agency_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\user_analytics_posthog",
+    "relative": "output/creative_agency_saas/src/user_analytics_posthog",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\user_analytics_posthog\\src",
+    "relative": "output/creative_agency_saas/src/user_analytics_posthog/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\user_management",
+    "relative": "output/creative_agency_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\creative_agency_saas\\src\\user_management\\src",
+    "relative": "output/creative_agency_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas",
+    "relative": "output/ecommerce_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src",
+    "relative": "output/ecommerce_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\admin_dashboard_ui",
+    "relative": "output/ecommerce_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\api_layer_axum",
+    "relative": "output/ecommerce_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\api_layer_axum\\src",
+    "relative": "output/ecommerce_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\auth_system",
+    "relative": "output/ecommerce_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\auth_system\\src",
+    "relative": "output/ecommerce_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\billing_stripe",
+    "relative": "output/ecommerce_saas/src/billing_stripe",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\billing_stripe\\src",
+    "relative": "output/ecommerce_saas/src/billing_stripe/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\cicd_github_actions",
+    "relative": "output/ecommerce_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\crm_integration_hub",
+    "relative": "output/ecommerce_saas/src/crm_integration_hub",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "crm.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\crm_integration_hub\\src",
+    "relative": "output/ecommerce_saas/src/crm_integration_hub/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\database_sqlite",
+    "relative": "output/ecommerce_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\database_sqlite\\src",
+    "relative": "output/ecommerce_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\desktop_shell_tauri",
+    "relative": "output/ecommerce_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\error_tracking_sentry",
+    "relative": "output/ecommerce_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/ecommerce_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\file_storage_local",
+    "relative": "output/ecommerce_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\file_storage_local\\src",
+    "relative": "output/ecommerce_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\frontend_svelte",
+    "relative": "output/ecommerce_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\landing_page_marketing",
+    "relative": "output/ecommerce_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\mobile_app_shell",
+    "relative": "output/ecommerce_saas/src/mobile_app_shell",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\notification_system",
+    "relative": "output/ecommerce_saas/src/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\notification_system\\src",
+    "relative": "output/ecommerce_saas/src/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\object_storage_s3",
+    "relative": "output/ecommerce_saas/src/object_storage_s3",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\object_storage_s3\\src",
+    "relative": "output/ecommerce_saas/src/object_storage_s3/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\search_engine_local",
+    "relative": "output/ecommerce_saas/src/search_engine_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\search_engine_local\\src",
+    "relative": "output/ecommerce_saas/src/search_engine_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\secrets_management_vault",
+    "relative": "output/ecommerce_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/ecommerce_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\tax_calculation_service",
+    "relative": "output/ecommerce_saas/src/tax_calculation_service",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tax.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\tax_calculation_service\\src",
+    "relative": "output/ecommerce_saas/src/tax_calculation_service/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\uptime_monitor",
+    "relative": "output/ecommerce_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\uptime_monitor\\src",
+    "relative": "output/ecommerce_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\user_analytics_posthog",
+    "relative": "output/ecommerce_saas/src/user_analytics_posthog",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\user_analytics_posthog\\src",
+    "relative": "output/ecommerce_saas/src/user_analytics_posthog/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\user_management",
+    "relative": "output/ecommerce_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\user_management\\src",
+    "relative": "output/ecommerce_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\webhook_system",
+    "relative": "output/ecommerce_saas/src/webhook_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "webhook.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\ecommerce_saas\\src\\webhook_system\\src",
+    "relative": "output/ecommerce_saas/src/webhook_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas",
+    "relative": "output/education_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src",
+    "relative": "output/education_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\admin_dashboard_ui",
+    "relative": "output/education_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\api_layer_axum",
+    "relative": "output/education_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\api_layer_axum\\src",
+    "relative": "output/education_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\auth_system",
+    "relative": "output/education_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\auth_system\\src",
+    "relative": "output/education_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\cicd_github_actions",
+    "relative": "output/education_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\component_library_ui",
+    "relative": "output/education_saas/src/component_library_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "Button.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\database_sqlite",
+    "relative": "output/education_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\database_sqlite\\src",
+    "relative": "output/education_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\desktop_shell_tauri",
+    "relative": "output/education_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\email_template_system",
+    "relative": "output/education_saas/src/email_template_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "templates.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\email_template_system\\src",
+    "relative": "output/education_saas/src/email_template_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\error_tracking_sentry",
+    "relative": "output/education_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/education_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\file_storage_local",
+    "relative": "output/education_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\file_storage_local\\src",
+    "relative": "output/education_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\frontend_svelte",
+    "relative": "output/education_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\landing_page_marketing",
+    "relative": "output/education_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\mobile_app_shell",
+    "relative": "output/education_saas/src/mobile_app_shell",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\notification_system",
+    "relative": "output/education_saas/src/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\notification_system\\src",
+    "relative": "output/education_saas/src/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\object_storage_s3",
+    "relative": "output/education_saas/src/object_storage_s3",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\object_storage_s3\\src",
+    "relative": "output/education_saas/src/object_storage_s3/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\reporting_engine",
+    "relative": "output/education_saas/src/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\reporting_engine\\src",
+    "relative": "output/education_saas/src/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\secrets_management_vault",
+    "relative": "output/education_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/education_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\support_portal_internal",
+    "relative": "output/education_saas/src/support_portal_internal",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "SupportPortal.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\uptime_monitor",
+    "relative": "output/education_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\uptime_monitor\\src",
+    "relative": "output/education_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\user_management",
+    "relative": "output/education_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\education_saas\\src\\user_management\\src",
+    "relative": "output/education_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas",
+    "relative": "output/finance_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src",
+    "relative": "output/finance_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\admin_dashboard_ui",
+    "relative": "output/finance_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\api_layer_axum",
+    "relative": "output/finance_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\api_layer_axum\\src",
+    "relative": "output/finance_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\auth_system",
+    "relative": "output/finance_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\auth_system\\src",
+    "relative": "output/finance_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\background_job_processor",
+    "relative": "output/finance_saas/src/background_job_processor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "processor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\background_job_processor\\src",
+    "relative": "output/finance_saas/src/background_job_processor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\billing_stripe",
+    "relative": "output/finance_saas/src/billing_stripe",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\billing_stripe\\src",
+    "relative": "output/finance_saas/src/billing_stripe/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\caching_layer_redis",
+    "relative": "output/finance_saas/src/caching_layer_redis",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "cache.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\caching_layer_redis\\src",
+    "relative": "output/finance_saas/src/caching_layer_redis/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\cicd_github_actions",
+    "relative": "output/finance_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\dashboard_analytics",
+    "relative": "output/finance_saas/src/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\dashboard_analytics\\src",
+    "relative": "output/finance_saas/src/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\database_sqlite",
+    "relative": "output/finance_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\database_sqlite\\src",
+    "relative": "output/finance_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\desktop_shell_tauri",
+    "relative": "output/finance_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\error_tracking_sentry",
+    "relative": "output/finance_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/finance_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\file_storage_local",
+    "relative": "output/finance_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\file_storage_local\\src",
+    "relative": "output/finance_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\frontend_svelte",
+    "relative": "output/finance_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\landing_page_marketing",
+    "relative": "output/finance_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\read_replicas_manager",
+    "relative": "output/finance_saas/src/read_replicas_manager",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "replicas.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\read_replicas_manager\\src",
+    "relative": "output/finance_saas/src/read_replicas_manager/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\reporting_engine",
+    "relative": "output/finance_saas/src/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\reporting_engine\\src",
+    "relative": "output/finance_saas/src/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\secrets_management_vault",
+    "relative": "output/finance_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/finance_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\security_zero_trust",
+    "relative": "output/finance_saas/src/security_zero_trust",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\security_zero_trust\\src",
+    "relative": "output/finance_saas/src/security_zero_trust/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\tax_calculation_service",
+    "relative": "output/finance_saas/src/tax_calculation_service",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tax.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\tax_calculation_service\\src",
+    "relative": "output/finance_saas/src/tax_calculation_service/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\uptime_monitor",
+    "relative": "output/finance_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\uptime_monitor\\src",
+    "relative": "output/finance_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\user_management",
+    "relative": "output/finance_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\user_management\\src",
+    "relative": "output/finance_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\webhook_system",
+    "relative": "output/finance_saas/src/webhook_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "webhook.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\finance_saas\\src\\webhook_system\\src",
+    "relative": "output/finance_saas/src/webhook_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas",
+    "relative": "output/healthcare_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src",
+    "relative": "output/healthcare_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\admin_dashboard_ui",
+    "relative": "output/healthcare_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\ai_engine_ollama",
+    "relative": "output/healthcare_saas/src/ai_engine_ollama",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "engine.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\ai_engine_ollama\\src",
+    "relative": "output/healthcare_saas/src/ai_engine_ollama/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\api_layer_axum",
+    "relative": "output/healthcare_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\api_layer_axum\\src",
+    "relative": "output/healthcare_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\auth_system",
+    "relative": "output/healthcare_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\auth_system\\src",
+    "relative": "output/healthcare_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\cicd_github_actions",
+    "relative": "output/healthcare_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\database_sqlite",
+    "relative": "output/healthcare_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\database_sqlite\\src",
+    "relative": "output/healthcare_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\desktop_shell_tauri",
+    "relative": "output/healthcare_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\error_tracking_sentry",
+    "relative": "output/healthcare_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/healthcare_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\file_storage_local",
+    "relative": "output/healthcare_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\file_storage_local\\src",
+    "relative": "output/healthcare_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\frontend_svelte",
+    "relative": "output/healthcare_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\landing_page_marketing",
+    "relative": "output/healthcare_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\log_aggregation_loki",
+    "relative": "output/healthcare_saas/src/log_aggregation_loki",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "logger.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\log_aggregation_loki\\src",
+    "relative": "output/healthcare_saas/src/log_aggregation_loki/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\monitoring_prometheus",
+    "relative": "output/healthcare_saas/src/monitoring_prometheus",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "metrics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\monitoring_prometheus\\src",
+    "relative": "output/healthcare_saas/src/monitoring_prometheus/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\object_storage_s3",
+    "relative": "output/healthcare_saas/src/object_storage_s3",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\object_storage_s3\\src",
+    "relative": "output/healthcare_saas/src/object_storage_s3/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\reporting_engine",
+    "relative": "output/healthcare_saas/src/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\reporting_engine\\src",
+    "relative": "output/healthcare_saas/src/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\secrets_management_vault",
+    "relative": "output/healthcare_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/healthcare_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\security_zero_trust",
+    "relative": "output/healthcare_saas/src/security_zero_trust",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\security_zero_trust\\src",
+    "relative": "output/healthcare_saas/src/security_zero_trust/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\support_portal_internal",
+    "relative": "output/healthcare_saas/src/support_portal_internal",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "SupportPortal.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\timeseries_db_influx",
+    "relative": "output/healthcare_saas/src/timeseries_db_influx",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\timeseries_db_influx\\src",
+    "relative": "output/healthcare_saas/src/timeseries_db_influx/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\uptime_monitor",
+    "relative": "output/healthcare_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\uptime_monitor\\src",
+    "relative": "output/healthcare_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\user_management",
+    "relative": "output/healthcare_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\user_management\\src",
+    "relative": "output/healthcare_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\waf_security_layer",
+    "relative": "output/healthcare_saas/src/waf_security_layer",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "waf.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\healthcare_saas\\src\\waf_security_layer\\src",
+    "relative": "output/healthcare_saas/src/waf_security_layer/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas",
+    "relative": "output/legal_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src",
+    "relative": "output/legal_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\admin_dashboard_ui",
+    "relative": "output/legal_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\ai_engine_ollama",
+    "relative": "output/legal_saas/src/ai_engine_ollama",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "engine.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\ai_engine_ollama\\src",
+    "relative": "output/legal_saas/src/ai_engine_ollama/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\api_layer_axum",
+    "relative": "output/legal_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\api_layer_axum\\src",
+    "relative": "output/legal_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\auth_system",
+    "relative": "output/legal_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\auth_system\\src",
+    "relative": "output/legal_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\cicd_github_actions",
+    "relative": "output/legal_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\database_sqlite",
+    "relative": "output/legal_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\database_sqlite\\src",
+    "relative": "output/legal_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\data_pipeline_etl",
+    "relative": "output/legal_saas/src/data_pipeline_etl",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "pipeline.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\data_pipeline_etl\\src",
+    "relative": "output/legal_saas/src/data_pipeline_etl/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\desktop_shell_tauri",
+    "relative": "output/legal_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\error_tracking_sentry",
+    "relative": "output/legal_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/legal_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\file_storage_local",
+    "relative": "output/legal_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\file_storage_local\\src",
+    "relative": "output/legal_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\frontend_svelte",
+    "relative": "output/legal_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\landing_page_marketing",
+    "relative": "output/legal_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\object_storage_s3",
+    "relative": "output/legal_saas/src/object_storage_s3",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\object_storage_s3\\src",
+    "relative": "output/legal_saas/src/object_storage_s3/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\reporting_engine",
+    "relative": "output/legal_saas/src/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\reporting_engine\\src",
+    "relative": "output/legal_saas/src/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\secrets_management_vault",
+    "relative": "output/legal_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/legal_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\security_zero_trust",
+    "relative": "output/legal_saas/src/security_zero_trust",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\security_zero_trust\\src",
+    "relative": "output/legal_saas/src/security_zero_trust/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\support_portal_internal",
+    "relative": "output/legal_saas/src/support_portal_internal",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "SupportPortal.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\uptime_monitor",
+    "relative": "output/legal_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\uptime_monitor\\src",
+    "relative": "output/legal_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\user_management",
+    "relative": "output/legal_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\legal_saas\\src\\user_management\\src",
+    "relative": "output/legal_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas",
+    "relative": "output/logistics_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src",
+    "relative": "output/logistics_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\admin_dashboard_ui",
+    "relative": "output/logistics_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\api_gateway_proxy",
+    "relative": "output/logistics_saas/src/api_gateway_proxy",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "gateway.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\api_gateway_proxy\\src",
+    "relative": "output/logistics_saas/src/api_gateway_proxy/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\api_layer_axum",
+    "relative": "output/logistics_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\api_layer_axum\\src",
+    "relative": "output/logistics_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\auth_system",
+    "relative": "output/logistics_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\auth_system\\src",
+    "relative": "output/logistics_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\background_job_processor",
+    "relative": "output/logistics_saas/src/background_job_processor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "processor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\background_job_processor\\src",
+    "relative": "output/logistics_saas/src/background_job_processor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\cicd_github_actions",
+    "relative": "output/logistics_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\dashboard_analytics",
+    "relative": "output/logistics_saas/src/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\dashboard_analytics\\src",
+    "relative": "output/logistics_saas/src/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\database_sqlite",
+    "relative": "output/logistics_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\database_sqlite\\src",
+    "relative": "output/logistics_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\desktop_shell_tauri",
+    "relative": "output/logistics_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\error_tracking_sentry",
+    "relative": "output/logistics_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/logistics_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\file_storage_local",
+    "relative": "output/logistics_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\file_storage_local\\src",
+    "relative": "output/logistics_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\frontend_svelte",
+    "relative": "output/logistics_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\landing_page_marketing",
+    "relative": "output/logistics_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\microservices_orchestrator",
+    "relative": "output/logistics_saas/src/microservices_orchestrator",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "orchestrator.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\microservices_orchestrator\\src",
+    "relative": "output/logistics_saas/src/microservices_orchestrator/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\notification_system",
+    "relative": "output/logistics_saas/src/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\notification_system\\src",
+    "relative": "output/logistics_saas/src/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\search_engine_local",
+    "relative": "output/logistics_saas/src/search_engine_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\search_engine_local\\src",
+    "relative": "output/logistics_saas/src/search_engine_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\secrets_management_vault",
+    "relative": "output/logistics_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/logistics_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\timeseries_db_influx",
+    "relative": "output/logistics_saas/src/timeseries_db_influx",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\timeseries_db_influx\\src",
+    "relative": "output/logistics_saas/src/timeseries_db_influx/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\uptime_monitor",
+    "relative": "output/logistics_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\uptime_monitor\\src",
+    "relative": "output/logistics_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\user_management",
+    "relative": "output/logistics_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\user_management\\src",
+    "relative": "output/logistics_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\webhook_system",
+    "relative": "output/logistics_saas/src/webhook_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "webhook.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\logistics_saas\\src\\webhook_system\\src",
+    "relative": "output/logistics_saas/src/webhook_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas",
+    "relative": "output/marketing_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src",
+    "relative": "output/marketing_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\admin_dashboard_ui",
+    "relative": "output/marketing_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\ai_engine_ollama",
+    "relative": "output/marketing_saas/src/ai_engine_ollama",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "engine.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\ai_engine_ollama\\src",
+    "relative": "output/marketing_saas/src/ai_engine_ollama/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\api_layer_axum",
+    "relative": "output/marketing_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\api_layer_axum\\src",
+    "relative": "output/marketing_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\auth_system",
+    "relative": "output/marketing_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\auth_system\\src",
+    "relative": "output/marketing_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\background_job_processor",
+    "relative": "output/marketing_saas/src/background_job_processor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "processor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\background_job_processor\\src",
+    "relative": "output/marketing_saas/src/background_job_processor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\cicd_github_actions",
+    "relative": "output/marketing_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\crm_integration_hub",
+    "relative": "output/marketing_saas/src/crm_integration_hub",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "crm.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\crm_integration_hub\\src",
+    "relative": "output/marketing_saas/src/crm_integration_hub/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\dashboard_analytics",
+    "relative": "output/marketing_saas/src/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\dashboard_analytics\\src",
+    "relative": "output/marketing_saas/src/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\database_sqlite",
+    "relative": "output/marketing_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\database_sqlite\\src",
+    "relative": "output/marketing_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\data_pipeline_etl",
+    "relative": "output/marketing_saas/src/data_pipeline_etl",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "pipeline.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\data_pipeline_etl\\src",
+    "relative": "output/marketing_saas/src/data_pipeline_etl/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\desktop_shell_tauri",
+    "relative": "output/marketing_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\email_template_system",
+    "relative": "output/marketing_saas/src/email_template_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "templates.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\email_template_system\\src",
+    "relative": "output/marketing_saas/src/email_template_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\error_tracking_sentry",
+    "relative": "output/marketing_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/marketing_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\file_storage_local",
+    "relative": "output/marketing_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\file_storage_local\\src",
+    "relative": "output/marketing_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\frontend_svelte",
+    "relative": "output/marketing_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\landing_page_marketing",
+    "relative": "output/marketing_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\notification_system",
+    "relative": "output/marketing_saas/src/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\notification_system\\src",
+    "relative": "output/marketing_saas/src/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\reporting_engine",
+    "relative": "output/marketing_saas/src/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\reporting_engine\\src",
+    "relative": "output/marketing_saas/src/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\secrets_management_vault",
+    "relative": "output/marketing_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/marketing_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\uptime_monitor",
+    "relative": "output/marketing_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\uptime_monitor\\src",
+    "relative": "output/marketing_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\user_analytics_posthog",
+    "relative": "output/marketing_saas/src/user_analytics_posthog",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\user_analytics_posthog\\src",
+    "relative": "output/marketing_saas/src/user_analytics_posthog/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\user_management",
+    "relative": "output/marketing_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\marketing_saas\\src\\user_management\\src",
+    "relative": "output/marketing_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas",
+    "relative": "output/real_estate_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src",
+    "relative": "output/real_estate_saas/src",
+    "kind": "generated-or-copy",
+    "directFiles": []
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\admin_dashboard_ui",
+    "relative": "output/real_estate_saas/src/admin_dashboard_ui",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "AdminDashboard.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\api_layer_axum",
+    "relative": "output/real_estate_saas/src/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\api_layer_axum\\src",
+    "relative": "output/real_estate_saas/src/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\auth_system",
+    "relative": "output/real_estate_saas/src/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\auth_system\\src",
+    "relative": "output/real_estate_saas/src/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\cicd_github_actions",
+    "relative": "output/real_estate_saas/src/cicd_github_actions",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.yml"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\crm_integration_hub",
+    "relative": "output/real_estate_saas/src/crm_integration_hub",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "crm.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\crm_integration_hub\\src",
+    "relative": "output/real_estate_saas/src/crm_integration_hub/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\dashboard_analytics",
+    "relative": "output/real_estate_saas/src/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\dashboard_analytics\\src",
+    "relative": "output/real_estate_saas/src/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\database_sqlite",
+    "relative": "output/real_estate_saas/src/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\database_sqlite\\src",
+    "relative": "output/real_estate_saas/src/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\desktop_shell_tauri",
+    "relative": "output/real_estate_saas/src/desktop_shell_tauri",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "main.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\error_tracking_sentry",
+    "relative": "output/real_estate_saas/src/error_tracking_sentry",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "tracker.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\error_tracking_sentry\\src",
+    "relative": "output/real_estate_saas/src/error_tracking_sentry/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\file_storage_local",
+    "relative": "output/real_estate_saas/src/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\file_storage_local\\src",
+    "relative": "output/real_estate_saas/src/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\frontend_svelte",
+    "relative": "output/real_estate_saas/src/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\landing_page_marketing",
+    "relative": "output/real_estate_saas/src/landing_page_marketing",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "LandingPage.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\mobile_app_shell",
+    "relative": "output/real_estate_saas/src/mobile_app_shell",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.js"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\notification_system",
+    "relative": "output/real_estate_saas/src/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\notification_system\\src",
+    "relative": "output/real_estate_saas/src/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\object_storage_s3",
+    "relative": "output/real_estate_saas/src/object_storage_s3",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\object_storage_s3\\src",
+    "relative": "output/real_estate_saas/src/object_storage_s3/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\search_engine_local",
+    "relative": "output/real_estate_saas/src/search_engine_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\search_engine_local\\src",
+    "relative": "output/real_estate_saas/src/search_engine_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\secrets_management_vault",
+    "relative": "output/real_estate_saas/src/secrets_management_vault",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "vault.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\secrets_management_vault\\src",
+    "relative": "output/real_estate_saas/src/secrets_management_vault/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\uptime_monitor",
+    "relative": "output/real_estate_saas/src/uptime_monitor",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "monitor.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\uptime_monitor\\src",
+    "relative": "output/real_estate_saas/src/uptime_monitor/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\user_management",
+    "relative": "output/real_estate_saas/src/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\user_management\\src",
+    "relative": "output/real_estate_saas/src/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\webhook_system",
+    "relative": "output/real_estate_saas/src/webhook_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "webhook.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\output\\real_estate_saas\\src\\webhook_system\\src",
+    "relative": "output/real_estate_saas/src/webhook_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates",
+    "relative": "templates",
+    "kind": "source",
+    "directFiles": [
+      "bundle_templates.py"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas",
+    "relative": "templates/creative_agency_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\billing_stripe",
+    "relative": "templates/creative_agency_saas/billing_stripe",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\billing_stripe\\src",
+    "relative": "templates/creative_agency_saas/billing_stripe/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\file_storage_local",
+    "relative": "templates/creative_agency_saas/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\file_storage_local\\src",
+    "relative": "templates/creative_agency_saas/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\frontend_svelte",
+    "relative": "templates/creative_agency_saas/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\notification_system",
+    "relative": "templates/creative_agency_saas/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\notification_system\\src",
+    "relative": "templates/creative_agency_saas/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\user_management",
+    "relative": "templates/creative_agency_saas/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\creative_agency_saas\\user_management\\src",
+    "relative": "templates/creative_agency_saas/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas",
+    "relative": "templates/ecommerce_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\auth_system",
+    "relative": "templates/ecommerce_saas/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\auth_system\\src",
+    "relative": "templates/ecommerce_saas/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\billing_stripe",
+    "relative": "templates/ecommerce_saas/billing_stripe",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\billing_stripe\\src",
+    "relative": "templates/ecommerce_saas/billing_stripe/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\file_storage_local",
+    "relative": "templates/ecommerce_saas/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\file_storage_local\\src",
+    "relative": "templates/ecommerce_saas/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\frontend_svelte",
+    "relative": "templates/ecommerce_saas/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\notification_system",
+    "relative": "templates/ecommerce_saas/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\notification_system\\src",
+    "relative": "templates/ecommerce_saas/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\search_engine_local",
+    "relative": "templates/ecommerce_saas/search_engine_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\ecommerce_saas\\search_engine_local\\src",
+    "relative": "templates/ecommerce_saas/search_engine_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas",
+    "relative": "templates/education_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\auth_system",
+    "relative": "templates/education_saas/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\auth_system\\src",
+    "relative": "templates/education_saas/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\database_sqlite",
+    "relative": "templates/education_saas/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\database_sqlite\\src",
+    "relative": "templates/education_saas/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\file_storage_local",
+    "relative": "templates/education_saas/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\file_storage_local\\src",
+    "relative": "templates/education_saas/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\frontend_svelte",
+    "relative": "templates/education_saas/frontend_svelte",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "App.svelte"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\user_management",
+    "relative": "templates/education_saas/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\education_saas\\user_management\\src",
+    "relative": "templates/education_saas/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas",
+    "relative": "templates/finance_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\auth_system",
+    "relative": "templates/finance_saas/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\auth_system\\src",
+    "relative": "templates/finance_saas/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\billing_stripe",
+    "relative": "templates/finance_saas/billing_stripe",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "billing.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\billing_stripe\\src",
+    "relative": "templates/finance_saas/billing_stripe/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\dashboard_analytics",
+    "relative": "templates/finance_saas/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\dashboard_analytics\\src",
+    "relative": "templates/finance_saas/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\database_sqlite",
+    "relative": "templates/finance_saas/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\database_sqlite\\src",
+    "relative": "templates/finance_saas/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\reporting_engine",
+    "relative": "templates/finance_saas/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\reporting_engine\\src",
+    "relative": "templates/finance_saas/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\security_zero_trust",
+    "relative": "templates/finance_saas/security_zero_trust",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\finance_saas\\security_zero_trust\\src",
+    "relative": "templates/finance_saas/security_zero_trust/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas",
+    "relative": "templates/healthcare_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\ai_engine_ollama",
+    "relative": "templates/healthcare_saas/ai_engine_ollama",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "engine.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\ai_engine_ollama\\src",
+    "relative": "templates/healthcare_saas/ai_engine_ollama/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\auth_system",
+    "relative": "templates/healthcare_saas/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\auth_system\\src",
+    "relative": "templates/healthcare_saas/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\database_sqlite",
+    "relative": "templates/healthcare_saas/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\database_sqlite\\src",
+    "relative": "templates/healthcare_saas/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\reporting_engine",
+    "relative": "templates/healthcare_saas/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\reporting_engine\\src",
+    "relative": "templates/healthcare_saas/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\security_zero_trust",
+    "relative": "templates/healthcare_saas/security_zero_trust",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\security_zero_trust\\src",
+    "relative": "templates/healthcare_saas/security_zero_trust/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\user_management",
+    "relative": "templates/healthcare_saas/user_management",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "user.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\healthcare_saas\\user_management\\src",
+    "relative": "templates/healthcare_saas/user_management/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas",
+    "relative": "templates/legal_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\auth_system",
+    "relative": "templates/legal_saas/auth_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "auth.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\auth_system\\src",
+    "relative": "templates/legal_saas/auth_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\database_sqlite",
+    "relative": "templates/legal_saas/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\database_sqlite\\src",
+    "relative": "templates/legal_saas/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\file_storage_local",
+    "relative": "templates/legal_saas/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\file_storage_local\\src",
+    "relative": "templates/legal_saas/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\reporting_engine",
+    "relative": "templates/legal_saas/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\reporting_engine\\src",
+    "relative": "templates/legal_saas/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\security_zero_trust",
+    "relative": "templates/legal_saas/security_zero_trust",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "security.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\legal_saas\\security_zero_trust\\src",
+    "relative": "templates/legal_saas/security_zero_trust/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas",
+    "relative": "templates/logistics_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\api_layer_axum",
+    "relative": "templates/logistics_saas/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\api_layer_axum\\src",
+    "relative": "templates/logistics_saas/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\dashboard_analytics",
+    "relative": "templates/logistics_saas/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\dashboard_analytics\\src",
+    "relative": "templates/logistics_saas/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\database_sqlite",
+    "relative": "templates/logistics_saas/database_sqlite",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "db.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\database_sqlite\\src",
+    "relative": "templates/logistics_saas/database_sqlite/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\notification_system",
+    "relative": "templates/logistics_saas/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\notification_system\\src",
+    "relative": "templates/logistics_saas/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\search_engine_local",
+    "relative": "templates/logistics_saas/search_engine_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\logistics_saas\\search_engine_local\\src",
+    "relative": "templates/logistics_saas/search_engine_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas",
+    "relative": "templates/marketing_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\ai_engine_ollama",
+    "relative": "templates/marketing_saas/ai_engine_ollama",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "engine.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\ai_engine_ollama\\src",
+    "relative": "templates/marketing_saas/ai_engine_ollama/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\api_layer_axum",
+    "relative": "templates/marketing_saas/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\api_layer_axum\\src",
+    "relative": "templates/marketing_saas/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\dashboard_analytics",
+    "relative": "templates/marketing_saas/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\dashboard_analytics\\src",
+    "relative": "templates/marketing_saas/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\notification_system",
+    "relative": "templates/marketing_saas/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\notification_system\\src",
+    "relative": "templates/marketing_saas/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\reporting_engine",
+    "relative": "templates/marketing_saas/reporting_engine",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "reporting.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\marketing_saas\\reporting_engine\\src",
+    "relative": "templates/marketing_saas/reporting_engine/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas",
+    "relative": "templates/real_estate_saas",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "manifest.json"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\api_layer_axum",
+    "relative": "templates/real_estate_saas/api_layer_axum",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "api.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\api_layer_axum\\src",
+    "relative": "templates/real_estate_saas/api_layer_axum/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\dashboard_analytics",
+    "relative": "templates/real_estate_saas/dashboard_analytics",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "analytics.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\dashboard_analytics\\src",
+    "relative": "templates/real_estate_saas/dashboard_analytics/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\file_storage_local",
+    "relative": "templates/real_estate_saas/file_storage_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "storage.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\file_storage_local\\src",
+    "relative": "templates/real_estate_saas/file_storage_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\notification_system",
+    "relative": "templates/real_estate_saas/notification_system",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "notify.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\notification_system\\src",
+    "relative": "templates/real_estate_saas/notification_system/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\search_engine_local",
+    "relative": "templates/real_estate_saas/search_engine_local",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      ".gitignore",
+      "Cargo.toml",
+      "search.rs"
+    ]
+  },
+  {
+    "root": "C:\\IEDB\\STRAW SaaS Generator",
+    "folder": "C:\\IEDB\\STRAW SaaS Generator\\templates\\real_estate_saas\\search_engine_local\\src",
+    "relative": "templates/real_estate_saas/search_engine_local/src",
+    "kind": "generated-or-copy",
+    "directFiles": [
+      "lib.rs"
+    ]
+  }
+]

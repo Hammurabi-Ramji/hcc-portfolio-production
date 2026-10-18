@@ -1,0 +1,55 @@
+{
+  "observed_utc": "2026-10-09T08:45:11.145067+00:00",
+  "baseline": "A-F049 input inventory",
+  "current_snapshot": [
+    {
+      "path": "straw-app/tools/frontend-build/src/main.rs",
+      "bytes": 17413,
+      "sha256": "a72c2c59ccca753ae0fcb0ab5edf9bd9a3cc4c59aa765de05721389fe335266b",
+      "mtime_utc": "2026-10-09T08:40:02.608098+00:00"
+    },
+    {
+      "path": "straw-app/tools/frontend-build/src/site_cache.rs",
+      "bytes": 5865,
+      "sha256": "02e2dffea5d76a241d5ba89570d7127c1ec7b72b61bef8a6c64b9a81dca40c68",
+      "mtime_utc": "2026-10-09T08:40:58.912218+00:00"
+    },
+    {
+      "path": "straw-app/site/index-site.html",
+      "bytes": 1680,
+      "sha256": "1f986085c2171c623d7d4af0b9c9ed1e20ffc7da9d10abc78ba9ebda6a6ee5d5",
+      "mtime_utc": "2026-10-09T08:40:56.122297+00:00"
+    },
+    {
+      "path": "straw-app/ui/App.svelte",
+      "bytes": 9718,
+      "sha256": "7c5483575e918a63b4376342178f9c0d793976b58059fa52d5c10d2f3b9928c6",
+      "mtime_utc": "2026-10-09T08:33:53.452194+00:00"
+    },
+    {
+      "path": "straw-app/Cargo.toml",
+      "bytes": 613,
+      "sha256": "9223c8a969408bf4942bcb180a19b5bb7428116b06a67d4db917b42e188e41e3",
+      "mtime_utc": "2026-10-09T06:20:42.370108+00:00"
+    },
+    {
+      "path": "straw-app/tools/frontend-build/Cargo.toml",
+      "bytes": 395,
+      "sha256": "d0bec38c340e511084510ab84bd83ec9d0f07c48d9e6b711ea488e673915fb3a",
+      "mtime_utc": "2026-10-09T08:40:56.303233+00:00"
+    }
+  ],
+  "unintended_formatting": {
+    "path": "straw-app/tools/frontend-build/src/site_cache.rs",
+    "original_sha256": "911370fe8b6715eeac785d8b69ff278a03629fc35f8dc732ca32f72bf0506e1a",
+    "formatter_sha256": "02e2dffea5d76a241d5ba89570d7127c1ec7b72b61bef8a6c64b9a81dca40c68",
+    "current_has_newer_external_edits": true,
+    "whole_file_restore_forbidden": "Would discard newer changes"
+  },
+  "coordination": "Human authorization requested before cross-chat message",
+  "formatting_recovery": {
+    "status": "restored formatter-only change while preserving later semantic patches",
+    "evidence": "review/agent-output/A-F050/formatting-recovery/restoration.json",
+    "current_sha256": "71ea5543ac20049399ba790d9fa242e8a76764c79cbfc5ab8fe0a633abe3a93d"
+  }
+}

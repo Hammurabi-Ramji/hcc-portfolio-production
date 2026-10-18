@@ -1,0 +1,8 @@
+{
+  "apps/web/app/settings/page.tsx": {
+    "before_sha256": "3b6129b1b562331c6e0cf5de94c3ca70030035758b2762ef2cf0cab204d848a0",
+    "after_sha256": "1026831e90b0a96cfd74cbed83597d9282405365226debef890cf556a5d41fcb",
+    "patch": "patches/page.tsx.patch",
+    "patch_reproduces_after": true
+  }
+}

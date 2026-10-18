@@ -1,0 +1,18 @@
+packages:
+  - 'sue-dashboard-web'
+  - 'sue-cloud-backend'
+  - 'sue-cli'
+  - 'sue-mobile'
+  - 'sue-admin-portal'
+  - 'sue-ai-chat'
+  - 'shared'
+
+catalogs:
+  node-lts:
+    node: '>=18.0.0'
+  
+  versions:
+    react: '^18.2.0'
+    vue: '^3.4.15'
+    typescript: '^5.3.3'
+    express: '^4.18.2'

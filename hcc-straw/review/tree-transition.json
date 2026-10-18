@@ -1,0 +1,418 @@
+{
+  "decision": "User requested current replacement tree; original audit retained as history.",
+  "added": [
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates",
+      "relative": "straw-app/crates",
+      "kind": "source",
+      "directFiles": []
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\axum-loop",
+      "relative": "straw-app/crates/axum-loop",
+      "kind": "source",
+      "directFiles": [
+        "Cargo.toml"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\axum-loop\\src",
+      "relative": "straw-app/crates/axum-loop/src",
+      "kind": "source",
+      "directFiles": [
+        "lib.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine",
+      "relative": "straw-app/crates/engine",
+      "kind": "source",
+      "directFiles": [
+        "Cargo.toml"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src",
+      "relative": "straw-app/crates/engine/src",
+      "kind": "source",
+      "directFiles": [
+        "codegen.rs",
+        "contract.rs",
+        "dag.rs",
+        "db.rs",
+        "flow.rs",
+        "lib.rs",
+        "network.rs",
+        "nlp.rs",
+        "schema.sql",
+        "tests.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\engine\\src\\nodes",
+      "relative": "straw-app/crates/engine/src/nodes",
+      "kind": "source",
+      "directFiles": [
+        "conditional.rs",
+        "csv_parse.rs",
+        "filter.rs",
+        "http_request.rs",
+        "join_text.rs",
+        "llm_prompt.rs",
+        "mod.rs",
+        "read_file.rs",
+        "template.rs",
+        "text_input.rs",
+        "transform.rs",
+        "write_file.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\wasm-frontend",
+      "relative": "straw-app/crates/wasm-frontend",
+      "kind": "source",
+      "directFiles": [
+        "Cargo.toml"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\crates\\wasm-frontend\\src",
+      "relative": "straw-app/crates/wasm-frontend/src",
+      "kind": "source",
+      "directFiles": [
+        "lib.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\public",
+      "relative": "straw-app/public",
+      "kind": "source",
+      "directFiles": []
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party",
+      "relative": "straw-app/third-party",
+      "kind": "source",
+      "directFiles": [
+        "NOTICE.md"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools",
+      "relative": "straw-app/tools",
+      "kind": "source",
+      "directFiles": []
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build",
+      "relative": "straw-app/tools/frontend-build",
+      "kind": "source",
+      "directFiles": [
+        "Cargo.toml"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tools\\frontend-build\\src",
+      "relative": "straw-app/tools/frontend-build/src",
+      "kind": "source",
+      "directFiles": [
+        "main.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\ui",
+      "relative": "straw-app/ui",
+      "kind": "source",
+      "directFiles": [
+        "App.svelte",
+        "CodeGenPanel.svelte",
+        "FlowCanvas.svelte",
+        "NlpChatPanel.svelte",
+        "NodeConfigPanel.svelte",
+        "Toast.svelte",
+        "main.js"
+      ]
+    }
+  ],
+  "removed": [
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\e2e",
+      "relative": "straw-app/e2e",
+      "kind": "source",
+      "directFiles": [
+        "01-app-shell.spec.js",
+        "02-flow-management.spec.js",
+        "03-nlp-chat.spec.js",
+        "04-code-gen.spec.js",
+        "05-flow-and-toast.spec.js",
+        "tauri-mock.js"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src\\code_gen",
+      "relative": "straw-app/src-tauri/src/code_gen",
+      "kind": "source",
+      "directFiles": [
+        "lib.rs",
+        "mod.rs",
+        "nlp.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src\\no_code",
+      "relative": "straw-app/src-tauri/src/no_code",
+      "kind": "source",
+      "directFiles": [
+        "001_init_schema.sql",
+        "build.rs",
+        "database.rs",
+        "executor.rs",
+        "main.rs",
+        "mod.rs",
+        "tests.rs",
+        "types.rs",
+        "workflow_executor.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src\\nodes",
+      "relative": "straw-app/src-tauri/src/nodes",
+      "kind": "source",
+      "directFiles": [
+        "conditional.rs",
+        "csv_parse.rs",
+        "filter.rs",
+        "http_request.rs",
+        "join_text.rs",
+        "json_build.rs",
+        "json_extract.rs",
+        "llm_prompt.rs",
+        "math_op.rs",
+        "mod.rs",
+        "read_file.rs",
+        "regex_extract.rs",
+        "split_text.rs",
+        "template.rs",
+        "text_input.rs",
+        "transform.rs",
+        "write_file.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\wasm-compute",
+      "relative": "straw-app/src-tauri/wasm-compute",
+      "kind": "source",
+      "directFiles": [
+        "Cargo.lock",
+        "Cargo.toml"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\wasm-compute\\pkg",
+      "relative": "straw-app/src-tauri/wasm-compute/pkg",
+      "kind": "source",
+      "directFiles": [
+        ".gitignore",
+        "package.json",
+        "wasm_compute_bg.wasm",
+        "wasm_compute_bg.wasm.d.ts",
+        "wasm_compute.d.ts",
+        "wasm_compute.js"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\wasm-compute\\src",
+      "relative": "straw-app/src-tauri/wasm-compute/src",
+      "kind": "source",
+      "directFiles": [
+        "lib.rs"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src\\lib",
+      "relative": "straw-app/src/lib",
+      "kind": "source",
+      "directFiles": [
+        "CodeGenPanel.svelte",
+        "FlowCanvas.svelte",
+        "FlowNode.svelte",
+        "NlpChatPanel.svelte",
+        "NodeConfigPanel.svelte",
+        "store.ts",
+        "tauri.ts",
+        "Toast.svelte",
+        "types.ts",
+        "wasm.ts"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src\\no-code",
+      "relative": "straw-app/src/no-code",
+      "kind": "source",
+      "directFiles": [
+        "App.tsx",
+        "Dashboard.tsx",
+        "ErrorBoundary.tsx",
+        "ExecutionDetailsPage.tsx",
+        "health-check.ts",
+        "index.css",
+        "keyboard.ts",
+        "main.tsx",
+        "Modal.tsx",
+        "NodeConfigDialog.tsx",
+        "NotificationProvider.tsx",
+        "schema.ts",
+        "SettingsPage.tsx",
+        "types.ts",
+        "undo-redo.ts",
+        "useWorkflow.ts",
+        "validation.ts",
+        "vite.config.ts",
+        "vitest.config.ts",
+        "workflow.test.ts",
+        "WorkflowCanvas.tsx",
+        "WorkflowEditor.tsx",
+        "workflows.ts",
+        "WorkflowSearch.tsx"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src\\routes",
+      "relative": "straw-app/src/routes",
+      "kind": "source",
+      "directFiles": [
+        "+layout.ts",
+        "+page.svelte"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\static",
+      "relative": "straw-app/static",
+      "kind": "source",
+      "directFiles": [
+        "favicon.png",
+        "svelte.svg",
+        "tauri.svg",
+        "vite.svg"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tests",
+      "relative": "straw-app/tests",
+      "kind": "source",
+      "directFiles": [
+        "api.spec.ts",
+        "integration.spec.ts",
+        "ui.spec.ts"
+      ]
+    },
+    {
+      "root": "C:\\IEDB\\STRAW Stack",
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\tests\\e2e",
+      "relative": "straw-app/tests/e2e",
+      "kind": "source",
+      "directFiles": [
+        "01-app-shell.test.ts",
+        "02-flow-management.test.ts",
+        "03-nlp-chat.test.ts",
+        "04-code-gen.test.ts",
+        "05-flow-canvas.test.ts",
+        "06-toast.test.ts",
+        "fixtures.ts",
+        "tauri-mock.js"
+      ]
+    }
+  ],
+  "direct_file_names_changed": [
+    {
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app",
+      "old": [
+        ".gitignore",
+        "package-lock.json",
+        "package.json",
+        "playwright.config.cjs",
+        "playwright.config.ts",
+        "pnpm-lock.yaml",
+        "README.md",
+        "svelte.config.js",
+        "tsconfig.json",
+        "vite.config.js"
+      ],
+      "current": [
+        ".gitignore",
+        "Cargo.lock",
+        "Cargo.toml",
+        "README.md",
+        "STRAW-001-VERIFICATION.md",
+        "Trunk.toml",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src",
+      "old": [
+        "app.html"
+      ],
+      "current": []
+    },
+    {
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri",
+      "old": [
+        ".gitignore",
+        "build.rs",
+        "Cargo.lock",
+        "Cargo.toml",
+        "tauri.conf.json"
+      ],
+      "current": [
+        ".gitignore",
+        "Cargo.toml",
+        "build.rs",
+        "tauri.conf.json"
+      ]
+    },
+    {
+      "folder": "C:\\IEDB\\STRAW Stack\\straw-app\\src-tauri\\src",
+      "old": [
+        "codegen.rs",
+        "commands.rs",
+        "dag.rs",
+        "db.rs",
+        "lib.rs",
+        "main.rs",
+        "nlp.rs",
+        "wasm_commands.rs"
+      ],
+      "current": [
+        "lib.rs",
+        "main.rs"
+      ]
+    }
+  ]
+}

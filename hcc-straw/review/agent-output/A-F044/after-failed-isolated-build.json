@@ -1,0 +1,22 @@
+﻿{
+    "acl-manifests.json":  {
+                               "bytes":  68996,
+                               "sha256":  "a3ad7c154de6efb52a058145b879b934c999f7ed85e2d42eb5f200b2eb3ee7e4",
+                               "lastWriteTime":  "2026-10-10T10:29:49.2534422-05:00"
+                           },
+    "capabilities.json":  {
+                              "bytes":  146,
+                              "sha256":  "4fca70b5437f720b9a72c727c0663349aa9e8b31917dcc0a870012de02406b07",
+                              "lastWriteTime":  "2026-10-09T01:32:01.9065006-05:00"
+                          },
+    "desktop-schema.json":  {
+                                "bytes":  121297,
+                                "sha256":  "4444ad5cda6787552fd55ea85b270b311998bf70e0bc31db0c32cfc4199b754e",
+                                "lastWriteTime":  "2026-10-10T10:29:49.2649293-05:00"
+                            },
+    "windows-schema.json":  {
+                                "bytes":  121297,
+                                "sha256":  "4444ad5cda6787552fd55ea85b270b311998bf70e0bc31db0c32cfc4199b754e",
+                                "lastWriteTime":  "2026-10-10T10:29:49.2649293-05:00"
+                            }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe test --offline --locked --package frontend-build -- --nocapture",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\staging-unit-tests.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\staging-unit-tests.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\compiler-clean.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-clean.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\compiler-removes-stale-extras.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\compiler-removes-stale-extras.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\deleted-incremental-native.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-incremental-native.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\deleted-incremental-trunk.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-incremental-trunk.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\deleted-clean-native.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-clean-native.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\deleted-clean-trunk.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-clean-trunk.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\deleted-recovery.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\deleted-recovery.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\renamed-incremental-native.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-incremental-native.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\renamed-incremental-trunk.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-incremental-trunk.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\renamed-clean-native.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-clean-native.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\trunk.exe build --offline --release",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\renamed-clean-trunk.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-clean-trunk.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 0,
+    "expected": "zero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\renamed-recovery.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\renamed-recovery.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\unmapped-import.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\unmapped-import.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\missing-vendor-module.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\missing-vendor-module.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  },
+  {
+    "command": "C:\\Users\\hammu\\.cargo\\bin\\cargo.exe run --offline --locked --package frontend-build",
+    "cwd": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\isolated\\straw-app",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\interim\\site-map-unmapped-import.log",
+    "acceptance": false,
+    "superseded_by": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F050\\logs\\site-map-unmapped-import.log",
+    "diagnostic": "Superseded fixture/harness attempt; final complete run is authoritative."
+  }
+]

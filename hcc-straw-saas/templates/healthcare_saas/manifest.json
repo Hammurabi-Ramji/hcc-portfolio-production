@@ -1,0 +1,13 @@
+{
+  "template_id": "healthcare_saas",
+  "industry": "Healthcare",
+  "bundled_components": [
+    "auth_system",
+    "database_sqlite",
+    "security_zero_trust",
+    "user_management",
+    "ai_engine_ollama",
+    "reporting_engine"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

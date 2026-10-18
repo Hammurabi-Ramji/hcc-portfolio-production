@@ -1,0 +1,13 @@
+{
+  "template_id": "ecommerce_saas",
+  "industry": "Ecommerce",
+  "bundled_components": [
+    "auth_system",
+    "billing_stripe",
+    "frontend_svelte",
+    "file_storage_local",
+    "search_engine_local",
+    "notification_system"
+  ],
+  "design_spec": "Industry Standard Dark Mode"
+}

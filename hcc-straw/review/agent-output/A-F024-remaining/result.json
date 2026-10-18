@@ -1,0 +1,69 @@
+{
+  "agent": "A-F024-remaining",
+  "status": "DONE",
+  "folder": "apps/web/services",
+  "wave": "remaining",
+  "files_touched": [
+    "apps/web/services/README.md",
+    "apps/web/services/file.service.ts",
+    "apps/web/services/user.service.ts"
+  ],
+  "gates_passed": [
+    "docs-reconcile-unsupported-file-avatar",
+    "live-advertised-routes-profile-ownership-pagination-archive-activate",
+    "zero-transport-file-avatar-stubs",
+    "prior-A-F024-offline-regression-still-green"
+  ],
+  "evidence_refs": [
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining.md",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\commands.json",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\00-docs.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\01.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\02.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\03.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\04.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\05.log",
+    "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\06.log"
+  ],
+  "commands": [
+    {
+      "command": "docs-reconcile-services-readme",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\00-docs.log"
+    },
+    {
+      "command": "reuse apps/api/target/debug/straw-web-api.exe",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\01.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F024-remaining/tsconfig.json",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\02.log"
+    },
+    {
+      "command": "node --test review/agent-output/A-F024-remaining/live-integration.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\03.log"
+    },
+    {
+      "command": "node apps/web/node_modules/typescript/bin/tsc --project review/agent-output/A-F024/tsconfig.json",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\04.log"
+    },
+    {
+      "command": "node --test review/agent-output/A-F024/regression.cjs",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\05.log"
+    },
+    {
+      "command": "scan-services-no-upload-advertising",
+      "exit_code": 0,
+      "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F024-remaining\\logs\\06.log"
+    }
+  ],
+  "blocker": null,
+  "primary": "Live service-path verification of auth/users/projects routes, profile restart persistence, ownership, pagination/search, and archive/activate; services README truthfully refuses file/avatar advertising.",
+  "secondary": "FileService and uploadAvatar remain local UNSUPPORTED/501 with zero transport; prior A-F024 offline matrix still passes.",
+  "tertiary": "apps/web SETUP_GUIDE FileService upload claims remain outside services ownership (F001/F003/docs)."
+}

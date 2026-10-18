@@ -1,0 +1,81 @@
+{
+  "clean_compiler_public": true,
+  "clean_trunk_public_and_dist": true,
+  "independent_target": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\cargo-target",
+  "assertions": [
+    {
+      "stage": "compiler-public",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\svelte\\LICENSE.md",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui\\vendor\\licenses\\svelte-LICENSE.md",
+      "bytes": 1126,
+      "sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3",
+      "byte_exact": true
+    },
+    {
+      "stage": "compiler-public",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\clsx\\LICENSE",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui\\vendor\\licenses\\clsx-LICENSE",
+      "bytes": 1104,
+      "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "byte_exact": true
+    },
+    {
+      "stage": "compiler-public",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\NOTICE.md",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui\\vendor\\licenses\\NOTICE.md",
+      "bytes": 1393,
+      "sha256": "4e1cb9dded5792129bbc41cc6fd125c250a2953e7a84539a6b1e999cf8ee7b4a",
+      "byte_exact": true
+    },
+    {
+      "stage": "trunk-public",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\svelte\\LICENSE.md",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui\\vendor\\licenses\\svelte-LICENSE.md",
+      "bytes": 1126,
+      "sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3",
+      "byte_exact": true
+    },
+    {
+      "stage": "trunk-public",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\clsx\\LICENSE",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui\\vendor\\licenses\\clsx-LICENSE",
+      "bytes": 1104,
+      "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "byte_exact": true
+    },
+    {
+      "stage": "trunk-public",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\NOTICE.md",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\public\\ui\\vendor\\licenses\\NOTICE.md",
+      "bytes": 1393,
+      "sha256": "4e1cb9dded5792129bbc41cc6fd125c250a2953e7a84539a6b1e999cf8ee7b4a",
+      "byte_exact": true
+    },
+    {
+      "stage": "trunk-dist",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\svelte\\LICENSE.md",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\dist\\public\\ui\\vendor\\licenses\\svelte-LICENSE.md",
+      "bytes": 1126,
+      "sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3",
+      "byte_exact": true
+    },
+    {
+      "stage": "trunk-dist",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\clsx\\LICENSE",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\dist\\public\\ui\\vendor\\licenses\\clsx-LICENSE",
+      "bytes": 1104,
+      "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "byte_exact": true
+    },
+    {
+      "stage": "trunk-dist",
+      "source": "C:\\IEDB\\STRAW Stack\\straw-app\\third-party\\NOTICE.md",
+      "output": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F047\\isolated-final\\straw-app\\dist\\public\\ui\\vendor\\licenses\\NOTICE.md",
+      "bytes": 1393,
+      "sha256": "4e1cb9dded5792129bbc41cc6fd125c250a2953e7a84539a6b1e999cf8ee7b4a",
+      "byte_exact": true
+    }
+  ],
+  "vendored_source_unchanged": true,
+  "packaged_frontend_inspection": "Deferred to W4 A-S16; no installer inspected"
+}

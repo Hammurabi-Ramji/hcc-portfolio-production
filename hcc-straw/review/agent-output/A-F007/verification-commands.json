@@ -1,0 +1,20 @@
+[
+  {
+    "command": "C:/Users/hammu/.cargo/bin/cargo.exe fmt --manifest-path apps/api/Cargo.toml -- --check",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\logs\\fmt-final.log",
+    "acceptance": true
+  },
+  {
+    "command": "node apps/web/node_modules/typescript/bin/tsc --project \"C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\tsconfig.json\"",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\logs\\typescript-final.log",
+    "acceptance": true
+  },
+  {
+    "command": "C:/Users/hammu/.cargo/bin/cargo.exe clippy --offline --locked --manifest-path apps/api/Cargo.toml --all-targets -- -D warnings",
+    "exit_code": 0,
+    "log": "C:\\IEDB\\STRAW Stack\\review\\agent-output\\A-F007\\logs\\clippy-final.log",
+    "acceptance": true
+  }
+]

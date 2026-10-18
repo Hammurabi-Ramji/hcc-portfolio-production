@@ -21,9 +21,21 @@
 **/pkg/
 **/release/
 **/installer/assets/
+**/.next/
+**/*.tsbuildinfo
 
-# Secrets — never commit
+# Local databases, including review-agent temp SQLite
+**/*.sqlite
+**/*.sqlite3
+**/*.sqlite3-shm
+**/*.sqlite3-wal
+**/review/**/*.db
+**/review/**/*.db-shm
+**/review/**/*.db-wal
+
+# Secrets — never commit. .env.example stays trackable.
 **/.env
+!**/.env.example
 **/.env.local
 **/.env.production
 **/*.pem
@@ -69,7 +81,19 @@ desktop.ini
 .idea/
 
 # Temp / scratch
-output/
+# Authored guides and verification under output/ stay trackable.
+# Ignore databases, build trees, and generated bundles there instead.
+**/output/**/*.sqlite
+**/output/**/*.sqlite3
+**/output/**/*.sqlite3-shm
+**/output/**/*.sqlite3-wal
+**/output/**/target/
+**/output/**/node_modules/
+**/output/**/.next/
+**/output/**/dist/
+**/output/**/*.tsbuildinfo
+hcc-straw-saas/output/
+hcc-straw/review/controller-fixture/output/
 temp/
 tmp/
 **/*.tmp

@@ -58,7 +58,7 @@
 
 #### ✅ Data Seeding
 - **Created:** 2 master admin users
-  - admin / Admin@123 (System Administrator)
+  - admin / <the password you set at bootstrap; never a documented default> (System Administrator)
   - ramco.admin / R@MC0. (RAMCO Master Administrator)
 - **Loaded:** 5 sample materials (Doxycycline, Enrofloxacin, etc.)
 - **Configured:** 3 warehouses (Main, Production, FG)

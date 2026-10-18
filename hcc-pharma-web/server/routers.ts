@@ -78,14 +78,16 @@ export const appRouter = router({
 
   // ============ CUSTOMERS ============
   
+  // The directory holds contact details and tax IDs, so reads are admin-only,
+  // matching the mutations below.
   customers: router({
-    list: protectedProcedure
+    list: adminProcedure
       .input(z.object({ limit: z.number().optional() }).optional())
       .query(async ({ input }) => {
         return await db.getCustomers(input?.limit);
       }),
-    
-    get: protectedProcedure
+
+    get: adminProcedure
       .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
         return await db.getCustomerById(input.id);
@@ -146,14 +148,15 @@ export const appRouter = router({
 
   // ============ VENDORS ============
   
+  // Vendor records include contact details and tax IDs; reads are admin-only.
   vendors: router({
-    list: protectedProcedure
+    list: adminProcedure
       .input(z.object({ limit: z.number().optional() }).optional())
       .query(async ({ input }) => {
         return await db.getVendors(input?.limit);
       }),
-    
-    get: protectedProcedure
+
+    get: adminProcedure
       .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
         return await db.getVendorById(input.id);

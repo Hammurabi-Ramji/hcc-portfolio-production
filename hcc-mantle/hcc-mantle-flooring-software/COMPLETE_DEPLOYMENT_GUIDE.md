@@ -380,7 +380,7 @@ NODE_ENV=production
 HOST=0.0.0.0
 
 # JWT Security
-JWT_SECRET=your_random_secret_here
+JWT_SECRET=   # required, 32+ random chars: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 JWT_EXPIRE=24h
 
 # Client URL

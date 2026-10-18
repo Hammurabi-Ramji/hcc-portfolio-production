@@ -352,7 +352,7 @@ http://localhost:8080
 Default credentials:
 ```
 Username: admin
-Password: Admin@123
+Password: <the password you set at bootstrap; never a documented default>
 ```
 
 ⚠️ **Change default password immediately!**

@@ -373,7 +373,7 @@ CREATE TABLE qc_tests (
 3. FG Warehouse - Finished Goods
 
 **User Accounts:**
-1. `admin` / `Admin@123` (System Administrator)
+1. `admin` / the password you set at bootstrap (never a documented default) (System Administrator)
 2. `ramco.admin` / `R@MC0.` (Master Administrator)
 
 ---

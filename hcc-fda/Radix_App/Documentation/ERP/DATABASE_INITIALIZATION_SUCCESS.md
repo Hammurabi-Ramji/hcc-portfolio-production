@@ -37,7 +37,7 @@ Your VetPharma ERP database has been successfully created and populated with see
 
 ```
 Username: admin
-Password: Admin@123
+Password: <the password you set at bootstrap; never a documented default>
 ```
 
 ⚠️ **SECURITY WARNING:** Change the default password immediately after first login!
@@ -219,7 +219,7 @@ Or run the production build:
 2. Or launch the desktop application
 3. Log in with:
    - **Username:** `admin`
-   - **Password:** `Admin@123`
+   - **Password:** the password you set at bootstrap (never a documented default)
 
 ### 3. Change Default Password
 
@@ -355,7 +355,7 @@ Copy-Item "data\vetpharma.db" "backups\vetpharma_$date.db"
 ⚠️ **IMPORTANT SECURITY WARNINGS:**
 
 1. **Change the default admin password immediately**
-2. The default password `Admin@123` is publicly known
+2. The default password the password you set at bootstrap (never a documented default) is publicly known
 3. Use strong passwords (12+ characters, mixed case, numbers, symbols)
 4. Enable multi-factor authentication if available
 5. Regularly rotate passwords every 90 days
@@ -370,7 +370,7 @@ The database stores password hashes using bcrypt (work factor 10). The default p
 $2a$10$rNzGPqKZSLJF8m5XQp5P7u.KQH1e1R1j6Z5mR5E5kR5R5R5R5R5R5
 ```
 
-This hash is for `Admin@123` and should be changed immediately.
+This hash is for the password you set at bootstrap (never a documented default) and should be changed immediately.
 
 ### Database Security
 
@@ -510,7 +510,7 @@ Your VetPharma ERP database is fully initialized and ready for use!
 npm run tauri:dev
 ```
 
-Then login with `admin` / `Admin@123` and start exploring!
+Then login with `admin` / the password you set at bootstrap (never a documented default) and start exploring!
 
 ---
 

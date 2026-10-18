@@ -48,7 +48,12 @@ const register = exports.register = [
   req
 }) => req.body.lastName !== undefined).trim().isLength({
   min: 1
-}).withMessage('Last name is required'), (0, _expressValidator.body)('role').isIn(['admin', 'quality_manager', 'compliance_manager', 'production_manager', 'lab_technician', 'auditor', 'regulatory_specialist', 'training_coordinator', 'customer_service', 'vendor_manager', 'hr_manager', 'finance_manager', 'it_admin', 'user']).withMessage('Invalid role specified'), async (req, res) => {
+}).withMessage('Last name is required'),
+// Public self-registration only ever creates a standard user. Privileged roles
+// are assigned afterwards by an administrator through the protected users API.
+(0, _expressValidator.body)('role').optional({
+  checkFalsy: true
+}).equals('user').withMessage('Public registration creates standard user accounts; privileged roles are assigned by an administrator'), async (req, res) => {
   try {
     // Check validation errors
     const errors = (0, _expressValidator.validationResult)(req);
@@ -66,7 +71,6 @@ const register = exports.register = [
       lastName,
       first_name,
       last_name,
-      role,
       department,
       employee_id
     } = req.body;
@@ -109,7 +113,7 @@ const register = exports.register = [
       password,
       first_name: normalizedFirstName,
       last_name: normalizedLastName,
-      role,
+      role: 'user',
       department,
       employee_id
     });

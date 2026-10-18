@@ -3,12 +3,23 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
+    // Seed accounts never ship with a known password. The operator supplies one
+    // for this run only, and production refuses to seed these demo accounts
+    // unless that is explicitly intended.
+    const seedPassword = process.env.RADIX_SEED_PASSWORD;
+    if (!seedPassword || seedPassword.length < 16) {
+      throw new Error('Set RADIX_SEED_PASSWORD (at least 16 characters) for this seed run; there is no default password.');
+    }
+    if (process.env.NODE_ENV === 'production' && process.env.RADIX_ALLOW_SEED_USERS !== 'true') {
+      throw new Error('Refusing to seed demo accounts in production. Create the first administrator explicitly, or set RADIX_ALLOW_SEED_USERS=true.');
+    }
+    const passwordHash = await require('bcryptjs').hash(seedPassword, 12);
+
     // Seed default users
     await queryInterface.bulkInsert('users', [{
       id: '550e8400-e29b-41d4-a716-446655440000',
       email: 'admin@radixlabs.com',
-      password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj8lZQKQF5m6',
-      // password: Admin123!
+      password: passwordHash,
       first_name: 'System',
       last_name: 'Administrator',
       role: 'admin',
@@ -22,8 +33,7 @@ module.exports = {
     }, {
       id: '550e8400-e29b-41d4-a716-446655440001',
       email: 'quality@radixlabs.com',
-      password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj8lZQKQF5m6',
-      // password: Admin123!
+      password: passwordHash,
       first_name: 'Quality',
       last_name: 'Manager',
       role: 'quality_manager',
@@ -37,8 +47,7 @@ module.exports = {
     }, {
       id: '550e8400-e29b-41d4-a716-446655440002',
       email: 'production@radixlabs.com',
-      password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj8lZQKQF5m6',
-      // password: Admin123!
+      password: passwordHash,
       first_name: 'Production',
       last_name: 'Manager',
       role: 'production_manager',
@@ -52,8 +61,7 @@ module.exports = {
     }, {
       id: '550e8400-e29b-41d4-a716-446655440003',
       email: 'compliance@radixlabs.com',
-      password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj8lZQKQF5m6',
-      // password: Admin123!
+      password: passwordHash,
       first_name: 'Compliance',
       last_name: 'Officer',
       role: 'compliance_manager',
@@ -67,8 +75,7 @@ module.exports = {
     }, {
       id: '550e8400-e29b-41d4-a716-446655440004',
       email: 'technician@radixlabs.com',
-      password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj8lZQKQF5m6',
-      // password: Admin123!
+      password: passwordHash,
       first_name: 'Lab',
       last_name: 'Technician',
       role: 'lab_technician',

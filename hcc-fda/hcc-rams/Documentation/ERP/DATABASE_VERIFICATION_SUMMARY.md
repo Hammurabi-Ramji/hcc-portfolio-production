@@ -301,7 +301,7 @@ conn.execute("PRAGMA foreign_keys = ON", [])?;
 | training_courses | 5 | 5 | ✅ Correct |
 
 **Master Admin Users:**
-1. ✅ `admin` / `Admin@123` (System Administrator)
+1. ✅ `admin` / the password you set at bootstrap (never a documented default) (System Administrator)
 2. ✅ `ramco.admin` / `R@MC0.` (RAMCO Master Administrator)
 
 **Sample Materials:**
@@ -481,7 +481,7 @@ The system is ready for:
 - **Documentation:** Root directory `*.md` files
 
 ### Test Credentials
-- **Admin:** admin / Admin@123
+- **Admin:** admin / <the password you set at bootstrap; never a documented default>
 - **Master Admin:** ramco.admin / R@MC0.
 
 ### Database Access

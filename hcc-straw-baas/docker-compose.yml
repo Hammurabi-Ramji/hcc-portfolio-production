@@ -15,7 +15,7 @@ services:
     environment:
       PORT: 3001
       NODE_ENV: production
-      JWT_SECRET: ${JWT_SECRET:-change-me-in-production}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "3001:3001"
     volumes:
@@ -32,6 +32,7 @@ services:
     environment:
       PORT: 3002
       NODE_ENV: production
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "3002:3002"
     volumes:
@@ -48,6 +49,7 @@ services:
     environment:
       PORT: 3003
       NODE_ENV: production
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "3003:3003"
     volumes:
@@ -64,6 +66,7 @@ services:
     environment:
       PORT: 3004
       NODE_ENV: production
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "3004:3004"
     volumes:
@@ -81,6 +84,7 @@ services:
     environment:
       PORT: 3005
       NODE_ENV: production
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "3005:3005"
     volumes:

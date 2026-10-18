@@ -238,7 +238,7 @@ tail -f ./logs/application.log
 ```
 URL: http://localhost:8080
 Username: admin
-Password: Admin@123
+Password: <the password you set at bootstrap; never a documented default>
 ```
 
 **⚠️ CRITICAL: Change default password immediately!**

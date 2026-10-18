@@ -1,11 +1,15 @@
 import { Hono } from 'hono';
 import { createServiceDB } from '../../shared/db/sqlite';
+import { requireAuth, tenantOf } from '../../shared/utils/auth';
 import crypto from 'crypto';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = new Hono();
+
+// Every route needs a live auth-service session; the tenant comes from it.
+app.use('*', requireAuth);
 
 // Initialize SQLite database
 const db = createServiceDB('data');
@@ -17,7 +21,7 @@ db.migrate(path.join(__dirname, 'migrations/001-init.sql'));
  * POST /collections - Create a new collection
  */
 app.post('/collections', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const body = await c.req.json().catch(() => ({}));
 	const { name, schema } = body;
 
@@ -47,7 +51,7 @@ app.post('/collections', async (c) => {
  * GET /collections - List collections for tenant
  */
 app.get('/collections', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 
 	try {
 		const collections = db
@@ -71,7 +75,7 @@ app.get('/collections', async (c) => {
  * POST /records - Insert record into collection
  */
 app.post('/records', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const body = await c.req.json().catch(() => ({}));
 	const { collection_id, data } = body;
 
@@ -113,7 +117,7 @@ app.post('/records', async (c) => {
  * GET /records - Query records from collection
  */
 app.get('/records', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const collectionId = c.req.query('collection_id');
 	const limit = parseInt(c.req.query('limit') || '100');
 	const offset = parseInt(c.req.query('offset') || '0');
@@ -156,7 +160,7 @@ app.get('/records', async (c) => {
  * GET /records/:id - Get specific record
  */
 app.get('/records/:id', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const recordId = c.req.param('id');
 
 	try {
@@ -188,7 +192,7 @@ app.get('/records/:id', async (c) => {
  * PUT /records/:id - Update record
  */
 app.put('/records/:id', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const recordId = c.req.param('id');
 	const body = await c.req.json().catch(() => ({}));
 	const { data } = body;
@@ -229,7 +233,7 @@ app.put('/records/:id', async (c) => {
  * DELETE /records/:id - Delete record
  */
 app.delete('/records/:id', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const recordId = c.req.param('id');
 
 	try {

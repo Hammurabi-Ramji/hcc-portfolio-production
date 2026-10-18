@@ -1,7 +1,7 @@
 /**
  * HOLO-9 Integration Tests
  * Test all services communicating together
- * Run: npm test
+ * Run: npm test (services must be running with the same JWT_SECRET)
  */
 
 import { describe, test, expect } from '@jest/globals';
@@ -15,9 +15,17 @@ const SERVICES = {
   analytics: 'http://localhost:3005',
 };
 
-// Test tenant
+// Test tenant and user
 const TENANT_ID = 'test-' + Date.now();
+const EMAIL = `user-${Date.now()}@example.com`;
+const PASSWORD = 'TestPass123!long';
 let authToken = '';
+
+const authed = (extra: Record<string, string> = {}) => ({
+  'Content-Type': 'application/json',
+  Authorization: `Bearer ${authToken}`,
+  ...extra,
+});
 
 describe('Auth Service Integration', () => {
   test('Register User', async () => {
@@ -25,8 +33,8 @@ describe('Auth Service Integration', () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        email: `user-${Date.now()}@example.com`,
-        password: 'TestPass123!',
+        email: EMAIL,
+        password: PASSWORD,
         tenant_id: TENANT_ID,
         tenant_name: 'Test Org',
       }),
@@ -37,22 +45,31 @@ describe('Auth Service Integration', () => {
     expect(data.success).toBe(true);
   });
 
-  test('Login User', async () => {
-    const response = await fetch(`${SERVICES.auth}/login`, {
+  test('Registering into an existing tenant is refused', async () => {
+    const response = await fetch(`${SERVICES.auth}/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        email: `user-${Date.now()}@example.com`,
-        password: 'TestPass123!',
+        email: `intruder-${Date.now()}@example.com`,
+        password: PASSWORD,
         tenant_id: TENANT_ID,
       }),
     });
 
-    if (response.status === 200) {
-      const data = await response.json();
-      expect(data.token).toBeDefined();
-      authToken = data.token;
-    }
+    expect(response.status).toBe(409);
+  });
+
+  test('Login User', async () => {
+    const response = await fetch(`${SERVICES.auth}/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: EMAIL, password: PASSWORD, tenant_id: TENANT_ID }),
+    });
+
+    expect(response.status).toBe(200);
+    const data = await response.json();
+    expect(data.token).toBeDefined();
+    authToken = data.token;
   });
 });
 
@@ -60,10 +77,7 @@ describe('Data Service Integration', () => {
   test('Create Collection', async () => {
     const response = await fetch(`${SERVICES.data}/collections`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Tenant-ID': TENANT_ID,
-      },
+      headers: authed(),
       body: JSON.stringify({ name: 'test_col' }),
     });
 
@@ -77,10 +91,7 @@ describe('Billing Service Integration', () => {
   test('Create Subscription', async () => {
     const response = await fetch(`${SERVICES.billing}/subscriptions`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Tenant-ID': TENANT_ID,
-      },
+      headers: authed(),
       body: JSON.stringify({ plan: 'pro' }),
     });
 
@@ -92,10 +103,7 @@ describe('Analytics Service Integration', () => {
   test('Track Event', async () => {
     const response = await fetch(`${SERVICES.analytics}/events`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Tenant-ID': TENANT_ID,
-      },
+      headers: authed(),
       body: JSON.stringify({
         event_name: 'test_event',
         event_data: { value: 1 },
@@ -107,16 +115,31 @@ describe('Analytics Service Integration', () => {
 });
 
 describe('Multi-Tenant Isolation', () => {
-  test('Prevent Cross-Tenant Access', async () => {
-    // Data in TENANT_ID should not be visible to OTHER_TENANT
+  test('Requests without a session are rejected', async () => {
     const response = await fetch(`${SERVICES.data}/collections`, {
-      method: 'GET',
-      headers: { 'X-Tenant-ID': 'other-tenant' },
+      headers: { 'X-Tenant-ID': TENANT_ID },
     });
+    expect(response.status).toBe(401);
+  });
 
-    expect(response.status).toBe(200);
-    const data = await response.json();
-    // Should be empty or different collections
-    expect(Array.isArray(data.collections)).toBe(true);
+  test('A session cannot claim another tenant', async () => {
+    const response = await fetch(`${SERVICES.data}/collections`, {
+      headers: authed({ 'X-Tenant-ID': 'other-tenant' }),
+    });
+    expect(response.status).toBe(403);
+  });
+
+  test('Billing path parameters are bound to the session tenant', async () => {
+    const response = await fetch(`${SERVICES.billing}/subscriptions/other-tenant`, {
+      headers: authed(),
+    });
+    expect(response.status).toBe(403);
+  });
+
+  test('Logout revokes the token for every service', async () => {
+    const logout = await fetch(`${SERVICES.auth}/logout`, { method: 'POST', headers: authed() });
+    expect(logout.status).toBe(200);
+    const after = await fetch(`${SERVICES.data}/collections`, { headers: authed() });
+    expect(after.status).toBe(401);
   });
 });

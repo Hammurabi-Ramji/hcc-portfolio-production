@@ -30,7 +30,7 @@ Your VetPharma ERP system now has **2 Administrator accounts**:
 
 | # | Username | Password | Role | Full Name |
 |---|----------|----------|------|-----------|
-| 1 | **admin** | `Admin@123` | Administrator | System Administrator |
+| 1 | **admin** | the password you set at bootstrap (never a documented default) | Administrator | System Administrator |
 | 2 | **ramco.admin** | `R@MC0.` | Administrator | RAMCO Master Administrator |
 
 ---
@@ -225,7 +225,7 @@ LIMIT 10;
 2. Prompt for password reset on first login
 3. Allow password change through the UI
 
-**Workaround:** Use the other admin account (`admin` / `Admin@123`) to reset the password through the UI, or contact development team for proper password hash generation.
+**Workaround:** Use the other admin account (`admin` / the password you set at bootstrap (never a documented default)) to reset the password through the UI, or contact development team for proper password hash generation.
 
 ### Problem: User Locked Out
 

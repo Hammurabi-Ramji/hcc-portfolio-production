@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { createServiceDB } from '../../shared/db/sqlite';
-import { fileStorage } from '../../shared/db/storage';
+import { requireAuth, tenantOf } from '../../shared/utils/auth';
+import { fileStorage, safeFileName } from '../../shared/db/storage';
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
@@ -8,6 +9,9 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = new Hono();
+
+// Every route needs a live auth-service session; the tenant comes from it.
+app.use('*', requireAuth);
 
 // Initialize SQLite database
 const db = createServiceDB('storage');
@@ -19,7 +23,7 @@ db.migrate(path.join(__dirname, 'migrations/001-init.sql'));
  * POST /upload - Upload file to local storage
  */
 app.post('/upload', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 
 	try {
 		const body = await c.req.parseBody();
@@ -104,7 +108,7 @@ app.post('/upload', async (c) => {
  * GET /files/:id - Download file
  */
 app.get('/files/:id', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const fileId = c.req.param('id');
 
 	try {
@@ -131,7 +135,7 @@ app.get('/files/:id', async (c) => {
 		c.header('Content-Type', fileEntry.mime_type || 'application/octet-stream');
 		c.header(
 			'Content-Disposition',
-			`attachment; filename="${fileEntry.name}"`
+			`attachment; filename="${safeFileName(fileEntry.name)}"`
 		);
 
 		return c.body(fileBuffer);
@@ -145,7 +149,7 @@ app.get('/files/:id', async (c) => {
  * GET /files-metadata/:id - Get file metadata
  */
 app.get('/files-metadata/:id', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const fileId = c.req.param('id');
 
 	try {
@@ -178,7 +182,7 @@ app.get('/files-metadata/:id', async (c) => {
  * GET /files - List files for tenant
  */
 app.get('/files', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 
 	try {
 		const files = db
@@ -199,7 +203,7 @@ app.get('/files', async (c) => {
  * DELETE /files/:id - Delete file
  */
 app.delete('/files/:id', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const fileId = c.req.param('id');
 
 	try {
@@ -234,7 +238,7 @@ app.delete('/files/:id', async (c) => {
  * GET /quota - Get storage quota info
  */
 app.get('/quota', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 
 	try {
 		const quota = db

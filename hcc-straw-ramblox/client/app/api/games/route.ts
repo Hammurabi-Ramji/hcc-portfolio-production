@@ -1,13 +1,17 @@
 /**
  * Game Management API Routes
- * 
- * GET /api/games - List all games
- * POST /api/games - Create new game
+ *
+ * GET /api/games?status=published - Public discovery (published games only)
+ * GET /api/games?userId=xxx - A creator's games; drafts only for that creator
+ * GET /api/games - The signed-in user's own games
+ * POST /api/games - Create a game owned by the signed-in user
  */
 
+import { randomUUID } from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '../../../../server/database';
 import { getGameById, type Game } from '../../../../server/database-types';
+import { getSession, unauthorized } from '@/lib/auth';
 
 export const config = {
   runtime: 'nodejs'
@@ -17,53 +21,50 @@ export async function GET(request: NextRequest) {
   try {
     const db = getDb();
     const { searchParams } = new URL(request.url);
-    
+
     const userId = searchParams.get('userId');
     const status = searchParams.get('status');
-    const limit = Number.parseInt(searchParams.get('limit') || '20', 10);
+    const requested = Number.parseInt(searchParams.get('limit') || '20', 10);
+    const limit = Number.isFinite(requested) && requested > 0 ? Math.min(requested, 100) : 20;
+    const session = await getSession();
 
+    let games: Game[];
     if (userId) {
-      // Get user's games
-      const games = db.prepare<[string, number], Game>(`
-        SELECT * FROM games WHERE creator_id = ? 
-        ORDER BY created_at DESC LIMIT ?
-      `).all(userId, limit);
-      
-      return NextResponse.json({
-        success: true,
-        games: transformGames(games),
-        total: games.length,
-        page: 1,
-        totalPages: 1
-      });
+      // Drafts and archived games are only visible to their creator.
+      games = session?.userId === userId
+        ? db.prepare<[string, number], Game>(`
+            SELECT * FROM games WHERE creator_id = ?
+            ORDER BY created_at DESC LIMIT ?
+          `).all(userId, limit)
+        : db.prepare<[string, string, number], Game>(`
+            SELECT * FROM games WHERE creator_id = ? AND status = ?
+            ORDER BY created_at DESC LIMIT ?
+          `).all(userId, 'published', limit);
     } else if (status === 'published') {
       // Get published games for discovery
-      const games = db.prepare<[string, number], Game>(`
-        SELECT * FROM games WHERE status = ? 
+      games = db.prepare<[string, number], Game>(`
+        SELECT * FROM games WHERE status = ?
         ORDER BY created_at DESC LIMIT ?
       `).all('published', limit);
-      
-      return NextResponse.json({
-        success: true,
-        games: transformGames(games),
-        total: games.length,
-        page: 1,
-        totalPages: 1
-      });
     } else {
-      // Return all games (for admin)
-      const games = db.prepare<[number], Game>(`
-        SELECT * FROM games ORDER BY created_at DESC LIMIT ?
-      `).all(limit);
-      
-      return NextResponse.json({
-        success: true,
-        games: transformGames(games),
-        total: games.length,
-        page: 1,
-        totalPages: 1
-      });
+      // Without a filter, list the signed-in user's own games. There is no
+      // admin role, so nobody can list every game including others' drafts.
+      if (!session) {
+        return unauthorized();
+      }
+      games = db.prepare<[string, number], Game>(`
+        SELECT * FROM games WHERE creator_id = ?
+        ORDER BY created_at DESC LIMIT ?
+      `).all(session.userId, limit);
     }
+
+    return NextResponse.json({
+      success: true,
+      games: transformGames(games),
+      total: games.length,
+      page: 1,
+      totalPages: 1
+    });
   } catch (error) {
     console.error('Get games error:', error);
     return NextResponse.json(
@@ -75,55 +76,32 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const db = getDb();
-    const { creator_id, name, description } = await request.json();
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
 
-    if (!creator_id || !name) {
+    const db = getDb();
+    const { name, description } = await request.json();
+
+    if (typeof name !== 'string' || !name.trim()) {
       return NextResponse.json(
-        { 
-          success: false, 
-          error: 'Missing required fields: creator_id, name' 
+        {
+          success: false,
+          error: 'Missing required field: name'
         },
         { status: 400 }
       );
     }
 
-    let validCreator = typeof creator_id === 'string' && creator_id.trim().length > 0
-      ? creator_id.trim()
-      : null;
-
-    if (validCreator) {
-      const existingCreator = db.prepare<[string], { id: string }>(
-        'SELECT id FROM users WHERE id = ?'
-      ).get(validCreator);
-
-      if (!existingCreator) {
-        validCreator = null;
-      }
-    }
-
-    if (!validCreator) {
-      const fallbackCreator = db.prepare<[], { id: string }>(
-        'SELECT id FROM users ORDER BY created_at ASC LIMIT 1'
-      ).get();
-
-      if (!fallbackCreator) {
-        return NextResponse.json(
-          { success: false, error: 'No valid creator found for game creation' },
-          { status: 500 }
-        );
-      }
-
-      validCreator = fallbackCreator.id;
-    }
-    
-    const gameId = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    // The creator is always the signed-in user; any creator_id in the body is ignored.
+    const gameId = randomUUID();
     const now = new Date().toISOString();
-    
+
     db.prepare(`
       INSERT INTO games (id, creator_id, name, description, status, created_at, updated_at)
       VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).run(gameId, validCreator, name, description || null, 'draft', now, now);
+    `).run(gameId, session.userId, name.trim(), description || null, 'draft', now, now);
 
     const game = getGameById(db).get(gameId);
 

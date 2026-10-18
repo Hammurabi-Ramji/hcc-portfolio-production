@@ -5,12 +5,19 @@ import {
   updateGame,
   deleteGame
 } from '../../../../../server/database-types';
+import { findGame, forbidden, getSession, unauthorized } from '@/lib/auth';
 
 type GameRouteContext = {
   params: Promise<{ id: string }>;
 };
 
-// GET single game
+const notFound = () =>
+  NextResponse.json(
+    { success: false, error: 'Game not found' },
+    { status: 404 }
+  );
+
+// GET single game: published games are public; others only for their creator.
 export async function GET(
   request: NextRequest,
   { params }: GameRouteContext
@@ -21,10 +28,15 @@ export async function GET(
     const game = getGameById(db).get(id);
 
     if (!game) {
-      return NextResponse.json(
-        { success: false, error: 'Game not found' },
-        { status: 404 }
-      );
+      return notFound();
+    }
+
+    if (game.status !== 'published') {
+      const session = await getSession();
+      if (session?.userId !== game.creator_id) {
+        // Do not reveal that an unpublished game exists.
+        return notFound();
+      }
     }
 
     return NextResponse.json({
@@ -47,13 +59,26 @@ export async function GET(
   }
 }
 
-// PUT update game
+// PUT update game (creator only)
 export async function PUT(
   request: NextRequest,
   { params }: GameRouteContext
 ) {
   try {
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
+
     const { id } = await params;
+    const existing = findGame(id);
+    if (!existing) {
+      return notFound();
+    }
+    if (existing.creator_id !== session.userId) {
+      return forbidden();
+    }
+
     const db = getDb();
     const { name, description, status } = await request.json();
     const now = new Date().toISOString();
@@ -67,10 +92,7 @@ export async function PUT(
     );
 
     if (result.changes === 0) {
-      return NextResponse.json(
-        { success: false, error: 'Game not found' },
-        { status: 404 }
-      );
+      return notFound();
     }
 
     const game = getGameById(db).get(id);
@@ -102,22 +124,31 @@ export async function PUT(
   }
 }
 
-// DELETE game
+// DELETE game (creator only)
 export async function DELETE(
   request: NextRequest,
   { params }: GameRouteContext
 ) {
   try {
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
+
     const { id } = await params;
+    const existing = findGame(id);
+    if (!existing) {
+      return notFound();
+    }
+    if (existing.creator_id !== session.userId) {
+      return forbidden();
+    }
+
     const db = getDb();
-    
     const result = deleteGame(db).run(id);
 
     if (result.changes === 0) {
-      return NextResponse.json(
-        { success: false, error: 'Game not found' },
-        { status: 404 }
-      );
+      return notFound();
     }
 
     return NextResponse.json({

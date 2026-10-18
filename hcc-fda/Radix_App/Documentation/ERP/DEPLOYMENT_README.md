@@ -194,7 +194,7 @@ docker-compose logs -f app
 ```
 URL: http://localhost:8080
 Username: admin
-Password: Admin@123
+Password: <the password you set at bootstrap; never a documented default>
 ```
 
 ⚠️ **CRITICAL:** Change the default password immediately after first login!

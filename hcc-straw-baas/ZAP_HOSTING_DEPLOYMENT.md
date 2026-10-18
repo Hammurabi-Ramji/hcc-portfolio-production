@@ -89,7 +89,6 @@ pnpm build
 ```bash
 cat > .env << 'EOF'
 NODE_ENV=production
-JWT_SECRET=your-super-secret-key-change-this-in-production-123456
 LOG_LEVEL=info
 
 # Service ports (internal, behind Caddy reverse proxy)
@@ -108,10 +107,10 @@ EOF
 ### Generate Secure JWT Secret
 
 ```bash
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+echo "JWT_SECRET=$(node -e 'console.log(require("crypto").randomBytes(32).toString("hex"))')" >> .env
 ```
 
-Copy this and update `JWT_SECRET` in `.env`.
+Every service refuses to start without a `JWT_SECRET` of at least 32 characters. Never reuse an example value.
 
 ---
 

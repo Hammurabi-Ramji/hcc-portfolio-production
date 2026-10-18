@@ -448,7 +448,7 @@ sqlite3 data/vetpharma.db ".tables"
 
 ### Test Credentials
 ```
-Admin User:        admin / Admin@123
+Admin User:        admin / <the password you set at bootstrap; never a documented default>
 Master Admin:      ramco.admin / R@MC0.
 ```
 

@@ -33,7 +33,7 @@ services:
       FINANCIAL_SERVICE_URL: http://financial-service:8088
       INVENTORY_SERVICE_URL: http://inventory-service:8089
       DOCUMENT_SERVICE_URL: http://document-service:8085
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
       REDIS_URL: redis://redis:6379
     ports:
       - "8080:8080"
@@ -63,7 +63,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/customer.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "8084:8084"
     volumes:
@@ -90,7 +90,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/estimation.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "8086:8086"
     volumes:
@@ -117,7 +117,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/field_operations.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "8087:8087"
     volumes:
@@ -144,7 +144,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/crm.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "8090:8090"
     volumes:
@@ -171,7 +171,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/financial.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "8088:8088"
     volumes:
@@ -198,7 +198,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/inventory.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
     ports:
       - "8089:8089"
     volumes:
@@ -225,7 +225,7 @@ services:
       LOG_LEVEL: info
       DB_TYPE: sqlite3
       DB_PATH: /data/document.db
-      JWT_SECRET: ${JWT_SECRET:-dev_secret_northstar_installations}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET to a random value of at least 32 characters}
       STORAGE_PATH: /storage
     ports:
       - "8085:8085"

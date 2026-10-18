@@ -1,11 +1,15 @@
 import { Hono } from 'hono';
 import { createServiceDB } from '../../shared/db/sqlite';
+import { requireAuth, tenantOf } from '../../shared/utils/auth';
 import crypto from 'crypto';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = new Hono();
+
+// Every route needs a live auth-service session; the tenant comes from it.
+app.use('*', requireAuth);
 
 // Initialize SQLite database
 const db = createServiceDB('billing');
@@ -24,7 +28,7 @@ const PLAN_PRICING: Record<string, { baseMonthly: number; ratePerUnit: number }>
  * POST /subscriptions - Create or update subscription
  */
 app.post('/subscriptions', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const body = await c.req.json().catch(() => ({}));
 	const { plan } = body;
 
@@ -70,6 +74,9 @@ app.post('/subscriptions', async (c) => {
  */
 app.get('/subscriptions/:tenantId', async (c) => {
 	const tenantId = c.req.param('tenantId');
+	if (tenantId !== tenantOf(c)) {
+		return c.json({ success: false, message: 'Forbidden' }, 403);
+	}
 
 	try {
 		const subscription = db
@@ -94,7 +101,7 @@ app.get('/subscriptions/:tenantId', async (c) => {
  * POST /usage/record - Record usage metric
  */
 app.post('/usage/record', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const body = await c.req.json().catch(() => ({}));
 	const { metric_name, value } = body;
 
@@ -123,6 +130,9 @@ app.post('/usage/record', async (c) => {
  */
 app.get('/usage/:tenantId', async (c) => {
 	const tenantId = c.req.param('tenantId');
+	if (tenantId !== tenantOf(c)) {
+		return c.json({ success: false, message: 'Forbidden' }, 403);
+	}
 
 	try {
 		const subscription = db
@@ -163,8 +173,8 @@ app.get('/usage/:tenantId', async (c) => {
  * POST /invoices/generate - Generate invoice for billing cycle
  */
 app.post('/invoices/generate', async (c) => {
-	const body = await c.req.json().catch(() => ({}));
-	const tenantId = body.tenant_id || c.req.header('X-Tenant-ID') || 'default';
+	// Invoices are only generated for the caller's own tenant; body.tenant_id is ignored.
+	const tenantId = tenantOf(c);
 
 	try {
 		const subscription = db
@@ -228,7 +238,7 @@ app.post('/invoices/generate', async (c) => {
  * GET /invoices - List invoices for tenant
  */
 app.get('/invoices', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const status = c.req.query('status');
 
 	try {

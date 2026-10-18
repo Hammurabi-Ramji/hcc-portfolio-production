@@ -76,7 +76,7 @@ bash scripts/init_database.sh
 
 This will create:
 - ✅ 50+ database tables
-- ✅ Admin user (username: `admin`, password: `Admin@123`)
+- ✅ Admin user (username: `admin`, password: the password you set at bootstrap (never a documented default))
 - ✅ Default roles and permissions
 - ✅ Sample seed data
 
@@ -99,7 +99,7 @@ Or run the production build:
 Once running, access at:
 - **URL:** `http://localhost:8080`
 - **Username:** `admin`
-- **Password:** `Admin@123`
+- **Password:** the password you set at bootstrap (never a documented default)
 
 ⚠️ **IMPORTANT:** Change the default password immediately after first login!
 
@@ -165,7 +165,7 @@ The database needs to be initialized now that SQLite3 is installed:
 ### 2. Default Credentials Security
 **Change these immediately in production:**
 - Username: `admin`
-- Password: `Admin@123`
+- Password: the password you set at bootstrap (never a documented default)
 
 ### 3. Environment Configuration
 Before production use, configure:

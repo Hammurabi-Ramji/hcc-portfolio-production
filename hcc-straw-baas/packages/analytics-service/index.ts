@@ -1,11 +1,15 @@
 import { Hono } from 'hono';
 import { createServiceDB } from '../../shared/db/sqlite';
+import { requireAuth, tenantOf } from '../../shared/utils/auth';
 import crypto from 'crypto';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = new Hono();
+
+// Every route needs a live auth-service session; the tenant comes from it.
+app.use('*', requireAuth);
 
 // Initialize SQLite database
 const db = createServiceDB('analytics');
@@ -17,7 +21,7 @@ db.migrate(path.join(__dirname, 'migrations/001-init.sql'));
  * POST /events - Track event
  */
 app.post('/events', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const body = await c.req.json().catch(() => ({}));
 	const {
 		event_name,
@@ -80,7 +84,7 @@ app.post('/events', async (c) => {
  * GET /events - Query events
  */
 app.get('/events', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const eventName = c.req.query('event_name');
 	const limit = parseInt(c.req.query('limit') || '100');
 	const offset = parseInt(c.req.query('offset') || '0');
@@ -133,7 +137,7 @@ app.get('/events', async (c) => {
  * GET /metrics - Query aggregated metrics
  */
 app.get('/metrics', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const metricName = c.req.query('metric_name');
 	const since = c.req.query('since');
 
@@ -169,7 +173,7 @@ app.get('/metrics', async (c) => {
  * GET /daily-aggregates - Get daily aggregated metrics
  */
 app.get('/daily-aggregates', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 	const metricName = c.req.query('metric_name');
 	const days = parseInt(c.req.query('days') || '30');
 
@@ -207,7 +211,7 @@ app.get('/daily-aggregates', async (c) => {
  * POST /aggregates/compute - Compute daily aggregates (background job)
  */
 app.post('/aggregates/compute', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 
 	try {
 		const today = new Date().toISOString().split('T')[0];
@@ -260,7 +264,7 @@ app.post('/aggregates/compute', async (c) => {
  * GET /health - Service health check with stats
  */
 app.get('/health', async (c) => {
-	const tenantId = c.req.header('X-Tenant-ID') || 'default';
+	const tenantId = tenantOf(c);
 
 	try {
 		const eventCount = db

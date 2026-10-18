@@ -13,6 +13,8 @@ import jwt from 'jsonwebtoken';
 import { PrismaClient } from '@prisma/client';
 import rateLimit from 'express-rate-limit';
 import { v4 as uuidv4 } from 'uuid';
+import { randomBytes, scrypt, timingSafeEqual } from 'crypto';
+import { promisify } from 'util';
 
 // Load environment variables
 dotenv.config();
@@ -23,7 +25,51 @@ const prisma = new PrismaClient();
 // Initialize Express App
 const app: Application = express();
 const PORT = process.env.PORT || 3001;
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+
+/**
+ * Signing key for access tokens. There is no fallback: a committed default
+ * would let anyone forge tokens, so the server refuses to start without one.
+ */
+function requireJwtSecret(): string {
+  const secret = process.env.JWT_SECRET;
+  if (!secret || secret.length < 32 || /change|your[-_]|example|dev_secret/i.test(secret)) {
+    console.error('✗ JWT_SECRET must be set to a random value of at least 32 characters');
+    process.exit(1);
+  }
+  return secret;
+}
+const JWT_SECRET = requireJwtSecret();
+
+// ============================================================================
+// PASSWORD HASHING
+// ============================================================================
+
+const scryptAsync = promisify(scrypt) as (password: string, salt: Buffer, keylen: number) => Promise<Buffer>;
+const HASH_PREFIX = 'scrypt$';
+const MIN_PASSWORD_LENGTH = 12;
+
+async function hashPassword(password: string): Promise<string> {
+  const salt = randomBytes(16);
+  const hash = await scryptAsync(password, salt, 64);
+  return `${HASH_PREFIX}${salt.toString('hex')}$${hash.toString('hex')}`;
+}
+
+/**
+ * Verify a password. Rows created before hashing was added hold plaintext;
+ * they still verify (in constant time) and are re-hashed by the caller.
+ */
+async function verifyPassword(password: string, stored: string): Promise<boolean> {
+  if (stored.startsWith(HASH_PREFIX)) {
+    const [saltHex, hashHex] = stored.slice(HASH_PREFIX.length).split('$');
+    const expected = Buffer.from(hashHex ?? '', 'hex');
+    if (!saltHex || expected.length === 0) return false;
+    const actual = await scryptAsync(password, Buffer.from(saltHex, 'hex'), expected.length);
+    return timingSafeEqual(actual, expected);
+  }
+  const a = Buffer.from(password);
+  const b = Buffer.from(stored);
+  return a.length === b.length && timingSafeEqual(a, b);
+}
 
 // ============================================================================
 // MIDDLEWARE CONFIGURATION
@@ -61,22 +107,32 @@ app.use('/api/', limiter);
 
 interface JWTPayload {
   userId: string;
-  email: string;
-  role: string;
   iat: number;
   exp: number;
+}
+
+interface AuthUser {
+  userId: string;
+  email: string;
+  role: string;
+  companyId: string;
 }
 
 declare global {
   namespace Express {
     interface Request {
-      user?: JWTPayload;
+      user?: AuthUser;
       userId?: string;
+      companyId?: string;
     }
   }
 }
 
-const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
+/**
+ * Verify the token, then load the user: role, status and company come from the
+ * database on every request, never from the token payload.
+ */
+const authenticateToken = async (req: Request, res: Response, next: NextFunction) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
@@ -84,14 +140,31 @@ const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
     return res.status(401).json({ error: 'Access token required' });
   }
 
-  jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) {
-      return res.status(403).json({ error: 'Invalid or expired token' });
+  let payload: JWTPayload;
+  try {
+    payload = jwt.verify(token, JWT_SECRET, { algorithms: ['HS256'] }) as JWTPayload;
+  } catch {
+    return res.status(401).json({ error: 'Invalid or expired token' });
+  }
+
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: payload.userId },
+      select: { id: true, email: true, role: true, status: true, companyId: true }
+    });
+    if (!user || user.status !== 'active') {
+      return res.status(401).json({ error: 'Invalid or expired token' });
     }
-    req.user = user as JWTPayload;
-    req.userId = (user as JWTPayload).userId;
+    if (!user.companyId) {
+      return res.status(403).json({ error: 'User is not assigned to a company' });
+    }
+    req.user = { userId: user.id, email: user.email, role: user.role, companyId: user.companyId };
+    req.userId = user.id;
+    req.companyId = user.companyId;
     next();
-  });
+  } catch (error) {
+    next(error);
+  }
 };
 
 const authorizeRole = (allowedRoles: string[]) => {
@@ -102,6 +175,24 @@ const authorizeRole = (allowedRoles: string[]) => {
     next();
   };
 };
+
+/** Copy only the listed fields, so clients cannot set ids, companyId or status. */
+function pick<T extends string>(source: any, fields: readonly T[]): Partial<Record<T, any>> {
+  const out: Partial<Record<T, any>> = {};
+  for (const field of fields) {
+    if (source && source[field] !== undefined) out[field] = source[field];
+  }
+  return out;
+}
+
+const CUSTOMER_FIELDS = ['name', 'email', 'phone', 'address', 'city', 'state', 'zipCode', 'notes', 'status'] as const;
+const PROJECT_FIELDS = [
+  'name', 'customerId', 'description', 'address', 'city', 'state', 'zipCode',
+  'squareFootage', 'startDate', 'endDate', 'budget', 'flooringType', 'status'
+] as const;
+
+const signToken = (userId: string) =>
+  jwt.sign({ userId }, JWT_SECRET, { algorithm: 'HS256', expiresIn: '24h' });
 
 // ============================================================================
 // HEALTH CHECK ENDPOINT
@@ -133,11 +224,16 @@ app.get('/api/health', async (req: Request, res: Response) => {
 
 app.post('/api/auth/register', async (req: Request, res: Response) => {
   try {
-    const { email, password, firstName, lastName, companyName, role } = req.body;
+    // `role` is deliberately not read: self-registration always gets the
+    // default role. Elevated roles must be granted by an administrator.
+    const { email, password, firstName, lastName, companyName } = req.body;
 
     // Validate input
     if (!email || !password || !firstName || !lastName) {
       return res.status(400).json({ error: 'Missing required fields' });
+    }
+    if (typeof password !== 'string' || password.length < MIN_PASSWORD_LENGTH) {
+      return res.status(400).json({ error: `Password must be at least ${MIN_PASSWORD_LENGTH} characters` });
     }
 
     // Check if user exists
@@ -146,19 +242,20 @@ app.post('/api/auth/register', async (req: Request, res: Response) => {
       return res.status(409).json({ error: 'User already exists' });
     }
 
-    // Create user (password hashing should be done in production)
+    // Registration creates a new company owned by this user; it never joins an existing one.
     const user = await prisma.user.create({
       data: {
         id: uuidv4(),
         email,
-        password, // In production, use bcrypt
+        password: await hashPassword(password),
         firstName,
         lastName,
-        role: role || 'customer',
+        role: 'customer',
         company: {
           create: {
             id: uuidv4(),
             name: companyName || `${firstName}'s Company`,
+            email,
             status: 'active'
           }
         }
@@ -166,16 +263,9 @@ app.post('/api/auth/register', async (req: Request, res: Response) => {
       include: { company: true }
     });
 
-    // Generate JWT
-    const token = jwt.sign(
-      { userId: user.id, email: user.email, role: user.role },
-      JWT_SECRET,
-      { expiresIn: '24h' }
-    );
-
     res.status(201).json({
       message: 'User registered successfully',
-      token,
+      token: signToken(user.id),
       user: {
         id: user.id,
         email: user.email,
@@ -187,7 +277,7 @@ app.post('/api/auth/register', async (req: Request, res: Response) => {
     });
   } catch (error: any) {
     console.error('Registration error:', error);
-    res.status(500).json({ error: 'Registration failed', details: error.message });
+    res.status(500).json({ error: 'Registration failed' });
   }
 });
 
@@ -195,7 +285,7 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password) {
+    if (!email || !password || typeof password !== 'string') {
       return res.status(400).json({ error: 'Email and password required' });
     }
 
@@ -204,19 +294,21 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
       include: { company: true }
     });
 
-    if (!user || user.password !== password) { // In production, use bcrypt.compare
+    if (!user || !(await verifyPassword(password, user.password))) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+    if (user.status !== 'active') {
+      return res.status(403).json({ error: 'Account is not active' });
+    }
 
-    const token = jwt.sign(
-      { userId: user.id, email: user.email, role: user.role },
-      JWT_SECRET,
-      { expiresIn: '24h' }
-    );
+    // Replace any legacy plaintext password with a hash.
+    if (!user.password.startsWith(HASH_PREFIX)) {
+      await prisma.user.update({ where: { id: user.id }, data: { password: await hashPassword(password) } });
+    }
 
     res.json({
       message: 'Login successful',
-      token,
+      token: signToken(user.id),
       user: {
         id: user.id,
         email: user.email,
@@ -240,7 +332,7 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
 app.get('/api/customers', authenticateToken, async (req: Request, res: Response) => {
   try {
     const customers = await prisma.customer.findMany({
-      where: { companyId: req.user!.userId },
+      where: { companyId: req.companyId! },
       include: {
         projects: { take: 5 },
         quotes: { take: 5 }
@@ -274,7 +366,7 @@ app.post('/api/customers', authenticateToken, async (req: Request, res: Response
         state,
         zipCode,
         notes,
-        companyId: req.userId!,
+        companyId: req.companyId!,
         status: 'active'
       }
     });
@@ -289,16 +381,19 @@ app.post('/api/customers', authenticateToken, async (req: Request, res: Response
   }
 });
 
-// Update customer
+// Update customer (own company only)
 app.put('/api/customers/:id', authenticateToken, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const updates = req.body;
 
-    const customer = await prisma.customer.update({
-      where: { id },
-      data: updates
+    const result = await prisma.customer.updateMany({
+      where: { id, companyId: req.companyId! },
+      data: pick(req.body, CUSTOMER_FIELDS)
     });
+    if (result.count === 0) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
+    const customer = await prisma.customer.findFirst({ where: { id, companyId: req.companyId! } });
 
     res.json({
       success: true,
@@ -310,12 +405,15 @@ app.put('/api/customers/:id', authenticateToken, async (req: Request, res: Respo
   }
 });
 
-// Delete customer
+// Delete customer (own company only)
 app.delete('/api/customers/:id', authenticateToken, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
-    await prisma.customer.delete({ where: { id } });
+    const result = await prisma.customer.deleteMany({ where: { id, companyId: req.companyId! } });
+    if (result.count === 0) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
 
     res.json({
       success: true,
@@ -330,11 +428,16 @@ app.delete('/api/customers/:id', authenticateToken, async (req: Request, res: Re
 // PROJECT ENDPOINTS
 // ============================================================================
 
+const customerInCompany = (customerId: unknown, companyId: string) =>
+  typeof customerId === 'string'
+    ? prisma.customer.findFirst({ where: { id: customerId, companyId }, select: { id: true } })
+    : Promise.resolve(null);
+
 // Get all projects
 app.get('/api/projects', authenticateToken, async (req: Request, res: Response) => {
   try {
     const projects = await prisma.project.findMany({
-      where: { companyId: req.userId! },
+      where: { companyId: req.companyId! },
       include: {
         customer: true,
         quotes: { take: 3 },
@@ -371,6 +474,10 @@ app.post('/api/projects', authenticateToken, async (req: Request, res: Response)
       flooringType
     } = req.body;
 
+    if (!(await customerInCompany(customerId, req.companyId!))) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
+
     const project = await prisma.project.create({
       data: {
         id: uuidv4(),
@@ -386,7 +493,7 @@ app.post('/api/projects', authenticateToken, async (req: Request, res: Response)
         endDate: endDate ? new Date(endDate) : null,
         budget: budget ? parseFloat(budget) : null,
         flooringType,
-        companyId: req.userId!,
+        companyId: req.companyId!,
         status: 'planning'
       },
       include: { customer: true }
@@ -402,11 +509,11 @@ app.post('/api/projects', authenticateToken, async (req: Request, res: Response)
   }
 });
 
-// Update project
+// Update project (own company only)
 app.put('/api/projects/:id', authenticateToken, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const updates = req.body;
+    const updates = pick(req.body, PROJECT_FIELDS);
 
     // Parse dates and numbers if present
     if (updates.startDate) updates.startDate = new Date(updates.startDate);
@@ -414,9 +521,19 @@ app.put('/api/projects/:id', authenticateToken, async (req: Request, res: Respon
     if (updates.squareFootage) updates.squareFootage = parseFloat(updates.squareFootage);
     if (updates.budget) updates.budget = parseFloat(updates.budget);
 
-    const project = await prisma.project.update({
-      where: { id },
-      data: updates,
+    if (updates.customerId !== undefined && !(await customerInCompany(updates.customerId, req.companyId!))) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
+
+    const result = await prisma.project.updateMany({
+      where: { id, companyId: req.companyId! },
+      data: updates
+    });
+    if (result.count === 0) {
+      return res.status(404).json({ error: 'Project not found' });
+    }
+    const project = await prisma.project.findFirst({
+      where: { id, companyId: req.companyId! },
       include: { customer: true }
     });
 
@@ -434,13 +551,13 @@ app.put('/api/projects/:id', authenticateToken, async (req: Request, res: Respon
 // QUOTE ENDPOINTS
 // ============================================================================
 
-// Get quotes for project
+// Get quotes for project (own company only)
 app.get('/api/projects/:projectId/quotes', authenticateToken, async (req: Request, res: Response) => {
   try {
     const { projectId } = req.params;
 
     const quotes = await prisma.quote.findMany({
-      where: { projectId },
+      where: { projectId, companyId: req.companyId! },
       include: { project: true, items: true },
       orderBy: { createdAt: 'desc' }
     });
@@ -455,10 +572,20 @@ app.get('/api/projects/:projectId/quotes', authenticateToken, async (req: Reques
   }
 });
 
-// Create quote
+// Create quote for a project in the caller's company
 app.post('/api/quotes', authenticateToken, async (req: Request, res: Response) => {
   try {
     const { projectId, items, laborCost, taxRate, notes } = req.body;
+
+    if (!Array.isArray(items)) {
+      return res.status(400).json({ error: 'items must be an array' });
+    }
+    const project = typeof projectId === 'string'
+      ? await prisma.project.findFirst({ where: { id: projectId, companyId: req.companyId! }, select: { id: true } })
+      : null;
+    if (!project) {
+      return res.status(404).json({ error: 'Project not found' });
+    }
 
     // Calculate totals
     const materialCost = items.reduce((sum: number, item: any) => sum + (item.quantity * item.unitPrice), 0);
@@ -469,7 +596,10 @@ app.post('/api/quotes', authenticateToken, async (req: Request, res: Response) =
     const quote = await prisma.quote.create({
       data: {
         id: uuidv4(),
-        projectId,
+        quoteNumber: `Q-${Date.now()}-${randomBytes(3).toString('hex')}`,
+        projectId: project.id,
+        companyId: req.companyId!,
+        userId: req.userId!,
         materialCost,
         laborCost: laborCost || 0,
         taxRate: taxRate || 0.08,
@@ -508,7 +638,7 @@ app.post('/api/quotes', authenticateToken, async (req: Request, res: Response) =
 app.get('/api/inventory', authenticateToken, async (req: Request, res: Response) => {
   try {
     const inventory = await prisma.inventoryItem.findMany({
-      where: { companyId: req.userId! },
+      where: { companyId: req.companyId! },
       orderBy: { name: 'asc' }
     });
 
@@ -536,7 +666,7 @@ app.post('/api/inventory', authenticateToken, async (req: Request, res: Response
         quantity: parseInt(quantity),
         unitPrice: parseFloat(unitPrice),
         reorderLevel: parseInt(reorderLevel) || 10,
-        companyId: req.userId!
+        companyId: req.companyId!
       }
     });
 
@@ -550,16 +680,20 @@ app.post('/api/inventory', authenticateToken, async (req: Request, res: Response
   }
 });
 
-// Update inventory
+// Update inventory (own company only)
 app.patch('/api/inventory/:id', authenticateToken, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { quantity } = req.body;
 
-    const item = await prisma.inventoryItem.update({
-      where: { id },
+    const result = await prisma.inventoryItem.updateMany({
+      where: { id, companyId: req.companyId! },
       data: { quantity: parseInt(quantity) }
     });
+    if (result.count === 0) {
+      return res.status(404).json({ error: 'Inventory item not found' });
+    }
+    const item = await prisma.inventoryItem.findFirst({ where: { id, companyId: req.companyId! } });
 
     res.json({
       success: true,
@@ -578,14 +712,14 @@ app.patch('/api/inventory/:id', authenticateToken, async (req: Request, res: Res
 // Get dashboard analytics
 app.get('/api/analytics/dashboard', authenticateToken, async (req: Request, res: Response) => {
   try {
-    const companyId = req.userId!;
+    const companyId = req.companyId!;
 
     // Fetch statistics
     const totalCustomers = await prisma.customer.count({ where: { companyId } });
     const totalProjects = await prisma.project.count({ where: { companyId } });
     const activeProjects = await prisma.project.count({ where: { companyId, status: 'active' } });
 
-    const quotes = await prisma.quote.findMany({ where: { project: { companyId } } });
+    const quotes = await prisma.quote.findMany({ where: { companyId } });
     const totalRevenue = quotes.reduce((sum, q) => sum + q.total, 0);
 
     const recentProjects = await prisma.project.findMany({
@@ -657,4 +791,5 @@ process.on('SIGINT', async () => {
 
 startServer();
 
+export { authorizeRole };
 export default app;

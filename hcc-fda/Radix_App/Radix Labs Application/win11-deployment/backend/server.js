@@ -11,6 +11,8 @@ var _compression = _interopRequireDefault(require("compression"));
 var _dotenv = _interopRequireDefault(require("dotenv"));
 var _http = require("http");
 var _socket = require("socket.io");
+var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
+var _User = require("./models/User.js");
 var _path = _interopRequireDefault(require("path"));
 var _url = require("url");
 var _database = require("./config/database.js");
@@ -130,42 +132,102 @@ app.use('*', (req, res) => {
 app.use(_errorHandler.errorHandler);
 
 // Socket.IO configuration
+//
+// Every socket must present the same JWT as the REST API, in
+// `io(url, { auth: { token } })` or an `Authorization: Bearer` handshake header.
+// Identity and role come from the database, and a socket can only join its own
+// user and role rooms. Client-originated broadcasts are limited to roles that
+// own that kind of update, and carry the verified sender.
+const SOCKET_BROADCAST_ROLES = {
+  notification: ['admin', 'it_admin'],
+  'erp-update': ['admin', 'production_manager', 'quality_manager'],
+  'regulatory-update': ['admin', 'compliance_manager', 'regulatory_specialist']
+};
+io.use(async (socket, next) => {
+  try {
+    const header = socket.handshake.headers?.authorization;
+    const token = socket.handshake.auth?.token || (typeof header === 'string' && header.startsWith('Bearer ') ? header.slice(7) : null);
+    if (!token) return next(new Error('Unauthorized'));
+    const decoded = _jsonwebtoken.default.verify(token, _security.securityConfig.jwt.secret, {
+      issuer: _security.securityConfig.jwt.issuer,
+      audience: _security.securityConfig.jwt.audience
+    });
+    const user = await _User.User.findByPk(decoded.id);
+    if (!user || user.status !== 'active') return next(new Error('Unauthorized'));
+    socket.data.user = {
+      id: String(user.id),
+      role: user.role
+    };
+    next();
+  } catch (error) {
+    next(new Error('Unauthorized'));
+  }
+});
+const canBroadcast = (socket, event) => SOCKET_BROADCAST_ROLES[event].includes(socket.data.user.role);
 io.on('connection', socket => {
-  _logger.logger.info(`Client connected: ${socket.id}`);
+  const {
+    id: userId,
+    role: userRole
+  } = socket.data.user;
+  _logger.logger.info(`Client connected: ${socket.id} (user ${userId})`);
+  socket.join(`user_${userId}`);
+  socket.join(`role_${userRole}`);
 
-  // Join user-specific room
-  socket.on('join', userId => {
+  // Kept for existing clients; only the caller's own rooms can be joined.
+  socket.on('join', requestedUserId => {
+    if (String(requestedUserId) !== userId) {
+      _logger.logger.warn(`Socket ${socket.id} (user ${userId}) refused join for user ${requestedUserId}`);
+      return;
+    }
     socket.join(`user_${userId}`);
-    _logger.logger.info(`User ${userId} joined room`);
   });
-
-  // Join role-specific room
-  socket.on('join-role', role => {
-    socket.join(`role_${role}`);
-    _logger.logger.info(`Socket joined role room: ${role}`);
+  socket.on('join-role', requestedRole => {
+    if (requestedRole !== userRole) {
+      _logger.logger.warn(`Socket ${socket.id} (user ${userId}) refused join for role ${requestedRole}`);
+      return;
+    }
+    socket.join(`role_${userRole}`);
   });
 
   // Real-time notifications
   socket.on('notification', data => {
-    // Broadcast to relevant users/roles
+    if (!canBroadcast(socket, 'notification') || !data || typeof data !== 'object') return;
+    const message = {
+      ...data,
+      from: userId
+    };
     if (data.userId) {
-      io.to(`user_${data.userId}`).emit('notification', data);
+      io.to(`user_${data.userId}`).emit('notification', message);
     }
     if (data.role) {
-      io.to(`role_${data.role}`).emit('notification', data);
+      io.to(`role_${data.role}`).emit('notification', message);
     }
   });
 
   // ERP real-time updates
   socket.on('erp-update', data => {
-    io.to(`role_production_manager`).emit('erp-update', data);
-    io.to(`role_quality_manager`).emit('erp-update', data);
+    if (!canBroadcast(socket, 'erp-update')) return;
+    const message = {
+      ...(data && typeof data === 'object' ? data : {
+        value: data
+      }),
+      from: userId
+    };
+    io.to(`role_production_manager`).emit('erp-update', message);
+    io.to(`role_quality_manager`).emit('erp-update', message);
   });
 
   // Regulatory updates
   socket.on('regulatory-update', data => {
-    io.to(`role_compliance_manager`).emit('regulatory-update', data);
-    io.to(`role_auditor`).emit('regulatory-update', data);
+    if (!canBroadcast(socket, 'regulatory-update')) return;
+    const message = {
+      ...(data && typeof data === 'object' ? data : {
+        value: data
+      }),
+      from: userId
+    };
+    io.to(`role_compliance_manager`).emit('regulatory-update', message);
+    io.to(`role_auditor`).emit('regulatory-update', message);
   });
   socket.on('disconnect', () => {
     _logger.logger.info(`Client disconnected: ${socket.id}`);

@@ -1,20 +1,33 @@
 /**
- * Monetization API Routes
- * 
- * GET /api/monetization?gameId=xxx - List game passes
+ * Monetization API Routes (game creator only)
+ *
+ * GET /api/monetization?gameId=xxx - List game passes and revenue
  * POST /api/monetization - Create game pass
  */
 
+import { randomUUID } from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '../../../../server/database';
 import { getGamePassById, type GamePass } from '../../../../server/database-types';
+import { findGame, forbidden, getSession, unauthorized } from '@/lib/auth';
 
 export const config = {
   runtime: 'nodejs'
 };
 
+const gameNotFound = () =>
+  NextResponse.json(
+    { success: false, error: 'Game not found' },
+    { status: 404 }
+  );
+
 export async function GET(request: NextRequest) {
   try {
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
+
     const db = getDb();
     const { searchParams } = new URL(request.url);
     const gameId = searchParams.get('gameId');
@@ -26,12 +39,21 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // Revenue and sales belong to the game's creator.
+    const game = findGame(gameId);
+    if (!game) {
+      return gameNotFound();
+    }
+    if (game.creator_id !== session.userId) {
+      return forbidden();
+    }
+
     // Get game passes
     const passes = db.prepare<[string, GamePass['status']], GamePass>(`
-      SELECT * FROM game_passes WHERE game_id = ? AND status != ? 
+      SELECT * FROM game_passes WHERE game_id = ? AND status != ?
       ORDER BY price DESC
-    `).all(gameId, 'deleted');
-    
+    `).all(game.id, 'deleted');
+
     // Calculate totals
     let totalRevenue = 0;
     let totalSales = 0;
@@ -59,63 +81,49 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
+
     const db = getDb();
     const { game_id, name, description, price } = await request.json();
 
     if (!game_id || !name || !price) {
       return NextResponse.json(
-        { 
-          success: false, 
-          error: 'Missing required fields: game_id, name, price' 
+        {
+          success: false,
+          error: 'Missing required fields: game_id, name, price'
         },
         { status: 400 }
       );
     }
 
     // Validate price
-    if (price <= 0) {
+    if (typeof price !== 'number' || !Number.isFinite(price) || price <= 0) {
       return NextResponse.json(
         { success: false, error: 'Price must be greater than 0' },
         { status: 400 }
       );
     }
 
-    let validGameId = typeof game_id === 'string' && game_id.trim().length > 0
-      ? game_id.trim()
-      : null;
-
-    if (validGameId) {
-      const existingGame = db.prepare<[string], { id: string }>(
-        'SELECT id FROM games WHERE id = ?'
-      ).get(validGameId);
-
-      if (!existingGame) {
-        validGameId = null;
-      }
+    // Passes can only be added to an existing game the caller created; there
+    // is no fallback to some other game.
+    const game = findGame(game_id);
+    if (!game) {
+      return gameNotFound();
+    }
+    if (game.creator_id !== session.userId) {
+      return forbidden();
     }
 
-    if (!validGameId) {
-      const fallbackGame = db.prepare<[], { id: string }>(
-        'SELECT id FROM games ORDER BY created_at ASC LIMIT 1'
-      ).get();
-
-      if (!fallbackGame) {
-        return NextResponse.json(
-          { success: false, error: 'No valid game found for monetization item' },
-          { status: 500 }
-        );
-      }
-
-      validGameId = fallbackGame.id;
-    }
-
-    const passId = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    const passId = randomUUID();
     const now = new Date().toISOString();
 
     db.prepare(`
       INSERT INTO game_passes (id, game_id, name, description, price, sales_count, total_revenue, status, created_at, updated_at)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `).run(passId, validGameId, name, description || null, price, 0, 0, 'active', now, now);
+    `).run(passId, game.id, name, description || null, price, 0, 0, 'active', now, now);
 
     const pass = getGamePassById(db).get(passId);
 

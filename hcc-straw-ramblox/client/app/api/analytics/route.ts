@@ -1,12 +1,20 @@
 /**
  * Analytics API Routes
  * 
- * GET /api/analytics?gameId=xxx - Get analytics data
- * POST /api/analytics - Track analytics event
+ * GET /api/analytics?gameId=xxx - Get analytics data (game creator only)
+ * POST /api/analytics - Track an event for the signed-in player
  */
 
+import { randomUUID } from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '../../../../server/database';
+import { findGame, forbidden, getSession, unauthorized } from '@/lib/auth';
+
+const gameNotFound = () =>
+  NextResponse.json(
+    { success: false, error: 'Game not found' },
+    { status: 404 }
+  );
 
 export const config = {
   runtime: 'nodejs'
@@ -24,6 +32,11 @@ interface CountRow {
 
 export async function GET(request: NextRequest) {
   try {
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
+
     const db = getDb();
     const { searchParams } = new URL(request.url);
     const gameId = searchParams.get('gameId');
@@ -33,6 +46,15 @@ export async function GET(request: NextRequest) {
         { success: false, error: 'gameId parameter required' },
         { status: 400 }
       );
+    }
+
+    // Player and revenue analytics belong to the game's creator.
+    const game = findGame(gameId);
+    if (!game) {
+      return gameNotFound();
+    }
+    if (game.creator_id !== session.userId) {
+      return forbidden();
     }
 
     // Get summary stats
@@ -111,56 +133,44 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const db = getDb();
-    const { game_id, player_id, event_type, event_data } = await request.json();
+    const session = await getSession();
+    if (!session) {
+      return unauthorized();
+    }
 
-    if (!game_id || !player_id || !event_type) {
+    const db = getDb();
+    // The player is the signed-in user; any player_id in the body is ignored.
+    const { game_id, event_type, event_data } = await request.json();
+
+    if (!game_id || !event_type) {
       return NextResponse.json(
         { 
           success: false, 
-          error: 'Missing required fields: game_id, player_id, event_type' 
+          error: 'Missing required fields: game_id, event_type' 
         },
         { status: 400 }
       );
     }
 
-    let validGameId = typeof game_id === 'string' && game_id.trim().length > 0
-      ? game_id.trim()
-      : null;
-
-    if (validGameId) {
-      const existingGame = db.prepare<[string], { id: string }>(
-        'SELECT id FROM games WHERE id = ?'
-      ).get(validGameId);
-
-      if (!existingGame) {
-        validGameId = null;
-      }
+    // Events are only recorded against a real game the player can see: a
+    // published game, or the caller's own game while it is in development.
+    const game = findGame(game_id);
+    if (!game) {
+      return gameNotFound();
     }
-
-    if (!validGameId) {
-      const fallbackGame = db.prepare<[], { id: string }>(
-        'SELECT id FROM games ORDER BY created_at ASC LIMIT 1'
-      ).get();
-
-      if (!fallbackGame) {
-        return NextResponse.json(
-          { success: false, error: 'No valid game found for analytics event' },
-          { status: 500 }
-        );
-      }
-
-      validGameId = fallbackGame.id;
+    if (game.status !== 'published' && game.creator_id !== session.userId) {
+      return gameNotFound();
     }
+    const validGameId = game.id;
     
-    const eventId = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    const eventId = randomUUID();
     const eventData = event_data ? JSON.stringify(event_data) : null;
     const now = new Date().toISOString();
 
     db.prepare(`
       INSERT INTO analytics_events (id, game_id, player_id, event_type, event_data, session_id, created_at)
       VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).run(eventId, validGameId, player_id, event_type, eventData, null, now);
+    `).run(eventId, validGameId, session.userId, event_type, eventData, null, now);
 
     return NextResponse.json({
       success: true,

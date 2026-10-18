@@ -30,6 +30,18 @@ cargo run --offline --locked
 
 That process binds `127.0.0.1:3001`. Set `STRAW_API_PORT` and `STRAW_WEB_ORIGIN` on both processes when you change the defaults. See `apps/api/README.md`.
 
+## Session and backend ownership
+
+| Concern | Owner | Contract |
+| --- | --- | --- |
+| Session credential | `apps/api` (Rust/Axum + SQLite) | HttpOnly cookie `straw_session`; hashed opaque token; expiry and revocation checked on every authenticated request |
+| Browser auth state | `apps/web/context` + `apps/web/services` | Cookie-only; no localStorage tokens; hydrate via `GET /api/auth/me` |
+| Same-origin API | `apps/web/app/api/**` + `apps/web/lib/backend-proxy.ts` | Next Node handlers proxy to `127.0.0.1:$STRAW_API_PORT` |
+| Navigation hint only | `apps/web/middleware.ts` | Redirects unauthenticated browsers away from `/dashboard`, `/settings`, `/profile`, `/projects`; does **not** authorize APIs |
+| Public auth routes | `/login`, `/signup`, `/api/auth/*` | Login/register/logout/refresh/me authorize in Rust; recovery endpoints return HTTP 501 |
+
+Exercise login, refresh, logout, expired/forged cookies, protected pages, and protected/public API requests against `apps/api` (`cargo test --offline --locked --test auth_http`). Full Next/browser observation remains with page/provider owners (F007/F013/F019).
+
 ## 🏗️ Project Structure
 
 ```

@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Optional isolated output when concurrent agents race on the default `.next`.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   images: {
     remotePatterns: [
       {

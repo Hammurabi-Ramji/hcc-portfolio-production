@@ -1,7 +1,7 @@
 import type { ApiResponse, IsoTimestamp, PaginatedResponse, PaginationParams } from '@/types';
 import { unsupported } from './service-utils';
 
-/** Wire metadata only; file storage and transfer are not implemented. */
+/** Wire metadata shape only. No `/api/files` routes or storage backend exist. */
 export interface FileUpload {
   id: string;
   filename: string;
@@ -13,7 +13,10 @@ export interface FileUpload {
   createdAt: IsoTimestamp;
 }
 
-/** Compatibility API: every operation truthfully reports unavailable storage. */
+/**
+ * Compatibility stubs only. Every method returns UNSUPPORTED/501 with no transport.
+ * Do not advertise upload, download, listing, or deletion as available features.
+ */
 export class FileService {
   static async uploadFile(
     _file: File,

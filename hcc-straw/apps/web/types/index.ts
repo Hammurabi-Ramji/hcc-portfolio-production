@@ -1,5 +1,27 @@
-/** JSON timestamps are ISO 8601 strings; clients do not hydrate Date objects. */
+/**
+ * Shared wire contracts for the quarantined `apps/web` tree (STACK-F026).
+ *
+ * This barrel exports types (and `ErrorCodes`) only — never a runtime HTTP client.
+ *
+ * Consumer import fixes (owned outside this folder):
+ * - F021 / lib: `import { api } from '@/lib/api-client'` (canonical singleton).
+ * - F024 / services: same `api` import; `import type { … } from '@/types'`;
+ *   return `ApiResponse<T>` unchanged (one envelope, no second wrap).
+ * - F019 / context: `import type { … } from '@/types'`; never `import { api } from '@/types'`.
+ *
+ * Canonical shapes:
+ * - Singular: `{ success: true, data: T }`
+ * - List: `{ success: true, data: { data: T[], meta } }` (`ApiResponse<PaginatedResponse<T>>`)
+ * - Void: `{ success: true, data: null }`
+ * - Failure: `{ success: false, error: { code, message, … } }`
+ */
+
+/** JSON timestamps are ISO 8601 strings; clients do not hydrate Date objects on the wire. */
 export type IsoTimestamp = string
+
+// ---------------------------------------------------------------------------
+// Wire DTOs (serialized JSON). Timestamps are strings; flags are required.
+// ---------------------------------------------------------------------------
 
 // Wire DTOs. User flags must come from persisted server state, not UI defaults.
 export interface UserDto {
@@ -47,6 +69,101 @@ export interface SessionDto {
 }
 
 export type Session = SessionDto
+
+export type ProjectStatus = 'active' | 'completed' | 'archived' | 'draft'
+
+export interface ProjectDto {
+  id: string
+  name: string
+  description?: string
+  status: ProjectStatus
+  createdAt: IsoTimestamp
+  updatedAt: IsoTimestamp
+  createdBy: string
+}
+
+export type Project = ProjectDto
+
+export interface AuditLogDto {
+  id: string
+  userId?: string
+  action: string
+  resourceType?: string
+  resourceId?: string
+  details?: Record<string, unknown>
+  ipAddress?: string
+  userAgent?: string
+  createdAt: IsoTimestamp
+}
+
+export type AuditLog = AuditLogDto
+
+// ---------------------------------------------------------------------------
+// Optional UI-boundary domain models (Date hydration). Never placed in
+// ApiResponse and never JSON-serialized as the HTTP contract.
+// Decode explicitly: `createdAt: new Date(dto.createdAt)`.
+// ---------------------------------------------------------------------------
+
+export interface UserDomain {
+  id: string
+  email: string
+  username?: string
+  role: UserRole
+  emailVerified: boolean
+  isActive: boolean
+  createdAt: Date
+  updatedAt: Date
+  profile?: ProfileDomain
+}
+
+export interface ProfileDomain {
+  id: string
+  userId: string
+  firstName?: string
+  lastName?: string
+  avatarUrl?: string
+  bio?: string
+  website?: string
+  location?: string
+  metadata?: Record<string, unknown>
+  createdAt: Date
+  updatedAt: Date
+}
+
+export interface SessionDomain {
+  id: string
+  userId: string
+  expiresAt: Date
+  ipAddress?: string
+  userAgent?: string
+  createdAt: Date
+}
+
+export interface ProjectDomain {
+  id: string
+  name: string
+  description?: string
+  status: ProjectStatus
+  createdAt: Date
+  updatedAt: Date
+  createdBy: string
+}
+
+export interface AuditLogDomain {
+  id: string
+  userId?: string
+  action: string
+  resourceType?: string
+  resourceId?: string
+  details?: Record<string, unknown>
+  ipAddress?: string
+  userAgent?: string
+  createdAt: Date
+}
+
+// ---------------------------------------------------------------------------
+// Envelope / auth / pagination (wire)
+// ---------------------------------------------------------------------------
 
 // One envelope per HTTP response. Void operations serialize data: null.
 export interface ApiSuccess<T> {
@@ -126,20 +243,6 @@ export interface PaginatedResponse<T> {
 
 export type PaginatedDto<T> = PaginatedResponse<T>
 
-export type ProjectStatus = 'active' | 'completed' | 'archived' | 'draft'
-
-export interface ProjectDto {
-  id: string
-  name: string
-  description?: string
-  status: ProjectStatus
-  createdAt: IsoTimestamp
-  updatedAt: IsoTimestamp
-  createdBy: string
-}
-
-export type Project = ProjectDto
-
 // File types
 export interface FileMetadata {
   filename: string
@@ -151,21 +254,6 @@ export interface FileMetadata {
   isPublic?: boolean
   metadata?: Record<string, unknown>
 }
-
-// Audit log types
-export interface AuditLogDto {
-  id: string
-  userId?: string
-  action: string
-  resourceType?: string
-  resourceId?: string
-  details?: Record<string, unknown>
-  ipAddress?: string
-  userAgent?: string
-  createdAt: IsoTimestamp
-}
-
-export type AuditLog = AuditLogDto
 
 // Error types
 export interface ApiError {
@@ -183,22 +271,22 @@ export const ErrorCodes = {
   ACCOUNT_DISABLED: 'ACCOUNT_DISABLED',
   TOKEN_EXPIRED: 'TOKEN_EXPIRED',
   INVALID_TOKEN: 'INVALID_TOKEN',
-  
+
   // Validation errors
   VALIDATION_ERROR: 'VALIDATION_ERROR',
   FIELD_REQUIRED: 'FIELD_REQUIRED',
   FIELD_INVALID: 'FIELD_INVALID',
-  
+
   // Resource errors
   RESOURCE_NOT_FOUND: 'RESOURCE_NOT_FOUND',
   RESOURCE_ALREADY_EXISTS: 'RESOURCE_ALREADY_EXISTS',
   RESOURCE_CONFLICT: 'RESOURCE_CONFLICT',
-  
+
   // Permission errors
   UNAUTHORIZED: 'UNAUTHORIZED',
   FORBIDDEN: 'FORBIDDEN',
   INSUFFICIENT_PERMISSIONS: 'INSUFFICIENT_PERMISSIONS',
-  
+
   // System errors
   INTERNAL_ERROR: 'INTERNAL_ERROR',
   NETWORK_ERROR: 'NETWORK_ERROR',

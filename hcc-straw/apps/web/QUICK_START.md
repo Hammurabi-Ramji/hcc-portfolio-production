@@ -89,16 +89,18 @@ Navigate to:
 ## 🛠️ Available Scripts
 
 ```bash
-# Development
-npm run dev          # Start dev server (port 3000)
-npm run build        # Build for production
-npm start            # Start production server
-npm run lint         # Check code quality
-npm run format       # Format code with Prettier
+# From apps/web only — these are the declared package scripts
+npm run dev          # Start Next on http://localhost:3000
+npm run build        # Production build
+npm start            # Serve the production build
+npm run lint         # ESLint via next lint
+npm run type-check   # tsc --noEmit
 
-# Type Checking
-npm run type-check   # Run TypeScript compiler
+# Legacy API (separate terminal, from apps/api — not an npm script here)
+cargo run --offline --locked
 ```
+
+There is no `npm run format`, Docker, or database script in this package. Prettier config exists for editors only.
 
 ---
 

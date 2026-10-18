@@ -4,11 +4,20 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Features from '@/components/Features';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Home() {
+  const { user } = useAuth();
+  const navUser = user
+    ? {
+        name: user.username || user.email || 'User',
+        avatar: user.profile?.avatarUrl,
+      }
+    : null;
+
   return (
     <main className="min-h-screen">
-      <Navbar user={null} />
+      <Navbar user={navUser} />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">

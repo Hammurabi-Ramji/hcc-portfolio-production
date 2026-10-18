@@ -20,7 +20,10 @@ export class UserService {
     return serviceRequest(() => api.put<Profile>('/users/profile', data));
   }
 
-  /** No storage handler exists; no upload or profile mutation is attempted. */
+  /**
+   * Avatar binary storage is unsupported. Returns local UNSUPPORTED/501 with no
+   * transport and no profile mutation. Do not advertise avatar upload as available.
+   */
   static async uploadAvatar(_file: File): Promise<ApiResponse<{ url: string }>> {
     return unsupported('Avatar upload');
   }

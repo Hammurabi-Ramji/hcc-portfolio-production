@@ -1,3 +1,7 @@
+/**
+ * Canonical browser API client. Envelope, origin, and consumer import rules:
+ * see ./API_CONTRACT.md (STACK-F021).
+ */
 import axios, { type AxiosInstance, type AxiosRequestConfig, type AxiosError } from 'axios'
 import type { ApiFailure, ApiResponse } from '../types'
 

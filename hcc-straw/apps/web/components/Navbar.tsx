@@ -9,6 +9,8 @@ interface NavbarProps {
   } | null;
 }
 
+const MOBILE_MENU_ID = 'navbar-mobile-menu';
+
 export default function Navbar({ user = null }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -95,7 +97,11 @@ export default function Navbar({ user = null }: NavbarProps) {
 
           {/* Mobile menu button */}
           <button
+            type="button"
             className="md:hidden p-2"
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls={MOBILE_MENU_ID}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg
@@ -103,6 +109,8 @@ export default function Navbar({ user = null }: NavbarProps) {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
             >
               {mobileMenuOpen ? (
                 <path
@@ -124,62 +132,64 @@ export default function Navbar({ user = null }: NavbarProps) {
         </div>
 
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
-              <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">
-                Features
-              </a>
-              <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">
-                About
-              </a>
-              <a href="/docs" className="text-sm font-medium hover:text-primary transition-colors">
-                Docs
-              </a>
-              {user ? (
-                <>
-                  <a
-                    href="/dashboard"
-                    className="text-sm font-medium hover:text-primary transition-colors"
-                  >
-                    Dashboard
-                  </a>
-                  <div className="flex items-center space-x-2">
-                    {user.avatar ? (
-                      <img
-                        src={user.avatar}
-                        alt={user.name}
-                        className="w-8 h-8 rounded-full"
-                      />
-                    ) : (
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-sm font-medium">
-                          {user.name.charAt(0).toUpperCase()}
-                        </span>
-                      </div>
-                    )}
-                    <span className="text-sm font-medium">{user.name}</span>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <a
-                    href="/login"
-                    className="text-sm font-medium hover:text-primary transition-colors"
-                  >
-                    Login
-                  </a>
-                  <a
-                    href="/signup"
-                    className="px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    Sign Up
-                  </a>
-                </>
-              )}
-            </div>
+        <div
+          id={MOBILE_MENU_ID}
+          className={`md:hidden py-4 border-t border-border ${mobileMenuOpen ? '' : 'hidden'}`}
+          hidden={!mobileMenuOpen}
+        >
+          <div className="flex flex-col space-y-4">
+            <a href="/features" className="text-sm font-medium hover:text-primary transition-colors">
+              Features
+            </a>
+            <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">
+              About
+            </a>
+            <a href="/docs" className="text-sm font-medium hover:text-primary transition-colors">
+              Docs
+            </a>
+            {user ? (
+              <>
+                <a
+                  href="/dashboard"
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  Dashboard
+                </a>
+                <div className="flex items-center space-x-2">
+                  {user.avatar ? (
+                    <img
+                      src={user.avatar}
+                      alt={user.name}
+                      className="w-8 h-8 rounded-full"
+                    />
+                  ) : (
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-sm font-medium">
+                        {user.name.charAt(0).toUpperCase()}
+                      </span>
+                    </div>
+                  )}
+                  <span className="text-sm font-medium">{user.name}</span>
+                </div>
+              </>
+            ) : (
+              <>
+                <a
+                  href="/login"
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  Login
+                </a>
+                <a
+                  href="/signup"
+                  className="px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Sign Up
+                </a>
+              </>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

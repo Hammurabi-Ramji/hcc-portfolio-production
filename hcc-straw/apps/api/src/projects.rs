@@ -40,7 +40,11 @@ fn parse<T>(input: Result<Json<T>, JsonRejection>) -> ApiResult<T> {
 }
 
 fn id_valid(id: &str) -> ApiResult<()> {
-    if id.len() == 64 && id.bytes().all(|b| b.is_ascii_digit() || (b'a'..=b'f').contains(&b)) {
+    if id.len() == 64
+        && id
+            .bytes()
+            .all(|b| b.is_ascii_digit() || (b'a'..=b'f').contains(&b))
+    {
         Ok(())
     } else {
         Err(ApiError::invalid())
@@ -129,7 +133,12 @@ struct ListQuery {
 }
 
 fn page(query: ListQuery) -> ApiResult<Page> {
-    let page = query.page.as_deref().map(positive).transpose()?.unwrap_or(1);
+    let page = query
+        .page
+        .as_deref()
+        .map(positive)
+        .transpose()?
+        .unwrap_or(1);
     let limit = query
         .limit
         .as_deref()

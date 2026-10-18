@@ -12,7 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'next',
   ],
-  ignorePatterns: ['node_modules', '.next', 'out', 'public'],
+  ignorePatterns: ['node_modules', '.next', '.next-*', 'out', 'public'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {

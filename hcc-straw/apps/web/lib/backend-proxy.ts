@@ -1,3 +1,7 @@
+/**
+ * Server-only loopback proxy. Origin, env vars, and path allowlist:
+ * see ./API_CONTRACT.md (STACK-F021).
+ */
 import 'server-only'
 import type { ApiFailure } from '../types'
 

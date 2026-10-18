@@ -12,7 +12,7 @@ const features = [
   {
     icon: Database,
     title: 'Modern Database',
-    description: 'PostgreSQL with Redis caching for optimal performance and data integrity.',
+    description: 'Designed for PostgreSQL with Redis caching; the current legacy API uses local SQLite on loopback.',
     color: 'from-purple-500 to-pink-500'
   },
   {
@@ -35,8 +35,8 @@ const features = [
   },
   {
     icon: Cloud,
-    title: 'Docker Ready',
-    description: 'Production-ready Docker configuration with nginx, PostgreSQL, and Redis.',
+    title: 'Container Scaffolding',
+    description: 'Frontend scaffolding only — production Docker, nginx, and managed Postgres/Redis are not configured in this tree.',
     color: 'from-yellow-500 to-orange-500'
   },
   {
@@ -59,10 +59,10 @@ export default function Features() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Built for <span className="text-gradient">Production</span>
+            Built for <span className="text-gradient">Modern Stacks</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to build scalable, maintainable web applications with modern best practices.
+            Frontend application scaffolding with modern practices. Infrastructure and live backend readiness are owned by deployment and API agents.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function Features() {
               className="group p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
             >
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                <feature.icon className="w-6 h-6 text-white" />
+                <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-muted-foreground text-sm">{feature.description}</p>

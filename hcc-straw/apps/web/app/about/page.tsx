@@ -1,14 +1,18 @@
 "use client";
 
-import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function AboutPage() {
+  const { user } = useAuth();
+  const navbarUser = user
+    ? { name: user.username || user.email || 'User', avatar: user.profile?.avatarUrl }
+    : null;
+
   return (
     <div className="min-h-screen">
-      <Navbar user={null} />
+      <Navbar user={navbarUser} />
 
       <main className="pt-20">
         <div className="container mx-auto px-4 py-12">
@@ -20,15 +24,20 @@ export default function AboutPage() {
               <section className="bg-card p-8 rounded-xl border border-border">
                 <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  AUTARCH is building the future of web development with production-ready
-                  platforms that enable developers to create scalable, maintainable,
-                  and secure applications without reinventing the wheel.
+                  AUTARCH is a legacy Next.js web tree paired with a loopback Rust API,
+                  giving developers a typed frontend and session-aware pages they can
+                  extend without claiming a production-hosted platform.
                 </p>
               </section>
 
               {/* Technology */}
               <section className="bg-card p-8 rounded-xl border border-border">
                 <h2 className="text-2xl font-semibold mb-4">Technology Stack</h2>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Capabilities below match what this quarantined tree implements today.
+                  PostgreSQL, Redis, Express, Docker Compose, and Nginx are not part of
+                  this tree.
+                </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <h3 className="font-medium mb-2">Frontend</h3>
@@ -41,33 +50,33 @@ export default function AboutPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-medium mb-2">Backend</h3>
+                    <h3 className="font-medium mb-2">Local API</h3>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Node.js & Express</li>
-                      <li>• PostgreSQL</li>
-                      <li>• Redis</li>
-                      <li>• JWT Authentication</li>
-                      <li>• RESTful APIs</li>
+                      <li>• Rust & Axum on 127.0.0.1:3001</li>
+                      <li>• SQLite (local file)</li>
+                      <li>• straw_session cookie auth</li>
+                      <li>• Argon2id password hashing</li>
+                      <li>• Next.js /api proxy to the API</li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-medium mb-2">DevOps</h3>
+                    <h3 className="font-medium mb-2">Local tooling</h3>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Docker & Docker Compose</li>
-                      <li>• Nginx</li>
-                      <li>• GitHub Actions</li>
-                      <li>• CI/CD Pipelines</li>
-                      <li>• Environment Management</li>
+                      <li>• npm scripts (dev, build, type-check)</li>
+                      <li>• cargo run --offline --locked</li>
+                      <li>• Environment via .env.local</li>
+                      <li>• Loopback-only web origin CORS</li>
+                      <li>• No production host configured</li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-medium mb-2">Security</h3>
+                    <h3 className="font-medium mb-2">Security (implemented)</h3>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• bcrypt Password Hashing</li>
-                      <li>• JWT Token Management</li>
-                      <li>• Role-Based Access Control</li>
-                      <li>• CORS & CSRF Protection</li>
-                      <li>• Audit Logging</li>
+                      <li>• Argon2id password hashing</li>
+                      <li>• Session cookie management</li>
+                      <li>• Role checks (user / moderator / admin)</li>
+                      <li>• Exact-origin CORS on the API proxy</li>
+                      <li>• Owner-scoped project authorization</li>
                     </ul>
                   </div>
                 </div>
@@ -80,19 +89,21 @@ export default function AboutPage() {
                   <div className="text-center p-4 bg-secondary rounded-lg">
                     <h3 className="font-medium mb-2">Quality</h3>
                     <p className="text-sm text-muted-foreground">
-                      Production-ready code with comprehensive testing and documentation
+                      Typed frontend and documented local setup; not a certified
+                      production test suite
                     </p>
                   </div>
                   <div className="text-center p-4 bg-secondary rounded-lg">
                     <h3 className="font-medium mb-2">Security</h3>
                     <p className="text-sm text-muted-foreground">
-                      Built-in security best practices and data protection
+                      Session cookies, Argon2id hashing, and role/owner checks on the
+                      loopback API
                     </p>
                   </div>
                   <div className="text-center p-4 bg-secondary rounded-lg">
                     <h3 className="font-medium mb-2">Scalability</h3>
                     <p className="text-sm text-muted-foreground">
-                      Architecture designed to grow with your application
+                      App Router pages and a proxied API shaped for further integration
                     </p>
                   </div>
                 </div>
@@ -102,7 +113,7 @@ export default function AboutPage() {
               <section className="bg-card p-8 rounded-xl border border-border">
                 <h2 className="text-2xl font-semibold mb-4">Built by Hammurabi Coding Company</h2>
                 <p className="text-muted-foreground">
-                  We're a team of passionate developers and engineers dedicated to creating
+                  We&apos;re a team of passionate developers and engineers dedicated to creating
                   tools that empower developers to build better applications faster.
                 </p>
               </section>
